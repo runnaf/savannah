@@ -1,7 +1,10 @@
+import { RouterProvider } from './providers/router/RouterProvider/RouterProvider';
+import './styles/index.scss'
+
 function App() {
   return (
     <div>
-      SAVANNAH WORLD !
+      <RouterProvider />
     </div>
   );
 }
