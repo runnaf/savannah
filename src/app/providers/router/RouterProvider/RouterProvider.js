@@ -1,10 +1,11 @@
 import { Suspense } from "react";
-import { Routes } from "react-router";
+import { Route, Routes } from "react-router";
+import MainPage from "../../../../pages/main/MainPage";
 
 export const RouterProvider = () => (
     <Suspense>
         <Routes>
-            {/* TODO ROUTE */}
+          <Route path="/" element={<MainPage />} />
         </Routes>
     </Suspense>
 );
