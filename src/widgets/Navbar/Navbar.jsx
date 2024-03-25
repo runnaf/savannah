@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 import Logo from '../../shared/assets/photo/Logo.png';
 import './Navbar.scss'
+import { 
+    getRouteCatalog, 
+    getRouteFAQ, 
+    getRouteMain, 
+    getRoutePets 
+} from "../../app/providers/router/config/helpers";
 
 export const Navbar = () => {
     return (
@@ -9,7 +15,7 @@ export const Navbar = () => {
                 className={({ isActive }) =>
                     `${isActive ? 'opened-page' : 'default'}`
                 }
-                to={'/'}
+                to={getRouteMain()}
             >
                 ГЛАВНАЯ
             </NavLink>
@@ -18,7 +24,7 @@ export const Navbar = () => {
                 className={({ isActive }) =>
                     `${isActive ? 'opened-page' : 'default'}`
                 }
-                to={'/catalog'}
+                to={getRouteCatalog()}
             >
                 КАТАЛОГ
             </NavLink>
@@ -29,7 +35,7 @@ export const Navbar = () => {
                 className={({ isActive }) =>
                     `${isActive ? 'opened-page' : 'default'}`
                 }
-                to={'/pets'}
+                to={getRoutePets()}
             >
                 ПИТОМЦЫ
             </NavLink>
@@ -38,7 +44,7 @@ export const Navbar = () => {
                 className={({ isActive }) =>
                     `${isActive ? 'opened-page' : 'default'}`
                 }
-                to={'/fag'}
+                to={getRouteFAQ()}
             >
                 ВОПРОСЫ
             </NavLink>
