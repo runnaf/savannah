@@ -1,10 +1,10 @@
-import './Button.scss';
+import styles from './Button.module.scss';
 
 export const Button = ({ text, onClick }) => {
     return (
         <button
             type="button"
-            className="btn"
+            className={styles.btn}
             onClick={onClick}
         >
             {text}

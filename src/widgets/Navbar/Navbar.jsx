@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from '../../shared/assets/photo/Logo.png';
-import './Navbar.scss'
+import styles from './Navbar.module.scss'
 import { 
     getRouteCatalog, 
     getRouteFAQ, 
@@ -13,7 +13,7 @@ export const Navbar = () => {
         <nav className="navbar">
             <NavLink
                 className={({ isActive }) =>
-                    `${isActive ? 'opened-page' : 'default'}`
+                    `${isActive ? styles.opened_page : styles.default}`
                 }
                 to={getRouteMain()}
             >
@@ -22,7 +22,7 @@ export const Navbar = () => {
 
             <NavLink
                 className={({ isActive }) =>
-                    `${isActive ? 'opened-page' : 'default'}`
+                    `${isActive ? styles.opened_page : styles.default}`
                 }
                 to={getRouteCatalog()}
             >
@@ -33,7 +33,7 @@ export const Navbar = () => {
 
             <NavLink
                 className={({ isActive }) =>
-                    `${isActive ? 'opened-page' : 'default'}`
+                    `${isActive ? styles.opened_page : styles.default}`
                 }
                 to={getRoutePets()}
             >
@@ -42,7 +42,7 @@ export const Navbar = () => {
 
             <NavLink
                 className={({ isActive }) =>
-                    `${isActive ? 'opened-page' : 'default'}`
+                    `${isActive ? styles.opened_page : styles.default}`
                 }
                 to={getRouteFAQ()}
             >

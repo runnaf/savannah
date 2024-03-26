@@ -1,4 +1,4 @@
-import './CatalogPage.scss';
+import styles from './CatalogPage.module.scss';
 
 export const CatalogPage = () => {
     return (

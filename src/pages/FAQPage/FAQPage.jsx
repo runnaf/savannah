@@ -1,4 +1,4 @@
-import './FAQPage.scss';
+import styles from './FAQPage.module.scss';
 
 export const FAQPage = () => {
     return (
