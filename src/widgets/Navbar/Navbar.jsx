@@ -10,7 +10,7 @@ import {
 
 export const Navbar = () => {
     return (
-        <nav className="navbar">
+        <nav className={styles.navbar}>
             <NavLink
                 className={({ isActive }) =>
                     `${isActive ? styles.opened_page : styles.default}`
