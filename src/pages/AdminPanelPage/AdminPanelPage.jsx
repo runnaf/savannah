@@ -1,4 +1,4 @@
-import './AdminPanelPage.scss';
+import styles from './AdminPanelPage.module.scss';
 
 export const AdminPanelPage = () => {
     return (
