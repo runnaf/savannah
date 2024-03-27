@@ -1,0 +1,29 @@
+.container_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.img {
+    width: 500px;
+}
+
+.container_text {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title {
+    color: #E7C287; 
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.description {
+    color: #CEDBE9;
+    font-size: 25px;
+    text-align: justify;
+}
