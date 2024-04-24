@@ -1,15 +1,31 @@
 :root {
-  --font-family-main: 'Inter', sans-serif;
-  --font-family-second: 'Unbounded', sans-serif;
-  --color-primary: #fff;
-  --color-secondary: #f0f0f0;
-  --color-stroke: #EBEBEB;
-  --color-accent: #d6001c;
-  --text-primary: #000;
-  --text-primary-inverted: #fff;
-  --text-secondary: #4E4E4E;
-  --text-disabled: #999;
+  // Шрифт
+  --font-family-main: 'Montserrat', sans-serif;
+
+  // Цвет фона
+  --color-primary: #F7F1EB;
+  --color-secondary: #7A5452;
+
+  //Цвет декорирования
+  --color-stroke: #7A5452;
+
+  //Цвет кнопки
+  --color-btn-primary: #7A5452;
+  // --color-btn-primary-hover: ;
+  // --color-btn-primary-disable: ;
+  --color-btn-secondary: transparent;
+  --color-text-btn: #FDFDFD;
+  --color-text-btn-secondary: #7A5452;
+  // --color-text-btn-hover: #204085;
+  // --color-text-btn-disable: #4A4747;
+
+  // Цвет текста
+  --text-primary: #000000;
+  --text-secondary: #7A5452;
 
   // Размеры
-  --header-height: 52px;
+  --header-height: 201px;
+  --title-height: 50px;
+  --text-primary-height: 30px;
+  --text-secondary-height: 25px;
 }
