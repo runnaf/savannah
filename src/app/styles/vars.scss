@@ -1,32 +1,18 @@
 :root {
   // Шрифт
-  --font-family-main: 'Lora', sans-serif;
+  --font-family-main: 'Montserrat', sans-serif;
 
-  // Цвет фона
-  --color-primary: #1E1E1E;
-  --color-secondary: #D2D5D6;
-
-  //Цвет декорирования
-  --color-stroke: #204085;
-  --color-accent: #E7C287;
-
-  //Цвет кнопки
-  --color-btn-primary: #204085;
-  --color-btn-primary-hover: #D2D5D6;
-  --color-btn-primary-disable: #CEDBE9;
-  --color-btn-secondary: #C9C0B4;
-  --color-text-btn: #CEDBE9;
-  --color-text-btn-hover: #204085;
-  --color-text-btn-disable: #4A4747;
-
-  // Цвет текста
-  --text-primary: #CEDBE9;
-  --text-secondary: #E7C287;
-  --text-header: #4A4747;
+  // Цвет
+  --light-brown: #F7F1EB;
+  --dark-brown: #7A5452;
+  --brown: #C49B82;
+  --black: #000000;
+  --white: #FDFDFD;
 
   // Размеры
-  --header-height: 223px;
-  --title-height: 36px;
-  --text-primary-height: 25px;
-  --text-secondary-height: 30px;
+  --font-size-xs: 14px; //мобильная версия текст
+  --font-size-s: 20px; //мобильная версия заголовок+кнопки
+  --font-size-m: 30px;
+  --font-size-l: 35px;
+  --font-size-xl: 50px;
 }
