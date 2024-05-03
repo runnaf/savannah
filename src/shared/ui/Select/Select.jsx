@@ -9,7 +9,6 @@ const SelectDrop = ({title, options}) => {
 
   const [selected, setSelected] = useState([]);
 
-
   const handleCheckboxChange = (event, optionValue) => {
     if (event.target.checked) {
       setSelected([...selected, optionValue]);
@@ -29,6 +28,7 @@ const SelectDrop = ({title, options}) => {
         <Select multiple value={selected} onChange={() => {}}>
         {options && options.map((option) => (
             <MenuItem key={option.id} value={option.value}>
+
               <ListItemIcon>
                 <Checkbox
                   checked={selected.includes(option.value)}

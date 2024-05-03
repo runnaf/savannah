@@ -4,6 +4,7 @@ import './styles/index.scss'
 import { Button } from '../shared/ui/Button/Button';
 import { Input } from '../shared/ui/Input/Input';
 import SelectDrop from '../shared/ui/Select/Select';
+import SelectTwo from '../shared/ui/SelectTwo/SelectTwo';
 
 const OptionsOne = [
   { id: 1, value: 'коты и кошки' },
@@ -35,7 +36,7 @@ function App() {
       <SelectDrop title="Возраст" options={OptionsOne} />
       </div>
       <div>
-      <SelectDrop title="Пол" options={OptionsTwo} />
+      <SelectDrop  title="Пол" options={OptionsTwo} />
       </div>
       <div>
       <SelectDrop title="Окрас" options={OptionsThree} />
@@ -43,7 +44,24 @@ function App() {
       <div>
       <SelectDrop title="Статус" options={OptionsFour} />
       </div>
+      </div>
 
+<div className='selection'>
+      <div className='selectTwo'>
+      <SelectTwo title="Возраст" options={OptionsOne}/>
+      </div>
+
+      <div className='selectTwo'>
+      <SelectTwo title="Пол" options={OptionsOne}/>
+      </div>
+
+      <div className='selectTwo'>
+      <SelectTwo title="Окрас" options={OptionsOne}/>
+      </div>
+
+      <div className='selectTwo'>
+      <SelectTwo title="Статус" options={OptionsOne}/>
+      </div>
       </div>
 
     </div>

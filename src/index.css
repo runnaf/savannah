@@ -6,3 +6,12 @@ body {
     justify-content: space-around;
     flex-direction: row;
   }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.selectTwo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
