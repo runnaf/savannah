@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Logo from '../../shared/assets/photo/Logo.png';
 import styles from './Navbar.module.scss'
 import { 
     getRouteCatalog, 
@@ -28,8 +27,6 @@ export const Navbar = () => {
             >
                 КАТАЛОГ
             </NavLink>
-
-            <img src={Logo} alt="savannah world" />
 
             <NavLink
                 className={({ isActive }) =>

@@ -1,17 +1,20 @@
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    color: white; //FIX LATER
-    background-color: #204085; //FIX LATER
-    padding: 16px; //FIX LATER
-    color: #CEDBE9;
-    font-size: 25px;
-    
+.button {
+    border-radius: 15px;
+    font-family: var(--font-family-main);
+    width: 360px;
+    height: 60px;
+    padding: 0 25px;
+    font-size: var(--font-size-m);
+    text-transform: uppercase;
+}
 
-    &:hover {
-        background-color: #CEDBE9; //FIX LATER
-        color: #4A4747; //FIX LATER
-    }
+.accent {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    border: none;
+}
+
+.secondary {
+    border: 3px solid var(--dark-brown);
+    color: var(--dark-brown);
 }
