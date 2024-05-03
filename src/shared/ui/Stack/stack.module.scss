@@ -1,0 +1,49 @@
+.stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-right {
+    justify-content: start;
+}
+
+.justify-sb {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.gap8 {
+    gap: 8px;
+}
+
+.gap16 {
+    gap: 16px;
+}
+
+.gap24 {
+    gap: 24px;
+}
+
+.gap32 {
+    gap: 32px;
+}
