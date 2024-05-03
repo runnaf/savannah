@@ -2,48 +2,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+};
 
-.justify-center {
-    justify-content: center;
-}
+$justifyItems: (
+    "center": center,
+    "right": start,
+    "sb": space-between
+);
 
-.justify-right {
-    justify-content: start;
-}
+@each $name, $value in $justifyItems {
+    .justify-#{$name} {
+        justify-content: $value;
+    }
+};
 
-.justify-sb {
-    justify-content: space-between;
-}
+$alignItems: (
+    "center": center,
+    "start": flex-start,
+);
 
-.align-center {
-    align-items: center;
-}
+@each $name, $value in $alignItems {
+    .align-#{$name} {
+        align-items: $value;
+    }
+};
 
-.align-start {
-    align-items: flex-start;
-}
+$directions: 'row', 'column';
 
-.row {
-    flex-direction: row;
-}
+@each $direction in $directions {
+    .#{$direction} {
+        flex-direction: $direction;
+    }
+};
 
-.column {
-    flex-direction: column;
-}
+$sizes: 8px, 16px, 24px, 32px;
 
-.gap8 {
-    gap: 8px;
-}
-
-.gap16 {
-    gap: 16px;
-}
-
-.gap24 {
-    gap: 24px;
-}
-
-.gap32 {
-    gap: 32px;
-}
+@each $size in $sizes {
+    .gap#{$size} {
+        gap: $size;
+    }
+};
