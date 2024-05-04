@@ -52,15 +52,15 @@ function App() {
       </div>
 
       <div className='selectTwo'>
-      <SelectTwo title="Пол" options={OptionsOne}/>
+      <SelectTwo title="Пол" options={OptionsTwo}/>
       </div>
 
       <div className='selectTwo'>
-      <SelectTwo title="Окрас" options={OptionsOne}/>
+      <SelectTwo title="Окрас" options={OptionsThree}/>
       </div>
 
       <div className='selectTwo'>
-      <SelectTwo title="Статус" options={OptionsOne}/>
+      <SelectTwo title="Статус" options={OptionsFour}/>
       </div>
       </div>
 
