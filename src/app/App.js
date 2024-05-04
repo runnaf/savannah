@@ -21,7 +21,7 @@ const OptionsTwo = [
 ];
  const OptionsFour = [
  { id: 1, value: 'готов к отправке' },
- { id: 2, value: 'документы в процессе' },
+ { id: 2, value: 'в процессе' },
  ];
 
 
@@ -47,19 +47,19 @@ function App() {
       </div>
 
 <div className='selection'>
-      <div className='selectTwo'>
+      <div className='select selectTwo'>
       <SelectTwo title="Возраст" options={OptionsOne}/>
       </div>
 
-      <div className='selectTwo'>
+      <div className='select selectTwo'>
       <SelectTwo title="Пол" options={OptionsTwo}/>
       </div>
 
-      <div className='selectTwo'>
+      <div className='select selectTwo'>
       <SelectTwo title="Окрас" options={OptionsThree}/>
       </div>
 
-      <div className='selectTwo'>
+      <div className='select selectTwo'>
       <SelectTwo title="Статус" options={OptionsFour}/>
       </div>
       </div>

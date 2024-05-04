@@ -19,3 +19,8 @@ body {
 .selectBox{
   width:200px;
 }
+.selectedOption,.option{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: black;
+}
