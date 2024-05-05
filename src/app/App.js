@@ -9,19 +9,23 @@ import SelectTwo from '../shared/ui/SelectTwo/SelectTwo';
 const OptionsOne = [
   { id: 1, value: 'коты и кошки' },
   { id: 2, value: 'котята' },
+  { id: 3, value: 'показать все' }
 ];
 const OptionsTwo = [
 { id: 1, value: 'самец' },
 { id: 2, value: 'самка' },
+{ id: 3, value: 'показать все' }
 ];
  const OptionsThree = [
- { id: 1, value: 'F2' },
- { id: 2, value: 'F3' },
- { id: 3, value: 'F4' }
+ { id: 1, value: 'Ф2' },
+ { id: 2, value: 'Ф3' },
+ { id: 3, value: 'Ф4' },
+ { id: 4, value: 'показать все' }
 ];
  const OptionsFour = [
  { id: 1, value: 'готов к отправке' },
  { id: 2, value: 'в процессе' },
+ { id: 3, value: 'показать все' }
  ];
 
 
