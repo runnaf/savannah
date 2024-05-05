@@ -32,7 +32,8 @@ export const Stack = (props) => {
         className,
     ];
 
-    const stackClass = getStyle(styles.stack, mode, additional)
+    const stackClass = getStyle(styles.stack, mode, additional);
+    
     return (
         <div className={stackClass} {...otherProps}>
             {children}

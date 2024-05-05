@@ -11,12 +11,13 @@ export const Navbar = () => {
                     .map(route =>
                         <NavLink
                             className={({ isActive }) =>
-                                `${isActive ? styles.opened_page : styles.default}`
+                                `${styles.link} ${isActive ? styles.opened_page : styles.default}`
                             }
                             to={route.path}
                         >
                             {route.navlink}
-                        </NavLink>)
+                        </NavLink>
+                    )
             }
         </nav>
     )

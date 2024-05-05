@@ -1,13 +1,16 @@
 .header {
     width: 100%;
-    position: relative;
+    // position: relative;
     display: flex;
 }
 
-.picture {
+.navbar {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100px;
+}
+
+.picture {
     pointer-events: none;
     object-fit: cover; 
     object-position: bottom;
@@ -18,10 +21,29 @@
 .buttonHeader {
     z-index: 10;
     position: absolute;
-    top: 450px; //FIX LATER
+    top: 520px; //FIX LATER
     left: 100px; //FIX LATER
     width: 360px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.titleContainer {
+    z-index: 10;
+    position: absolute;
+    top: 200px; //FIX LATER
+    left: 100px; //FIX LATER
+
+    .text {
+        color: var(--white);
+        margin-bottom: 18px;
+    }
+
+    .title {
+        color: var(--white);
+        width: 500px;
+        font-weight: 600;
+    }
+}
+
