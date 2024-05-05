@@ -1,10 +1,9 @@
 .button {
     border-radius: 15px;
-    font-family: var(--font-family-main);
     height: 60px;
     padding: 0 25px;
     font-size: var(--font-size-m);
-    text-transform: uppercase;
+    text-transform: var(--text-uppercase);
 }
 
 .accent {

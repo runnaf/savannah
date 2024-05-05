@@ -1,0 +1,49 @@
+@mixin afterElement($width: 0) {
+    &:after {
+        display: block;
+        left: 0;
+        width: $width;
+        height: 2px;
+        background-color: var(--white);
+        content: "";
+        transition: width 0.3s ease-out;
+    }
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    gap: 48px;
+    font-size: var(--font-size-l);
+    z-index: 10;
+    padding: 50px 100px;
+    font-weight: 400;
+}
+
+.default {
+    color: var(--white);
+    text-transform: var(--text-uppercase);
+    min-width: 210px;
+    text-align: center;
+    font-weight: 400;
+    @include afterElement(0);
+
+    &:hover {
+        transition: color 0.3s ease-out;
+    }
+
+
+    &:hover:after,
+    &:focus:after {
+        width: 100%;
+    }
+}
+
+.opened_page {
+    color: var(--white);
+    text-transform: var(--text-uppercase);
+    min-width: 210px;
+    text-align: center;
+    font-weight: 600;
+    @include afterElement(100%);
+} 
