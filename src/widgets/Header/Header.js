@@ -10,6 +10,11 @@ export const Header = () => {
         <section className={styles.header}>
             <div className={styles.navbar}>
                 <Navbar />
+                <Button
+                    className={styles.buttonSigin}
+                    variant="secondary">
+                    войти
+                </Button>
             </div>
             <img
                 className={styles.picture}
