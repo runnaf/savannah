@@ -13,11 +13,9 @@ export const Header = () => {
 
     return (
         <header className={styles.header}>
-            {
-                drawSiginModal(
-                    <Signin changeSigninModal={changeSigninModal} />
-                )
-            }
+            {drawSiginModal(
+                <Signin changeSigninModal={changeSigninModal} />
+            )}
 
             <div className={styles.navbar}>
                 <Navbar />
