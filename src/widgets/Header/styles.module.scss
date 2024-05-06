@@ -21,7 +21,7 @@
 .buttonHeader {
     z-index: 10;
     position: absolute;
-    top: 520px; //FIX LATER
+    top: 630px; //FIX LATER
     left: 100px; //FIX LATER
     width: 360px;
     display: flex;
@@ -32,12 +32,14 @@
 .titleContainer {
     z-index: 10;
     position: absolute;
-    top: 200px; //FIX LATER
+    top: 270px; //FIX LATER
     left: 100px; //FIX LATER
 
     .text {
         color: var(--white);
         margin-bottom: 18px;
+        font-weight: 400;
+        line-height: 2;
     }
 
     .title {

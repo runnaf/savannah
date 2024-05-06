@@ -18,11 +18,15 @@ export const Header = () => {
             />
 
             <div className={styles.titleContainer}>
-                <Text size="xxl" className={styles.text}>
+                {/* <Text size="xxl" className={styles.text}>
                     Питомник
                 </Text>
                 <Text type='h1' size="xxl" className={styles.title}>
                     SAVANNAH WORLD
+                </Text> */}
+
+                <Text type='h1' size="xxl" className={styles.title}>
+                    <span className={styles.text}>Питомник </span> SAVANNAH WORLD
                 </Text>
             </div>
 
