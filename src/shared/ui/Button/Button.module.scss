@@ -1,6 +1,36 @@
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+// <<<<<<< HEAD
+// .btn {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 10px;
+// =======
+.button {
+    border-radius: 15px;
+    height: 50px;
+    padding: 0 25px;
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    text-transform: var(--text-uppercase);
+}
+
+.accent {
+    background-color: var(--dark-brown);
+    color: var(--white);
+
+    &:hover {
+        background: linear-gradient(to left, var(--brown), var(--dark-brown));
+        background-size: 250% 100%;
+    }
+}
+
+.secondary {
+    border: 3px solid var(--dark-brown);
+    color: var(--dark-brown);
+    background-color: transparent;
+
+    &:hover {
+        background: linear-gradient(to left, var(--brown), transparent);
+        background-size: 350% 100%;
+    }
 }
