@@ -1,14 +1,13 @@
 .input {
-    display: flex;  
     padding: 15px;  
-    max-width: 450px;   
+    width: 100%; 
     border-radius: 15px;
     border: 2px solid transparent;   
     background-color: var(--white);
     font-family: var(--font-family-main);
     font-size: var(--font-size-m);
     color: var(--dark-brown); 
-    height: 62px;   
+    height: 50px;   
     word-wrap: break-word;
     text-transform: uppercase;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);

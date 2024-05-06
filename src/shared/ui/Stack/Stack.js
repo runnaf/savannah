@@ -5,11 +5,11 @@ export const Stack = (props) => {
     const {
         children,
         className,
-        justifyContent, //justify-center | justify-right | justify-sb
+        justifyContent, //justifyCenter | justifyRight | justifyBetween
         direction = 'row', //row | column
-        alignItems, //align-center | align-start
+        alignItems, //alignCenter | alignStart
         max,
-        gap,
+        gap, // 8 | 16 | 24 | 32
         ...otherProps
     } = props;
 

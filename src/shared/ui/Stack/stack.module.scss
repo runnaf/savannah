@@ -4,41 +4,42 @@
     justify-content: center;
 };
 
-$justifyItems: (
-    "center": center,
-    "right": start,
-    "sb": space-between
-);
+.justifyCenter {
+    justify-content: center;
+}
 
-@each $name, $value in $justifyItems {
-    .justify-#{$name} {
-        justify-content: $value;
-    }
-};
+.justifyRight {
+    justify-content: flex-end;
+}
 
-$alignItems: (
-    "center": center,
-    "start": flex-start,
-);
+.justifyBetween {
+    justify-content: space-between;
+}
 
-@each $name, $value in $alignItems {
-    .align-#{$name} {
-        align-items: $value;
-    }
-};
+.column {
+    flex-direction: column;
+}
 
-$directions: 'row', 'column';
+.alignCenter {
+    align-items: center;
+}
 
-@each $direction in $directions {
-    .#{$direction} {
-        flex-direction: $direction;
-    }
-};
+.alignStart {
+    align-items: flex-start;
+}
 
-$sizes: 8px, 16px, 24px, 32px;
+.gap8 {
+    gap: 8px;
+}
 
-@each $size in $sizes {
-    .gap#{$size} {
-        gap: $size;
-    }
-};
+.gap16 {
+    gap: 16px;
+}
+
+.gap24 {
+    gap: 24px;
+}
+
+.gap32 {
+    gap: 32px;
+}

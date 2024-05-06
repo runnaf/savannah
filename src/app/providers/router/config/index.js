@@ -1,9 +1,7 @@
-import { AdminPanelPage } from "../../../../pages/AdminPanelPage/AdminPanelPage";
 import { CatalogPage } from "../../../../pages/CatalogPage/CatalogPage";
 import { MainPage } from "../../../../pages/MainPage/MainPage";
 import { PetsPage } from "../../../../pages/PetsPage/PetsPage";
 import { 
-    getRouteAdminPanel, 
     getRouteCatalog, 
     getRouteMain, 
     getRoutePets 
@@ -25,9 +23,9 @@ export const routeConfig = {
         element: <PetsPage />,
         navlink: 'питомцы',
     },
-    admin_panel: {
-        path: getRouteAdminPanel(),
-        element: <AdminPanelPage />,
-        authOnly: true,
-    }
+    // admin_panel: {
+    //     path: getRouteAdminPanel(),
+    //     element: <AdminPanelPage />,
+    //     authOnly: true,
+    // }
 };

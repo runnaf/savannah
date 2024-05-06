@@ -10,6 +10,7 @@ export const Navbar = () => {
                     .filter(route => !route.authOnly)
                     .map(route =>
                         <NavLink
+                            key={route.path}
                             className={({ isActive }) =>
                                 `${styles.link} ${isActive ? styles.opened_page : styles.default}`
                             }

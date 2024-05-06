@@ -1,18 +1,31 @@
-import { Navbar } from "../../feature/Navbar/Navbar"
-import desktopPicture from "../../shared/assets/photo/header_cat.png"
-import { arrowIcon } from "../../shared/assets/svg/arrowIcon"
-import { Button } from "../../shared/ui/Button/Button"
-import { Text } from "../../shared/ui/Text/Text"
-import styles from "./styles.module.scss"
+import { Navbar } from "../../feature/Navbar/Navbar";
+import { Signin } from "../../feature/Signin/Signin";
+import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
+import { useModal } from "../../shared/hooks/useModal";
+import { Button } from "../../shared/ui/Button/Button";
+import { Text } from "../../shared/ui/Text/Text";
+import desktopPicture from "../../shared/assets/photo/header_cat.png";
+import styles from "./styles.module.scss";
 
 export const Header = () => {
+
+    const [changeSigninModal, drawSiginModal] = useModal();
+
     return (
-        <section className={styles.header}>
+        <header className={styles.header}>
+            {
+                drawSiginModal(
+                    <Signin changeSigninModal={changeSigninModal} />
+                )
+            }
+
             <div className={styles.navbar}>
                 <Navbar />
                 <Button
+                    onClick={changeSigninModal}
                     className={styles.buttonSigin}
-                    variant="secondary">
+                    variant="secondary"
+                >
                     войти
                 </Button>
             </div>
@@ -23,21 +36,16 @@ export const Header = () => {
             />
 
             <div className={styles.titleContainer}>
-                {/* <Text size="xxl" className={styles.text}>
-                    Питомник
-                </Text>
-                <Text type='h1' size="xxl" className={styles.title}>
-                    SAVANNAH WORLD
-                </Text> */}
-
                 <Text type='h1' size="xxl" className={styles.title}>
                     <span className={styles.text}>Питомник </span> SAVANNAH WORLD
                 </Text>
             </div>
 
-            <Button className={styles.buttonHeader}>
+            <Button
+                className={styles.buttonHeader}
+            >
                 в каталог {arrowIcon()}
             </Button>
-        </section>
+        </header>
     )
 }

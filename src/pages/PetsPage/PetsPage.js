@@ -1,4 +1,4 @@
-import styles from './PetsPage.module.scss';
+// import styles from './PetsPage.module.scss';
 
 export const PetsPage = () => {
     return (
