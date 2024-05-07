@@ -1,3 +1,13 @@
-.MainPage {
-    height: 1000px;
+.buttonIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 360px;
+}
+
+.buttonDefault {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
 }
