@@ -29,5 +29,15 @@
   }
 
  .iconAndText{
-    background-color: pink;
+    display: flex;
+ }
+ .options{
+    border-bottom: 2px solid rgba(122, 84, 82, 0.90);
+    width: 263px;
+    display: flex;
+    padding: 12px;
+    border-radius: 5px;
+ }
+ .selectedOption, .option{
+    padding-left: 10px;
  }
