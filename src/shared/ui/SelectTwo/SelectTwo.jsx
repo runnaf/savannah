@@ -3,7 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid';
 import './SelectTwo.css';
 import CheckedInput from "../Checkbox/Checkbox";
-import { checkboxClasses } from "@mui/material";
+// import { checkboxClasses } from "@mui/material";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -48,7 +48,7 @@ const [menuIsOpen, setMenuIsOpen] = useState(false);
         <div  key={option.id}>
             <div className="options">
         
-            <CheckedInput/>
+            <CheckedInput checked={option === selectedOption} onChange={() => handleOptionSelect(option)}/>
             <Menu.Item>
             {({ active }) => (
                 <a
