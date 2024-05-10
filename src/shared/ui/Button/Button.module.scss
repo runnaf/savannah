@@ -1,17 +1,29 @@
-// .btn {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border-radius: 10px;
-//     color: white; //FIX LATER
-//     background-color: #204085; //FIX LATER
-//     padding: 16px; //FIX LATER
-//     color: #CEDBE9;
-//     font-size: 25px;
-    
+.button {
+    border-radius: 15px;
+    height: 50px;
+    padding: 0 25px;
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    text-transform: var(--text-uppercase);
+}
 
-//     &:hover {
-//         background-color: #CEDBE9; //FIX LATER
-//         color: #4A4747; //FIX LATER
-//     }
-// }
+.accent {
+    background-color: var(--dark-brown);
+    color: var(--white);
+
+    &:hover {
+        background: linear-gradient(to left, var(--brown), var(--dark-brown));
+        background-size: 250% 100%;
+    }
+}
+
+.secondary {
+    border: 3px solid var(--dark-brown);
+    color: var(--dark-brown);
+    background-color: transparent;
+
+    &:hover {
+        background: linear-gradient(to left, var(--brown), transparent);
+        background-size: 350% 100%;
+    }
+}

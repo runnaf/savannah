@@ -3,13 +3,16 @@ import style from './Checkbox.module.scss';
 import clsx from 'clsx';
 
 
-const CheckedInput = ({className, nameField, idInput}) =>{
+const CheckedInput = ({className, nameField, idInput, onChange}) =>{
     const [checked,setChecked] = useState(false);
 
     const handleCheck = (e) => {
         setChecked(e.target.checked);
+        if (onChange) {
+            onChange(e.target.checked);
+        }
     }
-    const checkboxClasses = clsx(style.checkbox, style.enabled_channel, className)
+    const checkboxClasses = clsx(style.checkbox, className)
 
     return (
         <div>

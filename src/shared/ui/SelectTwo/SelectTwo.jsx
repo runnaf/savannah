@@ -48,7 +48,12 @@ const [menuIsOpen, setMenuIsOpen] = useState(false);
         <div  key={option.id}>
             <div className="options">
         
-            <CheckedInput checked={option === selectedOption} onChange={() => handleOptionSelect(option)}/>
+            <CheckedInput 
+            className='checkbox'
+            nameField={option.id}
+            idInput={option.id}
+            checked={option === selectedOption}
+            onChange={() => handleOptionSelect}/>
             <Menu.Item>
             {({ active }) => (
                 <a
