@@ -1,20 +1,21 @@
 import styles from './CatalogPage.module.scss';
-import SelectTwo from "../../shared/ui/SelectTwo/SelectTwo";
+import Select from "../../shared/ui/Select/Select";
+import { Edit } from '../../feature/Edit/Edit';
 
-const OptionsOne = [
+const OptionsAge = [
     { id: 1, value: 'коты и кошки' },
     { id: 2, value: 'котята' }
   ];
-  const OptionsTwo = [
+  const OptionsSex = [
   { id: 1, value: 'самец' },
   { id: 2, value: 'самка' }
   ];
-   const OptionsThree = [
+   const OptionsColor = [
    { id: 1, value: 'Ф2' },
    { id: 2, value: 'Ф3' },
    { id: 3, value: 'Ф4' }
   ];
-   const OptionsFour = [
+   const OptionsStatus = [
    { id: 1, value: 'готов к отправке' },
    { id: 2, value: 'в процессе' }
    ];
@@ -26,21 +27,25 @@ export const CatalogPage = () => {
         <div>
         <div className={styles.selection}>
       <div className='select'>
-      <SelectTwo title="Возраст" options={OptionsOne}/>
+      <Select title="Возраст" options={OptionsAge}/>
       </div>
 
       <div className='select'>
-      <SelectTwo title="Пол" options={OptionsTwo}/>
+      <Select title="Пол" options={OptionsSex}/>
       </div>
 
       <div className='select'>
-      <SelectTwo title="Окрас" options={OptionsThree}/>
+      <Select title="Окрас" options={OptionsColor}/>
       </div>
 
       <div className='select'>
-      <SelectTwo title="Статус" options={OptionsFour}/>
+      <Select title="Статус" options={OptionsStatus}/>
       </div>
       </div>
+
+      <div>
+            <Edit/>
+    </div>
 
         </div>
     )

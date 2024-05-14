@@ -7,6 +7,7 @@ import { Text } from "../../shared/ui/Text/Text";
 import desktopPicture from "../../shared/assets/photo/header_cat.png";
 import styles from "./styles.module.scss";
 
+
 export const Header = () => {
 
     const [changeSigninModal, drawSiginModal] = useModal();
@@ -44,6 +45,7 @@ export const Header = () => {
             >
                 в каталог {arrowIcon()}
             </Button>
+
         </header>
     )
 }
