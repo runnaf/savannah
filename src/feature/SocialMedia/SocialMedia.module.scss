@@ -1,0 +1,14 @@
+.media {
+    position: fixed;
+    bottom: 160px; //FIX LATER
+    right: 5px; //FIX LATER
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    padding: 25px 32px;
+    width: 64px;
+
+    img {
+        width: 50px;
+        cursor: pointer;
+    }
+}
