@@ -1,4 +1,5 @@
 import styles from './Modal.module.scss';
+import {motion as m} from "framer-motion";
 
 export const Modal = ({ setIsOpen, children }) => {
 
@@ -9,14 +10,18 @@ export const Modal = ({ setIsOpen, children }) => {
     };
 
     return (
-        <div className={styles.modal}>
-            <div
+        <div className={styles.modal}
+>
+            <m.div
                 className={styles.overlay}
                 data-class="overlay"
+                initial={{opacity: 0}}
+                animate={{opacity:1}}
+                transition={{duration:0.75}}
                 onClick={handleClick}
             >
                 {children}
-            </div>
+            </m.div>
         </div>
 
     );

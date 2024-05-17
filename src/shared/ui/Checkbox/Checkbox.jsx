@@ -1,24 +1,20 @@
-import React, {useState} from "react";
+import React from "react";
 import style from './Checkbox.module.scss';
-import clsx from 'clsx';
 
 
-const CheckedInput = ({className, nameField, idInput, onChange}) =>{
-    const [checked,setChecked] = useState(false);
+const CheckedInput = ({nameField, idInput, checked, onChange}) =>{
 
     const handleCheck = (e) => {
-        setChecked(e.target.checked);
         if (onChange) {
             onChange(e.target.checked);
         }
     }
-    const checkboxClasses = clsx(style.checkbox, className)
 
     return (
         <div>
             <input
             type='checkbox'
-            className={checkboxClasses}
+            className={style.checkbox}
             name={nameField}
             id={idInput}
             checked={checked}

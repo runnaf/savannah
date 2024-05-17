@@ -1,31 +1,47 @@
 import React, { Fragment , useState} from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import './Select.css';
-// import style from './Select.module.scss'; - ? мы используем библиотеку 
-//и тут прописаны styles уже, нужно ли оформлять с scss?
+import styles from "./Select.module.scss";
+import { getStyle } from "../../helper/getStyle";
 import CheckedInput from "../Checkbox/Checkbox";
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 const Select = ({title,options}) =>{
-    const [selectedOption, setSelectedOption] = useState(null);
-    const handleOptionSelect = (option) => {
-        setSelectedOption(option);
-    };
 
 const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+const [checkedOption, setCheckedOption] = useState(
+    options.reduce((result,option) => {
+        result[option.id] = false;
+        return result;
+    }, {})
+);
+
+    const handleCheckboxChange = (id, checked) => {
+        setCheckedOption((prevOption) =>({
+            ...prevOption,
+            [id]: checked,
+        }))
+    };
+
+    const handleMenuItemClick = (id) => {
+        setCheckedOption((prevOption) => ({
+            ...prevOption,
+            [id]: !prevOption[id],
+        }))
+    }
+
+
+
     return (
         <div>
         
-<Menu as="div" className="relative inline-block text-left">
+<Menu as="div" className={styles.relative}>
     <div >
-        <Menu.Button className="selectBox inline-flex w-full justify-center gap-x-12 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+        <Menu.Button className={styles.selectBox}
         onClick={()=> setMenuIsOpen(!menuIsOpen)}>
-        <p className="titleText">{title}</p>
-        <ChevronDownIcon className="icon -mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
+        <h2 className={styles.titleText}>{title}</h2>
+        <ChevronDownIcon className={styles.icon} aria-hidden="true" />
         </Menu.Button>
     </div>
     <Transition
@@ -38,33 +54,28 @@ const [menuIsOpen, setMenuIsOpen] = useState(false);
         leaveTo="transform opacity-0 scale-95"
         >
 
-
-        <Menu.Items className="absolute left-0 z-10 mt-2 w-39 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-        
+        <Menu.Items className={styles.absolute}>
         {options.map((option) => (
         <div  key={option.id}>
-            <div className="options">
+            <div className={styles.options}>
         
             <CheckedInput 
-            className='checkbox'
+            className={styles.checkbox}
             nameField={option.value}
             idInput={option.value}
-            checked={option === selectedOption}
-            onChange={() => handleOptionSelect}/>
+            checked={checkedOption[option.id]}
+            onChange={(checked) => handleCheckboxChange(option.id, checked)}
+/>
             <Menu.Item>
-            {({ active }) => (
-                <a
-                href="#"
-                className={classNames(
-                    active ? 'selectedOption' : 'option',
-                    
+                <p
+                className={getStyle(
+                    '' , {} , ['option']
                 )}
-                onClick={() => handleOptionSelect(option)}
+                onClick={() => handleMenuItemClick(option.id)}
+        
                 >
                 {option.value}
-                </a>
-            )}
-            
+                </p>
             </Menu.Item>
             </div>
 

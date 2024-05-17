@@ -2,20 +2,16 @@ import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
 import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
 import { Button } from "../../shared/ui/Button/Button";
 import { Stack } from "../../shared/ui/Stack/Stack";
-import styles from './Edit.module.scss';
+import styles from './Add.module.scss';
 import closeButton from '../../shared/assets/photo/close.png';
-import editPhoto from '../../shared/assets/photo/editCatImg.png';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
-import {motion as m} from "framer-motion";
 import { Input } from "../../shared/ui/Input/Input";
+import { dataSelect } from "../../shared/assets/config/dataSelect";
 import Select from "../../shared/ui/Select/Select";
 
-export const Edit = () => {
+
+export const Add = () => {
     return (
-        <m.div
-        initial={{opacity: 0}}
-        animate={{opacity:1}}
-        transition={{duration:0.75}}>
         <Stack
             justifyContent='justifyCenter'
             alignItems='alignCenter'
@@ -28,19 +24,28 @@ export const Edit = () => {
                 src={closeButton} alt="закрыть"
                 //onClick={changeEditModal} also put Edit = ({changeEditModdal}) =>
             />
-            <div className={styles.editImgBox}>
-            <img
-            className={styles.editPhoto}
-            src={editPhoto} alt="editPhoto"/>
+            <div className={styles.addImgBox}>
+            <div className={styles.addDiv}></div>
             <img
             className={styles.editIcon}
             src={editIcon} alt="editIcon"/>
             </div>
             
             <Input
+                placeholder='имя'
+                // onChange={() => console.log()}
+            />
+            <Select title="Возраст" options={dataSelect.OptionsAge} />
+
+            <Input
                 placeholder='возраст'
                 // onChange={() => console.log()}
             />
+
+            <Select title="Пол" options={dataSelect.OptionsSex} />
+            <Select title="Цвет" options={dataSelect.OptionsColor} />
+            <Select title="Статус" options={dataSelect.OptionsStatus} />
+            
             <Button className={styles.buttonEdit}>
                 сохранить {arrowIcon()}
             </Button>
@@ -48,6 +53,5 @@ export const Edit = () => {
                 удалить { deleteIcon() }
             </Button>
         </Stack>
-        </m.div>
     )
 }
