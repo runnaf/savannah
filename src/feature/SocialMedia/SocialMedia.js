@@ -14,12 +14,17 @@ const SocialMedia = ({ handleSocial }) => {
             alignItems='alignCenter'
             className={styles.media}
         >
-            <Link to=''><img src={whatsappIcon} alt='ватсап'/></Link>
-            <Link to=''><img src={telegramIcon}alt='телеграм'/></Link>
+            <Link to=''>
+                <img src={whatsappIcon} alt='ватсап' />
+            </Link>
+            <Link to=''>
+                <img src={telegramIcon} alt='телеграм' />
+            </Link>
             <img 
-            src={closeIcon}
-            onClick={handleSocial}
-            alt='закрыть'/>        
+                src={closeIcon}
+                onClick={handleSocial}
+                alt='закрыть'
+            />        
         </Stack>
       );
 }

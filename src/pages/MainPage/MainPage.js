@@ -6,7 +6,7 @@ export const MainPage = () => {
   return (
     <div className={styles.MainPage}>
       <Header />
-      <AboutUs/>
+      <AboutUs />
     </div>
   )
 };
