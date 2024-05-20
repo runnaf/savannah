@@ -5,8 +5,11 @@
     padding: 25px 32px;
     width: 64px;
 
+    .button {
+        background-color: transparent;
+    }
+
     img {
         width: 50px;
-        cursor: pointer;
     }
 }

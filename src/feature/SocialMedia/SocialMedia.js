@@ -20,11 +20,14 @@ const SocialMedia = ({ handleSocial }) => {
             <Link to=''>
                 <img src={telegramIcon} alt='телеграм' />
             </Link>
-            <img 
-                src={closeIcon}
+            <button 
+                className={styles.button} 
                 onClick={handleSocial}
-                alt='закрыть'
-            />        
+            >
+                <img src={closeIcon} alt='закрыть' /> 
+                <span className='visually-hidden'>закрыть</span> 
+            </button>
+      
         </Stack>
       );
 }
