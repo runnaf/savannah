@@ -16,7 +16,8 @@ export const Navbar = () => {
                             }
                             to={route.path}
                         >
-                            {route.navlink}
+                            <span>{route.navlink}</span>
+                            {route.img}
                         </NavLink>
                     )
             }

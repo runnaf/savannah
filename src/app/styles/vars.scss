@@ -15,7 +15,17 @@
   --font-size-m: 25px;
   --font-size-l: 30px;
   --font-size-xl: 50px;
-  --font-sixe-xxl: 70px;
+  --font-size-xxl: 70px;
+
+  //Размер экрана
+  --width-desktop: 1920px;
+  --width-tablet: 780px;
+  --width-mobile: 320px;
+
+  //Паддинги
+  --desktop-padding: calc(16%/2);
+  --tablet-padding: calc(18%/2);
+  --mobile-padding: calc(12%/2);
 
   //Text-transform
   --text-uppercase: uppercase; 
