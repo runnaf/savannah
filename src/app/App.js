@@ -1,3 +1,4 @@
+import ButtonSocial from '../widgets/ButtonSocial/ButtonSocial';
 import { ButtonUp } from '../shared/ui/ButtonUp/ButtonUp';
 import { RouterProvider } from './providers/router/RouterProvider/RouterProvider';
 import { Header } from '../widgets/Header/Header';
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <RouterProvider />
       <ButtonUp />
+      <ButtonSocial />
     </div>
   );
 }

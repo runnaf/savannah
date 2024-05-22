@@ -1,0 +1,117 @@
+.section {
+    margin-top: 60px;
+}
+
+.container {    
+    margin: 0 auto;
+    max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
+    padding: 0 var(--container-padding-x);  
+}
+.about__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 120px;
+    align-items: center;    
+    margin-top: 70px;
+
+
+    @media all and (max-width:1600px) {
+        column-gap: 70px;
+    }
+    @media all and (max-width:1540px) {
+        column-gap: 50px;
+    }
+}
+
+.title {
+    font-weight: 500;
+}
+.picture {
+    width: clamp(400px, 40vw, 600px);
+    border-radius: 83px;
+}
+.text {  
+    row-gap: 50px;   
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: justify;
+    padding: 20px 0;
+
+    @media all and (max-width:1540px) {
+        row-gap: 30px;
+    }
+    @media all and (max-width:1440px) {
+        row-gap: 20px;
+    }
+}
+.par { 
+
+    @media all and (max-width:1360px) {
+        font-size: var(--font-size-m);
+    }
+}
+.benefits__row {   
+    padding: 55px;
+    background-color: var(--white);
+    border-radius: 40px;    
+}
+.benefit__text {
+    font-weight: 400;
+    width: 260px;
+
+    @media all and (max-width:1360px) {
+        font-size:var(--font-size-s);
+        width: 200px;
+    }
+}
+.benefit__doc {
+    position: relative;
+    padding-left: 100px;
+
+
+    &::before {
+        content: '';
+        display: block;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: 0;   
+        background-image: url(../../shared/assets/photo/doc.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.benefit__vet {
+    position: relative; 
+    padding-left: 100px;
+
+
+    &::before {
+        content: '';
+        display: block;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: 0;   
+        background-image: url(../../shared/assets/photo/vet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.benefit__question {
+    position: relative;  
+    padding-left: 110px;
+
+
+    &::before {
+        content: '';
+        display: block;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        left: 0;        
+        background-image: url(../../shared/assets/photo/care.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

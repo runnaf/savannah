@@ -21,7 +21,9 @@ export const useShownOnScroll = () => {
             left: 0,
             behavior: "smooth",
         });
+
     };
+    
 
     return { isShow, handleScrollUp };
 }
