@@ -1,12 +1,12 @@
-import { Signin } from "../../feature/Signin/Signin";
-import { useModal } from "../../shared/hooks/useModal";
-import picture from "../../shared/assets/photo/banner_catalog.png";
-import picture2x from "../../shared/assets/photo/banner_catalog@2x.png";
+import { Signin } from "../../../../feature/Signin/Signin";
+import { useModal } from "../../../../shared/hooks/useModal";
+import picture from "../../../../shared/assets/photo/banner_catalog.png";
+import picture2x from "../../../../shared/assets/photo/banner_catalog@2x.png";
+import { NavbarContainer } from "../navbarContainer/NavbarContainer";
+
 import styles from "./styles.module.scss";
 
-import { NavbarContainer } from "../Header/ui/NavbarContainer";
-
-export const HeaderCatalog = () => {
+export const HeaderSecondary = () => {
 
     const [changeSigninModal, drawSiginModal] = useModal();
 

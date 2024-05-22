@@ -1,8 +1,11 @@
+.headerMain.navbar {
+    padding: 40px 0;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 40px 0;
 
     @media (max-width: 767px) {
         position: fixed;
