@@ -15,22 +15,27 @@ export const Add = () => {
         <Stack
             justifyContent='justifyCenter'
             alignItems='alignCenter'
-            direction='column'
+            direction='row'
             className={styles.edit}
-        >
-            
-            <img
-                className={styles.closeButton}
-                src={closeButton} alt="закрыть"
-                //onClick={changeEditModal} also put Edit = ({changeEditModdal}) =>
-            />
+        > 
+
+
+
             <div className={styles.addImgBox}>
             <div className={styles.addDiv}></div>
             <img
             className={styles.editIcon}
             src={editIcon} alt="editIcon"/>
             </div>
-            
+            <Stack             justifyContent='justifyCenter'
+            alignItems='alignCenter'
+            direction='column'
+            className={styles.editInput}>
+                            <img
+                className={styles.closeButton}
+                src={closeButton} alt="закрыть"
+                //onClick={changeEditModal} also put Edit = ({changeEditModdal}) =>
+            />
             <Input
                 placeholder='имя'
                 // onChange={() => console.log()}
@@ -52,6 +57,7 @@ export const Add = () => {
             <Button variant="secondary" className={styles.buttonEdit}>
                 удалить { deleteIcon() }
             </Button>
+            </Stack>
         </Stack>
     )
 }

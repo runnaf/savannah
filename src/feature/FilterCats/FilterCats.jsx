@@ -2,35 +2,33 @@ import Select from "../../shared/ui/Select/Select";
 import { dataSelect } from "../../shared/assets/config/dataSelect";
 import styles from './FilterCats.module.scss';
 import { Button } from "../../shared/ui/Button/Button";
+import { Stack } from "../../shared/ui/Stack/Stack";
 
 export const FilterCats = () => {
 
     return (
-        <div>
-        <div className={styles.selection}>
-      <div className='select'>
+      <div className={styles.container}>
+        <Stack             
+        alignItems='alignStart'
+        >
+
       <Select title="Возраст" options={dataSelect.OptionsAge} />
-      </div>
 
-      <div className='select'>
       <Select title="Пол" options={dataSelect.OptionsSex} />
-      </div>
 
-      <div className='select'>
       <Select title="Цвет" options={dataSelect.OptionsColor} />
-      </div>
 
-      <div className='select'>
       <Select title="Статус" options={dataSelect.OptionsStatus} />
-      </div>
 
-    <div>
-    <Button variant="secondary">
+
+
+    <Button className={styles.secondary} variant="secondary">
       сбросить
     </Button>
-    </div>
+    </Stack>
+
 
       </div>
-      </div>
+
 )
 };

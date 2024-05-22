@@ -13,12 +13,10 @@
     display: inline-block;
     width: 25px;
     height: 25px;
-    flex-shrink: 0;
-    flex-grow: 0;
     border-radius: 5px;
+    border: 1.5px solid var(--dark-brown);
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: var(--dark-brown);
     
 }
 .checkbox:checked+label::before {

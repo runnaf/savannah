@@ -4,6 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import styles from "./Select.module.scss";
 import { getStyle } from "../../helper/getStyle";
 import CheckedInput from "../Checkbox/Checkbox";
+import { Text } from "../Text/Text";
 
 
 const Select = ({title,options}) =>{
@@ -40,7 +41,7 @@ const [checkedOption, setCheckedOption] = useState(
     <div >
         <Menu.Button className={styles.selectBox}
         onClick={()=> setMenuIsOpen(!menuIsOpen)}>
-        <h2 className={styles.titleText}>{title}</h2>
+        <Text size="m">{title}</Text>
         <ChevronDownIcon className={styles.icon} aria-hidden="true" />
         </Menu.Button>
     </div>
@@ -67,15 +68,15 @@ const [checkedOption, setCheckedOption] = useState(
             onChange={(checked) => handleCheckboxChange(option.id, checked)}
 />
             <Menu.Item>
-                <p
+                <Text  size="s"
                 className={getStyle(
-                    '' , {} , ['option']
+                    '' , {} , []
                 )}
                 onClick={() => handleMenuItemClick(option.id)}
         
                 >
                 {option.value}
-                </p>
+                </Text>
             </Menu.Item>
             </div>
 

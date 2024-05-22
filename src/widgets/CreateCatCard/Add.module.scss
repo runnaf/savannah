@@ -1,15 +1,20 @@
 .edit {
-    width: 791px;
-    padding: 119px 189px 80px 189px;
+    width: 1000px;
+    height: 860px;
+    padding: 35px 50px 61px 50px;
     background-color: var(--light-brown);
     border-radius: 15px;
-    gap: 20px;
+    gap: 30px;
+}
+.editInput{
+    gap: 30px;
+    padding: 50px;
 }
 
 .closeButton {
     cursor: pointer;
     position: relative;
-    left: 250px;
+    left: 200px;
     width: 50px;
     height: 50px;
 }
