@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       {
-        location.pathname === '/catalog' ? <HeaderCatalog /> : <Header />
+        location.pathname === '/' ? <Header /> : <HeaderCatalog />
       }
       <RouterProvider />
       <ButtonUp />
