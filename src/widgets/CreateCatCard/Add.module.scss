@@ -1,30 +1,12 @@
 .edit {
-    width: 1000px;
-    height: 860px;
+    width: 920px;
+    height: 750px;
     padding: 35px 50px 61px 50px;
     background-color: var(--light-brown);
     border-radius: 15px;
-    gap: 30px;
-}
-.editInput{
-    gap: 30px;
-    padding: 50px;
+    gap: 50px;
 }
 
-.closeButton {
-    cursor: pointer;
-    position: relative;
-    left: 200px;
-    width: 50px;
-    height: 50px;
-}
-
-.buttonEdit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 .addImgBox{
     display: flex;
     justify-content: center;
@@ -34,7 +16,7 @@
 .addDiv{
     width: 410px;
     height: 465px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 47px;
 }
 
