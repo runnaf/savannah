@@ -2,7 +2,7 @@ import { Signin } from "../../../../feature/Signin/Signin";
 import { useModal } from "../../../../shared/hooks/useModal";
 import picture from "../../../../shared/assets/photo/banner_catalog.png";
 import picture2x from "../../../../shared/assets/photo/banner_catalog@2x.png";
-import { NavbarContainer } from "../navbarContainer/NavbarContainer";
+import { NavbarContainer } from "../NavbarContainer/NavbarContainer";
 
 import styles from "./styles.module.scss";
 

@@ -37,38 +37,6 @@
     }
 }
 
-.picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    object-fit: cover;
-    width: 100%;
-    min-height: 100%;
-    display: block;
-    z-index: -1;
-
-    @media (max-width: 1439px) {
-        min-height: 600px;
-    }
-
-    @media (max-width: 1023px) {
-        min-height: 550px;
-    }
-
-    @media (max-width: 767px) {
-        position: absolute;
-        width: 100%;
-        min-height: 230px;
-        z-index: -1;
-        background-color: var(--brown);
-    }
-
-    @media (max-width: 479px) {
-        min-height: 180px;
-    }
-}
-
 .buttonHeader {
     min-width: 360px;
     display: flex;
@@ -121,5 +89,3 @@
         }
     }
 }
-
-
