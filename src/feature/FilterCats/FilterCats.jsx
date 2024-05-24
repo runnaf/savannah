@@ -16,9 +16,9 @@ export const FilterCats = () => {
     return (
       <div className={styles.container}>
         <Stack  
-        className={styles.stackGap}           
+        
         alignItems='alignStart'
-        // gap="31"
+        gap="32"
         >
 
 {Object.entries(dataSelect).map(([key, options]) => (
