@@ -22,7 +22,7 @@ export const HeaderMain = ({location}) => {
                     {drawSiginModal(
                         <Signin changeSigninModal={changeSigninModal} />
                     )}
-                    <NavbarContainer location={location} />
+                    <NavbarContainer location={location} changeSigninModal={changeSigninModal} />
                     <div className={styles.titleContainer}>
                         <Text type='h1' className={styles.title}>
                             <span className={styles.text}>Питомник </span> SAVANNAH WORLD

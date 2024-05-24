@@ -16,7 +16,7 @@ export const HeaderSecondary = ({location}) => {
                     {drawSiginModal(
                         <Signin changeSigninModal={changeSigninModal} />
                     )}
-                    <NavbarContainer location={location} />
+                    <NavbarContainer location={location} changeSigninModal={changeSigninModal}/>
                 </div>               
             </header>       
     )

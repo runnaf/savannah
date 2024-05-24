@@ -1,16 +1,12 @@
 import {isMobile} from 'react-device-detect';
 
-import { useModal } from "../../../../shared/hooks/useModal";
-
 import { Navbar } from "../../../../feature/Navbar/Navbar";
 import { Button } from "../../../../shared/ui/Button/Button";
 
 import styles from "./styles.module.scss";
 
 
-export const NavbarContainer = ({location}) => {
-
-    const [changeSigninModal] = useModal();
+export const NavbarContainer = ({location, changeSigninModal}) => {
 
     return (
         <div className={`${styles.navbar}${isMobile ? ` ${styles.mobile}` : ''}${ location.pathname === '/' ? ` ${styles.headerMain}` : ''}`}>
