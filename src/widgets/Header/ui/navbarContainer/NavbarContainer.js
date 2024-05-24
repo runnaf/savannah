@@ -22,7 +22,7 @@ export const NavbarContainer = () => {
                 className={styles.buttonSigin}
                 variant="secondary"
             >
-            <span>войти</span>
+            войти
             </Button>                        
         </div>
     )
