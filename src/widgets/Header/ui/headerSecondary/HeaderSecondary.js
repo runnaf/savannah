@@ -5,7 +5,7 @@ import { NavbarContainer } from "../NavbarContainer/NavbarContainer";
 
 import styles from "./styles.module.scss";
 
-export const HeaderSecondary = () => {
+export const HeaderSecondary = ({location}) => {
 
     const [changeSigninModal, drawSiginModal] = useModal();
 
@@ -16,7 +16,7 @@ export const HeaderSecondary = () => {
                     {drawSiginModal(
                         <Signin changeSigninModal={changeSigninModal} />
                     )}
-                    <NavbarContainer />
+                    <NavbarContainer location={location} />
                 </div>               
             </header>       
     )

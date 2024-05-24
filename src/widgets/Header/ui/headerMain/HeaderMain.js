@@ -10,7 +10,7 @@ import { NavbarContainer } from "../NavbarContainer/NavbarContainer";
 import styles from "./styles.module.scss";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
 
-export const HeaderMain = () => {
+export const HeaderMain = ({location}) => {
 
     const [changeSigninModal, drawSiginModal] = useModal();
 
@@ -22,7 +22,7 @@ export const HeaderMain = () => {
                     {drawSiginModal(
                         <Signin changeSigninModal={changeSigninModal} />
                     )}
-                    <NavbarContainer />
+                    <NavbarContainer location={location} />
                     <div className={styles.titleContainer}>
                         <Text type='h1' className={styles.title}>
                             <span className={styles.text}>Питомник </span> SAVANNAH WORLD

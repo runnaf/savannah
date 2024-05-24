@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <>
             {
-                location.pathname === '/' ? <HeaderMain /> : <HeaderSecondary />
+                location.pathname === '/' ? <HeaderMain location={location} /> : <HeaderSecondary location={location} />
             }
         </>
     )

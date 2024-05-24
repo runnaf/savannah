@@ -6,11 +6,9 @@ import { Navbar } from "../../../../feature/Navbar/Navbar";
 import { Button } from "../../../../shared/ui/Button/Button";
 
 import styles from "./styles.module.scss";
-import { useLocation } from 'react-router';
 
 
-export const NavbarContainer = () => {
-    let location = useLocation();
+export const NavbarContainer = ({location}) => {
 
     const [changeSigninModal] = useModal();
 
