@@ -1,6 +1,6 @@
 
   export const dataSelect = {
-    OptionsAge: [
+    OptionsAge:  [
       { id: 1, value: 'коты и кошки' },
       { id: 2, value: 'котята' }
     ],

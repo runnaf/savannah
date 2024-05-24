@@ -4,21 +4,30 @@ import styles from './FilterCats.module.scss';
 import { Button } from "../../shared/ui/Button/Button";
 import { Stack } from "../../shared/ui/Stack/Stack";
 
+const titles = {
+  OptionsAge: 'Возраст',
+  OptionsSex: 'Пол',
+  OptionsColor: 'Цвет',
+  OptionsStatus: 'Статус'
+};
+
 export const FilterCats = () => {
 
     return (
       <div className={styles.container}>
-        <Stack             
+        <Stack  
+        className={styles.stackGap}           
         alignItems='alignStart'
+        // gap="31"
         >
 
-      <Select title="Возраст" options={dataSelect.OptionsAge} />
-
-      <Select title="Пол" options={dataSelect.OptionsSex} />
-
-      <Select title="Цвет" options={dataSelect.OptionsColor} />
-
-      <Select title="Статус" options={dataSelect.OptionsStatus} />
+{Object.entries(dataSelect).map(([key, options]) => (
+          <Select 
+            key={key} 
+            title={titles[key]} 
+            options={options} 
+          />
+        ))}
 
 
 

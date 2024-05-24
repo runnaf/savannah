@@ -3,8 +3,9 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import styles from "./Select.module.scss";
 import { getStyle } from "../../helper/getStyle";
-import CheckedInput from "../Checkbox/Checkbox";
+import Checkbox from "../Checkbox/Checkbox";
 import {Text} from '../Text/Text';
+
 
 
 
@@ -13,7 +14,7 @@ const Select = ({title,options}) =>{
 const [menuIsOpen, setMenuIsOpen] = useState(false);
 
 const [checkedOption, setCheckedOption] = useState(
-    options.reduce((result,option) => {
+    options.reduce((result, option) => {
         result[option.id] = false;
         return result;
     }, {})
@@ -61,7 +62,7 @@ const [checkedOption, setCheckedOption] = useState(
         <div  key={option.id}>
             <div className={styles.options}>
         
-            <CheckedInput 
+            <Checkbox 
             className={styles.checkbox}
             nameField={option.value}
             idInput={option.value}
