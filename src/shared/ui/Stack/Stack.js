@@ -1,4 +1,4 @@
-import styles from './Stack.module.scss';
+import styles from './stack.module.scss';
 import { getStyle } from '../../helper/getStyle';
 
 export const Stack = (props) => {
