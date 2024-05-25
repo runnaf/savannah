@@ -4,7 +4,7 @@ import { routeConfig } from "../../app/providers/router/config";
 
 export const Navbar = () => {
     return (
-        <nav className={styles.navbar}>
+        <nav className={`${styles.navbar}`}>
             {
                 Object.values(routeConfig)
                     .filter(route => !route.authOnly)
@@ -16,7 +16,8 @@ export const Navbar = () => {
                             }
                             to={route.path}
                         >
-                            {route.navlink}
+                            <span>{route.navlink}</span>
+                            {route.img}
                         </NavLink>
                     )
             }

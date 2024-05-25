@@ -3,7 +3,7 @@
 export const CatalogPage = () => {
     return (
         <div>
-            Catalog Page
+            <h1>Catalog Page</h1>
         </div>
     )
 };
