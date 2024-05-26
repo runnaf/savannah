@@ -22,7 +22,7 @@ import picture_320 from "../../../../shared/assets/photo/banner_320x180.jpg";
 import picture_320_2x from "../../../../shared/assets/photo/banner_320x180@2x.jpg";
 import picture_320webp from "../../../../shared/assets/photo/banner_320x180.webp";
 import picture_320_2xwebp from "../../../../shared/assets/photo/banner_320x180@2x.webp";
-import styles from "./styles.module.scss";
+import styles from "./HeaderPictureMain.module.scss";
 
 export const HeaderPictureMain = () => {
     return (

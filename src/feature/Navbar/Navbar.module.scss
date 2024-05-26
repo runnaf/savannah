@@ -8,12 +8,6 @@
         content: "";
         transition: width 0.3s ease-out;
     }
-
-    @media (max-width: 1439px) {
-        &::after {
-            display: none;
-        }
-    }
 }
 
 .navbar {

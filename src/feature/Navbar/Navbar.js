@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from './Navbar.module.scss'
 import { routeConfig } from "../../app/providers/router/config";
+import { isMobile } from "react-device-detect";
 
 export const Navbar = () => {
     return (
@@ -17,7 +18,7 @@ export const Navbar = () => {
                             to={route.path}
                         >
                             <span>{route.navlink}</span>
-                            {route.img}
+                            {isMobile && route.img}
                         </NavLink>
                     )
             }

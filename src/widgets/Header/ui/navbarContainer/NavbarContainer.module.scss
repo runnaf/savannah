@@ -1,5 +1,9 @@
 .headerMain.navbar {
     padding: 40px 0;
+
+    @media (max-width: 767px) {
+        padding: 12px 16px;
+    }
 }
 
 .navbar {
@@ -50,3 +54,4 @@
         flex-direction: column;
     }
 }
+

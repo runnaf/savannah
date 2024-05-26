@@ -1,7 +1,7 @@
 import picture from "../../../../shared/assets/photo/banner_catalog.png";
 import picture2x from "../../../../shared/assets/photo/banner_catalog@2x.png";
 
-import styles from "./styles.module.scss";
+import styles from "./HeaderPictureSecondary.module.scss";
 
 export const HeaderPictureSecondary = () => {
     return (

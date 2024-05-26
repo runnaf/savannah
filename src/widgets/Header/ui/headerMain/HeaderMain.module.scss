@@ -38,15 +38,14 @@
 }
 
 .buttonHeader {
-    min-width: 360px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: var(--font-size-l);
 
     @media (max-width: 767px) {
-        min-width: fit-content;
-        font-size: 10px;
+        width: 180px;
+        font-size: var(--font-size-xs);
     }
 
     & svg {
@@ -84,7 +83,7 @@
         }
 
         @media (max-width: 767px) {
-            font-size: var(--font-size-s);
+            font-size: var(--font-size-m);
             margin-bottom: 20px;
         }
     }
