@@ -5,7 +5,15 @@
 .container {    
     margin: 0 auto;
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
-    padding: 0 var(--container-padding-x);  
+    padding: 0 var(--container-padding-x); 
+    
+    
+    @media all and (max-width:590px) {
+        padding: 0 40px; 
+    }
+    @media all and (max-width:370px) {
+        padding: 0 20px; 
+    }
 }
 .about__row {
     display: flex;
@@ -21,6 +29,14 @@
     @media all and (max-width:1540px) {
         column-gap: 50px;
     }
+    @media all and (max-width:1270px) {
+        column-gap: 30px;
+    }
+    @media all and (max-width:1095px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
 }
 
 .title {
@@ -30,11 +46,38 @@
     @media all and (max-width:1440px) {    
         font-size: var(--font-size-l);
     }
+    @media all and (max-width:1240px) {    
+        font-size: var(--font-size-ml);
+    }
+    @media all and (max-width:795px) {    
+        font-size: var(--font-size-m);
+        padding: 0 90px;
+        text-align: center;
+    }
+    @media all and (max-width:590px) {  
+        padding: 0 40px;
+    }
+    @media all and (max-width:450px) {
+        font-size: var(--font-size-s);
+    }
+    @media all and (max-width:370px) {
+        padding: 0 20px; 
+    }
 }
 
 .picture {
-    width: clamp(400px, 40vw, 600px);
+    width: clamp(430px, 40vw, 600px);
     border-radius: 83px;
+
+    @media all and (max-width:1095px) {
+        width: 100%;
+    }
+    @media all and (max-width:795px) {
+        border-radius: 60px;
+    }
+    @media all and (max-width:590px) {
+        border-radius: 40px;
+    }
 }
 .text {  
     row-gap: 30px;   
@@ -44,33 +87,75 @@
     text-align: justify;
     padding: 20px 0;
 
-  
+
     @media all and (max-width:1440px) {
-        row-gap: 20px;       
+        row-gap: 15px; 
     }
-    @media all and (max-width:1380px) {
-        line-height: 1.4;     
+    @media all and (max-width:1095px) {
+        padding: 0;
+    }
+    
+}
+.par {
+
+    @media all and (max-width:1240px) {
+        font-size: var(--font-size-s);       
+    }
+    @media all and (max-width:450px) {
+        font-size: var(--font-size-xs);
     }
 }
 
 .benefits__row {   
     padding: 55px;
     background-color: var(--white);
-    border-radius: 40px;    
+    border-radius: 40px; 
+
+
+    @media all and (max-width:860px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        
+    }
+    
+    @media all and (max-width:680px) {    
+        padding: 40px 40px;
+    }
+
+    @media all and (max-width:450px) {      
+        padding: 40px 20px;
+    }
+    @media all and (max-width:340px) {
+        row-gap: 40px;
+    }
 }
 .benefit__text {
     font-weight: 400;
-    width: 260px;
+    max-width: 240px;
 
-    @media all and (max-width:1360px) {
-        font-size:var(--font-size-s);
-        width: 200px;
+
+    @media all and (max-width:1240px) {    
+    font-size: var(--font-size-xs);
+    }
+    @media all and (max-width:860px) {
+        max-width: 100%;
+        font-size: var(--font-size-s);
+    }
+    @media all and (max-width:680px) {
+        font-size: var(--font-size-xs);
     }
 }
 .benefit__doc {
     position: relative;
     padding-left: 100px;
 
+    @media all and (max-width:1240px) {    
+        padding-left: 80px;          
+    }
+    @media all and (max-width:860px) {    
+        padding-left: 65px;          
+    }
 
     &::before {
         content: '';
@@ -82,11 +167,30 @@
         background-image: url(../../shared/assets/photo/document.png);
         background-repeat: no-repeat;
         background-size: cover;
+
+        
+    @media all and (max-width:1240px) {    
+        width: 60px;
+        height: 60px;
     }
+
+    @media all and (max-width:860px) {
+        width: 50px;
+        height: 50px;
+    }
+    }
+
 }
 .benefit__vet {
     position: relative; 
     padding-left: 100px;
+
+    @media all and (max-width:1240px) {    
+        padding-left: 80px;          
+    }
+    @media all and (max-width:860px) {    
+        padding-left: 65px;          
+    }
 
 
     &::before {
@@ -99,12 +203,27 @@
         background-image: url(../../shared/assets/photo/vet.png);
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media all and (max-width:1240px) {    
+            width: 60px;
+            height: 60px;
+        }
+        @media all and (max-width:860px) {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
 .benefit__question {
     position: relative;  
     padding-left: 100px;
 
+    @media all and (max-width:1240px) {    
+        padding-left: 80px;          
+    }
+    @media all and (max-width:860px) {    
+        padding-left: 65px;          
+    }
 
     &::before {
         content: '';
@@ -116,5 +235,14 @@
         background-image: url(../../shared/assets/photo/care.png);
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media all and (max-width:1240px) {    
+            width: 60px;
+            height: 60px;           
+        }
+        @media all and (max-width:860px) {
+            width: 50px;
+            height: 50px;
+        }
     }
 }
