@@ -2,7 +2,7 @@ import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { Button } from "../../../../shared/ui/Button/Button";
 import { Text } from "../../../../shared/ui/Text/Text";
 import { Stack } from "../../../../shared/ui/Stack/Stack"
-import { NavbarContainer } from "../NavbarContainer/NavbarContainer";
+import { NavbarContainer } from "../navbarContainer/NavbarContainer";
 import styles from "./HeaderMain.module.scss";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
 

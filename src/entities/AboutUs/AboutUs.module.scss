@@ -1,3 +1,26 @@
+@mixin responsive-icon {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin position-icons (
+    $pad:100px,  
+
+) {
+    position: relative; 
+    padding-left: $pad;   
+}
+@mixin icons-width ($widht, $height) {
+    width: $widht;
+    height: $height;     
+}
+
 .section {
     margin-top: 60px;
 }
@@ -7,7 +30,7 @@
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
     padding: 0 var(--container-padding-x); 
     
-    
+
     @media all and (max-width:590px) {
         padding: 0 40px; 
     }
@@ -146,103 +169,76 @@
         font-size: var(--font-size-xs);
     }
 }
-.benefit__doc {
-    position: relative;
-    padding-left: 100px;
 
-    @media all and (max-width:1240px) {    
-        padding-left: 80px;          
-    }
-    @media all and (max-width:860px) {    
-        padding-left: 65px;          
-    }
+.benefit__doc { 
+    @include position-icons;   
 
-    &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;   
-        background-image: url(../../shared/assets/photo/document.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        
-    @media all and (max-width:1240px) {    
-        width: 60px;
-        height: 60px;
-    }
-
-    @media all and (max-width:860px) {
-        width: 50px;
-        height: 50px;
-    }
-    }
-
+    @media all and (max-width:1240px) { 
+    @include position-icons(80px); 
 }
+    @media all and (max-width:860px) {    
+    @include position-icons(65px);         
+}
+
+    &::before {
+        @include responsive-icon;       
+        background-image: url(../../shared/assets/photo/document.png);
+      
+        
+        @media all and (max-width:1240px) {    
+            @include icons-width(60px, 60px);
+        }
+
+        @media all and (max-width:860px) {
+            @include icons-width(50px, 50px);
+        }
+        
+        }
+}
+
 .benefit__vet {
-    position: relative; 
-    padding-left: 100px;
+    @include position-icons; 
 
     @media all and (max-width:1240px) {    
-        padding-left: 80px;          
+        @include position-icons(80px);          
     }
     @media all and (max-width:860px) {    
-        padding-left: 65px;          
+        @include position-icons(65px);         
     }
 
 
     &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;   
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/vet.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        
 
         @media all and (max-width:1240px) {    
-            width: 60px;
-            height: 60px;
+            @include icons-width(60px, 60px);
         }
         @media all and (max-width:860px) {
-            width: 50px;
-            height: 50px;
+            @include icons-width(50px, 50px);
         }
     }
 }
 .benefit__question {
-    position: relative;  
-    padding-left: 100px;
+    @include position-icons; 
 
     @media all and (max-width:1240px) {    
-        padding-left: 80px;          
+        @include position-icons(80px);         
     }
     @media all and (max-width:860px) {    
-        padding-left: 65px;          
+        @include position-icons(65px);         
     }
 
     &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;        
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/care.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
+    
         @media all and (max-width:1240px) {    
-            width: 60px;
-            height: 60px;           
+            @include icons-width(60px, 60px);           
         }
         @media all and (max-width:860px) {
-            width: 50px;
-            height: 50px;
+            @include icons-width(50px, 50px);
         }
     }
 }
