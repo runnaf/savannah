@@ -25,7 +25,7 @@ export const routeConfig = {
         path: getRoutePets(),
         element: <PetsPage />,
         navlink: 'питомцы',
-        img: petsIcon,
+        img: petsIcon(),
     },
     // admin_panel: {
     //     path: getRouteAdminPanel(),
