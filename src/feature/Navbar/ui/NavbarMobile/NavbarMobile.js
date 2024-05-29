@@ -1,20 +1,19 @@
 import { routeConfig } from '@/app/providers/router/config/routerConfig';
-import { Button } from '@/shared/ui/Button/Button';
 import { Signin } from '@/features/Signin';
+import { signinIcon } from '@/shared/assets/svg/navbarIcons';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
 import { useModal } from '@/shared/hooks/useModal';
 import { useAppRoutes } from '@/shared/hooks/useAppRoutes';
 
-import styles from './NavbarDesktop.module.scss';
+import styles from './NavbarMobile.module.scss';
 
-
-export const NavbarDesktop = () => {
+export const NavbarMobile = () => {
     const [changeSigninModal, drawSiginModal] = useModal();
-    const routes = useAppRoutes(routeConfig);
+    const routes = useAppRoutes(routeConfig, true);
 
     return (
-        <>
+        <div className={styles.container}>
             {drawSiginModal(
                 <Signin changeSigninModal={changeSigninModal} />
             )}
@@ -26,18 +25,18 @@ export const NavbarDesktop = () => {
                             key={route.path}
                             route={route}
                             styles={styles}
+                            isDefaultStyle={true}
                         />
                     ))
                 }
-
-                <Button
+                <button
+                    className={styles.button}
                     onClick={changeSigninModal}
-                    className={styles.buttonSigin}
-                    variant="secondary"
                 >
                     войти
-                </Button>
+                    {signinIcon()}
+                </button>
             </nav>
-        </>
+        </div>
     );
 };
