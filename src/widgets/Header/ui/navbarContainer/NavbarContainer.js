@@ -1,10 +1,14 @@
 import { isMobile } from 'react-device-detect';
-import { Navbar } from "../../../../feature/Navbar/Navbar";
-import { Button } from "../../../../shared/ui/Button/Button";
-import styles from "./NavbarContainer.module.scss";
 import { useLocation } from 'react-router';
-import { useModal } from '../../../../shared/hooks/useModal';
-import { Signin } from '../../../../feature/Signin/Signin';
+
+import { Navbar } from "@feature/Navbar/Navbar";
+import { Button } from "@shared/ui/Button/Button";
+import { Signin } from '@feature/Signin/Signin';
+
+import { useModal } from '@shared/hooks/useModal';
+
+import styles from "./NavbarContainer.module.scss";
+
 
 export const NavbarContainer = () => {
     
