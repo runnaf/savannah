@@ -1,4 +1,4 @@
-import { routeConfig } from '@/app/providers/router/config/routerConfig';
+import { routeConfig } from '@/app/providers/router/config/index';
 import { Button } from '@/shared/ui/Button/Button';
 import { Signin } from '@/features/Signin';
 import { AppNavLink } from '../AppNavLink/AppNavLink';

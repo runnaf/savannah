@@ -1,4 +1,4 @@
-import { routeConfig } from '@/app/providers/router/config/routerConfig';
+import { routeConfig } from '@/app/providers/router/config/index';
 import { Signin } from '@/features/Signin';
 import { signinIcon } from '@/shared/assets/svg/navbarIcons';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
