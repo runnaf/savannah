@@ -1,6 +1,6 @@
 import { routeConfig } from '@/app/providers/router/config/index';
 import { Button } from '@/shared/ui/Button/Button';
-import { Signin } from '@/features/Signin';
+import { Signin } from '@/feature/Signin/Signin';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
 import { useModal } from '@/shared/hooks/useModal';
@@ -11,7 +11,9 @@ import styles from './NavbarDesktop.module.scss';
 
 export const NavbarDesktop = () => {
     const [changeSigninModal, drawSiginModal] = useModal();
+    console.log(routeConfig)
     const routes = useAppRoutes(routeConfig);
+    console.log(routes)
 
     return (
         <>

@@ -1,5 +1,5 @@
-import { NavbarDesktop } from "./ui/NavbarDesktop/NavbarDesktop";
-import { NavbarMobile } from './ui/NavbarMobile/NavbarMobile';
+import { NavbarDesktop } from "./NavbarDesktop/NavbarDesktop";
+import { NavbarMobile } from './NavbarMobile/NavbarMobile';
 
 export {
     NavbarDesktop,
