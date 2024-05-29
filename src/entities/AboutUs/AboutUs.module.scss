@@ -34,7 +34,7 @@
     @media all and (max-width:590px) {
         padding: 0 40px; 
     }
-    @media all and (max-width:370px) {
+    @media all and (max-width:340px) {
         padding: 0 20px; 
     }
 }
@@ -79,11 +79,10 @@
     }
     @media all and (max-width:590px) {  
         padding: 0 40px;
-    }
-    @media all and (max-width:450px) {
         font-size: var(--font-size-s);
     }
-    @media all and (max-width:370px) {
+    
+    @media all and (max-width:340px) {
         padding: 0 20px; 
     }
 }

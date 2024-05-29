@@ -20,7 +20,7 @@ const AccordionItem = ({
             <li className={getStyle(styles.list, {}, additional)}>    
                 <button className={ isOpen ?  styles.open : styles.question}               
                         onClick={() => onClick()}>
-                            {element.question} {isOpen ? <span className={styles.icons}>{minusIcon()}</span> : <span>{plusIcon()}</span> }            
+                            {element.question} {isOpen ? <span>{minusIcon()}</span> : <span>{plusIcon()}</span> }            
                 </button>                 
                 {
                     isOpen &&                   

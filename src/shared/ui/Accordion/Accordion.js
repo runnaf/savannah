@@ -2,6 +2,7 @@
 import { useState } from "react";
 import AccordionItem from "./AccordionItem";
 
+
     const Accordion = ({accordionData}) => {
 
         const [collapse, setCollapse] = useState(false);

@@ -1,5 +1,5 @@
 import { HeaderPictureSecondary } from "../HeaderPictureSecondary/HeaderPictureSecondary";
-import { NavbarContainer } from "../navbarContainer/NavbarContainer";
+import { NavbarContainer } from "../NavbarContainer/NavbarContainer";
 import styles from "./HeaderSecondary.module.scss";
 
 export const HeaderSecondary = () => {
