@@ -1,4 +1,28 @@
 @import '../../app/styles/mixins.scss';
+
+@mixin responsive-icon {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 0; 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    @mixin position-icons (
+        $pad:100px, 
+    
+    ) {
+        position: relative; 
+        padding-left: $pad; 
+    }
+    @mixin icons-width ($widht, $height) {
+        width: $widht;
+        height: $height; 
+    }
+    
 .section {
     margin-top: 60px;
 
@@ -83,14 +107,12 @@
     text-align: justify;
     padding: 20px 0;
 
-
     @include desktop-l {
         row-gap: 15px; 
     }
     @include tablet-l {
         padding: 0;
     }
-    
 }
 .par {
 
@@ -140,71 +162,51 @@
     }
 }
 .benefit__doc {
-    position: relative;
-    padding-left: 100px;
+    @include position-icons;
+   
 
     @include desktop-m {    
-        padding-left: 80px;          
+        @include position-icons(80px);          
     }
     @include tablet-m {    
-        padding-left: 65px;          
+        @include position-icons(65px);          
     }
 
     &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;   
+        @include responsive-icon; 
         background-image: url(../../shared/assets/photo/document.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
         
         @include desktop-m {    
-        width: 60px;
-        height: 60px;
+            @include icons-width(60px, 60px);
     }
 
     @include tablet-m {
-        width: 50px;
-        height: 50px;
+        @include icons-width(50px, 50px);
     }
     }
 
 }
 .benefit__vet {
-    position: relative; 
-    padding-left: 100px;
+    @include position-icons;   
 
     @include desktop-m {    
-        padding-left: 80px;          
+        @include position-icons(80px);          
     }
     @include tablet-m {    
-        padding-left: 65px;          
+        @include position-icons(65px);          
     }
 
 
     &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;   
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/vet.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
+        
         @include desktop-m {    
-            width: 60px;
-            height: 60px;
-        }
+            @include icons-width(60px, 60px);
+    }
         @include tablet-m {
-            width: 50px;
-            height: 50px;
-        }
+            @include icons-width(50px, 50px);
+    }
     }
 }
 .benefit__question {
@@ -219,23 +221,15 @@
     }
 
     &::before {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 0;        
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/care.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-
+        
         @include desktop-m {    
-            width: 60px;
-            height: 60px;           
-        }
+            @include icons-width(60px, 60px);
+    }
+
         @include tablet-m {
-            width: 50px;
-            height: 50px;
-        }
+            @include icons-width(50px, 50px);
+    }
     }
 }
