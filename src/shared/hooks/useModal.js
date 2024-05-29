@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "../ui/Modal/Modal";
 
 export const useModal = () => {
@@ -7,6 +7,13 @@ export const useModal = () => {
     const changeOpen = async () => {
         setIsOpen(p => !p);
     };
+
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : ''
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [isOpen])
 
     const drawModal = child => {
         return (

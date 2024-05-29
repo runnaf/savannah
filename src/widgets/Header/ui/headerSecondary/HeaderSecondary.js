@@ -6,9 +6,7 @@ export const HeaderSecondary = () => {
     return (
         <header className={styles.header}>
             <HeaderPictureSecondary />
-            <div className={styles.headerContext}>
-                <NavbarContainer />
-            </div>
+            <NavbarContainer />
         </header>
     )
 }
