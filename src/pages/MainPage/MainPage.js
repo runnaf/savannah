@@ -4,12 +4,12 @@ import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
   return (
-<div>
+
     <div className={styles.MainPage}>
       <Header />
       <AboutUs />
     </div>
 
-    </div>
+
   )
 };

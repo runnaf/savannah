@@ -1,10 +1,10 @@
 import { Stack } from "../../shared/ui/Stack/Stack";
-import styles from './Add.module.scss';
+import styles from './CreateCatCard.module.scss';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
 import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
 
 
-export const Add = () => {
+export const CreateCatCard = () => {
     return (
         <Stack
             justifyContent='justifyCenter'

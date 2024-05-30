@@ -1,6 +1,6 @@
 // import styles from './CatalogPage.module.scss';
-import { Edit } from '../../widgets/EditCatCard/Edit';
-import { Add } from '../../widgets/CreateCatCard/Add';
+import { EditCatCard } from '../../widgets/EditCatCard/EditCatCard';
+import { CreateCatCard } from '../../widgets/CreateCatCard/CreateCatCard';
 import { FilterCats } from '../../feature/FilterCats/FilterCats';
 
 export const CatalogPage = () => {
@@ -9,10 +9,10 @@ export const CatalogPage = () => {
         <div>
     <FilterCats/>   
       <div>
-    <Edit/>
+    <EditCatCard/>
     </div>
     <div>
-    <Add/>
+    <CreateCatCard/>
     </div>
 
         </div>

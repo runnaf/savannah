@@ -1,12 +1,12 @@
 import { Stack } from '../../shared/ui/Stack/Stack';
-import styles from './Edit.module.scss';
+import styles from './EditCatCard.module.scss';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
 import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
 import editPhoto from '../../shared/assets/photo/editCatImg.png';
 
 
 
-export const Edit = () => {
+export const EditCatCard = () => {
     return (
         <Stack
             justifyContent='justifyCenter'

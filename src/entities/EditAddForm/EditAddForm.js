@@ -26,11 +26,7 @@ export const EditAddForm = () => {
             placeholder='имя'
             // onChange={() => console.log()}
         />
-        <Input
-        className={styles.editInput}
-            placeholder='возраст'
-            // onChange={() => console.log()}
-        />
+
         <Select title="Возраст" options={dataSelect.OptionsAge} />
         <Select title="Пол" options={dataSelect.OptionsSex} />
         <Select title="Цвет" options={dataSelect.OptionsColor} />

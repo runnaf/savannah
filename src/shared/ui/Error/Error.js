@@ -1,12 +1,21 @@
 import styles from './Error.module.scss';
+import { getStyle } from '../../helper/getStyle';
 
-const Error = () => {
+
+export const Error = ({
+    className,
+    text,
+    ...otherProps
+}) => {
+
+    const additional = [
+        className
+    ]
     return (
-        <div className={styles.error}>
-            <p className={styles.errortext}>
-            Введен неверный логин или пароль
-            </p>
-        </div>
+        <div
+            className={getStyle(styles.error, {}, additional)}
+            {...otherProps}>
+        <p className={getStyle(styles.errortext, {}, additional)}>{text}</p>
+            </div>
     )}
 
-    export default Error;
