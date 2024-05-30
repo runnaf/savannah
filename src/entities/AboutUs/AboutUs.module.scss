@@ -25,66 +25,62 @@
 
 .section {
     margin-top: 60px;
+
+    @include mobile-l {
+        margin-top: 40px;
+    }
 }
 
 .container {    
     margin: 0 auto;
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
     padding: 0 var(--container-padding-x); 
-    
-
-    @media all and (max-width:590px) {
+      
+  
+    @include mobile-l {
         padding: 0 40px; 
     }
-    @media all and (max-width:340px) {
+    @include mobile-m {
         padding: 0 20px; 
     }
 }
 .about__row {
     display: flex;
     justify-content: space-between;
-    column-gap: 120px;
+    column-gap: clamp(20px, 5vw, 120px);
     align-items: center;    
-    margin-top: 70px;
-
-
-    @media all and (max-width:1600px) {
-        column-gap: 70px;
-    }
-    @media all and (max-width:1540px) {
-        column-gap: 50px;
-    }
-    @media all and (max-width:1270px) {
-        column-gap: 30px;
-    }
-    @media all and (max-width:1095px) {
+    margin-top: 60px;
+  
+    @include tablet-l {
         display: flex;
         flex-direction: column;
         row-gap: 50px;
+    }
+    @include mobile-l {
+        margin-top: 40px;
     }
 }
 
 .title {
     font-weight: 500;
+    text-align: center;
+    padding: 0 90px;
 
 
-    @media all and (max-width:1440px) {    
+    @include desktop-l {    
         font-size: var(--font-size-l);
     }
-    @media all and (max-width:1240px) {    
+    @include desktop-m {    
         font-size: var(--font-size-ml);
     }
-    @media all and (max-width:795px) {    
+    @include tablet-m {    
         font-size: var(--font-size-m);
-        padding: 0 90px;
-        text-align: center;
     }
-    @media all and (max-width:590px) {  
-        padding: 0 40px;
+    @include mobile-l {  
         font-size: var(--font-size-s);
+        padding: 0 40px;
     }
-    
-    @media all and (max-width:340px) {
+    @include mobile-m {
         padding: 0 20px; 
     }
 }
@@ -93,13 +89,13 @@
     width: clamp(430px, 40vw, 600px);
     border-radius: 83px;
 
-    @media all and (max-width:1095px) {
+    @include tablet-l {
         width: 100%;
     }
-    @media all and (max-width:795px) {
+    @include tablet-m {
         border-radius: 60px;
     }
-    @media all and (max-width:590px) {
+    @include mobile-l {
         border-radius: 40px;
     }
 }
@@ -111,21 +107,19 @@
     text-align: justify;
     padding: 20px 0;
 
-
-    @media all and (max-width:1440px) {
+    @include desktop-l {
         row-gap: 15px; 
     }
-    @media all and (max-width:1095px) {
+    @include tablet-l {
         padding: 0;
     }
-    
 }
 .par {
 
-    @media all and (max-width:1240px) {
+    @include desktop-m {
         font-size: var(--font-size-s);       
     }
-    @media all and (max-width:450px) {
+    @include mobile-l {
         font-size: var(--font-size-xs);
     }
 }
@@ -136,21 +130,18 @@
     border-radius: 40px; 
 
 
-    @media all and (max-width:860px) {
+    @include tablet-m {
         display: flex;
         flex-direction: column;
         row-gap: 60px;
+        padding: 40px 40px;
         
     }
     
-    @media all and (max-width:680px) {    
-        padding: 40px 40px;
-    }
-
-    @media all and (max-width:450px) {      
+    @include mobile-l {      
         padding: 40px 20px;
     }
-    @media all and (max-width:340px) {
+    @include mobile-m {
         row-gap: 40px;
     }
 }
@@ -159,52 +150,50 @@
     max-width: 240px;
 
 
-    @media all and (max-width:1240px) {    
+    @include desktop-m {    
     font-size: var(--font-size-xs);
     }
-    @media all and (max-width:860px) {
+    @include tablet-m {
         max-width: 100%;
         font-size: var(--font-size-s);
     }
-    @media all and (max-width:680px) {
+    @include mobile-l {
         font-size: var(--font-size-xs);
     }
 }
+.benefit__doc {
+    @include position-icons;
+   
 
-.benefit__doc { 
-    @include position-icons;   
-
-    @media all and (max-width:1240px) { 
-    @include position-icons(80px); 
-}
-    @media all and (max-width:860px) {    
-    @include position-icons(65px);         
-}
-
-    &::before {
-        @include responsive-icon;       
-        background-image: url(../../shared/assets/photo/document.png);
-      
-        
-        @media all and (max-width:1240px) {    
-            @include icons-width(60px, 60px);
-        }
-
-        @media all and (max-width:860px) {
-            @include icons-width(50px, 50px);
-        }
-        
-        }
-}
-
-.benefit__vet {
-    @include position-icons; 
-
-    @media all and (max-width:1240px) {    
+    @include desktop-m {    
         @include position-icons(80px);          
     }
-    @media all and (max-width:860px) {    
-        @include position-icons(65px);         
+    @include tablet-m {    
+        @include position-icons(65px);          
+    }
+
+    &::before {
+        @include responsive-icon; 
+        background-image: url(../../shared/assets/photo/document.png);
+        
+        @include desktop-m {    
+            @include icons-width(60px, 60px);
+    }
+
+    @include tablet-m {
+        @include icons-width(50px, 50px);
+    }
+    }
+
+}
+.benefit__vet {
+    @include position-icons;   
+
+    @include desktop-m {    
+        @include position-icons(80px);          
+    }
+    @include tablet-m {    
+        @include position-icons(65px);          
     }
 
 
@@ -212,34 +201,34 @@
         @include responsive-icon;
         background-image: url(../../shared/assets/photo/vet.png);
         
-
-        @media all and (max-width:1240px) {    
+        @include desktop-m {    
             @include icons-width(60px, 60px);
-        }
-        @media all and (max-width:860px) {
+    }
+        @include tablet-m {
             @include icons-width(50px, 50px);
-        }
+    }
     }
 }
 .benefit__question {
     @include position-icons; 
 
-    @media all and (max-width:1240px) {    
-        @include position-icons(80px);         
+    @include desktop-m {    
+        @include position-icons(80px);        
     }
-    @media all and (max-width:860px) {    
+    @include tablet-m {    
         @include position-icons(65px);         
     }
 
     &::before {
         @include responsive-icon;
         background-image: url(../../shared/assets/photo/care.png);
-    
-        @media all and (max-width:1240px) {    
-            @include icons-width(60px, 60px);           
-        }
-        @media all and (max-width:860px) {
+        
+        @include desktop-m {    
+            @include icons-width(60px, 60px);
+    }
+
+        @include tablet-m {
             @include icons-width(50px, 50px);
-        }
+    }
     }
 }
