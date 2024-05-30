@@ -1,9 +1,7 @@
-
 import { Stack } from "../../shared/ui/Stack/Stack";
 import { Text } from "../../shared/ui/Text/Text";
 import styles from './AboutUs.module.scss';
 import aboutPicture from '../../shared/assets/photo/aboutus.png';
-
 
 const AboutUs = () => {
     return (
