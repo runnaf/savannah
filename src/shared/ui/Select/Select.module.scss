@@ -4,6 +4,10 @@
     background-color: white;
     margin-top: 5px;
   }
+  .titleText{
+    @media (max-width: 1439px) {
+      font-size: var(--font-size-xs);}
+  }
   .selectBox{
     width:263px;
     height:62px;
