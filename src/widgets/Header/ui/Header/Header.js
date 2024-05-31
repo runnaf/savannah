@@ -9,8 +9,8 @@ export const Header = () => {
         <>
             {
                 location.pathname === '/'
-                    ? <HeaderMain />
-                    : <HeaderSecondary />
+                    ? <HeaderMain /> :
+                    <HeaderSecondary />
             }
         </>
     )
