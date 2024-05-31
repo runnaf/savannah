@@ -22,12 +22,15 @@
       width: 180px;
       height: 40px;
       font-size: var(--font-size-xs);
-      padding:8px 18px 8px 18px;
+      padding:5px 15px 5px 15px;
   }
   }
   .icon{
     width: 40px;
     color: var(--dark-brown);
+    @media (max-width: 1439px) {
+      height: 30px;
+  }
   }
   
 p{
