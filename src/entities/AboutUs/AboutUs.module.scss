@@ -1,117 +1,234 @@
+@import '../../app/styles/media-queries.scss';
+
+@mixin responsive-icon {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin position-icons (
+    $pad:100px,  
+
+) {
+    position: relative; 
+    padding-left: $pad;   
+}
+@mixin icons-width ($widht, $height) {
+    width: $widht;
+    height: $height;     
+}
+
 .section {
     margin-top: 60px;
+
+    @include mobile-l {
+        margin-top: 40px;
+    }
 }
 
 .container {    
     margin: 0 auto;
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
-    padding: 0 var(--container-padding-x);  
+    padding: 0 var(--container-padding-x); 
+      
+  
+    @include mobile-l {
+        padding: 0 40px; 
+    }
+    @include mobile-m {
+        padding: 0 20px; 
+    }
 }
 .about__row {
     display: flex;
     justify-content: space-between;
-    column-gap: 120px;
+    column-gap: clamp(20px, 5vw, 120px);
     align-items: center;    
-    margin-top: 70px;
-
-
-    @media all and (max-width:1600px) {
-        column-gap: 70px;
+    margin-top: 60px;
+  
+    @include tablet-l {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
     }
-    @media all and (max-width:1540px) {
-        column-gap: 50px;
+    @include mobile-l {
+        margin-top: 40px;
     }
 }
 
 .title {
     font-weight: 500;
+    text-align: center;
+    padding: 0 90px;
+
+
+    @include desktop-l {    
+        font-size: var(--font-size-l);
+    }
+    @include desktop-m {    
+        font-size: var(--font-size-ml);
+    }
+    @include tablet-m {    
+        font-size: var(--font-size-m);
+    }
+    @include mobile-l {  
+        font-size: var(--font-size-s);
+        padding: 0 40px;
+    }
+    @include mobile-m {
+        padding: 0 20px; 
+    }
 }
+
 .picture {
-    width: clamp(400px, 40vw, 600px);
+    width: clamp(430px, 40vw, 600px);
     border-radius: 83px;
+
+    @include tablet-l {
+        width: 100%;
+    }
+    @include tablet-m {
+        border-radius: 60px;
+    }
+    @include mobile-l {
+        border-radius: 40px;
+    }
 }
 .text {  
-    row-gap: 50px;   
+    row-gap: 30px;   
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
     text-align: justify;
     padding: 20px 0;
 
-    @media all and (max-width:1540px) {
-        row-gap: 30px;
+    @include desktop-l {
+        row-gap: 15px; 
     }
-    @media all and (max-width:1440px) {
-        row-gap: 20px;
+    @include tablet-l {
+        padding: 0;
     }
 }
-.par { 
+.par {
 
-    @media all and (max-width:1360px) {
-        font-size: var(--font-size-m);
+    @include desktop-m {
+        font-size: var(--font-size-s);       
+    }
+    @include mobile-l {
+        font-size: var(--font-size-xs);
     }
 }
+
 .benefits__row {   
     padding: 55px;
     background-color: var(--white);
-    border-radius: 40px;    
+    border-radius: 40px; 
+
+
+    @include tablet-m {
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        padding: 40px 40px;
+        
+    }
+    
+    @include mobile-l {      
+        padding: 40px 20px;
+    }
+    @include mobile-m {
+        row-gap: 40px;
+    }
 }
 .benefit__text {
     font-weight: 400;
-    width: 260px;
+    max-width: 240px;
 
-    @media all and (max-width:1360px) {
-        font-size:var(--font-size-s);
-        width: 200px;
+
+    @include desktop-m {    
+    font-size: var(--font-size-xs);
+    }
+    @include tablet-m {
+        max-width: 100%;
+        font-size: var(--font-size-s);
+    }
+    @include mobile-l {
+        font-size: var(--font-size-xs);
     }
 }
 .benefit__doc {
-    position: relative;
-    padding-left: 100px;
+    @include position-icons;
+   
 
+    @include desktop-m {    
+        @include position-icons(80px);          
+    }
+    @include tablet-m {    
+        @include position-icons(65px);          
+    }
 
     &::before {
-        content: '';
-        display: block;
-        width: 90px;
-        height: 90px;
-        position: absolute;
-        left: 0;   
-        background-image: url(../../shared/assets/photo/doc.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include responsive-icon; 
+        background-image: url(../../shared/assets/photo/document.png);
+        
+        @include desktop-m {    
+            @include icons-width(60px, 60px);
     }
+
+    @include tablet-m {
+        @include icons-width(50px, 50px);
+    }
+    }
+
 }
 .benefit__vet {
-    position: relative; 
-    padding-left: 100px;
+    @include position-icons;   
+
+    @include desktop-m {    
+        @include position-icons(80px);          
+    }
+    @include tablet-m {    
+        @include position-icons(65px);          
+    }
 
 
     &::before {
-        content: '';
-        display: block;
-        width: 90px;
-        height: 90px;
-        position: absolute;
-        left: 0;   
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/vet.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        
+        @include desktop-m {    
+            @include icons-width(60px, 60px);
+    }
+        @include tablet-m {
+            @include icons-width(50px, 50px);
+    }
     }
 }
 .benefit__question {
-    position: relative;  
-    padding-left: 110px;
+    @include position-icons; 
 
+    @include desktop-m {    
+        @include position-icons(80px);        
+    }
+    @include tablet-m {    
+        @include position-icons(65px);         
+    }
 
     &::before {
-        content: '';
-        display: block;
-        width: 90px;
-        height: 90px;
-        position: absolute;
-        left: 0;        
+        @include responsive-icon;
         background-image: url(../../shared/assets/photo/care.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        
+        @include desktop-m {    
+            @include icons-width(60px, 60px);
+    }
+
+        @include tablet-m {
+            @include icons-width(50px, 50px);
+    }
     }
 }

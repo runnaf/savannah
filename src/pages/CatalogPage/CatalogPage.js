@@ -7,14 +7,7 @@ export const CatalogPage = () => {
 
     return (
         <div>
-    <FilterCats/>   
-      <div>
-    <EditCatCard/>
-    </div>
-    <div>
-    <CreateCatCard/>
-    </div>
-
+            <h1>Catalog Page</h1>
         </div>
     )
 };

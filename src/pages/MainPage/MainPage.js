@@ -1,15 +1,14 @@
 import AboutUs from '../../entities/AboutUs/AboutUs';
-import { Header } from '../../widgets/Header/Header';
+import OurKittens from '../../entities/OurKittens/ui/OurKittensList/OurKittens';
+import AccordionComponent from '../../entities/AccordionComponent/ui/AccordionComponent';
 import styles from './MainPage.module.scss';
 
 export const MainPage = () => {
   return (
-
-    <div className={styles.MainPage}>
-      <Header />
+    <main className={styles.MainPage}>
       <AboutUs />
-    </div>
-
-
+      <OurKittens/>
+      <AccordionComponent />
+    </main>
   )
 };

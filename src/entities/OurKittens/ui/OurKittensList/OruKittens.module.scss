@@ -1,0 +1,135 @@
+@import '../../../../app/styles/media-queries.scss';
+
+.section {
+    margin-top: 60px;
+    @include mobile-l {
+        margin-top: 40px;
+    }
+}
+
+.container {    
+    margin: 0 auto;
+    max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
+    padding: 0 var(--container-padding-x); 
+    
+    
+    @include mobile-l {
+        padding: 0 40px; 
+    }
+    @include mobile-m {
+        padding: 0 20px; 
+    }
+}
+.kittens__row {
+    display: flex;    
+    justify-content: space-between;
+    column-gap: clamp(10px, 2vw, 105px);
+    margin-top: 60px;
+
+    @include tablet-l {
+        column-gap: clamp(10px, 2vw, 50px);
+        justify-content: center;
+    }
+    @include mobile-l {
+        margin-top: 40px;
+    }
+}
+.title {
+    font-weight: 500;   
+    text-align: center;
+    padding: 0 90px;
+
+
+    @include desktop-l {    
+        font-size: var(--font-size-l);
+    }
+    @include desktop-m {    
+        font-size: var(--font-size-ml);
+    }
+    @include tablet-m {    
+        font-size: var(--font-size-m);
+    }
+    @include mobile-l {  
+        font-size: var(--font-size-s);
+        padding: 0 40px;
+    }
+    @include mobile-m {
+        padding: 0 20px; 
+    }
+}
+.kitten__btn {
+    width: clamp(240px, 15vw, 300px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+
+    @include tablet-m {
+        
+        font-size: var(--font-size-xs);
+    }
+
+    & svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+.kittens__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 45px;
+    width: clamp(240px, 25vw, 410px);
+    height: 100%;
+
+    @include tablet-l {
+        width: clamp(240px, 40vw, 410px);
+    }
+    @include mobile-l {
+        width: 100%;
+    }
+}
+.description {  
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.5px; 
+    margin-bottom: 45px;
+    
+    
+    @include desktop-m {
+        font-size: var(--font-size-s);       
+    }
+    @include mobile-m {
+        font-size: var(--font-size-xs);
+    }
+}
+.kitten__name {
+    color: var(--black);
+    font-weight: 700;
+
+    @include desktop-m {
+        font-size: var(--font-size-ml);       
+    }
+    @include mobile-m {
+        font-size: var(--font-size-m);
+    }
+}
+.card__body {
+    display: flex;
+    flex-direction: column;  
+    flex-grow: 1;
+}
+.kitten__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 47px;
+}
+.card__item__three {
+    @include tablet-l {
+        display: none;
+    }
+}
+.card__item__two {
+    @include mobile-l {
+        display: none;
+    }
+}

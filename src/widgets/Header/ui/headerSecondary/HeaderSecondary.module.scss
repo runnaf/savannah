@@ -1,0 +1,17 @@
+.header {
+    background-color: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 var(--desktop-padding);
+
+    @media (max-width: 1440px) {
+        padding: 0 var(--tablet-padding);
+    }
+
+    @media (max-width: 820px) {
+        padding: 0 var(--mobile-padding);
+    }
+}
+

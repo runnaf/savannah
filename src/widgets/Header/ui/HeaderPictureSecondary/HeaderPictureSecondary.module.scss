@@ -1,0 +1,12 @@
+.picture {
+    width: 230px;
+    height: auto;
+
+    @media (max-width: 1439px) {
+        width: 150px;
+    }
+
+    @media (max-width: 767px) {
+        width: 100px;
+    }
+}
