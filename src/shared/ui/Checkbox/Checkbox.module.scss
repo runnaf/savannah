@@ -17,6 +17,10 @@
     border: 1.5px solid var(--dark-brown);
     background-repeat: no-repeat;
     background-position: center center;
+    @media (max-width: 1439px) {
+        width: 18px;
+        height: 18px;
+    }
     
 }
 .checkbox:checked+label::before {

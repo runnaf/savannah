@@ -5,6 +5,10 @@
     background-color: var(--light-brown);
     border-radius: 15px;
     gap: 50px;
+    @media (max-width: 1439px) {
+        width: 700px;
+        height: 500px;
+    }
 }
 
 .addImgBox{
@@ -18,8 +22,16 @@
     height: 465px;
     background-color: var(--white);
     border-radius: 47px;
+        @media (max-width: 1439px) {
+            width: 280px;
+            height: 335px;
+    }
+
 }
 
 .editIcon{
     position: absolute;
+    @media (max-width: 1439px) {
+        width: 70px;
+}
 }

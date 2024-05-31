@@ -5,20 +5,27 @@
     background-color: var(--light-brown);
     border-radius: 15px;
     gap: 50px;
+    @media (max-width: 1439px) {
+        width: 700px;
+        height: 500px;
+    }
 }
 
-.buttonEdit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 .editImgBox{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.editPhoto{
+    @media (max-width: 1439px) {
+        width: 280px;
+        height: 335px;
+}
+}
 
 .editIcon{
     position: absolute;
+    @media (max-width: 1439px) {
+        width: 70px;
+}
 }
