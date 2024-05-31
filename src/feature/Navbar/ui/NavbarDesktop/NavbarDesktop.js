@@ -1,10 +1,10 @@
-import { routeConfig } from '@/app/providers/router/config/index';
-import { Button } from '@/shared/ui/Button/Button';
-import { Signin } from '@/feature/Signin/Signin';
+import { routeConfig } from '../../../../app/providers/router/config/index';
+import { Button } from '../../../../shared/ui/Button/Button';
+import { Signin } from '../../../../feature/Signin/Signin';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
-import { useModal } from '@/shared/hooks/useModal';
-import { useAppRoutes } from '@/shared/hooks/useAppRoutes';
+import { useModal } from '../../../../shared/hooks/useModal';
+import { useAppRoutes } from '../../../../shared/hooks/useAppRoutes';
 
 import styles from './NavbarDesktop.module.scss';
 import { getStyle } from '../../../../shared/helper/getStyle';

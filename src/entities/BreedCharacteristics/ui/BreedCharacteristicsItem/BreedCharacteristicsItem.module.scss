@@ -1,0 +1,98 @@
+.item {
+    background-color: rgba(253, 253, 253, 0.67);
+    max-width: 400px;
+    width: fit-content;
+    min-height: 1018px;
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    & img {
+        margin: auto auto 0 auto;
+
+        @media (max-width: 1240px) {
+            max-width: 170px;
+            height: auto;
+        }
+        @media (max-width: 795px) {    
+            max-width: 180px;
+        }
+        @media (max-width: 329px) {    
+            max-width: 150px;
+        }
+    }
+
+    @media (max-width: 1440px) {    
+        max-width: 320px;
+        min-height: 900px;
+        padding: 50px;
+    }
+    @media (max-width: 1200px) {    
+        max-width: 273px;
+        min-height: 700px;
+        padding: 30px;
+    }
+    @media (max-width: 1000px) {    
+        max-width: 360px;
+        min-height: 700px;
+        padding: 45px;
+    }
+    @media (max-width: 850px) {    
+        max-width: 280px;
+        min-height: 700px;
+        padding: 45px;
+    }
+    @media (max-width: 765px) {    
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 500px;
+    }
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+    padding-bottom: 32px;
+    text-transform: var(--text-uppercase);
+    margin-bottom: 56px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: var(--dark-brown);
+    }
+
+    @media (max-width: 1440px) {    
+        font-size: var(--font-size-ml);
+    }
+    @media (max-width: 1240px) {    
+        font-size: var(--font-size-m);
+    }
+    @media (max-width: 765px) {    
+        font-size: var(--font-size-s);
+    }
+}
+
+.text {
+    font-size: 30px;
+
+    @media (max-width: 1440px) {    
+        font-size: var(--font-size-m);
+    }
+    @media (max-width: 1240px) {    
+        font-size: var(--font-size-s);
+    }
+
+    @media (max-width: 765px) {    
+        font-size: var(--font-size-xs);
+    }
+}
+

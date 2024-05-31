@@ -6,6 +6,7 @@ import { Header } from '../widgets/Header/ui/Header/Header';
 import './styles/index.scss';
 import styles from './App.module.scss';
 
+
 function App() {
 
   return (
@@ -14,7 +15,6 @@ function App() {
       <RouterProvider />
       <ButtonUp />
       <ButtonSocial />
-      
     </div>
   );
 }

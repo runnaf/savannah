@@ -3,8 +3,8 @@ import { Signin } from '../../../../feature/Signin/Signin';
 import { signinIcon } from '../../../../shared/assets/svg/navbarIcons';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
-import { useModal } from '@/shared/hooks/useModal';
-import { useAppRoutes } from '@/shared/hooks/useAppRoutes';
+import { useModal } from '../../../../shared/hooks/useModal';
+import { useAppRoutes } from '../../../../shared/hooks/useAppRoutes';
 
 import styles from './NavbarMobile.module.scss';
 
