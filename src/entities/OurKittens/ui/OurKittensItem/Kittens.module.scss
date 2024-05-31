@@ -1,0 +1,19 @@
+@import '../../../../app/styles/media-queries.scss';
+.kittens__row {
+    display: flex;   
+    justify-content: space-between;
+    column-gap: clamp(10px, 2vw, 105px);
+  
+
+    @include tablet-l {
+        display: flex;   
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        column-gap: clamp(10px, 2vw, 50px);
+        justify-content: center;
+    }
+    @include tablet-m {
+        
+    }
+}

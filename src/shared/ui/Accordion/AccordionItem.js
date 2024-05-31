@@ -1,30 +1,30 @@
 import { minusIcon } from '../../assets/svg/minusIcon';
 import { plusIcon } from '../../assets/svg/plusIcon';
 import { getStyle } from '../../helper/getStyle';
+import { Button } from '../Button/Button';
 import styles from './AccordionItem.module.scss'
 
 const AccordionItem = ({
     element,
     onClick,
     isOpen,
-    className,
-    open
+    className
+  
 
 }) => {
 
     const additional = [
-        className,
-        styles[open]
+        className     
     ]
 
     return (
         <li className={getStyle(styles.list, {}, additional)}>
-            <button
+            <Button
                 className={isOpen ? styles.open : styles.question}
                 onClick={onClick}
             >
                 {element.question} {isOpen ? <span>{minusIcon()}</span> : <span>{plusIcon()}</span>}
-            </button>
+            </Button>
             {
                 isOpen &&
                 <div className={styles.answer}>

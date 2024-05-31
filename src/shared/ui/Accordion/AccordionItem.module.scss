@@ -1,3 +1,6 @@
+@import '../../../app/styles/media-queries.scss';
+
+
 @mixin accordion-btn{
     display: flex;
     justify-content: space-between;
@@ -6,11 +9,9 @@
     width: 100%;    
     padding: 17px 58px;
     text-align: start;
-    background-color: var(--dark-brown);
-    color: var(--white);
-    cursor: pointer; 
-
-    @media all and (max-width: 795px) {
+   
+  
+    @include tablet-m {
         padding: 15px;
     }
 }
@@ -21,11 +22,11 @@
     
     & svg {
 
-        @media all and (max-width:795px) {
+        @include tablet-m {
             width: 40px;
             height: 40px;          
         }
-        @media all and (max-width:590px) {
+        @include mobile-l {
             width: 30px;
             height: 30px;          
         }
@@ -41,7 +42,7 @@
     background-color: var(--white);
     text-align: start; 
 
-    @media all and (max-width: 795px) {
+    @include tablet-m {
         padding: 15px;
     }
 }
@@ -50,12 +51,13 @@
     line-height: 1.2;
     letter-spacing: 0.5px;
     border-radius: 10px;  
-    margin-bottom: 17px; 
+    margin-bottom: 10px; 
 
-    @media all and (max-width:1240px) {
-        font-size: var(--font-size-s);       
+    @include desktop-m {
+        font-size: var(--font-size-s);  
+        margin-bottom: 5px;      
     }
-    @media all and (max-width:590px) {
+    @include mobile-l {
         font-size: var(--font-size-xs);
     }
 }
@@ -64,7 +66,7 @@
     border-radius: 10px 10px 0 0; 
 
     & svg {
-        @media all and (max-width:590px) {
+        @include mobile-l {
             width: 30px;
             height: 30px;
         }
