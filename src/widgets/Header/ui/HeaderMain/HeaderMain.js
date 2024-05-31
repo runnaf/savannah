@@ -1,6 +1,6 @@
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { Text } from "../../../../shared/ui/Text/Text";
-import { Stack } from "../../../../shared/ui/Stack/Stack";
+import { Stack } from "../../../../shared/ui/Stack/Stack"
 import styles from "./HeaderMain.module.scss";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
 import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";

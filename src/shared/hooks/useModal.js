@@ -4,7 +4,7 @@ import { Modal } from "../ui/Modal/Modal";
 export const useModal = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const changeOpen = async () => {
+    const changeOpen = () => {
         setIsOpen(p => !p);
     };
 
