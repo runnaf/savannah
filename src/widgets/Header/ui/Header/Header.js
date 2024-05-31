@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
-import { HeaderMain } from '../HeaderMain/HeaderMain';
-import { HeaderSecondary } from '../HeaderSecondary/HeaderSecondary';
+import { HeaderMain } from '../headerMain/HeaderMain';
+import { HeaderSecondary } from '../headerSecondary/HeaderSecondary';
 
 export const Header = () => {
     const location = useLocation();
@@ -9,7 +9,7 @@ export const Header = () => {
         <>
             {
                 location.pathname === '/'
-                    ? <HeaderMain />
+                    ? <HeaderMain/>
                     : <HeaderSecondary />
             }
         </>

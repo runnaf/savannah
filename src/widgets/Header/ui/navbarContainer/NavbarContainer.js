@@ -1,5 +1,5 @@
 import { isMobile } from 'react-device-detect';
-import { Navbar } from "../../../../feature/Navbar/Navbar";
+import { Navbar } from '../../../../feature/Navbar/Navbar';
 import { Button } from "../../../../shared/ui/Button/Button";
 import styles from "./NavbarContainer.module.scss";
 import { useLocation } from 'react-router';
