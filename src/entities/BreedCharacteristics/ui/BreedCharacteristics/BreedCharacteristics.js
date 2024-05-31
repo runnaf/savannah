@@ -5,15 +5,17 @@ import { BreedCharacteristicsItem } from "../BreedCharacteristicsItem/BreedChara
 import styles from "./BreedCharacteristics.module.scss"
 
 export const BreedCharacteristics = () => {
-    console.log(data)
     return (
         <section className={styles.breedCharacteristics}>
-            <Text className={styles.title} type="h2">ХАРАКТЕРИСТИКИ САВАНН</Text>
+            <Text className={styles.title} type="h2">
+                ХАРАКТЕРИСТИКИ САВАНН
+            </Text>
             <ul className={styles.container}>
-                {data.map( item => <BreedCharacteristicsItem 
-                        key = {item.title}
-                        data = {item}
-                        />                  
+                {data.map(item =>
+                    <BreedCharacteristicsItem
+                        key={item.title}
+                        data={item}
+                    />
                 )}
             </ul>
         </section>
