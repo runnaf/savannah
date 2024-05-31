@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const AppNavLink = (props) => {
     const { route, styles, isDefaultStyle = false } = props;
+
     return (
         <NavLink
             key={route.path}
@@ -11,7 +12,8 @@ export const AppNavLink = (props) => {
             to={route.path}
         >
             {route.navlink}
-            {route.icon}
+            {route.img}
         </NavLink>
     );
+    
 };

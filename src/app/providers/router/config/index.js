@@ -1,7 +1,7 @@
-import { CatalogPage } from "@/pages/CatalogPage/CatalogPage";
-import { MainPage } from "@/pages/MainPage/MainPage";
-import { PetsPage } from "@/pages/PetsPage/PetsPage";
-import { catalogIcon, homeIcon, petsIcon } from "@/shared/assets/svg/navbarIcons";
+import { CatalogPage } from "../../../../pages/CatalogPage/CatalogPage";
+import { MainPage } from "../../../../pages/MainPage/MainPage";
+import { PetsPage } from "../../../../pages/PetsPage/PetsPage";
+import { catalogIcon, homeIcon, petsIcon } from "../../../../shared/assets/svg/navbarIcons";
 import { 
     getRouteCatalog, 
     getRouteMain, 

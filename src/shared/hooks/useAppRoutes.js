@@ -9,7 +9,7 @@ export const useAppRoutes = (props) => {
             .map(route => ({
                 path: route.path,
                 navlink: route.navlink,
-                icon: includeIcons ? route.icon : null
+                img: includeIcons ? route.img : null
             }));
     }, [routeConfig, includeIcons]);
 };

@@ -4,13 +4,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 var(--desktop-padding);
+    padding: 20px var(--desktop-padding);
 
     @media (max-width: 1440px) {
-        padding: 0 var(--tablet-padding);
+        padding: 20px var(--tablet-padding);
     }
 
-    @media (max-width: 820px) {
-        padding: 0 var(--mobile-padding);
+    @media (max-width: 767px) {
+        padding: 20px var(--mobile-padding);
+        justify-content: center;
     }
 }

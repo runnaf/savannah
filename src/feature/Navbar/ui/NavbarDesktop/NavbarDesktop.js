@@ -7,21 +7,23 @@ import { useModal } from '@/shared/hooks/useModal';
 import { useAppRoutes } from '@/shared/hooks/useAppRoutes';
 
 import styles from './NavbarDesktop.module.scss';
+import { getStyle } from '../../../../shared/helper/getStyle';
 
 
-export const NavbarDesktop = () => {
+export const NavbarDesktop = ({className}) => {
     const [changeSigninModal, drawSiginModal] = useModal();
-    console.log(routeConfig)
-    const routes = useAppRoutes(routeConfig);
-    console.log(routes)
+    const routes = useAppRoutes({routeConfig});
+    const additional = [
+        className,
+    ]
 
     return (
-        <>
+        <div className={styles.container}>
             {drawSiginModal(
                 <Signin changeSigninModal={changeSigninModal} />
             )}
 
-            <nav className={styles.navbar}>
+            <nav className={getStyle(styles.navbar, {}, additional)}>
                 {
                     routes.map(route => (
                         <AppNavLink
@@ -40,6 +42,6 @@ export const NavbarDesktop = () => {
                     войти
                 </Button>
             </nav>
-        </>
+        </div>
     );
 };

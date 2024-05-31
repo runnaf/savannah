@@ -1,6 +1,6 @@
-import { routeConfig } from '@/app/providers/router/config/index';
-import { Signin } from '@/feature/Signin/Signin';
-import { signinIcon } from '@/shared/assets/svg/navbarIcons';
+import { routeConfig } from '../../../../app/providers/router/config/index'
+import { Signin } from '../../../../feature/Signin/Signin';
+import { signinIcon } from '../../../../shared/assets/svg/navbarIcons';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
 import { useModal } from '@/shared/hooks/useModal';
@@ -10,9 +10,8 @@ import styles from './NavbarMobile.module.scss';
 
 export const NavbarMobile = () => {
     const [changeSigninModal, drawSiginModal] = useModal();
-    console.log(routeConfig)
-    const routes = useAppRoutes(routeConfig, true);
-    console.log(routes)
+    const includeIcons = true;
+    const routes = useAppRoutes({ routeConfig, includeIcons });
 
     return (
         <div className={styles.container}>
