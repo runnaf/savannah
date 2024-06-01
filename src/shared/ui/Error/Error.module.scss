@@ -1,0 +1,20 @@
+.error{
+    width: 400px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #D82828;
+    background: rgba(216, 40, 40, 0.10);
+    display: flex;
+    align-items: center;
+}
+.errortext{
+color: #D82828;
+text-align: center;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px;
+margin-left: 20px;
+}

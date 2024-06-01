@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Modal } from "../ui/Modal/Modal";
 
+
+
 export const useModal = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -18,9 +20,11 @@ export const useModal = () => {
     const drawModal = child => {
         return (
             isOpen &&
-            <Modal setIsOpen={setIsOpen}>
+
+            <Modal setIsOpen={setIsOpen} >
                 {child}
             </Modal>
+
         );
     };
 

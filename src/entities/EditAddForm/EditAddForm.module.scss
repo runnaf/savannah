@@ -1,0 +1,35 @@
+.editSection{
+    gap: 20px;
+}
+
+.editInput{
+    width: 263px;
+    @media (max-width: 1439px) {
+        width: 180px;
+        height: 40px;
+        font-size: var(--font-size-xs);
+    }
+}
+.closeButton {
+    cursor: pointer;
+    position: relative;
+    left: 180px;
+    width: 50px;
+    height: 50px;
+    @media (max-width: 1439px) {
+        left: 130px;
+        top: 20px;
+    }
+}
+
+.buttonEdit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 263px;
+    @media (max-width: 1439px) {
+        width: 180px;
+        height: 40px;
+        font-size: var(--font-size-xs);
+    }
+}
