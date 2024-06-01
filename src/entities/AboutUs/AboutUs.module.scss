@@ -35,8 +35,7 @@
     margin: 0 auto;
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
     padding: 0 var(--container-padding-x); 
-      
-  
+
     @include mobile-l {
         padding: 0 40px; 
     }
@@ -50,7 +49,7 @@
     column-gap: clamp(20px, 5vw, 120px);
     align-items: center;    
     margin-top: 60px;
-  
+
     @include tablet-l {
         display: flex;
         flex-direction: column;
