@@ -10,19 +10,20 @@ export const Modal = ({ setIsOpen, children }) => {
     };
 
     return (
-        <div className={styles.modal}
->
-            <m.div
+        <div className={styles.modal}>
+            <div
                 className={styles.overlay}
                 data-class="overlay"
-                initial={{opacity: 0}}
-                animate={{opacity:1}}
-                transition={{duration:0.75}}
                 onClick={handleClick}
             >
-                {children}
-            </m.div>
+                <m.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    {children}
+                </m.div>
+            </div>
         </div>
-
     );
 };
