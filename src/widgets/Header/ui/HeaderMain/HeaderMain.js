@@ -1,10 +1,6 @@
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { Text } from "../../../../shared/ui/Text/Text";
 import { Stack } from "../../../../shared/ui/Stack/Stack"
-<<<<<<< HEAD:src/widgets/Header/ui/headerMain/HeaderMain.js
-import { NavbarContainer } from "../navbarContainer/NavbarContainer";
-=======
->>>>>>> 7d4bd790d01e9b042b9e20b403c9d7552ae3ec83:src/widgets/Header/ui/HeaderMain/HeaderMain.js
 import styles from "./HeaderMain.module.scss";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
 import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";
