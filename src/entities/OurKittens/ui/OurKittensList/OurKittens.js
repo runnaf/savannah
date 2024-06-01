@@ -9,7 +9,7 @@ import { arrowIcon } from '../../../../shared/assets/svg/arrowIcon';
 const OurKittens = () => {
     return (
         <section className={styles.section}>
-            <Stack>
+            <Stack justifyContent='justifyCenter'>
                 <Text type="h2" size="xl" className={styles.title}>
                     НАШИ КОТЯТА
                 </Text>
