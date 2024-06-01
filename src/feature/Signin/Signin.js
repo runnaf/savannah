@@ -8,7 +8,7 @@ import { useState } from "react";
 import styles from './Signin.module.scss';
 
 export const Signin = ({ changeSigninModal }) => {
-    const [error, setError] = useState(false);
+    const [error, setError] = useState(true);
 
     const handleSignIn = () => {
         console.log('handleSignIn');
