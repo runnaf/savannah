@@ -1,11 +1,11 @@
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { Text } from "../../../../shared/ui/Text/Text";
-import { Stack } from "../../../../shared/ui/Stack/Stack"
 import styles from "./HeaderMain.module.scss";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
 import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";
 import { getStyle } from "../../../../shared/helper/getStyle";
 import { Link } from "react-router-dom";
+import { Stack } from "../../../../shared/ui/Stack/Stack";
 
 export const HeaderMain = () => {
     const catalog = '/catalog'
