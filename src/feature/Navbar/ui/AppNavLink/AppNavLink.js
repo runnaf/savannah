@@ -15,5 +15,5 @@ export const AppNavLink = (props) => {
             {route.img}
         </NavLink>
     );
-    
+
 };

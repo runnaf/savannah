@@ -2,6 +2,7 @@
 @import '../../../app/styles/mixin.scss';
 
 .section {
+    @include section-styles;
     margin-top: 60px;
     
     @include mobile-l {
@@ -9,9 +10,6 @@
     }
 }
 
-.container {    
-    @include section-styles;
-}
 .title {
     font-weight: 500;
     margin-bottom: 60px;
@@ -22,7 +20,7 @@
         font-size: var(--font-size-l);
     }
     @include desktop-m {    
-        font-size: var(--font-size-ml);
+        font-size: var(--font-size-m);
         margin-bottom: 40px;
     }
     @include tablet-m {    

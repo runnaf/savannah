@@ -48,13 +48,7 @@
 .kitten__name {
     color: var(--black);
     font-weight: 700;
-
-    @include desktop-m {
-        font-size: var(--font-size-ml);       
-    }
-    @include mobile-m {
-        font-size: var(--font-size-m);
-    }
+    font-size: var(--font-size-m);   
 }
 .card__body {
     display: flex;

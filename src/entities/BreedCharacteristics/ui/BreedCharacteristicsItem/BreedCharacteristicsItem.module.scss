@@ -1,8 +1,7 @@
 .item {
-    background-color: rgba(253, 253, 253, 0.67);
+    background-color: var(--opacity);
     max-width: 400px;
     width: fit-content;
-    min-height: 1018px;
     border-radius: 15px;
     padding: 40px;
     display: flex;
@@ -59,6 +58,7 @@
     padding-bottom: 32px;
     text-transform: var(--text-uppercase);
     margin-bottom: 56px;
+    color: var(--dark-brown);
 
     &::after {
         content: '';
@@ -71,9 +71,6 @@
     }
 
     @media (max-width: 1440px) {    
-        font-size: var(--font-size-ml);
-    }
-    @media (max-width: 1240px) {    
         font-size: var(--font-size-m);
     }
     @media (max-width: 765px) {    
@@ -82,7 +79,7 @@
 }
 
 .text {
-    font-size: 30px;
+    font-size: var(--font-size-m);
 
     @media (max-width: 1440px) {    
         font-size: var(--font-size-m);

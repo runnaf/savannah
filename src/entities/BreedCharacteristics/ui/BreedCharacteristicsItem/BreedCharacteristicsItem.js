@@ -1,13 +1,17 @@
 import { Text } from "../../../../shared/ui/Text/Text";
-import styles from "./BreedCharacteristicsItem.module.scss" 
+import styles from "./BreedCharacteristicsItem.module.scss";
 
 export const BreedCharacteristicsItem = (props) => {
     const { data } = props;
     return (
-        <Text type = "li" className={styles.item}>
-            <Text className={styles.title} type = "h3">{data.title}</Text>
-            <Text className={styles.text} type = "p">{data.text}</Text>
+        <Text type="li" className={styles.item}>
+            <span className={styles.title}>
+                {data.title}
+            </span>
+            <span className={styles.text}>
+                {data.text}
+            </span>
             {data.img}
         </Text>
-    )
-}
+    );
+};
