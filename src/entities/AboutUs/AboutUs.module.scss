@@ -1,4 +1,5 @@
 @import '../../app/styles/media-queries.scss';
+@import '../../app/styles/mixin.scss';
 
 @mixin responsive-icon {
     content: '';
@@ -32,45 +33,33 @@
 }
 
 .container {    
-    margin: 0 auto;
-    max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
-    padding: 0 var(--container-padding-x); 
-
-    @include mobile-l {
-        padding: 0 40px; 
-    }
-    @include mobile-m {
-        padding: 0 20px; 
-    }
+    @include section-styles;
 }
 .about__row {
     display: flex;
     justify-content: space-between;
     column-gap: clamp(20px, 5vw, 120px);
     align-items: center;    
-    margin-top: 60px;
 
     @include tablet-l {
         display: flex;
         flex-direction: column;
         row-gap: 50px;
-    }
-    @include mobile-l {
-        margin-top: 40px;
-    }
+    }   
 }
 
 .title {
     font-weight: 500;
-    text-align: center;
+    margin-bottom: 60px;
     padding: 0 90px;
-
+    text-align: center;
 
     @include desktop-l {    
         font-size: var(--font-size-l);
     }
     @include desktop-m {    
         font-size: var(--font-size-ml);
+        margin-bottom: 40px;
     }
     @include tablet-m {    
         font-size: var(--font-size-m);
@@ -78,11 +67,13 @@
     @include mobile-l {  
         font-size: var(--font-size-s);
         padding: 0 40px;
+        margin-bottom: 20px;
     }
     @include mobile-m {
         padding: 0 20px; 
     }
 }
+
 
 .picture {
     width: clamp(430px, 40vw, 600px);
