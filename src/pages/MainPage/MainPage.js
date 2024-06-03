@@ -11,9 +11,9 @@ export const MainPage = () => {
     <main className={styles.MainPage}>
       <AboutUs />
       <OurKittens/>
+      <Characteristics/>
       <BreedCharacteristics />
       <Advices/>
-      <Characteristics/>
       <AccordionComponent />
     </main>
   )
