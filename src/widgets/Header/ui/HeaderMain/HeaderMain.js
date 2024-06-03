@@ -6,9 +6,9 @@ import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";
 import { getStyle } from "../../../../shared/helper/getStyle";
 import { Link } from "react-router-dom";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
+import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 
 export const HeaderMain = () => {
-    const catalog = '/catalog'
     return (
         <Stack justifyContent='justifyCenter'>
             <header className={getStyle(styles.header, {}, [styles.headerMain])}>
@@ -20,12 +20,12 @@ export const HeaderMain = () => {
                         <Text type='h1' className={styles.title}>
                             <span className={styles.text}>Питомник </span> SAVANNAH WORLD
                         </Text>
-                        <Link to={catalog} className={styles.linkHeader} >
+                        <Link to={getRouteCatalog()} className={styles.linkHeader} >
                             в каталог {arrowIcon()}
                         </Link>
                     </div>
                 </div>
             </header>
         </Stack>
-    )
-}
+    );
+};
