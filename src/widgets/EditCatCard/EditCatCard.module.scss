@@ -1,0 +1,31 @@
+.edit {
+    width: 920px;
+    height: 750px;
+    padding: 35px 50px 61px 50px;
+    background-color: var(--light-brown);
+    border-radius: 15px;
+    gap: 50px;
+    @media (max-width: 1439px) {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+.editImgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editPhoto{
+    @media (max-width: 1439px) {
+        width: 280px;
+        height: 335px;
+}
+}
+
+.editIcon{
+    position: absolute;
+    @media (max-width: 1439px) {
+        width: 70px;
+}
+}

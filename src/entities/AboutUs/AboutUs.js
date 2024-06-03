@@ -1,13 +1,13 @@
-import { Stack } from "../../shared/ui/Stack/Stack";
 import { Text } from "../../shared/ui/Text/Text";
 import styles from './AboutUs.module.scss';
 import aboutPicture from '../../shared/assets/photo/aboutus.png';
+import { Stack } from "../../shared/ui/Stack/Stack";
 
 const AboutUs = () => {
     return (
         <div>
             <section className={styles.section}>                    
-                <Stack>
+                <Stack justifyContent='justifyCenter'>
                     <Text type="h2" size="xl" className={styles.title}>
                         О ПИТОМНИКЕ <strong>SAVANNAH WORLD</strong>
                     </Text>
@@ -35,7 +35,7 @@ const AboutUs = () => {
                     </div>
             </section>
             <section className={styles.section}>
-                <Stack>
+                <Stack justifyContent='justifyCenter'>
                     <Text type="h2" size="xl" className={styles.title}>
                         ПИТОМНИК <strong>SAVANNAH WORLD</strong> ЭТО -
                     </Text>

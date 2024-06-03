@@ -34,15 +34,13 @@
 
 .container {    
     @include section-styles;
-   
 }
 .about__row {
     display: flex;
     justify-content: space-between;
     column-gap: clamp(20px, 5vw, 120px);
     align-items: center;    
-  
-  
+
     @include tablet-l {
         display: flex;
         flex-direction: column;

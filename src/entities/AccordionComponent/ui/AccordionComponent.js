@@ -8,7 +8,7 @@ const AccordionComponent = () => {
 
     return (
         <section className={styles.section}>
-            <Stack>
+            <Stack justifyContent='justifyCenter'>
                 <Text type="h2" size="xl" className={styles.title}>
                     ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
                 </Text>
