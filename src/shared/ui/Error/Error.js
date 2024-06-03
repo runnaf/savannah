@@ -1,21 +1,14 @@
+import { Stack } from '../Stack/Stack';
 import styles from './Error.module.scss';
-import { getStyle } from '../../helper/getStyle';
 
-
-export const Error = ({
-    className,
-    text,
-    ...otherProps
-}) => {
-
-    const additional = [
-        className
-    ]
+export const Error = ({text}) => {
     return (
-        <div
-            className={getStyle(styles.error, {}, additional)}
-            {...otherProps}>
-        <p className={getStyle(styles.errortext, {}, additional)}>{text}</p>
-            </div>
-    )}
-
+        <Stack
+            justifyContent='justifyCenter'
+            alignItems='alignCenter'
+            className={styles.error}
+        >
+            {text}
+        </Stack>
+    );
+};

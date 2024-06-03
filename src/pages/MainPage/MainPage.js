@@ -4,6 +4,7 @@ import OurKittens from '../../entities/OurKittens/ui/OurKittensList/OurKittens';
 import AccordionComponent from '../../entities/AccordionComponent/ui/AccordionComponent';
 import { Advices } from '../../entities/AdvicesComponent/ui/Advices/Advices'
 import styles from './MainPage.module.scss';
+import Characteristics from '../../entities/Characteristics/Characteristics';
 
 export const MainPage = () => {
   return (
@@ -12,6 +13,7 @@ export const MainPage = () => {
       <OurKittens/>
       <BreedCharacteristics />
       <Advices/>
+      <Characteristics/>
       <AccordionComponent />
     </main>
   )

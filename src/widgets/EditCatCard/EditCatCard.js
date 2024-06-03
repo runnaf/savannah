@@ -4,8 +4,6 @@ import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
 import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
 import editPhoto from '../../shared/assets/photo/editCatImg.png';
 
-
-
 export const EditCatCard = () => {
     return (
         <Stack
@@ -14,18 +12,16 @@ export const EditCatCard = () => {
             direction='row'
             className={styles.edit}
         >
-            
+
             <div className={styles.editImgBox}>
-            <img
-            className={styles.editPhoto}
-            src={editPhoto} alt="editPhoto"/>
-            <img
-            className={styles.editIcon}
-            src={editIcon} alt="editIcon"/>
+                <img
+                    className={styles.editPhoto}
+                    src={editPhoto} alt="editPhoto" />
+                <img
+                    className={styles.editIcon}
+                    src={editIcon} alt="editIcon" />
             </div>
-           
-           
-            <EditAddForm/>
+            <EditAddForm />
         </Stack>
     )
 }
