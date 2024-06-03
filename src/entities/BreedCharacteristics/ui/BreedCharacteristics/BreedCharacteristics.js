@@ -1,12 +1,12 @@
 import { Text } from "../../../../shared/ui/Text/Text";
-import { data } from "../../bd/bs";
+import { data } from "../../lib/data.js";
 import { BreedCharacteristicsItem } from "../BreedCharacteristicsItem/BreedCharacteristicsItem";
 
 import styles from "./BreedCharacteristics.module.scss"
 
 export const BreedCharacteristics = () => {
     return (
-        <section className={styles.breedCharacteristics}>
+        <section className={styles.section}>
             <Text className={styles.title} type="h2">
                 ХАРАКТЕРИСТИКИ САВАНН
             </Text>

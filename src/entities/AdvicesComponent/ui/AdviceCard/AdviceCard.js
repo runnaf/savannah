@@ -1,12 +1,11 @@
 import styles from "./AdviceCard.module.scss";
 import { Text } from "../../../../shared/ui/Text/Text";
-// import { adviceData } from "../../lib/adviceData";
 
-const AdviceCard = ({cat, title, content}) => {
+const AdviceCard = ({ cat, title, content }) => {
   return (
     <div className={styles.container}>
       <div>
-        <img src={cat} className={styles.img}  alt="Cat" />
+        <img src={cat} className={styles.img} alt="Cat" />
       </div>
       <div>
         <Text className={styles.title} type="h2">
