@@ -3,6 +3,7 @@ import styles from "./BreedCharacteristicsItem.module.scss";
 
 export const BreedCharacteristicsItem = (props) => {
     const { data } = props;
+    
     return (
         <Text type="li" className={styles.item}>
             <span className={styles.title}>
