@@ -15,7 +15,7 @@ const Characteristics = () => {
         className={styles.container}
       >
 
-        {/* ИСПОЛЬЗОВАТЬ MAP */}
+        {/* ИСПОЛЬЗОВАТЬ MAP - и корневой докуменнт должен быть ul,  а каждый его элемент li */}
         <div className={styles.block}>
           <img src={check} alt="Иконка" width="50px" />
           <Text size="m" className={styles.text}>
