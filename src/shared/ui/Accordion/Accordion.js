@@ -1,22 +1,19 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import AccordionItem from "./AccordionItem";
 
 const Accordion = ({ accordionData }) => {
 
-    const [collapse, setCollapse] = useState(false);
+    const [collapse, setCollapse] = useState(0);
 
 
     const accordionHendler =
     useCallback((index) => {
         if (index === collapse)
-             setCollapse(false);
+             setCollapse(null);
         else setCollapse(index);
     },[collapse])
     
-    
-    useEffect(() => {
-        setCollapse(0);
-    },[])
+  
     return (
         <ul>
             {accordionData.map((element, index) => {

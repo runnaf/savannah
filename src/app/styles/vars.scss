@@ -9,15 +9,15 @@
   --black: #000000;
   --white: #FDFDFD;
   --red: #D82828;
+  --opacity: rgba(253, 253, 253, 0.67);
 
   // Размеры
-  --font-size-xs: 14px; //мобильная версия текст
-  --font-size-s: 20px; //мобильная версия заголовок+кнопки
-  --font-size-m: 24px;
-  --font-size-ml: 30px;
-  --font-size-l: 40px;
-  --font-size-xl: 50px;
-  --font-size-xxl: 70px;
+  --font-size-xs: 16px;
+  --font-size-s: 18px;
+  --font-size-m: 20px;
+  --font-size-l: 26px;
+  --font-size-xl: 35px;
+  --font-size-xxl: 50px;
 
   //Размер экрана
   --width-desktop: 1920px;
@@ -45,4 +45,10 @@
   //Переменные для кнопок
   --border-radius-desktop: 15px;
   --border-radius-mobile: 10px;
+  
+  
+  //Border Radius
+  --border-radius-container: 40px;
+  --border-radius-element: 15px;
+
 }

@@ -8,18 +8,26 @@ import { Button } from "../../../../shared/ui/Button/Button";
 
 
 
-const OurKittensItem = ({element}) => { 
+const OurKittensItem = ({kittensData}) => { 
 
-    return ( 
-        
+    return (         
             <article className={styles.kittens__card}>
                 <div className={styles.card__image}>
                     <img className={styles.kitten__img} src={kittenImg} alt='котята Саванны' />
                 </div>
                 <div className={styles.card__body}>
-                    <Text size="l" className={styles.kitten__name}>{element.kittenName}</Text>
+                    <Text size="l" className={styles.kitten__name}>{kittensData.kittenName}</Text>
                     <Text size="m" className={styles.description}>
-                        {element.description}
+                        {kittensData.color} :
+                    </Text>
+                    <Text size="m" className={styles.description}>
+                        {kittensData.sex} :
+                    </Text>
+                    <Text size="m" className={styles.description}>
+                        {kittensData.age} :
+                    </Text>
+                    <Text size="m" className={styles.description}>
+                        {kittensData.status} :
                     </Text>
                     <Button className={styles.kitten__btn}>В каталог {arrowIcon()}</Button>
                 </div>
