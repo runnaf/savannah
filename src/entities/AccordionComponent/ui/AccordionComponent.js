@@ -1,4 +1,4 @@
-import Accordion from "../../../shared/ui/Accordion/Accordion";
+import Accordion from "../../../shared/ui/Accordion/Accordion/Accordion";
 import styles from './AccordionComponent.module.scss';
 import { Text } from "../../../shared/ui/Text/Text";
 import { Stack } from "../../../shared/ui/Stack/Stack";

@@ -32,11 +32,6 @@
     @include desktop-m {
         padding: 30px;
     }
-
-    @include tablet-m {       
-        border-radius: 35px; 
-    }
-  
 }
 .description {  
     font-weight: 400;
