@@ -14,7 +14,6 @@ export const MainPage = () => {
       <Kittens/>
       <BreedCharacteristics />
       <Advices/>
-      <Characteristics/>
       <AccordionComponent />
     </main>
   )

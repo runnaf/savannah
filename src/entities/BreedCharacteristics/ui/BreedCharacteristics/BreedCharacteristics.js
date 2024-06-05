@@ -8,7 +8,7 @@ export const BreedCharacteristics = () => {
     return (
         <section className={styles.section}>
             <Text className={styles.title} type="h2">
-                ХАРАКТЕРИСТИКИ САВАНН
+                ГЕНЕТИЧЕСКИЕ ПОДГРУППЫ САВАНН
             </Text>
             <ul className={styles.container}>
                 {data.map(item =>

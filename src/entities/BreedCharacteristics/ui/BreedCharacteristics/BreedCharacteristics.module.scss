@@ -1,22 +1,7 @@
+@import '../../../../app/styles/mixin.scss';
+
 .section {
-    margin: 0 auto;
-    max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
-    padding: 0 var(--container-padding-x); 
-
-    @media (max-width: 1240px) {    
-        padding: 40px var(--tablet-padding);
-        margin-top: 80px;
-    }
-    @media (max-width: 767px) {    
-        padding: 40px var(--mobile-padding);
-        margin-top: 60px;
-    }
-
-    @media (max-width: 450px) {    
-        font-size: var(--font-size-s);
-        margin-bottom: 30px;
-        margin-top: 40px;
-    }
+    @include section-styles;
 }
 
 .title {
@@ -31,7 +16,7 @@
         margin-bottom: 60px;
     }
     @media (max-width: 1240px) {    
-        font-size: var(--font-size-ml);
+        font-size: var(--font-size-m);
         margin-bottom: 30px;
     }
     @media (max-width: 765px) {    
@@ -47,14 +32,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 60px;
 
     @media (max-width: 1440px) {    
         font-size: var(--font-size-l);
         gap: 10px;
     }
     @media (max-width: 1000px) {    
-        font-size: var(--font-size-ml);
+        font-size: var(--font-size-m);
         gap: 25px;
     }
     @media (max-width: 850px) {

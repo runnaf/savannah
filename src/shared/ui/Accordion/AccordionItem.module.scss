@@ -1,6 +1,5 @@
 @import '../../../app/styles/media-queries.scss';
 
-
 @mixin accordion-btn{
     display: flex;
     justify-content: space-between;
@@ -9,7 +8,12 @@
     width: 100%;    
     padding: 17px 58px;
     text-align: start;
-
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
+   
+  
     @include tablet-m {
         padding: 15px;
     }

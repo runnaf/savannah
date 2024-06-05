@@ -52,12 +52,6 @@
     @include tablet-l {
         width: 100%;
     }
-    @include tablet-m {
-        border-radius: 60px;
-    }
-    @include mobile-l {
-        border-radius: 40px;
-    }
 }
 .text {  
     row-gap: 30px;   

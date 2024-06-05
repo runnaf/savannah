@@ -1,12 +1,15 @@
+@import '../../app/styles/mixin.scss';
+
+.section {
+    @include section-styles;
+}
+
+
 .container {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--light-brown); // временно / верный цвет background: rgba(253, 253, 253, 0.67);
-    width: 1440px;
-    height: 554px;
-    padding: 69px 0;
-    border-radius: 45px;
-    margin-bottom: 120px;
+    background-color: var(--opacity);
+    padding: 20px 200px;
+    border-radius: var(--border-radius-container);
+
     @media all and (max-width:1440px) {    
         width: 1200px;
     }
@@ -31,7 +34,7 @@
 
 .block {
     display: flex;
-    padding: 15px 104px;
+
     @media all and (max-width:1440px) {    
        
     }
@@ -61,7 +64,7 @@ img {
 .text {
     display: flex;
     align-items: center;
-    margin-left: 59px;
+
     @media all and (max-width:795px) {    
         font-size: var(--font-size-s);
         
@@ -75,7 +78,9 @@ img {
 
 .title {
     font-weight: 500;
-    margin: 120px 0 70px 0;
+    margin: 20px 0;
+    text-align: center;
+    
     @media all and (max-width:1440px) {    
        
     }

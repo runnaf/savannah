@@ -1,4 +1,3 @@
-
 import { Text } from "../../../../shared/ui/Text/Text";
 import styles from './OurKittensItem.module.scss';
 import kittenImg from '../../../../shared/assets/photo/kitten-1x.png';

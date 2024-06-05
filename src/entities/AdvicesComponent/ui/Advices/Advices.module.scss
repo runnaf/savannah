@@ -1,5 +1,10 @@
-.cont {
-    margin: 0 auto;
+@import '../../../../app/styles/mixin.scss';
+
+.section {
+    @include section-styles;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -15,13 +20,9 @@
         margin-bottom: 60px;
     }
     @media (max-width: 1240px) {    
-        font-size: var(--font-size-ml);
+        font-size: var(--font-size-m);
         margin-bottom: 30px;
     }
-    @media (max-width: 765px) {    
-        font-size: var(--font-size-m);
-    }
-
     @media (max-width: 450px) {    
         font-size: var(--font-size-s);
     }

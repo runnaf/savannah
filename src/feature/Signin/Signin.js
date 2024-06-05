@@ -8,7 +8,7 @@ import { useState } from "react";
 import styles from './Signin.module.scss';
 
 export const Signin = ({ changeSigninModal }) => {
-    const [error, setError] = useState(true);
+    const [error, setError] = useState(false);
 
     const handleSignIn = () => {
         console.log('handleSignIn');
@@ -37,10 +37,11 @@ export const Signin = ({ changeSigninModal }) => {
                 onChange={(value) => console.log(value)}
             />
             {
-                error && 
-                <Error text="Введен неправильный логин и/или пароль"/>
+                error &&
+                <Error text="Введен неправильный логин и/или пароль" />
             }
-            <Button 
+
+            <Button
                 className={styles.buttonSignin}
                 onClick={handleSignIn}
             >

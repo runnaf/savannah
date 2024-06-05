@@ -2,8 +2,9 @@ import { useCallback, useState } from "react";
 import AccordionItem from "./AccordionItem";
 
 const Accordion = ({ accordionData }) => {
-
     const [collapse, setCollapse] = useState(0);
+
+   
 
 
     const accordionHendler =
@@ -28,6 +29,6 @@ const Accordion = ({ accordionData }) => {
             })}
         </ul>
     );
-}
+};
 
 export default Accordion;
