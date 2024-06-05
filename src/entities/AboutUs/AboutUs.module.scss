@@ -77,16 +77,10 @@
 
 .picture {
     width: clamp(430px, 40vw, 600px);
-    border-radius: 83px;
+    border-radius: var(--border-radius-container);
 
     @include tablet-l {
         width: 100%;
-    }
-    @include tablet-m {
-        border-radius: 60px;
-    }
-    @include mobile-l {
-        border-radius: 40px;
     }
 }
 .text {  
@@ -117,7 +111,7 @@
 .benefits__row {   
     padding: 55px;
     background-color: var(--white);
-    border-radius: 40px; 
+    border-radius: var(--border-radius-container); 
 
 
     @include tablet-m {

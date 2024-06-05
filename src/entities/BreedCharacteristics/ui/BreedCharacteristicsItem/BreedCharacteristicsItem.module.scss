@@ -2,7 +2,7 @@
     background-color: var(--opacity);
     max-width: 400px;
     width: fit-content;
-    border-radius: 15px;
+    border-radius: var(--border-radius-element);
     padding: 40px;
     display: flex;
     flex-direction: column;

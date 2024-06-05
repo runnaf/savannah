@@ -8,7 +8,7 @@
 .container {
     background-color: var(--opacity);
     padding: 20px 200px;
-    border-radius: 45px;
+    border-radius: var(--border-radius-container);
 
     @media all and (max-width:1440px) {    
         width: 1200px;

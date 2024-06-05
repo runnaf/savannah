@@ -21,7 +21,7 @@
     width: 410px;
     height: 465px;
     background-color: var(--white);
-    border-radius: 47px;
+    border-radius: var(--border-radius-container);
         @media (max-width: 1439px) {
             width: 280px;
             height: 335px;

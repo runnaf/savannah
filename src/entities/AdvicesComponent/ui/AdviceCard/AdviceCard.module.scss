@@ -1,7 +1,7 @@
 .container {
     background-color: var(--opacity);
     width: 100%;
-    border-radius: 45px;
+    border-radius: var(--border-radius-container);
     margin-bottom: 20px;
     padding: 40px 60px;
 
@@ -27,7 +27,7 @@
 
 .img {
     width: 300px;
-    border-radius: 45px;
+    border-radius: var(--border-radius-container);
 
     @media (max-width: 765px) {    
         width: 200px;
