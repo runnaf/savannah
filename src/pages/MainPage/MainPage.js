@@ -1,4 +1,4 @@
-import AboutUs from '../../entities/AboutUs/AboutUs';
+import AboutUs from '../../entities/AboutUs/ui/AboutUs';
 import { BreedCharacteristics } from '../../entities/BreedCharacteristics/ui/BreedCharacteristics/BreedCharacteristics';
 import AccordionComponent from '../../entities/AccordionComponent/ui/AccordionComponent';
 import { Advices } from '../../entities/AdvicesComponent/ui/Advices/Advices'

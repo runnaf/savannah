@@ -25,7 +25,7 @@ const CatCard = ({ kittensData, isMain }) => {
                     Статус: {kittensData.status}
                 </Text>
                 <Button className={styles.kitten__btn}>
-                    {isMain ? 'в катагалог' : 'подробнее'} {arrowIcon()}
+                    {isMain ? 'в каталог' : 'подробнее'} {arrowIcon()}
                 </Button>
             </div>
         </article>
