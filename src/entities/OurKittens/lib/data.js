@@ -2,17 +2,26 @@ const kittensData = [
     {
         id: 1,
         kittenName: 'Имя',
-        description:'Описание'
+        color:'Цвет',
+        sex: 'Пол',
+        age: 'Возраст',
+        status: 'Статус'
     },
     {
         id: 2,
         kittenName: 'Имя',
-        description:'Описание описание'
+        color:'Цвет',
+        sex: 'Пол',
+        age: 'Возраст',
+        status: 'Статус'
     },
     {
         id: 3,
         kittenName: 'Имя',
-        description:'Описание описание описание описание описание'
+        color:'Цвет',
+        sex: 'Пол',
+        age: 'Возраст',
+        status: 'Статус'
     },
 ]
 export default kittensData;

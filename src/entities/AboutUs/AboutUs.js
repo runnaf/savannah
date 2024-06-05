@@ -12,7 +12,7 @@ const AboutUs = () => {
                         О ПИТОМНИКЕ <strong>SAVANNAH WORLD</strong>
                     </Text>
                 </Stack>
-                <div className={styles.container}>
+        
                     <div className={styles.about__row}>               
                         <div>
                             <img className={styles.picture} src={aboutPicture} alt="about"/>
@@ -31,8 +31,7 @@ const AboutUs = () => {
                                     Мы стремимся к получению котят прекрасным внешним видом и отличным здоровьем. Поэтому на регулярной основе проводим анализы и осмотры ветеринарным врачом.
                                 </Text>                                  
                         </Stack>
-                        </div>
-                    </div>
+                    </div>                    
             </section>
             <section className={styles.section}>
                 <Stack justifyContent='justifyCenter'>
@@ -40,7 +39,7 @@ const AboutUs = () => {
                         ПИТОМНИК <strong>SAVANNAH WORLD</strong> ЭТО -
                     </Text>
                 </Stack>
-                <div className={styles.container}>
+               
                     <Stack
                         gap='32'
                         justifyContent='justifyCenter'
@@ -61,8 +60,7 @@ const AboutUs = () => {
                                 Консультация по вопросам содержания и воспитания
                             </Text>
                         </div>
-                    </Stack>
-                </div>
+                    </Stack>              
             </section>
         </div>
     );
