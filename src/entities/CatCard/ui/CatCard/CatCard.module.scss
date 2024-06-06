@@ -9,13 +9,18 @@
 
 
     @include desktop-m {
-        font-size: var(--font-size-s);
+        font-size: var(--font-size-xs);
+        padding: 10px 15px;
+
         border-radius: var(--border-radius-mobile);
         & svg {
             width: 20px;
             height: 20px;
         }
     }  
+    @include tablet-l {
+        padding: 10px 25px;
+    }
     }
     
 
@@ -30,7 +35,14 @@
     border-radius: var(--border-radius-container);
 
     @include desktop-m {
-        padding: 30px;
+        padding: 25px;
+    }
+    @include tablet-l {
+        width: clamp(240px, 80vw, 410px);
+        padding: 40px;
+    }
+    @include mobile-l {       
+        padding: 20px;
     }
 }
 .description {  

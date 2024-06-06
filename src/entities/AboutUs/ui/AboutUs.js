@@ -1,7 +1,10 @@
-import { Text } from "../../shared/ui/Text/Text";
+import { Text } from "../../../shared/ui/Text/Text";
 import styles from './AboutUs.module.scss';
-import aboutPicture from '../../shared/assets/photo/aboutus.png';
-import { Stack } from "../../shared/ui/Stack/Stack";
+import aboutPicture from '../../../shared/assets/photo/aboutus.png';
+import aboutPicture_2x from '../../../shared/assets/photo/aboutus@2x.png';
+import { Stack } from "../../../shared/ui/Stack/Stack";
+import Benefits from "./Benefits";
+import benefitsData from "../lib/data";
 
 const AboutUs = () => {
     return (
@@ -14,7 +17,8 @@ const AboutUs = () => {
                 </Stack>
 
                 <div className={styles.about__row}>
-                    <img className={styles.picture} src={aboutPicture} alt="about" />
+                    <img className={styles.picture} src={aboutPicture}
+                        srcSet={`${aboutPicture_2x} 2x`} alt="about" />
                     <Stack
                         direction='column'
                         alignItems='alignStart'
@@ -38,29 +42,13 @@ const AboutUs = () => {
                         ПИТОМНИК <strong>SAVANNAH WORLD</strong> ЭТО -
                     </Text>
                 </Stack>
-
-                <Stack
-                    gap='32'
-                    justifyContent='justifyCenter'
-                    alignItems='alignStart'
-                    className={styles.benefits__row}
-                >
-                    <div className={styles.benefit__doc}>
-                        <Text type="h3" size="s" className={styles.benefit__text}>
-                            Документация согласно стандартам породы
-                        </Text>
-                    </div>
-                    <div className={styles.benefit__vet}>
-                        <Text type="h3" size="s" className={styles.benefit__text}>
-                            Полное ветеринарное обследование и вакцинация
-                        </Text>
-                    </div>
-                    <div className={styles.benefit__question}>
-                        <Text type="h3" size="s" className={styles.benefit__text}>
-                            Консультация по вопросам содержания и воспитания
-                        </Text>
-                    </div>
-                </Stack>
+                <div className={styles.benefits__row}>
+                    {benefitsData.map(element =>
+                        <Benefits                  
+                            benefitsData={element}
+                            key={element.benefit}/>
+                    )}           
+                </div>                    
             </section>
         </>
     );
