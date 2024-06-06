@@ -1,7 +1,7 @@
 @import '../../../app/styles/media-queries.scss';
 
 .button {
-    border-radius: var(--border-radius-desktop);
+    border-radius: var(--border-radius-element);
     padding: 10px 25px;
     font-size: var(--font-size-m);
     font-weight: 700;
@@ -11,11 +11,6 @@
         font-weight: 600;
         font-size: var(--font-size-s);
     }
-
-    @include tablet-m {
-        border-radius: var(--border-radius-mobile);
-    }
-
 }
 
 .accent {
