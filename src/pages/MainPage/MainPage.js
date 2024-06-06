@@ -7,7 +7,7 @@ import OurKittens from '../../feature/OurKittens/ui/OurKittens';
 
 export const MainPage = () => {
   return (
-    <main className={styles.MainPage}>
+    <main className={styles.main}>
       <AboutUs />
       <OurKittens />
       <BreedCharacteristics />

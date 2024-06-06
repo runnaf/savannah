@@ -1,3 +1,5 @@
-.MainPage {
-    // height: 2000px;
+@import '../../app/styles/mixin.scss';
+
+.main {
+    @include main-styles;
 }

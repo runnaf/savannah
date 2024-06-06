@@ -1,6 +1,10 @@
+.filterbar {
+    margin-top: 60px;
+}
 .secondary{
     width: 263px;
     height: 62px;
+
     @media (max-width: 1439px) {
         width: 180px;
         height: 40px;

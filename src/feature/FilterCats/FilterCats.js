@@ -16,6 +16,7 @@ export const FilterCats = () => {
     <Stack
       alignItems='alignStart'
       gap="32"
+      className={styles.filterbar}
     >
       {Object.entries(dataSelect).map(([key, options]) => (
         <Select
