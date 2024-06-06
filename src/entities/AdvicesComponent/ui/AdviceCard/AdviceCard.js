@@ -2,25 +2,18 @@ import { Text } from "../../../../shared/ui/Text/Text";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
 import styles from "./AdviceCard.module.scss";
 
-const AdviceCard = ({ cat, title, content }) => {
+const AdviceCard = ({ cat, title, content, index }) => {
   return (
-    <Stack
-      justifyContent='justifyBetween'
-      className={styles.container}
-      gap='32'
-    >
-      <img src={cat} className={styles.img} alt="Cat" />
-      <Stack
-        direction='column'
-        justifyContent='justifyCenter'
-      >
+    <Stack justifyContent="justifyBetween" className={styles.container}>
+      <img src={cat} width='240 px' className={styles.img} alt="Cat" />
+      <div>
         <Text className={styles.title} type="h2">
           {title}
         </Text>
         <Text className={styles.content} type="p">
           {content}
         </Text>
-      </Stack>
+      </div>
     </Stack>
   );
 };
@@ -28,3 +21,4 @@ const AdviceCard = ({ cat, title, content }) => {
 export default AdviceCard;
 
 
+     

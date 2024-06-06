@@ -1,78 +1,83 @@
+@import "../../../../app/styles/media-queries.scss";
+
 .container {
-    background-color: var(--opacity);
-    width: 100%;
-    border-radius: var(--border-radius-container);
-    margin-bottom: 20px;
-    padding: 40px 60px;
+  display: flex;
+  background-color: var(--opacity);
+  border-radius: var(--border-radius-container);
+  margin-bottom: 35px;
+  padding: 70px 90px;
+  gap: 50px;
 
-    @media (max-width: 1440px) {    
-        width: 1200px;
-    }
-    @media (max-width: 1240px) {    
-        width: 1000px;
-    }
-    @media (max-width: 765px) {    
-        width: 700px;
-        height: 400px;
-    }
+  @include tablet-l {
+    width: 740px;
+    height: auto;
+    padding: 40px 40px;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
 
-    @media (max-width: 450px) {    
-        width: 400px;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-    }
+  @include mobile-l {
+    width: 540px;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  @include mobile-m {
+    width: 300px;
+  }
 }
 
 .img {
-    width: 300px;
-    border-radius: var(--border-radius-container);
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-container);
 
-    @media (max-width: 765px) {    
-        width: 200px;
-        height: 270px;
-    }
+  @include tablet-l {
+    width: 30%;
+  }
 
+  @include mobile-l {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-m {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }
 
+
 .title {
+  font-size: var(--font-size-l);
+  font-weight: bold;
+  margin-bottom: 30px;
+
+  @include desktop-l {
     font-size: var(--font-size-m);
-    font-weight: bold;
-    margin-bottom: 30px;
-    margin-top: 80px;
+  }
 
-    @media (max-width: 1440px) {    
-        margin-bottom: 60px;
-    }
-    @media (max-width: 1240px) {    
-        font-size: var(--font-size-m);
-        margin-bottom: 30px;
-    }
-    @media (max-width: 765px) {    
-        font-size: var(--font-size-s);
-    }
+  @include tablet-l {
+    font-size: var(--font-size-s);
+  }
 
-    @media (max-width: 450px) {    
-        font-size: var(--font-size-xs);
-        margin: 1em 5em;
-
-    }
+  @include mobile-l {
+    font-size: var(--font-size-xs);
+  }
 }
 
 .content {
-    text-align: justify;
-    font-size: var(--font-size-m);
-    line-height: normal;
+  text-align: justify;
+  font-size: var(--font-size-m);
+  line-height: 1.6;
+  padding-left: 0;
 
-    @media (max-width: 1440px) {    
-        font-size: var(--font-size-m);
-    }
-    @media (max-width: 1240px) {    
-        font-size: var(--font-size-s);
+  @include desktop-l {
+    font-size: var(--font-size-s);
+  }
 
-    }
-    @media (max-width: 765px) {    
-        font-size: var(--font-size-xs);
-    }
+  @include tablet-l {
+    font-size: var(--font-size-xs);
+  }
 }

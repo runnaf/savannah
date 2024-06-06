@@ -1,29 +1,51 @@
-@import '../../../../app/styles/mixin.scss';
+@import "../../../../app/styles/mixin.scss";
 
 .section {
-    @include section-styles;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  @include section-styles;
+}
+.title {
+  @include title-section;
 }
 
 
-.title {
-    font-size: var(--font-size-xl);
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 60px;
+.img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-container);
+  order: 1;
 
-    @media (max-width: 1440px) {    
-        font-size: var(--font-size-l);
-        margin-bottom: 60px;
-    }
-    @media (max-width: 1240px) {    
-        font-size: var(--font-size-m);
-        margin-bottom: 30px;
-    }
-    @media (max-width: 450px) {    
-        font-size: var(--font-size-s);
-    }
+  @include tablet-l {
+    width: 30%;
+  }
+
+  @include mobile-l {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-m {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+.reverse {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-container);
+  order: 3;
+
+  @include tablet-l {
+    width: 30%;
+  }
+
+  @include mobile-l {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-m {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }
