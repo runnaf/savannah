@@ -6,12 +6,13 @@ import styles from './MainPage.module.scss';
 import OurKittens from '../../feature/OurKittens/ui/OurKittens/OurKittens';
 import Benefits from '../../feature/Benefits/Benefits';
 
+
 export const MainPage = () => {
   return (
     <main className={styles.main}>
       <AboutUs />
       <Benefits/>
-      <OurKittens />
+      <OurKittens />  
       <BreedCharacteristics />
       <Advices/>
       <AccordionComponent />
