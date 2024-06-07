@@ -1,4 +1,4 @@
-import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";
+import { NavbarDesktop, NavbarMobile } from "../../../../feature/ui/Navbar/ui";
 import { HeaderPictureSecondary } from "../HeaderPictureSecondary/HeaderPictureSecondary";
 import styles from "./HeaderSecondary.module.scss";
 

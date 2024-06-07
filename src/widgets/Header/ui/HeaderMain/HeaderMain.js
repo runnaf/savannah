@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { Text } from "../../../../shared/ui/Text/Text";
 import { HeaderPictureMain } from "../HeaderPictureMain/HeaderPictureMain";
-import { NavbarDesktop, NavbarMobile } from "../../../../feature/Navbar/ui";
+import { NavbarDesktop, NavbarMobile } from "../../../../feature/ui/Navbar/ui";
 import { getStyle } from "../../../../shared/helper/getStyle";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
-import { ScrollToTop, getRouteCatalog } from "../../../../app/providers/router/config/helpers";
+import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 
 import styles from "./HeaderMain.module.scss";
+import { ScrollToTop } from "../../../../feature/helper/scrollToTop";
 
 export const HeaderMain = () => {
     return (
