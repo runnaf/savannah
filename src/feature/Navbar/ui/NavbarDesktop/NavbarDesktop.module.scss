@@ -1,3 +1,5 @@
+@import '../../../../app/styles/media-queries.scss';
+
 @mixin afterElement($width: 0) {
     &:after {
         display: block;
@@ -13,7 +15,7 @@
 .container {
     z-index: 10;
     
-    @media (max-width: 767px) {
+    @include mobile-xl {
         display: none;
     }
 }
@@ -27,11 +29,11 @@
     font-weight: 400;
     flex-wrap: wrap;
 
-    @media (max-width: 1439px) {
+    @include desktop-l {
         gap: var(--gap-tablet);
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         gap: var(--gap-mobile);
     }
 }
@@ -45,12 +47,12 @@
     padding: 5px;
     line-height: 1;
 
-    @media (max-width: 1439px) {
+    @include desktop-l {
         font-size: var(--font-size-m);
         min-width: 80px;
     }
 
-    @media (max-width: 1023px) {
+    @include tablet-l {
         font-size: var(--font-size-xs);
     }
 }
@@ -78,12 +80,12 @@
 .buttonSigin {
     min-width: 200px;
 
-    @media (max-width: 1439px) {
+    @include desktop-l {
         font-size: var(--font-size-m);
         min-width: 100px;
     }
 
-    @media (max-width: 1023px) {
+    @include tablet-l {
         font-size: var(--font-size-xs);
         min-width: 70px;
     }

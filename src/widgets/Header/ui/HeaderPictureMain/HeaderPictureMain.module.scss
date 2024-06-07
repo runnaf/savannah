@@ -1,3 +1,5 @@
+@import '../../../../app/styles/media-queries.scss'; 
+
 .picture {
     position: absolute;
     top: 0;
@@ -8,23 +10,23 @@
     min-height: 100%;
     display: block;
 
-    @media (max-width: 1439px) {
+    @include desktop-xl {
         min-height: 820px;
     }
 
-    @media (max-width: 1023px) {
+    @include tablet-l {
         min-height: 550px;
     }
 
-    @media (max-width: 850px) {
+    @include tablet-m {
         min-height: 480px;
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         min-height: 330px;
     }
 
-    @media (max-width: 500px) {
+    @include mobile-l {
         position: absolute;
         width: 100%;
         min-height: 230px;

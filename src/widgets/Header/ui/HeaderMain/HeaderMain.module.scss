@@ -1,4 +1,5 @@
 @import '../../../../app/styles/mixin.scss';
+@import '../../../../app/styles/media-queries.scss';
 
 .header {
     display: flex;
@@ -8,25 +9,25 @@
     position: relative;
     padding: 20px var(--desktop-padding);
 
-    @media (max-width: 1439px) {
+    @include desktop-xl {
         height: fit-content;
         min-height: 820px;
         padding: 20px var(--tablet-padding);
     }
 
-    @media (max-width: 1023px) {
+    @include tablet-l {
         min-height: 550px;
     }
 
-    @media (max-width: 850px) {
+    @include tablet-m {
         min-height: 480px;
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         min-height: 330px;
     }
 
-    @media (max-width: 500px) {
+    @include tablet-l {
         display: flex;
         align-items: center;
         background-color: transparent;
@@ -49,11 +50,11 @@
     flex-direction: column;
     width: 100%;
     
-    @media (max-width: 1439px) {
+    @include desktop-xl {
         padding: 0;
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         margin-left: 0;
         align-items: center;
     }
@@ -68,16 +69,19 @@
     background-color: var(--dark-brown);
     @include button;
     @include button-accent;
+    font-weight: 600;
 
-    @media (max-width: 1439px) {
+
+    @include desktop-xl {
         font-size: var(--font-size-m);
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         min-width: 160px;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-xl);
         padding: 8px 15px;
         border-radius: var(--border-radius-mobile);
+        font-size: var(--font-size-s);
     }
 
     & svg {
@@ -108,11 +112,11 @@
         margin-bottom: 56px;
         font-size: 70px;
 
-        @media (max-width: 1439px) {
+        @include desktop-xl {
             font-size: var(--font-size-xl);          
         }
 
-        @media (max-width: 767px) {
+        @include mobile-xl {
             font-size: var(--font-size-m);
             margin-bottom: 20px;
         }

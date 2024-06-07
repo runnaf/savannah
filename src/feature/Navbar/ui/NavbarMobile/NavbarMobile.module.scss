@@ -1,3 +1,5 @@
+@import '../../../../app/styles/media-queries.scss';
+
 .container {
     display: none;
     background: rgba(253, 253, 253); //FIX LATER
@@ -8,7 +10,7 @@
     left: 0;
     z-index: 99;
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         display: block;
         padding: 12px var(--mobile-padding);
     }
@@ -27,7 +29,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (max-width: 360px) {
+    @include mobile-m {
         font-size: 10px;
     }
 }
@@ -44,7 +46,7 @@
     text-transform: var(--text-uppercase);
     background-color: transparent;
 
-    @media (max-width: 360px) {
+    @include mobile-m {
         font-size: 10px;
     }
 }
