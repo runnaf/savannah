@@ -86,3 +86,49 @@
         background-size: 250% 100%;
     }
 }
+
+@mixin header-height {
+    @include desktop-xl {
+        min-height: 820px;
+    }
+
+    @include desktop-l {
+        min-height: 750px;
+    }
+
+    @include desktop-m {
+        min-height: 700px;
+    }
+
+    @include tablet-l {
+        min-height: 580px;
+    }
+
+    @include tablet-m {
+        min-height: 450px;
+    }
+
+    @include mobile-xl {
+        min-height: 330px;
+    }
+
+    @include mobile-l {
+        min-height: 305px;
+    }
+
+    @media (max-width: 440px) {
+        min-height: 250px;
+    }
+
+    @media (max-width: 400px) {
+        min-height: 220px;
+    }
+
+    @media (max-width: 360px) {
+        min-height: 220px;
+    }
+
+    @include mobile-m {
+        min-height: 200px;
+    }
+}

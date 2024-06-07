@@ -12,7 +12,7 @@
 
     @include mobile-xl {
         display: block;
-        padding: 12px var(--mobile-padding);
+        padding: 12px var(--mobile-padding) 0;
     }
 }
 
@@ -20,6 +20,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+
 }
 
 .link {
@@ -28,6 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 
     @include mobile-m {
         font-size: 10px;
@@ -45,6 +49,7 @@
     color: var(--dark-brown);
     text-transform: var(--text-uppercase);
     background-color: transparent;
+    margin-bottom: 20px;
 
     @include mobile-m {
         font-size: 10px;
