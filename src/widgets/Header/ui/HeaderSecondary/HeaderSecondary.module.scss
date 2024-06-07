@@ -1,19 +1,16 @@
 @import '../../../../app/styles/media-queries.scss';
+@import '../../../../app/styles/mixin.scss';
 
 .header {
     background-color: var(--brown);
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    @include main-styles;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 20px var(--desktop-padding);
-
-    @include desktop-l {
-        padding: 20px var(--tablet-padding);
-    }
-
-    @include mobile-xl {
-        padding: 20px var(--mobile-padding);
-        justify-content: center;
-    }
 }

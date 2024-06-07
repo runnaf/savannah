@@ -5,9 +5,11 @@ import styles from "./HeaderSecondary.module.scss";
 export const HeaderSecondary = () => {
     return (
         <header className={styles.header}>
-            <HeaderPictureSecondary />
-            <NavbarMobile />
-            <NavbarDesktop />
+            <div className={styles.container}>
+                <HeaderPictureSecondary />
+                <NavbarMobile />
+                <NavbarDesktop />
+            </div>
         </header>
     )
 }

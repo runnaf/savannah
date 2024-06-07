@@ -1,4 +1,5 @@
 @import '../../../../app/styles/media-queries.scss';
+@import '../../../../app/styles/mixin.scss';
 
 .container {
     display: none;
@@ -12,7 +13,8 @@
 
     @include mobile-xl {
         display: block;
-        padding: 12px var(--mobile-padding) 0;
+        padding: 20px 0;
+
     }
 }
 
@@ -21,8 +23,11 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 10px;
 
-
+    @include mobile-xl {
+        @include main-styles
+    }
 }
 
 .link {
@@ -31,7 +36,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+
+    @include mobile-xl {
+        font-size: 14px;
+    }
 
     @include mobile-m {
         font-size: 10px;
@@ -49,7 +57,10 @@
     color: var(--dark-brown);
     text-transform: var(--text-uppercase);
     background-color: transparent;
-    margin-bottom: 20px;
+
+    @include mobile-xl {
+        font-size: 14px;
+    }
 
     @include mobile-m {
         font-size: 10px;
