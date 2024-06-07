@@ -1,15 +1,16 @@
 import styles from './OurKittens.module.scss';
-import { Text } from "../../../shared/ui/Text/Text";
-import { Stack } from '../../../shared/ui/Stack/Stack';
-import kittensData from "../../../entities/CatCard/lib/data";
-import CatCard from '../../../entities/CatCard/ui/CatCard/CatCard';
+import { Text } from "../../../../shared/ui/Text/Text";
+import { Stack } from '../../../../shared/ui/Stack/Stack';
+import kittensData from "../../../../entities/CatCard/lib/data";
+import CatCard from '../../../../entities/CatCard/ui/CatCard/CatCard';
+import CatSlider from '../CatSlider/CatSlider';
 
 const OurKittens = () => {
     return (
         <section className={styles.section}>
             <Stack justifyContent='justifyCenter'>
                 <Text type="h2" size="xl" className={styles.title}>
-                    НАШИ КОТЯТА
+                    НАШИ <strong>КОТЯТА</strong>
                 </Text>
             </Stack>
 
@@ -21,6 +22,9 @@ const OurKittens = () => {
                         isMain
                     />
                 )}
+            </div>
+            <div className={styles.slider}>
+                <CatSlider/>
             </div>
         </section>
     )
