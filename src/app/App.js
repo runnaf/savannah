@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router';
 import ButtonSocial from '../widgets/ButtonSocial/ButtonSocial';
 import { ButtonUp } from '../shared/ui/ButtonUp/ButtonUp';
 import { RouterProvider } from './providers/router/RouterProvider/RouterProvider';
@@ -8,10 +7,8 @@ import styles from './App.module.scss';
 
 
 function App() {
-  const location = useLocation();
-
   return (
-    <div className={`${styles.container} ${location.pathname === '/'? styles.containerMain : ''}`}>
+    <div className={`${styles.container} `}>
       <Header />
       <RouterProvider />
       <ButtonUp />

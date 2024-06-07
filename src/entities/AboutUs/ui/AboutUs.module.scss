@@ -4,6 +4,8 @@
 
 .section {
     @include section-styles;
+    margin-top: 0;
+    padding-top: 60px;
 }
 
 .title {
