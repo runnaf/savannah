@@ -1,5 +1,5 @@
 import { Input } from "../../shared/ui/Input/Input";
-import { dataSelect } from "../../shared/assets/config/dataSelect";
+import { dataSelect } from "../../feature/FilterCats/lib/dataSelect";
 import Select from "../../shared/ui/Select/Select";
 import closeButton from '../../shared/assets/photo/close.png';
 import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
@@ -27,10 +27,10 @@ export const EditAddForm = () => {
             // onChange={() => console.log()}
         />
 
-        <Select title="Возраст" options={dataSelect.OptionsAge} />
-        <Select title="Пол" options={dataSelect.OptionsSex} />
-        <Select title="Цвет" options={dataSelect.OptionsColor} />
-        <Select title="Статус" options={dataSelect.OptionsStatus} />
+        <Select title="Возраст" options={dataSelect.optionsAge} />
+        <Select title="Пол" options={dataSelect.optionsSex} />
+        <Select title="Цвет" options={dataSelect.optionsColor} />
+        <Select title="Статус" options={dataSelect.optionsStatus} />
         
         <Button className={styles.buttonEdit}>
             сохранить {arrowIcon()}
