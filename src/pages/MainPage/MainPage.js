@@ -3,18 +3,19 @@ import { BreedCharacteristics } from '../../entities/BreedCharacteristics/ui/Bre
 import AccordionComponent from '../../entities/AccordionComponent/ui/AccordionComponent';
 import { Advices } from '../../entities/AdvicesComponent/ui/Advices/Advices'
 import styles from './MainPage.module.scss';
-import OurKittens from '../../feature/OurKittens/ui/OurKittens';
-import { Footer } from '../../widgets/Footer/Footer';
+import OurKittens from '../../feature/OurKittens/ui/OurKittens/OurKittens';
+import Benefits from '../../feature/Benefits/Benefits';
+
 
 export const MainPage = () => {
   return (
-    <main className={styles.MainPage}>
+    <main className={styles.main}>
       <AboutUs />
-      <OurKittens />
+      <Benefits/>
+      <OurKittens />  
       <BreedCharacteristics />
       <Advices/>
       <AccordionComponent />
-      <Footer/>
     </main>
   )
 };

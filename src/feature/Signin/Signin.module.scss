@@ -1,8 +1,8 @@
+@import '../../app/styles/mixin.scss';
+
 .signin {
     width: 600px;
-    padding: 20px 100px 80px 100px;
-    background-color: var(--light-brown);
-    border-radius: 15px;
+    @include modal-content;
 }
 
 .closeButton {

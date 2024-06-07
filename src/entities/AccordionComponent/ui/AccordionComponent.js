@@ -11,8 +11,8 @@ const AccordionComponent = () => {
                 <Text type="h2" size="xl" className={styles.title}>
                     ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ
                 </Text>
-            </Stack>          
-                <Accordion accordionData={accordionData}/>          
+            </Stack>
+            <Accordion accordionData={accordionData} />
         </section>
     );
 };

@@ -1,19 +1,27 @@
 @import './media-queries.scss';
 
-@mixin section-styles {
+@mixin main-styles {
     margin: 0 auto;
-    margin-top: 60px;
     max-width: calc(var(--container-max-width) + var(--container-padding-x) * 2);
     padding: 0 var(--container-padding-x); 
+
+    @include tablet-m {
+        padding: 0 70px; 
+    }
+
+    @include mobile-l{
+        padding: 0 40px; 
+    }   
+}
+
+@mixin section-styles {
+    margin-top: 60px;
       
     @include tablet-l {        
         margin-top: 40px;
     }
-    @include tablet-m {
-        padding: 0 70px; 
-    }
+
     @include mobile-l{
-        padding: 0 40px; 
         margin-top: 40px;
     }      
    
@@ -40,5 +48,16 @@
     }
     @include mobile-m {
         padding: 0 20px; 
+    }
+}
+
+@mixin modal-content {
+    padding: 10px 100px 60px 100px;
+    background-color: var(--light-brown);
+    border-radius: var(--border-radius-container);
+    box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.25);
+
+    @include mobile-l {
+        padding: 15px 20px 40px 20px;
     }
 }
