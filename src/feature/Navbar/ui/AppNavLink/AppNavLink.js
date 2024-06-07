@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { ScrollToTop } from "../../../../app/providers/router/config/helpers";
 
 export const AppNavLink = (props) => {
     const { route, styles, isDefaultStyle = false } = props;
@@ -10,6 +11,7 @@ export const AppNavLink = (props) => {
                 `${styles.link} ${isActive ? styles.opened_page : (isDefaultStyle ? styles.default : '')}`
             }
             to={route.path}
+            onClick={ScrollToTop()}
         >
             {route.navlink}
             {route.img}
