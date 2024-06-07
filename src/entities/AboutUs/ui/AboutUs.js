@@ -3,8 +3,7 @@ import styles from './AboutUs.module.scss';
 import aboutPicture from '../../../shared/assets/photo/aboutus.png';
 import aboutPicture_2x from '../../../shared/assets/photo/aboutus@2x.png';
 import { Stack } from "../../../shared/ui/Stack/Stack";
-import Benefits from "./Benefits";
-import benefitsData from "../lib/data";
+
 
 const AboutUs = () => {
     return (
@@ -36,20 +35,7 @@ const AboutUs = () => {
                     </Stack>
                 </div>
             </section>
-            <section className={styles.section}>
-                <Stack justifyContent='justifyCenter'>
-                    <Text type="h2" size="xl" className={styles.title}>
-                        ПИТОМНИК <strong>SAVANNAH WORLD</strong> ЭТО -
-                    </Text>
-                </Stack>
-                <div className={styles.benefits__row}>
-                    {benefitsData.map(element =>
-                        <Benefits                  
-                            benefitsData={element}
-                            key={element.benefit}/>
-                    )}           
-                </div>                    
-            </section>
+     
         </>
     );
 }
