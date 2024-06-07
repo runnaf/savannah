@@ -1,15 +1,21 @@
 @import '../../app/styles/mixin.scss';
 
-
 .footer {
     background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-top: 60px;
     padding: 20px var(--desktop-padding);
     padding-top: 40px;
 
+    @include tablet-l {        
+        margin-top: 40px;
+    }
+    @include mobile-l{
+        margin-top: 40px;
+    }  
     @include desktop-l {
         padding: 30px var(--tablet-padding);
         padding-top: 40px;

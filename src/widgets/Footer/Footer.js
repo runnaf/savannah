@@ -12,6 +12,7 @@ import vkIcon from "../../shared/assets/footer/vk.png";
 
 export const Footer = () => {
     return(
+        <section className={styles.section}>
         <footer className={styles.footer}>
             <Stack 
                     className={styles.footerLeftSection}
@@ -111,7 +112,8 @@ export const Footer = () => {
                         >
                         <p>Сайт сделан в <span>AL TECH LABS LTD.</span></p>
                         </Stack>
-            </Stack>     
+                </Stack>     
         </footer>
+        </section>
     )
 }
