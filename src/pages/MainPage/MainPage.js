@@ -5,10 +5,14 @@ import { Advices } from '../../entities/AdvicesComponent/ui/Advices/Advices'
 import styles from './MainPage.module.scss';
 import OurKittens from '../../feature/OurKittens/ui/OurKittens/OurKittens';
 import Benefits from '../../feature/Benefits/Benefits';
+import { Footer } from '../../widgets/Footer/ui/Footer';
+import { Gallery } from '../../entities/Gallery/ui/Gallery';
+
 
 
 export const MainPage = () => {
   return (
+    <>
     <main className={styles.main}>
       <AboutUs />
       <Benefits/>
@@ -16,6 +20,9 @@ export const MainPage = () => {
       <BreedCharacteristics />
       <Advices/>
       <AccordionComponent />
+      <Gallery/>
     </main>
+    <Footer/>
+    </>
   )
 };

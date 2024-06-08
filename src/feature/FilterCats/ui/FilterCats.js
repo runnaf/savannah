@@ -1,14 +1,14 @@
-import Select from "../../shared/ui/Select/Select";
-import { dataSelect } from "../../shared/assets/config/dataSelect";
-import { Button } from "../../shared/ui/Button/Button";
-import { Stack } from "../../shared/ui/Stack/Stack";
+import Select from "../../../shared/ui/Select/Select";
+import { dataSelect } from "../lib/dataSelect";
+import { Button } from "../../../shared/ui/Button/Button";
+import { Stack } from "../../../shared/ui/Stack/Stack";
 import styles from './FilterCats.module.scss';
 
 const titles = {
-  OptionsAge: 'Возраст',
-  OptionsSex: 'Пол',
-  OptionsColor: 'Цвет',
-  OptionsStatus: 'Статус'
+  optionsAge: 'Возраст',
+  optionsSex: 'Пол',
+  optionsColor: 'Цвет',
+  optionsStatus: 'Статус'
 };
 
 export const FilterCats = () => {
