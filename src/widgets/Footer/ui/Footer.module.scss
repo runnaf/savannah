@@ -1,4 +1,4 @@
-@import '../../app/styles/mixin.scss';
+@import '../../../app/styles/mixin.scss';
 
 .footer {
     background-color: var(--white);
@@ -96,4 +96,7 @@ p{
     @include mobile-m {
         font-size: 8px;
     }  
+}
+.visuallyhidden{
+display: none;
 }
