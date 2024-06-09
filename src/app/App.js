@@ -5,10 +5,10 @@ import { Header } from '../widgets/Header/ui/Header/Header';
 import './styles/index.scss';
 import styles from './App.module.scss';
 
-function App() {
 
+function App() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} `}>
       <Header />
       <RouterProvider />
       <ButtonUp />
