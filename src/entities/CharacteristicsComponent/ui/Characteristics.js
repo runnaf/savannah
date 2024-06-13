@@ -2,6 +2,7 @@ import styles from "./Characteristics.module.scss";
 import { Stack } from "../../../shared/ui/Stack/Stack";
 import { Text } from "../../../shared/ui/Text/Text";
 import { characteristicsData } from "../lib/characteristicsData";
+import check from '../../../shared/assets/photo/check.png'
 
 const Characteristics = () => {
   return (
@@ -17,7 +18,7 @@ const Characteristics = () => {
         <ul>
           {characteristicsData.map((item, index) => (
             <li key={index} className={styles.text}>
-              <img src={item.icon} alt="Check" className={styles.imgCharact} />
+              <img src={check} alt="Check" className={styles.imgCharact} />
               {item.content}
             </li>
           ))}
