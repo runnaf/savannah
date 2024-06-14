@@ -2,18 +2,33 @@
 
 .edit {
     @include modal-content;
+        @include mobile-l {
+        flex-direction: column;
+    } 
 }
 
 .editImgBox{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .editPhoto{
-    @media (max-width: 1439px) {
+    width:330px;
+    height:374px;
+    
+    @include desktop-l {
         width: 280px;
-        height: 335px;
-}
+        height: 317.56px;
+    } 
+    @include desktop-m {
+        width: 259.6px;
+        height: 294.42px;
+    } 
+    @include tablet-l {
+        width: 410px;
+        height: 465px;
+    } 
 }
 
 .editIcon{
@@ -29,8 +44,48 @@
     align-items: center;
     width: 100%;
     margin-top: 20px;
-
-    @media (max-width: 1439px) {
+    height: 44px;
+    @include desktop-l {
         font-size: var(--font-size-xs);
-    }
+    } 
+
+    @include desktop-m {
+        width: 170px;
+    } 
+    @include tablet-l {
+        width: 150px;
+} 
+@include tablet-m {
+    width: 140px;
+    justify-content: center;
+} 
+    @include mobile-l {
+        width: 220px;
+    } 
+
+}
+
+.buttonDelete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border: 2px solid var(--red) !important;
+    color: var(--red) !important;
+    height: 44px;
+    @include desktop-m {
+        width: 170px;
+    } 
+    @include tablet-l {
+            width: 150px;
+    } 
+    @include tablet-m {
+        width: 140px;
+        justify-content: center;
+    } 
+    @include mobile-l {
+        width: 220px;
+    } 
+
 }

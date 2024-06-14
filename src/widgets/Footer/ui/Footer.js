@@ -15,14 +15,14 @@ export const Footer = () => {
 
                         {leftSectionData.map((item) => (
                             <Stack
-                            key = {item.is}
+                            key = {item.id}
                             justifyContent = 'justifyCenter'
                             alignItems = "alignCenter"
                             direction='row'
                             gap='8'
                             className = {styles[item.className]}
                             >
-                                <img className={styles.connectIcon} src= {item.icon} alt={item.alt}/>
+                                <img className={styles.connectIcon} src={item.icon} alt={item.alt}/>
                                 <Text
                                 size='s'
                                 type='p'
@@ -43,7 +43,7 @@ export const Footer = () => {
 
                     {rightSectionData.map((item) => (
                         <Stack
-                        key = {item.is}
+                        key = {item.id}
                             justifyContent = 'justifyCenter'
                             alignItems = "alignCenter"
                             direction='row'

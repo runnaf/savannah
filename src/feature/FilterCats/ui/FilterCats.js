@@ -29,6 +29,7 @@ export const FilterCats = () => {
       <Button className={styles.secondary} variant="secondary">
         сбросить
       </Button>
+
     </Stack>
   )
 };

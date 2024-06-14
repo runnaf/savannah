@@ -5,13 +5,15 @@ import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
 import editPhoto from '../../shared/assets/photo/editCatImg.png';
 import { Button } from '../../shared/ui/Button/Button';
 import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
+import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
 
 export const EditCatCard = ({ changeEditModal }) => {
     return (
         <Stack
             justifyContent='justifyCenter'
             alignItems='alignCenter'
-            direction='row' gap='32'
+            direction='row'
+            gap='32'
             className={styles.edit}
         >
 
@@ -23,10 +25,14 @@ export const EditCatCard = ({ changeEditModal }) => {
                     className={styles.editIcon}
                     src={editIcon} alt="editIcon" />
             </div>
+            
             <div>
-                <EditAddForm />
+                <EditAddForm/>
                 <Button className={styles.button}>
                     сохранить {arrowIcon()}
+                </Button>
+                <Button variant="secondary" className={styles.buttonDelete}>
+                    удалить {deleteIcon()}
                 </Button>
             </div>
 

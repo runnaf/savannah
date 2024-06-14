@@ -1,16 +1,37 @@
 @import '../../app/styles/mixin.scss';
+@import '../../app/styles/media-queries.scss';
 
 .signin {
     width: 600px;
     @include modal-content;
+    
+
+    @include mobile-l {
+        width: 95%;
+        margin-left: 10px;
+    }
+
+    .title {
+        align-self: flex-start;
+
+        &:last-of-type {
+            margin-bottom: 22px;
+        }
+    }
 }
 
 .closeButton {
     cursor: pointer;
     position: relative;
     left: 250px;
+    top: 10px;
     width: 50px;
     height: 50px;
+}
+
+.wrong{
+    border: 1.5px solid var(--red);
+
 }
 
 .buttonSignin {
@@ -18,4 +39,27 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+.error {
+    text-align: center;
+
+.text {
+    color: var(--red);
+}  
+}
+
+.password {
+    position: relative;
+    left: 170px;
+    bottom: 80px;
+    width: 80px;
+    height: 0;
+
+    @include mobile-l {
+        left: 160px;
+    }
+
+    @include mobile-m {
+        left: 130px;
+    }
 }

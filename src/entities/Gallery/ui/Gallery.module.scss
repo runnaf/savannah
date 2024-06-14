@@ -12,8 +12,25 @@
     padding-top: 40px;
     padding-bottom: 40px;
     border-radius: var(--border-radius-container);
+    @include mobile-l {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      } 
 }
 
+.photoRow{
+    @include mobile-m {
+    display: flex;
+    flex-wrap:wrap;
+    }
+}
+
+.photoRowHide{
+    @include mobile-m {
+        display: none;
+      } 
+
+}
 
 .photo{
     width: 312px;
@@ -28,8 +45,12 @@
         width: 312px;
         height: 226px;
     }
+    @include tablet-m {        
+        width: 120px;
+        height: 90px;
+    }
     @include mobile-l{
-        width: 80px;
-        height: 60px;
+        width: 90px;
+        height: 70px;
     } 
 }

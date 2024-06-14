@@ -21,9 +21,8 @@
         padding-top: 40px;
     }  
     @include mobile-m {
-        padding: 10px;
-        padding-top: 40px;
-        flex-direction: column;
+flex-wrap: wrap;
+flex-flow: column-reverse;
     }  
 
 }
@@ -59,6 +58,10 @@
 }
 .footerRightSection{
     align-items: flex-end;
+
+    @include mobile-m {
+        // ?
+    }  
 }
 
 .email{
@@ -67,6 +70,7 @@
 
 .cIcon{
     width: 15px;
+
     @include tablet-m {
         font-size: 14px;
     }  

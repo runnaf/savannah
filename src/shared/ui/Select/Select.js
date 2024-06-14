@@ -36,7 +36,7 @@ const Select = ({ title, options }) => {
             <div >
                 <Menu.Button className={styles.selectBox}
                     onClick={() => setMenuIsOpen(!menuIsOpen)}>
-                    <Text className={styles.titleText}>{title}</Text>
+                    <Text size="h1" className={styles.titleText}>{title}</Text>
                     <ChevronDownIcon className={styles.icon} aria-hidden="true" />
                 </Menu.Button>
             </div>
@@ -63,12 +63,14 @@ const Select = ({ title, options }) => {
                                     onChange={(checked) => handleCheckboxChange(option.id, checked)}
                                 />
                                 <Menu.Item>
+                                    <Text>
                                     <p
                                         className={getStyle('', {}, ["option"])}
                                         onClick={() => handleMenuItemClick(option.id)}
                                     >
                                         {option.value}
                                     </p>
+                                    </Text>
                                 </Menu.Item>
                             </div>
                         </div>

@@ -35,7 +35,7 @@ export const leftSectionData = [
         alt: 'corporation',
         hiddenText: 'Корпорация',
         content: <p>2024 <b>Savannah World.</b> Все права защищены</p>,
-        className: 'legal'
+        className: styles.legal
     }
 ];
 
@@ -64,7 +64,7 @@ export const rightSectionData =[
 
     {
         id: 4,
-        className: 'legal',
+        className: styles.legal,
         content: <p>Сайт сделан в <span>AL TECH LABS LTD.</span></p>
     }
 ]

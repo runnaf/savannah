@@ -3,20 +3,29 @@ import { Button } from "../../shared/ui/Button/Button";
 import { Stack } from "../../shared/ui/Stack/Stack";
 import { Input } from '../../shared/ui/Input/Input';
 import closeButton from '../../shared/assets/photo/close.png';
-import { Error } from "../../shared/ui/Error/Error";
+// import { Error } from "../../shared/ui/Error/Error";
 import { useState } from "react";
 import styles from './Signin.module.scss';
+import { Text } from "../../shared/ui/Text/Text";
+import { showPasswordIcon, hidePasswordIcon } from "../../shared/assets/svg/passwordIcons";
 
 export const Signin = ({ changeSigninModal }) => {
     const [error, setError] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSignIn = () => {
-        console.log('handleSignIn');
-    };
+        const CorrectPassword = false;
+
+        if (CorrectPassword) {
+            setError(false);
+        } else {
+            setError(true);
+        }
+    }
 
     return (
         <Stack
-            gap='32'
+            gap='16'
             justifyContent='justifyCenter'
             alignItems='alignCenter'
             direction='column'
@@ -27,19 +36,41 @@ export const Signin = ({ changeSigninModal }) => {
                 src={closeButton} alt="закрыть"
                 onClick={changeSigninModal}
             />
+            <Text
+            type='h3' size='l' className={styles.title}
+            >Вход</Text>
+            <Text
+            type='h3' size='s' className={styles.title}
+            >Введите данные, чтобы войти в систему</Text>
+
+
             <Input
+                error={error}
                 placeholder='логин'
-                onChange={(value) => console.log(value)}
+                className={`${error ? styles.wrong : ''}`}
+                onChange={() => {}}
             />
             <Input
-                type="password"
+                error={error}
+                type={!showPassword ? 'password' : 'text'}
                 placeholder='пароль'
-                onChange={(value) => console.log(value)}
+                className={`${error ? styles.wrong : ''}`}
+                onChange={() => {}}
             />
+                <div
+                className={styles.password}
+                onClick={() => setShowPassword(!showPassword)}
+            >
+                {showPassword ? hidePasswordIcon() : showPasswordIcon()}
+            </div>
+            <div className={styles.error}>
             {
                 error &&
-                <Error text="Введен неправильный логин и/или пароль" />
+                <Text size='xs' className={styles.text}>
+                    Введен неверный логин и/или пароль
+                </Text>
             }
+            </div>
 
             <Button
                 className={styles.buttonSignin}
@@ -47,6 +78,7 @@ export const Signin = ({ changeSigninModal }) => {
             >
                 войти {arrowIcon()}
             </Button>
+
         </Stack>
     );
 };

@@ -1,14 +1,33 @@
+@import '../../../app/styles/mixin.scss';
+@import '../../../app/styles/media-queries.scss';
+
 .filterbar {
     margin-top: 60px;
+
+    @include tablet-l {
+        flex-wrap: wrap;
+    } 
+    @include mobile-l {
+        justify-content: space-around;
+    }
 }
 .secondary{
     width: 263px;
-    height: 62px;
+    height: 44px;
 
-    @media (max-width: 1439px) {
-        width: 180px;
-        height: 40px;
+    @include desktop-l {
+        width: 200px;
         font-size: var(--font-size-xs);
+    } 
+    @include desktop-m {
+        width: 170px;
+    } 
+    @include tablet-l {
+        width: 150px;
+    } 
+    @include mobile-l {
+        width: 220px;
     }
+
     
 }
