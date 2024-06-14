@@ -18,6 +18,7 @@ export const Advices = () => {
           cat={item.cat}
           title={item.title}
           content={item.content}
+          index={index}
         />
       ))}
     </section>
