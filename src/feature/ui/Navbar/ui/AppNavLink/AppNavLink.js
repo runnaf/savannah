@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { ScrollToTop } from "../../../../helper/scrollToTop";
+import { ScrollToTop } from "../../../../hooks/scrollToTop";
 
 export const AppNavLink = (props) => {
     const { route, styles, isDefaultStyle = false } = props;

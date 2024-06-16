@@ -2,8 +2,7 @@
 
 .main {
     @include main-styles;
-    background-image: image-set(
-        url('../../shared/assets/photo/background_main.jpg') 1x);
+    background-image: url('../../shared/assets/photo/background_main.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--light-brown);
