@@ -12,10 +12,12 @@ import { deleteIcon } from '../../shared/assets/svg/deleteIcon';
 
 export const EditAddForm = () => {
     return (
-        <Stack justifyContent='justifyCenter'
+        <Stack
+            justifyContent='justifyCenter'
             alignItems='alignCenter'
             direction='column' gap='16'
-            className={styles.editSection}>
+            className={styles.editSection}
+        >
             <img
                 className={styles.closeButton}
                 src={closeButton} alt="закрыть"

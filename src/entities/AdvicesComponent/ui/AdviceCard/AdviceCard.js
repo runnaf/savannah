@@ -4,7 +4,8 @@ import styles from "./AdviceCard.module.scss";
 
 const AdviceCard = ({ cat, title, content, index }) => {
   return (
-    <Stack justifyContent="justifyBetween" className={styles.container}>
+    <Stack 
+    justifyContent="justifyBetween" className={styles.container}>
       <img
         src={cat} width='240 px' alt="Cat"
         className={index % 2 === 0 ? styles.img : styles.imgRev} />
