@@ -1,0 +1,38 @@
+@import '../../../app/styles/media-queries.scss';
+@import '../../../app/styles/mixin.scss';
+
+
+.benefit {
+
+    & img {
+        width: 100px;
+        height: 100px;
+
+        @include desktop-m {    
+            width: 80px;
+            height: 80px;
+        }
+        @include mobile-l {    
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    @include desktop-l {
+        column-gap: 20px;
+    }
+    }
+
+.benefit__text {
+    font-weight: 400;
+    max-width: 240px;
+
+
+    @include desktop-m {    
+        max-width: 100%;
+    }
+
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+    }
+}

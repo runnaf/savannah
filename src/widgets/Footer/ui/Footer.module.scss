@@ -1,0 +1,102 @@
+@import '../../../app/styles/mixin.scss';
+
+.footer {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px var(--desktop-padding);
+    padding-top: 40px;
+
+    @include tablet-l {        
+        margin-top: 40px;
+    }
+    @include mobile-l{
+        margin-top: 40px;
+    }  
+    @include desktop-l {
+        padding: 30px var(--tablet-padding);
+        padding-top: 40px;
+    }  
+    @include mobile-m {
+        padding: 10px;
+        padding-top: 40px;
+        flex-direction: column;
+    }  
+
+}
+
+
+
+.text{
+    @include tablet-m {
+        font-size: 20px;
+    }  
+    @include mobile-l {
+        font-size: 14px;
+    }  
+}
+
+.connectIcon {
+    width: 50px;
+    height: 50px;
+
+    @include tablet-m {
+        width: 40px;
+        height: 40px;
+    }  
+    @include mobile-l {
+        width: 30px;
+        height: 30px;
+    }  
+
+}
+
+.footerLeftSection{
+    align-items: flex-start;
+}
+.footerRightSection{
+    align-items: flex-end;
+}
+
+.email{
+    color: var(--black);
+}
+
+.cIcon{
+    width: 15px;
+    @include tablet-m {
+        font-size: 14px;
+    }  
+    @include mobile-l {
+        width: 10px;
+    }  
+    @include mobile-m {
+        width: 8px;
+    }  
+}
+
+.legal{
+    margin-top: 40px;
+}
+span{
+    color: var(--dark-brown);
+    font-weight: 700;
+}
+
+p{
+    @include tablet-m {
+        font-size: 14px;
+    }  
+    @include mobile-l {
+        font-size: 10px;
+    }  
+    @include mobile-m {
+        font-size: 8px;
+    }  
+}
+.visuallyhidden{
+display: none;
+}

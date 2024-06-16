@@ -1,23 +1,5 @@
 @import '../../../../app/styles/media-queries.scss';
 
-.kitten__btn {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-
-
-    @include desktop-m {
-        font-size: var(--font-size-s);
-        border-radius: var(--border-radius-mobile);
-        & svg {
-            width: 20px;
-            height: 20px;
-        }
-    }  
-    }
-    
 
 .kittens__card {
     display: flex;
@@ -30,7 +12,14 @@
     border-radius: var(--border-radius-container);
 
     @include desktop-m {
-        padding: 30px;
+        padding: 25px;
+    }
+    @include tablet-l {
+        width: 100%;
+        padding: 40px;
+    }
+    @include mobile-l {       
+        padding: 20px;
     }
 }
 .description {  
@@ -67,4 +56,28 @@
     object-fit: cover;
     border-radius: var(--border-radius-container);
 }
+.kitten__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
 
+
+    @include desktop-m {
+        font-size: var(--font-size-xs);
+        padding: 10px 15px;
+
+        border-radius: var(--border-radius-mobile);
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }  
+    @include tablet-l {
+        padding: 10px 25px;
+    }
+    @include mobile-l {
+        padding: 10px 10px;
+    }
+}

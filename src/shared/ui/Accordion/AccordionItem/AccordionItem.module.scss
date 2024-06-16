@@ -13,16 +13,22 @@
     -moz-user-select: none;
     -ms-user-select: none;
    
-  
+    @include desktop-m {
+        font-size: var(--font-size-s);  
+    }
     @include tablet-m {
         padding: 15px;
     }
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+    }  
 }
 
 .question {  
     @include accordion-btn;
     border-radius: var(--border-radius-element); 
     
+
     & svg {
 
         @include tablet-m {
@@ -67,6 +73,8 @@
 .open {      
     @include accordion-btn;
     border-radius: 15px 15px 0 0; 
+
+
 
     & svg {
         @include mobile-l {

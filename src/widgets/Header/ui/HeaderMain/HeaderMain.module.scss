@@ -1,36 +1,26 @@
+@import '../../../../app/styles/mixin.scss';
+@import '../../../../app/styles/media-queries.scss';
+
 .header {
     display: flex;
     background-color: transparent;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     position: relative;
-    padding: 20px var(--desktop-padding);
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-    @media (max-width: 1439px) {
+    @include desktop-xl {
         height: fit-content;
-        min-height: 820px;
-        padding: 20px var(--tablet-padding);
     }
 
-    @media (max-width: 1023px) {
-        min-height: 550px;
-    }
+    @include header-height;
 
-    @media (max-width: 850px) {
-        min-height: 480px;
-    }
-
-    @media (max-width: 767px) {
-        min-height: 330px;
-    }
-
-    @media (max-width: 500px) {
+    @include mobile-l {
         display: flex;
         align-items: center;
         background-color: transparent;
         justify-content: flex-start;
-        min-height: 230px;
-        padding: 20px var(--mobile-padding);
     }
 }
 
@@ -46,12 +36,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    @media (max-width: 1439px) {
-        padding: 0;
-    }
+    @include main-styles;
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         margin-left: 0;
         align-items: center;
     }
@@ -59,33 +46,27 @@
 
 .linkHeader {
     width: 100%;
+    max-width: 300px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     color: var(--white);
     background-color: var(--dark-brown);
+    @include button;
+    @include button-accent;
     font-weight: 600;
-    border-radius: var(--border-radius-desktop);
-    padding: 15px 15px;
-    text-transform: var(--text-uppercase);
-    font-size: var(--font-size-m);
-    cursor: pointer;
-    border: none;
-    outline: none;
 
-    &:hover {
-        opacity: 0.8;
-    }
 
-    @media (max-width: 1439px) {
+    @include desktop-xl {
         font-size: var(--font-size-m);
     }
 
-    @media (max-width: 767px) {
+    @include mobile-xl {
         min-width: 160px;
-        font-size: var(--font-size-xs);
         padding: 8px 15px;
         border-radius: var(--border-radius-mobile);
+        font-size: var(--font-size-xs);
     }
 
     & svg {
@@ -116,11 +97,11 @@
         margin-bottom: 56px;
         font-size: 70px;
 
-        @media (max-width: 1439px) {
+        @include desktop-xl {
             font-size: var(--font-size-xl);          
         }
 
-        @media (max-width: 767px) {
+        @include mobile-xl {
             font-size: var(--font-size-m);
             margin-bottom: 20px;
         }

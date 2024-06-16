@@ -1,0 +1,70 @@
+@import '../../../app/styles/media-queries.scss';
+@import '../../../app/styles/mixin.scss';
+
+
+.section {
+    @include section-styles;
+    margin-top: 0;
+    padding-top: 60px;
+}
+
+.title {
+    @include title-section;   
+}
+
+.about__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: clamp(20px, 5vw, 120px);
+    align-items: center;    
+
+    @include desktop-m {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }   
+    @include mobile-l {
+        row-gap: 20px;
+    }
+}
+
+.picture {
+    width: clamp(430px, 40vw, 600px);
+    border-radius: var(--border-radius-container);
+
+    @include desktop-m {
+        width: clamp(240px, 80vw, 410px);
+    }
+    @include mobile-m {
+        width: 100%;
+    }
+}
+.text {  
+    row-gap: 30px;   
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    padding: 20px 0;
+
+    @include desktop-l {
+        row-gap: 15px; 
+    }
+    @include desktop-m {
+        padding: 0;
+    }
+    @include mobile-l {
+        line-height: 1.4;        
+    }
+}
+.par {
+
+    @include tablet-l {
+        font-size: var(--font-size-s);       
+    }
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+    }
+}
+
+

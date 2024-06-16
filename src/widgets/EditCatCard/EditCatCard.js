@@ -3,13 +3,15 @@ import styles from './EditCatCard.module.scss';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
 import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
 import editPhoto from '../../shared/assets/photo/editCatImg.png';
+import { Button } from '../../shared/ui/Button/Button';
+import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
 
-export const EditCatCard = () => {
+export const EditCatCard = ({ changeEditModal }) => {
     return (
         <Stack
             justifyContent='justifyCenter'
             alignItems='alignCenter'
-            direction='row'
+            direction='row' gap='32'
             className={styles.edit}
         >
 
@@ -21,7 +23,13 @@ export const EditCatCard = () => {
                     className={styles.editIcon}
                     src={editIcon} alt="editIcon" />
             </div>
-            <EditAddForm />
+            <div>
+                <EditAddForm />
+                <Button className={styles.button}>
+                    сохранить {arrowIcon()}
+                </Button>
+            </div>
+
         </Stack>
     )
 }
