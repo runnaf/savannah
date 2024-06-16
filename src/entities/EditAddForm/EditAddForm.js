@@ -27,17 +27,11 @@ export const EditAddForm = () => {
             // onChange={() => console.log()}
             />
 
-        <Select title="Возраст" options={dataSelect.optionsAge} />
-        <Select title="Пол" options={dataSelect.optionsSex} />
-        <Select title="Цвет" options={dataSelect.optionsColor} />
-        <Select title="Статус" options={dataSelect.optionsStatus} />
-        
-        <Button className={styles.buttonEdit}>
-            сохранить {arrowIcon()}
-        </Button>
-        <Button variant="secondary" className={styles.buttonEdit}>
-            удалить { deleteIcon() }
-        </Button>
+            <Select title="Возраст" options={dataSelect.optionsAge} />
+            <Select title="Пол" options={dataSelect.optionsSex} />
+            <Select title="Цвет" options={dataSelect.optionsColor} />
+            <Select title="Статус" options={dataSelect.optionsStatus} />
+
         </Stack>
     )
 }
