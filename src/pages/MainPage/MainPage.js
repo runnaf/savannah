@@ -12,17 +12,16 @@ import GallerySlider from "../../entities/Gallery/GallerySlider/GallerySlider";
 export const MainPage = () => {
   return (
     <main className={styles.main}>
-      <AboutUs />
-      <OurKittens />
-      <Characteristics />
-      <Benefits />
-      <OurKittens />
-      <BreedCharacteristics />
-      <Advices />
-      <AccordionComponent />
-      <Gallery />
-      <GallerySlider/>
-
+      <div className={styles.container}>
+        <AboutUs />
+        <Benefits/>
+        <OurKittens />  
+        <Characteristics />
+        <BreedCharacteristics />
+        <Advices/>
+        <AccordionComponent />
+        <Gallery />
+      </div>
     </main>
   )
 };

@@ -97,7 +97,7 @@
         margin-bottom: 56px;
         font-size: 70px;
 
-        @include desktop-xl {
+        @include desktop-m {
             font-size: var(--font-size-xl);          
         }
 
