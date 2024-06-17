@@ -11,15 +11,16 @@ import { Gallery } from '../../entities/Gallery/ui/Gallery';
 export const MainPage = () => {
   return (
     <main className={styles.main}>
-      <AboutUs />
-      <OurKittens />
-      <Characteristics />
-      <Benefits />
-      <OurKittens />
-      <BreedCharacteristics />
-      <Advices />
-      <AccordionComponent />
-      <Gallery />
+      <div className={styles.container}>
+        <AboutUs />
+        <Benefits/>
+        <OurKittens />  
+        <Characteristics />
+        <BreedCharacteristics />
+        <Advices/>
+        <AccordionComponent />
+        <Gallery />
+      </div>
     </main>
   )
 };

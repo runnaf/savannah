@@ -1,9 +1,12 @@
 @import '../../app/styles/mixin.scss';
 
 .main {
-    @include main-styles;
     background-image: url('../../shared/assets/photo/background_main.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--light-brown);
+}
+
+.container {
+    @include main-styles;
 }
