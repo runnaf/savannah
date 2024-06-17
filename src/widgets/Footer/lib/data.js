@@ -5,7 +5,7 @@ import placemarkerIcon from "../../../shared/assets/footer/placemarker.png";
 import telegramIcon from "../../../shared/assets/footer/telegram.png";
 import instaIcon from "../../../shared/assets/footer/insta.png";
 import vkIcon from "../../../shared/assets/footer/vk.png";
-import cIcon from "../../../shared/assets/footer/c.png";
+
 
 export const leftSectionData = [
     {

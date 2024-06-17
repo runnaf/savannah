@@ -11,7 +11,7 @@ export const Footer = () => {
 
         <footer className={styles.footer}>
             <Stack
-                className={styles.footerLeftSection}
+                className={styles.footerSection}
                 direction='column'
                 gap="8">
 
@@ -53,7 +53,7 @@ export const Footer = () => {
 
 
             <Stack
-                className={styles.footerRightSection}
+                className={styles.footerMediaOnly}
                 direction='column'
                 gap="8">
 
@@ -98,11 +98,12 @@ export const Footer = () => {
                 <Stack
                 className={styles.footerAdjust}
                 alignItems="alignCenter"
+                justifyContent="justifyCenter"
                 direction='column'>
 
                     <Stack 
                     alignItems="alignCenter"
-                    className={styles.legalAdjust}>
+                    justifyContent="justifyCenter">
                     <img className={styles.cIcon} src={cIcon}/>
                     <Text
                     size='s'
@@ -112,13 +113,17 @@ export const Footer = () => {
                         </Text>
                         </Stack>
                         
-
+                        <Stack 
+                    alignItems="alignCenter"
+                    justifyContent="justifyCenter">
                         <Text
                         size='s'
                         type='p'
                         className={styles.text}>
                         Сайт сделан в <span>AL TECH LABS LTD.</span>
                         </Text>
+                        </Stack>
+                        
                         </Stack>
                         </>
     )

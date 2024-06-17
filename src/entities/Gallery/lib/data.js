@@ -49,21 +49,5 @@ export const imageData = [
     {
         index:12,
         src: kitten2
-    },
-    {
-        index:13,
-        src: kitten1
-    },
-    {
-        index:14,
-        src: kitten2
-    },
-    {
-        index:15,
-        src: kitten1
-    },
-    {
-        index:16,
-        src: kitten2
     }
 ]

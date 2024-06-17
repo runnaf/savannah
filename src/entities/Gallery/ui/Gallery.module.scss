@@ -12,10 +12,9 @@
     padding-bottom: 40px;
     border-radius: var(--border-radius-container);
 
-    @include mobile-l {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      } 
+    @include tablet-l  {
+        display: none;
+    }
 }
 
 .photoContainer{

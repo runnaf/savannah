@@ -68,10 +68,10 @@
 
 }
 
-.footerLeftSection{
+.footerSection{
     align-items: flex-start;
 }
-.footerRightSection{
+.footerMediaOnly{
     align-items: flex-end;
 
     @include mobile-m{
@@ -109,5 +109,5 @@
         display: block;
     }  
 
-    background-color: var(--white);
+   background-color: var(--white);
 }
