@@ -11,7 +11,7 @@ export const Gallery = () =>{
         gap='32'
         >
             <Stack
-            className={styles.photoRow}
+            className={styles.photoContainer}
             alignItems = "alignCenter"
             justifyContent = 'justifyCenter'
             gap='32'>     
@@ -20,26 +20,6 @@ export const Gallery = () =>{
                 ))}
             </Stack>
        
-            <Stack
-            className={styles.photoRowHide}
-            alignItems = "alignCenter"
-            justifyContent = 'justifyCenter'
-            gap='32'>     
-            {imageData.map(({src, index}) => (
-                <img key={index} className={styles.photo} src={src} alt="наши питомцы"/>
-                ))}
-            </Stack>
-
-            <Stack
-            className={styles.photoRowHide} //переделать на слайд
-            alignItems = "alignCenter"
-            justifyContent = 'justifyCenter'
-            gap='32'>     
-            {imageData.map(({src, index}) => (
-                <img key={index} className={styles.photo} src={src} alt="наши питомцы"/>
-                ))}
-            </Stack>
-
         </Stack>
 
     )

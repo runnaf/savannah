@@ -28,14 +28,6 @@ export const leftSectionData = [
         alt: 'адрес',
         hiddenText: 'адрес',
         content: 'г.Москва, ул.Отрадная, дом 1'
-    },
-    {
-        id: 4,
-        icon: cIcon,
-        alt: 'corporation',
-        hiddenText: 'Корпорация',
-        content: <p>2024 <b>Savannah World.</b> Все права защищены</p>,
-        className: styles.legal
     }
 ];
 
@@ -60,11 +52,5 @@ export const rightSectionData =[
         alt: 'вконтакте',
         hiddenText: 'вконтакте',
         content: <a className={styles.email} target='_blank' rel="noreferrer" href="https://vk.com/savannahworld">@savannahworld</a>
-    },
-
-    {
-        id: 4,
-        className: styles.legal,
-        content: <p>Сайт сделан в <span>AL TECH LABS LTD.</span></p>
     }
 ]

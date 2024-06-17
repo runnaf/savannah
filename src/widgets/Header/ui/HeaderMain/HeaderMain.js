@@ -9,7 +9,7 @@ import { Stack } from "../../../../shared/ui/Stack/Stack";
 import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 
 import styles from "./HeaderMain.module.scss";
-import { ScrollToTop } from "../../../../feature/helper/scrollToTop";
+import { ScrollToTop } from "../../../../feature/hooks/scrollToTop";
 
 export const HeaderMain = () => {
     return (
