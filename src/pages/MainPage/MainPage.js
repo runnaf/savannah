@@ -10,12 +10,14 @@ import Benefits from '../../feature/Benefits/Benefits';
 export const MainPage = () => {
   return (
     <main className={styles.main}>
-      <AboutUs />
-      <Benefits/>
-      <OurKittens />  
-      <BreedCharacteristics />
-      <Advices/>
-      <AccordionComponent />
+      <div className={styles.container}>
+        <AboutUs />
+        <Benefits/>
+        <OurKittens />  
+        <BreedCharacteristics />
+        <Advices/>
+        <AccordionComponent />
+      </div>
     </main>
   )
 };
