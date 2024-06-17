@@ -7,7 +7,7 @@ import cIcon from "../../../shared/assets/footer/c.png";
 
 export const Footer = () => {
     return (
-        <>
+     
 
         <footer className={styles.footer}>
             <Stack
@@ -92,14 +92,11 @@ export const Footer = () => {
 
             </Stack>
 
-            
-
-        </footer>
-                <Stack
+            <Stack
                 className={styles.footerAdjust}
                 alignItems="alignCenter"
                 justifyContent="justifyCenter"
-                direction='column'>
+                direction='row'>
 
                     <Stack 
                     alignItems="alignCenter"
@@ -125,6 +122,11 @@ export const Footer = () => {
                         </Stack>
                         
                         </Stack>
-                        </>
+
+            
+
+        </footer>
+
+                  
     )
 }

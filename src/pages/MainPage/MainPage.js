@@ -21,6 +21,7 @@ export const MainPage = () => {
         <Advices/>
         <AccordionComponent />
         <Gallery />
+        <GallerySlider/>
       </div>
     </main>
   )
