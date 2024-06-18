@@ -4,13 +4,11 @@ import Select from "../../shared/ui/Select/Select";
 import closeButton from '../../shared/assets/photo/close.png';
 import { Stack } from "../../shared/ui/Stack/Stack";
 import styles from './EditAddForm.module.scss';
-import { Button } from "../../shared/ui/Button/Button";
-import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
-import { deleteIcon } from '../../shared/assets/svg/deleteIcon';
 
 
 
-export const EditAddForm = () => {
+
+export const EditAddForm = ({ changeSigninModal }) => {
     return (
         <Stack
             justifyContent='justifyCenter'
@@ -21,6 +19,7 @@ export const EditAddForm = () => {
             <img
                 className={styles.closeButton}
                 src={closeButton} alt="закрыть"
+                onClick={changeSigninModal}
             //onClick={changeEditModal} also put Edit = ({changeEditModdal}) =>
             />
             <Input

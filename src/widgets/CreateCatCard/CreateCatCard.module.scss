@@ -2,51 +2,69 @@
 
 .edit {
     @include modal-content;
+    @include mobile-l {
+        flex-direction: column;
+    } 
 }
 
 .addImgBox{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
 
 .addDiv{
-    width: 410px;
-    height: 465px;
+    width:330px;
+    height:374px;
     background-color: var(--white);
     border-radius: var(--border-radius-container);
-        @media (max-width: 1439px) {
-            width: 280px;
-            height: 335px;
-    }
 
+    @include desktop-l {
+        width: 280px;
+        height: 317.56px;
+    } 
+    @include desktop-m {
+        width: 259.6px;
+        height: 294.42px;
+    } 
+    @include tablet-l {
+        width: 410px;
+        height: 465px;
+    } 
 }
 
 .editIcon{
     position: absolute;
-    @media (max-width: 1439px) {
-        width: 70px;
-}
+    @include desktop-l {
+    width: 70px;
+} 
 }
 
 .button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width:263px;
+    height: 44px;
     margin-top: 20px;
 
-    @media (max-width: 1439px) {
-        font-size: var(--font-size-xs);
-    }
+    @include desktop-l {
+        width: 200px;
+        height: 40px;
+    } 
+    @include desktop-m {
+        width: 170px;
+    } 
+    @include tablet-l {
+        width: 150px;
+} 
+@include tablet-m {
+    width: 140px;
+    justify-content: center;
+} 
+    @include mobile-l {
+        width: 220px;
+    } 
 }
 
-.buttonDelete {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-    border: 2px solid var(--red);
-    color: var(--red);
-}
