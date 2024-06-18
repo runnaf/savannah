@@ -7,13 +7,14 @@ import cIcon from "../../../shared/assets/footer/c.png";
 
 export const Footer = () => {
     return (
-     
+
 
         <footer className={styles.footer}>
             <Stack
                 className={styles.footerSection}
                 direction='column'
-                gap="8">
+                gap="8"
+            >
 
                 {leftSectionData.map((item) => (
                     <Stack
@@ -28,34 +29,32 @@ export const Footer = () => {
                         <Text
                             size='s'
                             type='p'
->
+                        >
                             <span className='visually-hidden'>{item.hiddenText}</span>
                             {item.content}
                         </Text>
                     </Stack>
-                    
+
                 ))}
-                 <Stack 
+                <Stack
                     alignItems="alignCenter"
-                    className={styles.legal}>
-                        <img className={styles.cIcon} src={cIcon}/>
-                        <Text
+                    className={styles.legal}
+                >
+                    <img className={styles.cIcon} src={cIcon} alt="Savannah World" />
+                    <Text
                         size='s'
                         type='p'
-                         className={styles.text}>
+                        className={styles.text}>
                         2024 <span>Savannah World.</span> Все права защищены
-                        </Text>
-                        </Stack>
-                        
+                    </Text>
+                </Stack>
             </Stack>
-
-
-
 
             <Stack
                 className={styles.footerMediaOnly}
                 direction='column'
-                gap="8">
+                gap="8"
+            >
 
                 {rightSectionData.map((item) => (
                     <Stack
@@ -75,58 +74,56 @@ export const Footer = () => {
                             {item.content}
                         </Text>
 
-<div className={styles.adjMobile}>
-                        {item.icon && <img className={styles.connectIcon} src={item.icon} alt={item.alt} />}
+                        <div className={styles.adjMobile}>
+                            {item.icon && <img className={styles.connectIcon} src={item.icon} alt={item.alt} />}
                         </div>
                     </Stack>
                 ))}
                 <Stack
-                className={styles.legal}>
-                        <Text
+                    className={styles.legal}>
+                    <Text
                         size='s'
                         type='p'
-                        className={styles.text}>
+                        className={styles.text}
+                    >
                         Сайт сделан в <span>AL TECH LABS LTD.</span>
-                        </Text>
+                    </Text>
                 </Stack>
-
             </Stack>
 
             <Stack
                 className={styles.footerAdjust}
                 alignItems="alignCenter"
                 justifyContent="justifyCenter"
-                direction='row'>
+                direction='row'
+            >
 
-                    <Stack 
+                <Stack
                     alignItems="alignCenter"
                     justifyContent="justifyCenter">
-                    <img className={styles.cIcon} src={cIcon}/>
+                    <img className={styles.cIcon} src={cIcon} alt="Savannah World" />
                     <Text
-                    size='s'
-                    type='p'
-                    className={styles.text}>
-                        2024 <span>Savannah World.</span> Все права защищены
-                        </Text>
-                        </Stack>
-                        
-                        <Stack 
-                    alignItems="alignCenter"
-                    justifyContent="justifyCenter">
-                        <Text
                         size='s'
                         type='p'
-                        className={styles.text}>
+                        className={styles.text}
+                    >
+                        2024 <span>Savannah World.</span> Все права защищены
+                    </Text>
+                </Stack>
+
+                <Stack
+                    alignItems="alignCenter"
+                    justifyContent="justifyCenter"
+                >
+                    <Text
+                        size='s'
+                        type='p'
+                        className={styles.text}
+                    >
                         Сайт сделан в <span>AL TECH LABS LTD.</span>
-                        </Text>
-                        </Stack>
-                        
-                        </Stack>
-
-            
-
+                    </Text>
+                </Stack>
+            </Stack>
         </footer>
-
-                  
     )
 }
