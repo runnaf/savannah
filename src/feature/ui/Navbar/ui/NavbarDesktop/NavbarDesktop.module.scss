@@ -23,13 +23,16 @@
 .navbar {
     display: flex;
     align-items: center;
-    gap: var(--gap-desktop);
-    font-size: var(--font-size-m);
+    gap: 74px;
     z-index: 10;
     font-weight: 400;
     flex-wrap: wrap;
 
-    @include desktop-l {
+    @include desktop-m {
+        gap: var(--gap-desktop);
+    }
+
+    @include tablet-l {
         gap: var(--gap-tablet);
     }
 
@@ -46,13 +49,22 @@
     text-align: center;
     padding: 5px;
     line-height: 1;
+    font-size: var(--font-size-xl);
 
     @include desktop-l {
-        font-size: var(--font-size-m);
         min-width: 80px;
+        font-size: var(--font-size-l);
+    }
+
+    @include desktop-m {
+        font-size: var(--font-size-m);
     }
 
     @include tablet-l {
+        font-size: var(--font-size-s);
+    }
+
+    @include mobile-xl {
         font-size: var(--font-size-xs);
     }
 }
@@ -79,6 +91,8 @@
 
 .buttonSigin {
     min-width: 200px;
+    font-size: 30px;
+    font-weight: 400;
 
     @include desktop-l {
         font-size: var(--font-size-m);
@@ -88,5 +102,9 @@
     @include tablet-l {
         font-size: var(--font-size-xs);
         min-width: 70px;
+    }
+
+    @include mobile-xl {
+        font-size: var(--font-size-xs);
     }
 }

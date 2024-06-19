@@ -36,11 +36,14 @@
 
     @include desktop-l {    
         font-size: var(--font-size-l);
-        gap: 10px;
+        gap: 40px;
     }
     @include tablet-l {    
         font-size: var(--font-size-m);
         gap: 25px;
+    }
+    @media (max-width: 900px) {
+        justify-content: center;
     }
     @include tablet-m {
         min-height: 700px;
