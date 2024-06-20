@@ -13,7 +13,7 @@
 
     @include header-height;
 
-    @include mobile-l {
+    @include tablet-m {
         position: absolute;
         width: 100%;
         background-color: var(--brown);

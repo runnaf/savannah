@@ -21,7 +21,8 @@ export const HeaderMain = () => {
                     <NavbarMobile />
                     <div className={styles.titleContainer}>
                         <Text type='h1' className={styles.title}>
-                            <span className={styles.text}>Питомник </span> SAVANNAH WORLD
+                            SAVANNAH WORLD<br/>
+                            <span className={styles.text}>Питомник кошек Саванны </span> 
                         </Text>
                         <Link to={getRouteCatalog()} className={styles.linkHeader} onClick={ScrollToTop()}>
                             в каталог {arrowIcon()}

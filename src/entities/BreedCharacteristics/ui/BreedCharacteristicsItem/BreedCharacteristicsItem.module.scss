@@ -26,22 +26,24 @@
 
     @include desktop-l() {    
         max-width: 320px;
-        min-height: 900px;
+        min-height: 750px;
         padding: 50px;
     }
     @include desktop-m() {    
         max-width: 273px;
-        min-height: 700px;
+        min-height: 600px;
         padding: 30px;
     }
     @include tablet-l() {    
-        max-width: 360px;
-        min-height: 700px;
+        max-width: 270px;
+        min-height: 520px;
         padding: 45px;
     }
+    @media (max-width: 900px) {
+        max-width: 350px;
+    }
     @include tablet-m() {    
-        max-width: 280px;
-        min-height: 700px;
+        max-width: 350px;
         padding: 45px;
     }
     @include mobile-l() {    

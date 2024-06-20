@@ -7,11 +7,14 @@
     height: 100vh;
     width: 100%;
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 76px 0;
 
     @include desktop-xl {
         height: fit-content;
+    }
+
+    @include desktop-m {
+        padding: 40px 0;
     }
 
     @include header-height;
@@ -41,6 +44,8 @@
     @include mobile-xl {
         margin-left: 0;
         align-items: center;
+        margin-top: auto;
+        margin-bottom: 50px;
     }
 }
 
@@ -56,9 +61,21 @@
     @include button;
     @include button-accent;
     font-weight: 600;
+    font-size: 30px;
+    background: linear-gradient(45deg, #7A5452, #C49B82, #F7F1EB);
+    background-size: 400% 400%;
+    animation: animate_gradient 5s ease infinite;
 
+    &:hover {
+        background-color: #C49B82;
+        animation: none;
+    }
 
     @include desktop-xl {
+        font-size: var(--font-size-l);
+    }
+
+    @include tablet-l {
         font-size: var(--font-size-m);
     }
 
@@ -66,12 +83,24 @@
         min-width: 160px;
         padding: 8px 15px;
         border-radius: var(--border-radius-mobile);
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-m);
     }
 
     & svg {
         width: 20px;
         height: 20px;
+    }
+}
+
+@keyframes animate_gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -84,26 +113,52 @@
     height: 100%;
     z-index: 10;
 
-    .text {
-        color: var(--white);        
-        font-weight: 400;
-        line-height: 2;
-    }
-
     .title {
         color: var(--white);
-        width: min-content;
         font-weight: 600;
-        margin-bottom: 56px;
-        font-size: 70px;
+        margin-bottom: 48px;
+        font-size: 96px;
+        max-width: min-content;
+
+        @include desktop-l {
+            font-size: 70px;          
+        }
 
         @include desktop-m {
-            font-size: var(--font-size-xl);          
+            font-size: 60px;          
+        }
+
+        @include tablet-l {
+            font-size: 52px;
+            max-width: 360px;
         }
 
         @include mobile-xl {
-            font-size: var(--font-size-m);
-            margin-bottom: 20px;
+            font-size: 53px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .text {
+        color: var(--white);        
+        font-weight: 400;
+        line-height: 1.1;
+        font-size: 40px;
+
+        @include desktop-l {
+            font-size: 30px;          
+        }
+
+        @include desktop-m {
+            font-size: 25px;          
+        }
+
+        @include tablet-l {
+            min-width: max-content;
+        }
+
+        @include mobile-xl {
+            font-size: 21px;
         }
     }
 }
