@@ -11,20 +11,7 @@
 .kittens__row {
     display: flex;   
     justify-content: space-between;
-    column-gap: clamp(10px, 2vw, 105px);
-  
+} 
 
-    @include tablet-l {
-      display: none;
-    }
- 
-}
-.slider {
-    display: none;
-
-    @include tablet-l {
-        display: block;
-      }
-}
 
 

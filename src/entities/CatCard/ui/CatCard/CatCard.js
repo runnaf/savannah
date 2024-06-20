@@ -1,7 +1,8 @@
 import { Text } from "../../../../shared/ui/Text/Text";
 import styles from './CatCard.module.scss';
 import { arrowIcon } from '../../../../shared/assets/svg/arrowIcon';
-import { Button } from "../../../../shared/ui/Button/Button";
+import { Link } from "react-router-dom";
+import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 
 const CatCard = ({ kittensData, isMain }) => {
     return (
@@ -23,9 +24,9 @@ const CatCard = ({ kittensData, isMain }) => {
                 <Text size="m" className={styles.description}>
                     Статус: {kittensData.status}
                 </Text>
-                <Button className={styles.kitten__btn}>
-                    {isMain ? 'в каталог' : 'подробнее'} {arrowIcon()}
-                </Button>
+                <Link to={getRouteCatalog()}  className={styles.kitten__btn}>
+                    {isMain ? 'в каталог' : 'подробнее'} {arrowIcon()}                
+                </Link>
             </div>
         </article>
     );

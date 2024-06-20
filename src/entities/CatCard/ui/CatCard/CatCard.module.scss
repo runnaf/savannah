@@ -1,11 +1,12 @@
 @import '../../../../app/styles/media-queries.scss';
+@import '../../../../app/styles/mixin.scss';
 
 
 .kittens__card {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     row-gap: 15px;
-    width: clamp(240px, 25vw, 410px);
+    width: 100%;
     height: 100%;
     padding: 40px;
     background-color: var(--opacity);
@@ -15,7 +16,7 @@
         padding: 25px;
     }
     @include tablet-l {
-        width: 100%;
+      
         padding: 40px;
     }
     @include mobile-l {       
@@ -54,7 +55,7 @@
 .kitten__img {
     width: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius-container);
+    border-radius: calc(var(--border-radius-container) - 10px);
 }
 .kitten__btn {
     width: 100%;
@@ -62,6 +63,9 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
+    margin-bottom: 10px;
+    @include button;
+    @include button-accent;
 
 
     @include desktop-m {
