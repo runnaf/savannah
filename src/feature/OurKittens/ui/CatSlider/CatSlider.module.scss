@@ -2,17 +2,8 @@
 
 .slider__row {
     display: flex;
-    justify-content: center;
-    column-gap: 10px; 
+    justify-content: center;   
 }
-.slider__btn {
-    background-color: transparent;
 
 
-    @include mobile-l {
-        & svg {
-            width: 30px;
-            height: 30px;
-        }
-    } 
-}
+

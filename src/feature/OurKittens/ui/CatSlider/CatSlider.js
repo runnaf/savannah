@@ -1,50 +1,44 @@
 import styles from './CatSlider.module.scss';
-import kittensData from "../../../../entities/CatCard/lib/data";
 import CatCard from '../../../../entities/CatCard/ui/CatCard/CatCard';
-import { chevronLeft, chevronRight } from '../../../../shared/assets/svg/chevronIcons'
-import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/scss';
+import 'swiper/scss/pagination';
+import kittensData from '../../../../entities/CatCard/lib/data';
 
-
-const CatSlider = () => {
-
-        const [kittenCard, setKittenCard] = useState(0);
-        const items = kittensData[kittenCard];
-
-        const prevSlide = () => {
-            setKittenCard((kittenCard => {
-                kittenCard --;
-                if (kittenCard < 0) {
-                    return kittensData.length-1;
-                }
-                return kittenCard;
-            }))
-        }
-        const nextSlide = () => {
-            setKittenCard((kittenCard => {
-                kittenCard ++;
-                if (kittenCard > kittensData.length-1) {
-                    kittenCard = 0;
-                }
-                return kittenCard;
-            }))
-        }
-
+const CatSlider = () => {   
 
     return (     
-        <div className={styles.slider__row}>
-            <button onClick={prevSlide} 
-                    className={styles.slider__btn}>
-                    {chevronLeft()}
-            </button>    
-                <CatCard                   
-                    kittensData={items}
-                    isMain
-                />
-            <button onClick={nextSlide} 
-                    className={styles.slider__btn}>
-                    {chevronRight()}
-            </button> 
-        </div>
+        <Swiper         
+        modules={[Pagination]} 
+        loop = {true}        
+        pagination={{ clickable: true }} 
+        breakpoints={{
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+
+        }}  
+        className={styles.slider__row}
+        >
+            {kittensData.map(element =>
+                <SwiperSlide key={element.id}>             
+                    <CatCard                     
+                        kittensData={element}
+                        isMain
+                    />                
+                </SwiperSlide>
+            )}
+        </Swiper>
   
     );
 }
