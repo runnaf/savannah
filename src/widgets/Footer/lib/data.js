@@ -1,13 +1,13 @@
 import styles from "../ui/Footer.module.scss";
-import phoneIcon from "../../../shared/assets/footer/phone.png";
-import envelopeIcon from "../../../shared/assets/footer/mail.png";
-import placemarkerIcon from "../../../shared/assets/footer/placemarker.png";
-import telegramIcon from "../../../shared/assets/footer/telegram.png";
-import instaIcon from "../../../shared/assets/footer/insta.png";
-import vkIcon from "../../../shared/assets/footer/vk.png";
+import phoneIcon from "../../../shared/assets/footer/phone.svg";
+import envelopeIcon from "../../../shared/assets/footer/mail.svg";
+import placemarkerIcon from "../../../shared/assets/footer/map.svg";
+import telegramIcon from "../../../shared/assets/footer/telegram.svg";
+import instaIcon from "../../../shared/assets/footer/instagram.svg";
+import vkIcon from "../../../shared/assets/footer/vk.svg";
 
 
-export const leftSectionData = [
+export const sectionData = [
     {
         id: 1,
         icon: phoneIcon,
@@ -31,7 +31,7 @@ export const leftSectionData = [
     }
 ];
 
-export const rightSectionData =[
+export const mediaData =[
     {
         id: 1,
         icon: telegramIcon,

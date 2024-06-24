@@ -29,6 +29,10 @@
         width: 410px;
         height: 465px;
     } 
+    @include mobile-m {
+        width: 140px;
+        height: 159px;
+    } 
 }
 
 .editIcon{
@@ -87,5 +91,25 @@
     @include mobile-l {
         width: 220px;
     } 
-
+}
+.closeButton {
+    cursor: pointer;
+    position: relative;
+    left: 290px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    @include desktop-l {
+        left: 230px;
+    } 
+    @include desktop-m {
+        left: 200px;
+    } 
+    @include tablet-l {
+        left: 180px;
+        top:-10px;
+    } 
+    @include tablet-m {
+        left: 170px;
+    } 
 }

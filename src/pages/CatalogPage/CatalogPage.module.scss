@@ -3,3 +3,35 @@
 .main {
     @include main-styles;
 }
+.adjustm{
+    background-color: var(--light-brown)
+}
+.picAdjustm{
+    width: 44px;
+    @include mobile-m {
+        width: 36px;   
+    } 
+}
+.picAdjustM{
+    width: 50px;
+    @include mobile-m {
+        width: 40px;   
+    } 
+}
+.adjustmIcon{
+        width: 46px;
+        @include mobile-m {
+            width: 36px;
+        } 
+}
+
+.btnAdj{
+    @include desktop-xl {
+        display: none;
+    } 
+    @include tablet-l {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+    } 
+}

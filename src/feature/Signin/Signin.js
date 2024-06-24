@@ -3,7 +3,6 @@ import { Button } from "../../shared/ui/Button/Button";
 import { Stack } from "../../shared/ui/Stack/Stack";
 import { Input } from '../../shared/ui/Input/Input';
 import closeButton from '../../shared/assets/photo/close.png';
-// import { Error } from "../../shared/ui/Error/Error";
 import { useState } from "react";
 import styles from './Signin.module.scss';
 import { Text } from "../../shared/ui/Text/Text";
