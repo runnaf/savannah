@@ -6,8 +6,9 @@ import editPhoto from '../../shared/assets/photo/editCatImg.png';
 import { Button } from '../../shared/ui/Button/Button';
 import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
 import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
+import closeButton from '../../shared/assets/photo/close.png';
 
-export const EditCatCard = ({ changeEditModal }) => {
+export const EditCatCard = ({changeEditModal}) => {
     return (
         <Stack
             justifyContent='justifyCenter'
@@ -25,8 +26,12 @@ export const EditCatCard = ({ changeEditModal }) => {
                     className={styles.editIcon}
                     src={editIcon} alt="editIcon" />
             </div>
-            
             <div>
+            <img
+                className={styles.closeButton}
+                src={closeButton} alt="закрыть"
+                onClick={changeEditModal}
+            />
                 <EditAddForm/>
                 <Button className={styles.button}>
                     сохранить {arrowIcon()}

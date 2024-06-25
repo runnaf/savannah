@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 import { Stack } from "../../../shared/ui/Stack/Stack";
 import { Text } from "../../../shared/ui/Text/Text";
-import { leftSectionData, rightSectionData } from "../lib/data";
+import { sectionData, mediaData } from "../lib/data";
 import cIcon from "../../../shared/assets/footer/c.png";
 
 
@@ -16,7 +16,7 @@ export const Footer = () => {
                 gap="8"
             >
 
-                {leftSectionData.map((item) => (
+                {sectionData.map((item) => (
                     <Stack
                         key={item.id}
                         justifyContent='justifyCenter'
@@ -56,13 +56,13 @@ export const Footer = () => {
                 gap="8"
             >
 
-                {rightSectionData.map((item) => (
+                {mediaData.map((item) => (
                     <Stack
                         key={item.id}
                         justifyContent='justifyCenter'
                         alignItems="alignCenter"
                         direction='row'
-                        gap='8'
+                        gap="8"
                         className={styles[item.className]}
                     >
                         <Text
@@ -84,7 +84,7 @@ export const Footer = () => {
                     <Text
                         size='s'
                         type='p'
-                        className={styles.text}
+                        className={styles.textCompany}
                     >
                         Сайт сделан в <span>AL TECH LABS LTD.</span>
                     </Text>
@@ -98,9 +98,7 @@ export const Footer = () => {
                 direction='row'
             >
 
-                <Stack
-                    alignItems="alignCenter"
-                    justifyContent="justifyCenter">
+                <Stack>
                     <img className={styles.cIcon} src={cIcon} alt="Savannah World" />
                     <Text
                         size='s'

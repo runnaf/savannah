@@ -44,9 +44,25 @@
         color: var(--dark-brown);
         font-weight: 700;
     }
+    // margin-top: 12px;
 
     @include tablet-m {
         font-size: var(--font-size-m);
+    }  
+    @include mobile-l {
+        font-size: var(--font-size-xxs);
+    }  
+}
+
+.textCompany{
+    span{
+        color: var(--dark-brown);
+        font-weight: 700;
+    }
+
+    @include tablet-m {
+        font-size: var(--font-size-m);
+        text-align: right;
     }  
     @include mobile-l {
         font-size: var(--font-size-xxs);
@@ -89,23 +105,38 @@
     height: 15px;
 
     @include tablet-m {
+        margin-top: 5px;
+    }   
+    @include mobile-l {
+        width: 12px;
+        height: 12px;
+        margin-top: 3px;
+    }   
+    @include mobile-m {
         width: 15px;
         height: 15px;
+        margin-top: 2px;
     }   
 }
 
 .legal{
-    margin-top: 40px;
-    @include tablet-m {
-        display: none;
+   margin-top: 40px;
+
+   @include tablet-m{
+    align-items: flex-start;
+
+   }
+    @include mobile-m {
+    display: none;
     }  
 }
+
 
 .footerAdjust{
     @include desktop-xl{
         display: none;
     } 
-    @include tablet-m {
+    @include mobile-m {
         display: block;
     }  
 
