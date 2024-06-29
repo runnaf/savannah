@@ -4,16 +4,16 @@ import { Stack } from '../../../../shared/ui/Stack/Stack';
 import CatSlider from '../CatSlider/CatSlider';
 
 const OurKittens = () => {
-    
+
     return (
         <section className={styles.section}>
             <Stack justifyContent='justifyCenter'>
                 <Text type="h2" size="xl" className={styles.title}>
                     НАШИ <strong>КОТЯТА</strong>
                 </Text>
-            </Stack>         
+            </Stack>
             <div className={styles.kittens__row}>
-                <CatSlider/>
+                <CatSlider />
             </div>
         </section>
     )

@@ -23,7 +23,6 @@ const Characteristics = () => {
             </li>
           ))}
         </ul>
-
       </Stack>
     </section>
   );

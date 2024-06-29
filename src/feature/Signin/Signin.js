@@ -35,40 +35,40 @@ export const Signin = ({ changeSigninModal }) => {
                 src={closeButton} alt="закрыть"
                 onClick={changeSigninModal}
             />
-            <Text
-            type='h3' size='l' className={styles.title}
-            >Вход</Text>
-            <Text
-            type='h3' size='s' className={styles.title}
-            >Введите данные, чтобы войти в систему</Text>
+            <Text type='h3' size='l' className={styles.title}>
+                Вход
+            </Text>
+            <Text type='h3' size='s' className={styles.title}>
+                Введите данные, чтобы войти в систему
+            </Text>
 
 
             <Input
                 error={error}
                 placeholder='логин'
                 className={`${error ? styles.wrong : ''}`}
-                onChange={() => {}}
+                onChange={() => { }}
             />
             <Input
                 error={error}
                 type={!showPassword ? 'password' : 'text'}
                 placeholder='пароль'
                 className={`${error ? styles.wrong : ''}`}
-                onChange={() => {}}
+                onChange={() => { }}
             />
-                <div
+            <div
                 className={styles.password}
                 onClick={() => setShowPassword(!showPassword)}
             >
                 {showPassword ? hidePasswordIcon() : showPasswordIcon()}
             </div>
             <div className={styles.error}>
-            {
-                error &&
-                <Text size='xs' className={styles.text}>
-                    Введен неверный логин и/или пароль
-                </Text>
-            }
+                {
+                    error &&
+                    <Text size='xs' className={styles.text}>
+                        Введен неверный логин и/или пароль
+                    </Text>
+                }
             </div>
 
             <Button

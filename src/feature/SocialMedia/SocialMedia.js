@@ -9,7 +9,7 @@ const SocialMedia = ({ handleSocial }) => {
     return (
         <Stack
             direction='column'
-            gap='32'
+            gap='16'
             justifyContent='justifyCenter'
             alignItems='alignCenter'
             className={styles.media}
@@ -20,16 +20,15 @@ const SocialMedia = ({ handleSocial }) => {
             <Link to=''>
                 <img src={telegramIcon} alt='телеграм' />
             </Link>
-            <button 
-                className={styles.button} 
+            <button
+                className={styles.button}
                 onClick={handleSocial}
             >
-                <img src={closeIcon} alt='закрыть' /> 
-                <span className='visually-hidden'>закрыть</span> 
+                <img src={closeIcon} alt='закрыть' />
+                <span className='visually-hidden'>закрыть</span>
             </button>
-      
         </Stack>
-      );
+    );
 }
- 
+
 export default SocialMedia;

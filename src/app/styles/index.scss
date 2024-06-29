@@ -12,6 +12,10 @@ body,
   font-family: var(--font-family-main);
   background-color: var(--light-brown);
   --swiper-theme-color:#7a5452;
+
+  @include tablet-l {
+    padding-bottom: 50px;
+  }
 }
 
 .visually-hidden {

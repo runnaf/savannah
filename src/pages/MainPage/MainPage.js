@@ -14,14 +14,14 @@ export const MainPage = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <AboutUs />
-        <Benefits/>
-        <OurKittens />  
+        <Benefits />
+        <OurKittens />
         <Characteristics />
         <BreedCharacteristics />
-        <Advices/>
+        <Advices />
         <AccordionComponent />
         <Gallery />
-        <GallerySlider/>
+        <GallerySlider />
       </div>
     </main>
   )

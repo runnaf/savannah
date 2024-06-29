@@ -29,38 +29,38 @@ export const CatalogPage = () => {
 
             <div className={styles.btnAdj}>
                 <Stack
-                justifyContent="justifyContent">
-            <button
-                className={styles.adjustm}
-                type="button"
-                // onClick={}
-            >
-                <img className={styles.picAdjustm} src={picAdjustm} alt="выбор картинок"/>
-                <span className='visually-hidden'>Выбрать картинки</span>              
-            </button>
+                    justifyContent="justifyContent">
+                    <button
+                        className={styles.adjustm}
+                        type="button"
+                    // onClick={}
+                    >
+                        <img className={styles.picAdjustm} src={picAdjustm} alt="выбор картинок" />
+                        <span className='visually-hidden'>Выбрать картинки</span>
+                    </button>
 
-            <button
-                className={styles.adjustm}
-                type="button"
-                // onClick={}
-            >
-                <img className={styles.picAdjustM} src={picAdjustMore} alt="выбор картинок"/>
-                <span className='visually-hidden'>Выбрать картинки</span>              
-            </button>
-            </Stack>
+                    <button
+                        className={styles.adjustm}
+                        type="button"
+                    // onClick={}
+                    >
+                        <img className={styles.picAdjustM} src={picAdjustMore} alt="выбор картинок" />
+                        <span className='visually-hidden'>Выбрать картинки</span>
+                    </button>
+                </Stack>
 
-      
+
                 <button
-                className={styles.adjustm}
-                type="button"
-                onClick={toggleDrawer}
-            >
-                <img className={styles.adjustmIcon} src={adjustmIcon} alt="выбор категории"/>
-                <span className='visually-hidden'>Выбрать категории</span>              
-            </button>
+                    className={styles.adjustm}
+                    type="button"
+                    onClick={toggleDrawer}
+                >
+                    <img className={styles.adjustmIcon} src={adjustmIcon} alt="выбор категории" />
+                    <span className='visually-hidden'>Выбрать категории</span>
+                </button>
             </div>
 
-    
+
 
             {drawCreateModal(
                 <CreateCatCard changeCreateModal={changeCreateModal} />

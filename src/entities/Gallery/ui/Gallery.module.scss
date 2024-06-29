@@ -19,9 +19,10 @@
 
 .photoContainer{
     flex-wrap: wrap;
+
     @include tablet-l {
-    display: flex;
-    flex-wrap:wrap;
+        display: flex;
+        flex-wrap:wrap;
     }
 }
 
@@ -31,7 +32,7 @@
     width: 312px;
     height: 226px;
     border-radius: var(--border-radius-element);
- 
+
     @include desktop-l {
         width: 210px;
         height: 176px;

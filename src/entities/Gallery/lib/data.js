@@ -38,16 +38,16 @@ export const imageData = [
         index:9,
         src: kitten1
     },
-    {
-        index:10,
-        src: kitten2
-    },
-    {
-        index:11,
-        src: kitten1
-    },
-    {
-        index:12,
-        src: kitten2
-    }
+    // {
+    //     index:10,
+    //     src: kitten2
+    // },
+    // {
+    //     index:11,
+    //     src: kitten1
+    // },
+    // {
+    //     index:12,
+    //     src: kitten2
+    // }
 ]

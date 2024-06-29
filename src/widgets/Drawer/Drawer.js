@@ -23,7 +23,7 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
             },
         }));
     };
-        const handleListItemClick = (category, id) => {
+    const handleListItemClick = (category, id) => {
         setCheckedOptions((prev) => ({
             ...prev,
             [category]: {
@@ -55,48 +55,48 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
 
     return (
         <>
-        {isDrawerOpen && <div className={styles.overlay} onClick={toggleDrawer}></div>}
-        <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ''}`}>
-            <Stack
-                justifyContent="justifyContent"
-                direction='column'
-                gap="16"
-                className={styles.drawerContent}>
-                <img
-                    className={styles.closeButton}
-                    src={closeButton} 
-                    alt="закрыть"
-                    onClick={toggleDrawer}
-                />
-                
-                <h3>Возраст:</h3>
-                <ul>
-                    {renderOptions('optionsAge', dataSelect.optionsAge)}
-                </ul>
+            {isDrawerOpen && <div className={styles.overlay} onClick={toggleDrawer}></div>}
+            <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ''}`}>
+                <Stack
+                    justifyContent="justifyContent"
+                    direction='column'
+                    gap="16"
+                    className={styles.drawerContent}>
+                    <img
+                        className={styles.closeButton}
+                        src={closeButton}
+                        alt="закрыть"
+                        onClick={toggleDrawer}
+                    />
 
-                <h3>Пол:</h3>
-                <ul>
-                    {renderOptions('optionsSex', dataSelect.optionsSex)}
-                </ul>
-                <h3>Цвет:</h3>
-                <ul>
-                    {renderOptions('optionsColor', dataSelect.optionsColor)}
-                </ul>
-                <h3>Статус:</h3>
-                <ul>
-                    {renderOptions('optionsStatus', dataSelect.optionsStatus)}
-                </ul>
-               
-            </Stack>
-            <Button className={styles.secondary} variant="secondary" onClick={() => setCheckedOptions({
-                optionsAge: dataSelect.optionsAge.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
-                optionsSex: dataSelect.optionsSex.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
-                optionsColor: dataSelect.optionsColor.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
-                optionsStatus: dataSelect.optionsStatus.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
-            })}>
-                сбросить
-            </Button>
-        </div>
+                    <h3>Возраст:</h3>
+                    <ul>
+                        {renderOptions('optionsAge', dataSelect.optionsAge)}
+                    </ul>
+
+                    <h3>Пол:</h3>
+                    <ul>
+                        {renderOptions('optionsSex', dataSelect.optionsSex)}
+                    </ul>
+                    <h3>Цвет:</h3>
+                    <ul>
+                        {renderOptions('optionsColor', dataSelect.optionsColor)}
+                    </ul>
+                    <h3>Статус:</h3>
+                    <ul>
+                        {renderOptions('optionsStatus', dataSelect.optionsStatus)}
+                    </ul>
+
+                </Stack>
+                <Button className={styles.secondary} variant="secondary" onClick={() => setCheckedOptions({
+                    optionsAge: dataSelect.optionsAge.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
+                    optionsSex: dataSelect.optionsSex.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
+                    optionsColor: dataSelect.optionsColor.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
+                    optionsStatus: dataSelect.optionsStatus.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
+                })}>
+                    сбросить
+                </Button>
+            </div>
         </>
     );
 };

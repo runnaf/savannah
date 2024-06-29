@@ -6,33 +6,25 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 60px;
     padding: 20px var(--desktop-padding);
     padding-top: 40px;
 
-    @include tablet-l {        
-        margin-top: 40px;
-    }
-    @include mobile-l{
-        margin-top: 40px;
-    }  
     @include desktop-l {
         padding: 30px var(--tablet-padding);
         padding-top: 40px;
     } 
     @include mobile-l{ 
-        margin-top: 40px;
         justify-content: center;
         flex-direction: column;
     } 
 }
 .adjMobile{
     @include mobile-l{  
-       padding: 40px;
+        padding: 40px;
     } 
     @include mobile-m{   
         padding: 20px;
-     } 
+    } 
 }
 .hiddenTextMobileM{
     @include mobile-l{ 
@@ -49,7 +41,6 @@
         color: var(--dark-brown);
         font-weight: 700;
     }
-    // margin-top: 12px;
 
     @include tablet-m {
         font-size: var(--font-size-m);
@@ -125,14 +116,14 @@
 }
 
 .legal{
-   margin-top: 40px;
+    margin-top: 40px;
 
-   @include tablet-m{
-    align-items: flex-start;
+    @include tablet-m{
+        align-items: flex-start;
+    }
 
-   }
     @include mobile-l { 
-    display: none;
+        display: none;
     }  
 }
 
@@ -142,8 +133,11 @@
         display: none;
     } 
     @include mobile-l { 
-        display: block;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        align-items: flex-start;
     }  
 
-   background-color: var(--white);
+    background-color: var(--white);
 }
