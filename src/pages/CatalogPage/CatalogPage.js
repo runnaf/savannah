@@ -8,12 +8,20 @@ import picAdjustm from '../../shared/assets/photo/picAdjustm.png';
 import adjustmIcon from '../../shared/assets/photo/adjustmIcon.png';
 import { Stack } from '../../shared/ui/Stack/Stack';
 import picAdjustMore from '../../shared/assets/photo/picAdjustMore3.png';
+import { Drawer } from '../../widgets/Drawer/Drawer';
+import React, { useState } from 'react';
 
 
 export const CatalogPage = () => {
 
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
+    // const [changeDrawerModal, drawDrawerModal] = useModal();
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const toggleDrawer = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+    };
 
 
     return (
@@ -30,7 +38,7 @@ export const CatalogPage = () => {
                 <img className={styles.picAdjustm} src={picAdjustm} alt="выбор картинок"/>
                 <span className='visually-hidden'>Выбрать картинки</span>              
             </button>
-            
+
             <button
                 className={styles.adjustm}
                 type="button"
@@ -41,17 +49,18 @@ export const CatalogPage = () => {
             </button>
             </Stack>
 
-
-            <button
+      
+                <button
                 className={styles.adjustm}
                 type="button"
-                // onClick={}
+                onClick={toggleDrawer}
             >
                 <img className={styles.adjustmIcon} src={adjustmIcon} alt="выбор категории"/>
                 <span className='visually-hidden'>Выбрать категории</span>              
             </button>
             </div>
 
+    
 
             {drawCreateModal(
                 <CreateCatCard changeCreateModal={changeCreateModal} />
@@ -62,6 +71,8 @@ export const CatalogPage = () => {
             )}
 
             <FilterCats />
+            <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer}
+            />
 
 
             {/* TEST */}

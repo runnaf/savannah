@@ -1,7 +1,7 @@
 import styles from "./Footer.module.scss";
 import { Stack } from "../../../shared/ui/Stack/Stack";
 import { Text } from "../../../shared/ui/Text/Text";
-import { sectionData, mediaData } from "../lib/data";
+import { contacts, mediaData } from "../lib/data";
 import cIcon from "../../../shared/assets/footer/c.png";
 
 
@@ -16,7 +16,7 @@ export const Footer = () => {
                 gap="8"
             >
 
-                {sectionData.map((item) => (
+                {contacts.map((item) => (
                     <Stack
                         key={item.id}
                         justifyContent='justifyCenter'
@@ -30,8 +30,8 @@ export const Footer = () => {
                             size='s'
                             type='p'
                         >
-                            <span className='visually-hidden'>{item.hiddenText}</span>
-                            {item.content}
+                            <span className='visually-hidden'>{item.alt}</span>
+                            {item.href ? <a href={item.href} className={styles.link}>{item.text}</a> : item.text}
                         </Text>
                     </Stack>
 
@@ -70,8 +70,8 @@ export const Footer = () => {
                             type="p"
                             className={styles.hiddenTextMobileM}
                         >
-                            <span className='visually-hidden'>{item.hiddenText}</span>
-                            {item.content}
+                            <span className='visually-hidden'>{item.alt}</span>
+                            {item.href ? <a href={item.href} className={styles.link}>{item.text}</a> : item.text}
                         </Text>
 
                         <div className={styles.adjMobile}>
