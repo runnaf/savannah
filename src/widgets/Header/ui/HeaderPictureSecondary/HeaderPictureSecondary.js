@@ -11,6 +11,6 @@ export const HeaderPictureSecondary = () => {
         <Link to={getRouteMain()}>
             <img className={styles.picture} src={picture}
                 srcSet={`${picture2x} 2x`} alt="Savannah World" width="350" height="201" />
-        </Link> 
+        </Link>
     )
 }

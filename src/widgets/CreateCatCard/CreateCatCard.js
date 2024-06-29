@@ -6,12 +6,12 @@ import { Button } from "../../shared/ui/Button/Button";
 import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
 import closeButton from '../../shared/assets/photo/close.png';
 
-export const CreateCatCard = ({changeCreateModal}) => {
+export const CreateCatCard = ({ changeCreateModal }) => {
     return (
         <Stack
             justifyContent="justifyCenter"
             alignItems="alignCenter"
-            direction="row" 
+            direction="row"
             gap='32'
             className={styles.edit}
         >
@@ -22,12 +22,12 @@ export const CreateCatCard = ({changeCreateModal}) => {
             </div>
 
             <div>
-            <img
-                className={styles.closeButton}
-                src={closeButton} alt="закрыть"
-                onClick={changeCreateModal}
-            />
-                <EditAddForm/>
+                <img
+                    className={styles.closeButton}
+                    src={closeButton} alt="закрыть"
+                    onClick={changeCreateModal}
+                />
+                <EditAddForm />
                 <Button className={styles.button}>
                     сохранить {arrowIcon()}
                 </Button>

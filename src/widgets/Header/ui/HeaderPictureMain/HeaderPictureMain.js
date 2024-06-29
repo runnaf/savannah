@@ -26,21 +26,21 @@ export const HeaderPictureMain = () => {
             <source media="(min-width: 1920px)"
                 srcSet={`${picture_1920webp} 1x, ${picture_1920_2xwebp} 2x`} type="image/webp" />
             <source media="(min-width: 1920px)"
-                srcSet={`${picture_1920} 1x, ${picture_1920_2x} 2x`}/>
+                srcSet={`${picture_1920} 1x, ${picture_1920_2x} 2x`} />
             <source media="(min-width: 1440px)"
                 srcSet={`${picture_1440webp} 1x, ${picture_1440_2xwebp} 2x`} type="image/webp" />
             <source media="(min-width: 1440px)"
-                srcSet={`${picture_1440} 1x, ${picture_1440_2x} 2x`}/>
+                srcSet={`${picture_1440} 1x, ${picture_1440_2x} 2x`} />
             <source media="(min-width: 1024px)"
                 srcSet={`${picture_1024webp} 1x, ${picture_1024_2xwebp} 2x`} type="image/webp" />
             <source media="(min-width: 1024px)"
-                srcSet={`${picture_1024} 1x, ${picture_1024_2x} 2x`}/>
+                srcSet={`${picture_1024} 1x, ${picture_1024_2x} 2x`} />
             <source media="(min-width: 821px)"
                 srcSet={`${picture_768webp} 1x, ${picture_768_2xwebp} 2x`} type="image/webp" />
             <source media="(min-width: 821px)"
-                srcSet={`${picture_768} 1x, ${picture_768_2x} 2x`}/>
+                srcSet={`${picture_768} 1x, ${picture_768_2x} 2x`} />
             <source media="(min-width: 320px)"
-                srcSet={`${picture_320webp} 1x, ${picture_320_2xwebp} 2x`} type="image/webp"/>
+                srcSet={`${picture_320webp} 1x, ${picture_320_2xwebp} 2x`} type="image/webp" />
             <img className={styles.picture} src={picture_320}
                 srcSet={`${picture_320_2x} 2x`} alt="Savannah World" width="310" height="180" />
         </picture>

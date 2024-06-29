@@ -6,8 +6,8 @@ const Accordion = ({ accordionData }) => {
 
     const accordionHendler = useCallback((index) => {
         setCollapse(prevCollapse => index === prevCollapse ? null : index);
-    },[]);
-    
+    }, []);
+
     return (
         <ul>
             {accordionData.map((element, index) => {

@@ -9,7 +9,7 @@ import { Footer } from '../widgets/Footer/ui/Footer';
 
 function App() {
   return (
-    <div className={`${styles.container} `}>
+    <div className={`${styles.container}`}>
       <Header />
       <RouterProvider />
       <Footer />

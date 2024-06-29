@@ -13,25 +13,25 @@ const ButtonSocial = () => {
     const handleSocial = () => closeMedia(!openMedia);
 
     return (
-        <div>            
-            { isShow &&
-            <div>
-                {
-                    !openMedia && 
+        <div>
+            {isShow &&
+                <div>
+                    {
+                        !openMedia &&
                         <button
                             className={styles.buttonSocial}
                             type="button"
                             onClick={handleSocial}
                         >
-                                <img className={styles.iconChat} src={chatIcon} alt="социальные сети"/>
-                                <span className='visually-hidden'>Социальные сети</span>              
+                            <img className={styles.iconChat} src={chatIcon} alt="социальные сети" />
+                            <span className='visually-hidden'>Социальные сети</span>
                         </button>
-                }
-                {
-                    openMedia && 
+                    }
+                    {
+                        openMedia &&
                         <SocialMedia handleSocial={handleSocial} />
-                }
-            </div>
+                    }
+                </div>
             }
         </div>
     );

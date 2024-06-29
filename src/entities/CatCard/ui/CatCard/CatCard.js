@@ -24,8 +24,8 @@ const CatCard = ({ kittensData, isMain }) => {
                 <Text size="m" className={styles.description}>
                     Статус: {kittensData.status}
                 </Text>
-                <Link to={getRouteCatalog()}  className={styles.kitten__btn}>
-                    {isMain ? 'в каталог' : 'подробнее'} {arrowIcon()}                
+                <Link to={getRouteCatalog()} className={styles.kitten__btn}>
+                    {isMain ? 'в каталог' : 'подробнее'} {arrowIcon()}
                 </Link>
             </div>
         </article>

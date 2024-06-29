@@ -17,12 +17,12 @@ export const HeaderMain = () => {
             <header className={getStyle(styles.header, {}, [styles.headerMain])}>
                 <HeaderPictureMain />
                 <div className={styles.headerContext}>
-                    <NavbarDesktop className={styles.navbarMain}/>
+                    <NavbarDesktop className={styles.navbarMain} />
                     <NavbarMobile />
                     <div className={styles.titleContainer}>
                         <Text type='h1' className={styles.title}>
-                            SAVANNAH WORLD<br/>
-                            <span className={styles.text}>Питомник кошек Саванны </span> 
+                            SAVANNAH WORLD<br />
+                            <span className={styles.text}>Питомник кошек Саванны </span>
                         </Text>
                         <Link to={getRouteCatalog()} className={styles.linkHeader} onClick={ScrollToTop()}>
                             в каталог {arrowIcon()}
