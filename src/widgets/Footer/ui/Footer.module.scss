@@ -20,24 +20,29 @@
         padding: 30px var(--tablet-padding);
         padding-top: 40px;
     } 
-    @include mobile-m{
+    @include mobile-l{ 
         margin-top: 40px;
         justify-content: center;
         flex-direction: column;
     } 
 }
 .adjMobile{
-    @include mobile-m{
-       padding: 20px;
+    @include mobile-l{  
+       padding: 40px;
     } 
+    @include mobile-m{   
+        padding: 20px;
+     } 
 }
 .hiddenTextMobileM{
-    @include mobile-m{
+    @include mobile-l{ 
         display: none;
     } 
 }
 
-
+.link{
+    color: var(--black);
+}
 
 .text{
     span{
@@ -90,7 +95,7 @@
 .footerMediaOnly{
     align-items: flex-end;
 
-    @include mobile-m{
+    @include mobile-l{ 
         flex-direction: row;
         margin: 10px;
     } 
@@ -126,7 +131,7 @@
     align-items: flex-start;
 
    }
-    @include mobile-m {
+    @include mobile-l { 
     display: none;
     }  
 }
@@ -136,7 +141,7 @@
     @include desktop-xl{
         display: none;
     } 
-    @include mobile-m {
+    @include mobile-l { 
         display: block;
     }  
 
