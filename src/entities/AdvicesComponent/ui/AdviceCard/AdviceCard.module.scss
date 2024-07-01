@@ -41,6 +41,7 @@
   max-width: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-container);
+  width: 240px;
   order: 2;
 
   @include mobile-l {
@@ -50,7 +51,6 @@
 
   @include mobile-m {
     width: 80%;
-
   }
 }
 
