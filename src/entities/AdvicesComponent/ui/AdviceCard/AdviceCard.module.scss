@@ -28,10 +28,7 @@
   max-width: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-container);
-
-  @include tablet-l {
-    width: 30%;
-  }
+  width: 240px;
 
   @include mobile-l {
     width: 100%;
@@ -45,10 +42,6 @@
   object-fit: cover;
   border-radius: var(--border-radius-container);
   order: 2;
-
-  @include tablet-l {
-    width: 30%;
-  }
 
   @include mobile-l {
     width: 100%;

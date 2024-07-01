@@ -9,7 +9,7 @@ const AdviceCard = ({ cat, title, content, index }) => {
       className={styles.container}
     >
       <img
-        src={cat} width='240 px' alt="Cat"
+        src={cat} alt="Cat Savannah"
         className={index % 2 === 0 ? styles.img : styles.imgRev} />
       <div>
         <Text className={styles.title} type="h2">
