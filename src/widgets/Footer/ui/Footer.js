@@ -2,13 +2,10 @@ import styles from "./Footer.module.scss";
 import { Stack } from "../../../shared/ui/Stack/Stack";
 import { Text } from "../../../shared/ui/Text/Text";
 import { contacts, mediaData } from "../lib/data";
-import cIcon from "../../../shared/assets/footer/c.png";
 
 
 export const Footer = () => {
     return (
-
-
         <footer className={styles.footer}>
             <Stack
                 className={styles.footerSection}
@@ -40,12 +37,11 @@ export const Footer = () => {
                     alignItems="alignCenter"
                     className={styles.legal}
                 >
-                    <img className={styles.cIcon} src={cIcon} alt="Savannah World" />
                     <Text
                         size='s'
                         type='p'
                         className={styles.text}>
-                        2024 <span>Savannah World.</span> Все права защищены
+                        © 2024 Savannah World. Все права защищены
                     </Text>
                 </Stack>
             </Stack>
@@ -86,7 +82,7 @@ export const Footer = () => {
                         type='p'
                         className={styles.textCompany}
                     >
-                        Сайт сделан в <span>AL TECH LABS LTD.</span>
+                        Создание сайта - AL TECH LABS LTD.
                     </Text>
                 </Stack>
             </Stack>
@@ -99,13 +95,12 @@ export const Footer = () => {
             >
 
                 <Stack>
-                    <img className={styles.cIcon} src={cIcon} alt="Savannah World" />
                     <Text
                         size='s'
                         type='p'
                         className={styles.text}
                     >
-                        2024 <span>Savannah World.</span> Все права защищены
+                        © 2024 Savannah World. Все права защищены
                     </Text>
                 </Stack>
 
@@ -118,7 +113,7 @@ export const Footer = () => {
                         type='p'
                         className={styles.text}
                     >
-                        Сайт сделан в <span>AL TECH LABS LTD.</span>
+                        Создание сайта - AL TECH LABS LTD.
                     </Text>
                 </Stack>
             </Stack>
