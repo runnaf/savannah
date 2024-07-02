@@ -9,7 +9,6 @@ import { Stack } from "../../../../shared/ui/Stack/Stack";
 import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 
 import styles from "./HeaderMain.module.scss";
-import { ScrollToTop } from "../../../../feature/hooks/scrollToTop";
 
 export const HeaderMain = () => {
     return (
@@ -24,7 +23,7 @@ export const HeaderMain = () => {
                             SAVANNAH WORLD<br />
                             <span className={styles.text}>Питомник кошек Саванны </span>
                         </Text>
-                        <Link to={getRouteCatalog()} className={styles.linkHeader} onClick={ScrollToTop()}>
+                        <Link to={getRouteCatalog()} className={styles.linkHeader}>
                             в каталог {arrowIcon()}
                         </Link>
                     </div>

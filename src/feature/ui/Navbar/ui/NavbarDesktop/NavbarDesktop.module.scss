@@ -14,7 +14,12 @@
 
 .container {
     z-index: 10;
-    
+    padding: 40px 0;
+
+    @include tablet-l {
+        padding: 20px 0;
+    };
+
     @include mobile-xl {
         display: none;
     }
@@ -60,10 +65,6 @@
         font-size: var(--font-size-m);
     }
 
-    @include tablet-l {
-        font-size: var(--font-size-s);
-    }
-
     @include mobile-xl {
         font-size: var(--font-size-xs);
     }
@@ -102,9 +103,5 @@
     @include tablet-l {
         font-size: var(--font-size-xs);
         min-width: 70px;
-    }
-
-    @include mobile-xl {
-        font-size: var(--font-size-xs);
     }
 }

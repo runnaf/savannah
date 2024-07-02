@@ -8,8 +8,10 @@ import Characteristics from "../../entities/CharacteristicsComponent/ui/Characte
 import Benefits from '../../feature/Benefits/Benefits';
 import { Gallery } from '../../entities/Gallery/ui/Gallery';
 import GallerySlider from "../../entities/Gallery/GallerySlider/GallerySlider";
+import { ScrollToTop } from "../../shared/hooks/scrollToTop";
 
 export const MainPage = () => {
+  ScrollToTop()
   return (
     <main className={styles.main}>
       <div className={styles.container}>

@@ -28,6 +28,10 @@
     @include mobile-xl {
         @include main-styles
     }
+
+    @media (max-width: 375px) {
+        gap: 3px;
+    }
 }
 
 .link {
@@ -41,8 +45,16 @@
         font-size: 14px;
     }
 
+    @include mobile-l {
+        font-size: 12px;
+    }
+
     @include mobile-m {
         font-size: 10px;
+    }
+
+    @media (max-width: 345px) {
+        font-size: 12px;
     }
 }
 
@@ -60,6 +72,10 @@
 
     @include mobile-xl {
         font-size: 14px;
+    }
+
+    @include mobile-l {
+        font-size: 12px;
     }
 
     @include mobile-m {
