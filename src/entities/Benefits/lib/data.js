@@ -1,18 +1,21 @@
-import { docIcon, vetIcon, careIcon } from '../../../shared/assets/photo/benefitsIcons';
+import { documentIcon, consultationIcon, veterinaryIcon } from '../../../shared/assets/svg/benefitIcons';
 
 
 
 const benefitsData = [
     {
-        img: docIcon(),
+        id: 1,
+        img: documentIcon(),
         benefit:' Документация согласно стандартам породы',       
     },
     {
-        img: vetIcon(),
+        id: 2,
+        img: consultationIcon(),
         benefit:' Полное ветеринарное обследование и вакцинация',
     },
     {
-        img: careIcon(),
+        id: 3,
+        img: veterinaryIcon(),
         benefit:'Консультация по вопросам содержания и воспитания',
     },
 ]

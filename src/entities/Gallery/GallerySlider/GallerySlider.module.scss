@@ -1,41 +1,22 @@
 @import '../../../app/styles/media-queries.scss';
+@import '../../../app/styles/mixin.scss';
 
-
-.slider__row {
-    display: flex;
-    justify-content: center;
-    column-gap: 10px; 
-}
-.slider__btn {
-    display: none;
-    background-color: transparent;
-    @include tablet-l {
-        display: block;
-    } 
-    @include mobile-l {
-        & svg {
-            width: 30px;
-            height: 30px;
-        }
-    } 
-}
-.photo{
-    display: none;
-    border-radius: var(--border-radius-element);
-        @include tablet-l  {
-            width: 600px;
-            display: block;
-        }
-        @include tablet-m  {
-            width: 450px;
-        }
-        @include mobile-l  {
-            width: 300px;
-        }
-        @include mobile-m  {
-            width: 200px;
-        }
-    } 
-
-
+.section {
+    display: none;  
+    @include section-styles; 
     
+
+    @include tablet-l  {        
+        display: block;
+    }
+}
+
+.photo{   
+    width: 100%;
+    height: 60vw;
+    object-fit: cover;
+    margin-bottom: 40px;
+    border-radius: var(--border-radius-element);  
+} 
+
+

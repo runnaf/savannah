@@ -1,10 +1,10 @@
 import styles from './CatSlider.module.scss';
-import CatCard from '../../../../entities/CatCard/ui/CatCard/CatCard';
+import CatCard from '../../../CatCard/ui/CatCard/CatCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
-import kittensData from '../../../../entities/CatCard/lib/data';
+import kittensData from '../../../CatCard/lib/data';
 
 const CatSlider = () => {
 
@@ -13,6 +13,7 @@ const CatSlider = () => {
             modules={[Pagination]}
             loop={true}
             pagination={{ clickable: true }}
+            
             breakpoints={{
                 0: {
                     slidesPerView: 1,
