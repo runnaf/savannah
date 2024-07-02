@@ -1,7 +1,7 @@
 import styles from './OurKittens.module.scss';
 import { Text } from "../../../../shared/ui/Text/Text";
 import { Stack } from '../../../../shared/ui/Stack/Stack';
-import CatSlider from '../CatSlider/CatSlider';
+import CatSlider from '../../ui/CatSlider/CatSlider';
 
 const OurKittens = () => {
 

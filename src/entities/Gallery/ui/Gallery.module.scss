@@ -45,17 +45,11 @@
 
 .galleryText {
     margin-top: 60px;
-    margin-bottom: 60px; 
 
 
     @include tablet-l {        
         margin-top: 40px;
-        margin-bottom: 20px; 
-       
     } 
-    @include mobile-l{        
-        gap: 16px;
-    }   
 }
 .galleryTitle {
     text-align: center;
@@ -94,6 +88,7 @@
   
     @include mobile-l {  
         width: 100%;    
+        font-size: var(--font-size-xxs);
         padding: 10px 10px;
     }
 }
