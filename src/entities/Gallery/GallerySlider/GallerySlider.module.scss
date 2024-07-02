@@ -1,41 +1,42 @@
 @import '../../../app/styles/media-queries.scss';
+@import '../../../app/styles/mixin.scss';
 
+.section {
+    display: none;  
+    @include section-styles; 
+    
 
-.slider__row {
-    display: flex;
-    justify-content: center;
-    column-gap: 10px; 
-}
-.slider__btn {
-    display: none;
-    background-color: transparent;
-    @include tablet-l {
+    @include tablet-l  {        
         display: block;
-    } 
-    @include mobile-l {
-        & svg {
-            width: 30px;
-            height: 30px;
-        }
-    } 
+    }
 }
-.photo{
-    display: none;
+.slider__row {   
+    display: flex;
+    justify-content: center;   
+}
+
+.photo{   
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    margin-bottom: 40px;
     border-radius: var(--border-radius-element);
-        @include tablet-l  {
-            width: 600px;
-            display: block;
-        }
-        @include tablet-m  {
-            width: 450px;
+
+    
+      
+    @include tablet-m  {        
+        height: 480px;
+    }
+        @include mobile-xl  {
+            height: 440px;
         }
         @include mobile-l  {
-            width: 300px;
+            height: 340px;
         }
         @include mobile-m  {
-            width: 200px;
+            height: 200px;
         }
     } 
 
-
+   
     

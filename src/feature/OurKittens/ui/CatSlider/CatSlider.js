@@ -13,6 +13,7 @@ const CatSlider = () => {
             modules={[Pagination]}
             loop={true}
             pagination={{ clickable: true }}
+            
             breakpoints={{
                 0: {
                     slidesPerView: 1,

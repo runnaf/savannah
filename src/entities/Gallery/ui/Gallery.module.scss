@@ -11,6 +11,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     border-radius: var(--border-radius-container);
+  
 
     @include tablet-l  {
         display: none;
@@ -27,7 +28,6 @@
 }
 
 
-
 .photo{
     width: 312px;
     height: 226px;
@@ -40,5 +40,60 @@
     @include tablet-l {        
         width: 150px;
         height: 106px;
+    }
+}
+
+.galleryText {
+    margin-top: 60px;
+    margin-bottom: 60px; 
+
+
+    @include tablet-l {        
+        margin-top: 40px;
+        margin-bottom: 20px; 
+       
+    } 
+    @include mobile-l{        
+        gap: 16px;
+    }   
+}
+.galleryTitle {
+    text-align: center;
+
+    @include desktop-m {
+        font-size: var(--font-size-m);
+    }
+    @include tablet-l {   
+        font-size: var(--font-size-s);
+    }
+}
+.gallery__btn {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    @include button;
+    @include button-accent;
+    text-transform: lowercase;
+
+
+    @include desktop-m {
+        font-size: var(--font-size-xs);
+        padding: 10px 15px;
+
+        border-radius: var(--border-radius-mobile);
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }  
+    @include tablet-l {   
+        width: 80%;     
+        padding: 10px 25px;
+    }
+  
+    @include mobile-l {  
+        width: 100%;    
+        padding: 10px 10px;
     }
 }
