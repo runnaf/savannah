@@ -8,14 +8,24 @@
     pointer-events: none;
     object-fit: cover;
     width: 100%;
-    min-height: 100%;
     display: block;
+    object-position: 80% center;
 
     @include header-height;
 
+    @include desktop-m {
+        object-position: 85% center;
+    }
+    @include tablet-l {
+        object-position: 90% center;
+    }
+
     @include tablet-m {
-        position: absolute;
-        width: 100%;
         background-color: var(--brown);
+        object-position: 0% center;
+    }
+
+    @include mobile-xl {
+        object-position: 85% center;
     }
 }

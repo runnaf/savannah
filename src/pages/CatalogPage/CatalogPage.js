@@ -10,10 +10,12 @@ import { Stack } from '../../shared/ui/Stack/Stack';
 import picAdjustMore from '../../shared/assets/photo/picAdjustMore3.png';
 import { Drawer } from '../../widgets/Drawer/Drawer';
 import React, { useState } from 'react';
+import { ScrollToTop } from '../../shared/hooks/scrollToTop';
 
 
 export const CatalogPage = () => {
 
+    ScrollToTop()
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
     // const [changeDrawerModal, drawDrawerModal] = useModal();

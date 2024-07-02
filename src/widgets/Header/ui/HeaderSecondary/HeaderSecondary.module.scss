@@ -4,10 +4,37 @@
 .header {
     background-color: var(--brown);
     width: 100%;
-    padding: 76px 0;
 
-    @include desktop-m {
-        padding: 40px 0;
+    nav {
+        @include tablet-l {
+            gap: 13px;
+        }
+
+        @include mobile-xl {
+            gap: 3px;
+        }
+
+        a {
+            @include tablet-l {
+                font-size: 17px;
+            }
+
+            @include mobile-xl {
+                font-size: 14px;
+            }
+        
+            @include mobile-l {
+                font-size: 12px;
+            }
+        
+            @include mobile-m {
+                font-size: 10px;
+            }
+        
+            @media (max-width: 345px) {
+                font-size: 12px;
+            }
+        }
     }
 }
 
@@ -16,4 +43,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 var(--desktop-padding);
+
+    @include desktop-l {
+        padding: 0 var(--tablet-padding);
+    } 
+
+    @include mobile-xl {
+        padding: 20px var(--tablet-padding);
+    } 
 }

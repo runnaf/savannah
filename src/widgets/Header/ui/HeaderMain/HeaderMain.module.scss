@@ -4,20 +4,8 @@
 .header {
     display: flex;
     background-color: transparent;
-    height: 100vh;
     width: 100%;
     position: relative;
-    padding: 76px 0;
-
-    @include desktop-xl {
-        height: fit-content;
-    }
-
-    @include desktop-m {
-        padding: 40px 0;
-    }
-
-    @include header-height;
 
     @include mobile-l {
         display: flex;
@@ -39,13 +27,20 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
     @include main-styles;
+    @include header-height;
 
     @include mobile-xl {
-        margin-left: 0;
         align-items: center;
         margin-top: auto;
         margin-bottom: 50px;
+        margin-left: 0;
+    }
+
+    @include mobile-l {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -80,6 +75,7 @@
     }
 
     @include mobile-xl {
+        display: none;
         min-width: 160px;
         padding: 8px 15px;
         border-radius: var(--border-radius-mobile);
@@ -113,52 +109,69 @@
     height: 100%;
     z-index: 9;
 
-    .title {
-        color: var(--white);
-        font-weight: 600;
-        margin-bottom: 48px;
-        font-size: 96px;
-        max-width: min-content;
-
-        @include desktop-l {
-            font-size: 70px;          
-        }
-
-        @include desktop-m {
-            font-size: 60px;          
-        }
-
-        @include tablet-l {
-            font-size: 52px;
-            max-width: 360px;
-        }
-
-        @include mobile-xl {
-            font-size: 53px;
-            margin-bottom: 50px;
-        }
+    @include tablet-m {
+        margin-top: 160px;
     }
 
-    .text {
-        color: var(--white);        
-        font-weight: 400;
-        line-height: 1.1;
+    @include mobile-xl {
+        margin-top: auto;
+        margin-bottom: 40%;
+    }
+
+    @media (max-width: 380px) {
+        margin-bottom: 25%;
+    }
+}
+
+.title {
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 48px;
+    font-size: 96px;
+    max-width: min-content;
+
+    @include desktop-l {
+        font-size: 70px;          
+    }
+
+    @include desktop-m {
+        font-size: 60px;          
+    }
+
+    @include tablet-l {
+        font-size: 52px;
+        max-width: 360px;
+    }
+
+    @include mobile-l {
         font-size: 40px;
+        margin-bottom: 0;
+    }
+}
 
-        @include desktop-l {
-            font-size: 30px;          
-        }
+.text {
+    color: var(--white);        
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 40px;
 
-        @include desktop-m {
-            font-size: 25px;          
-        }
+    @include desktop-l {
+        font-size: 30px;          
+    }
 
-        @include tablet-l {
-            min-width: max-content;
-        }
+    @include desktop-m {
+        font-size: 25px;          
+    }
 
-        @include mobile-xl {
-            font-size: 21px;
-        }
+    @include tablet-l {
+        min-width: max-content;
+    }
+
+    @include mobile-xl {
+        font-size: 21px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 19px;
     }
 }

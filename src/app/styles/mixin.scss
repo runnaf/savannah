@@ -88,26 +88,22 @@
 
 @mixin header-height {
     @include desktop-xl {
-        min-height: 1044px;
-    }
-
-    @media (max-width: 1700px) {
-        min-height: 900px;
-    }
-
-    @include desktop-l {
-        min-height: 850px;
+        min-height: 100vh;
     }
 
     @include desktop-m {
-        min-height: 700px;
+        min-height: 800px;
     }
 
     @include tablet-l {
-        min-height: 580px;
+        min-height: 600px;
     }
 
     @include tablet-m {
-        min-height: calc(100vh - 100px);
+        min-height: 800px;
+    }
+
+    @include mobile-xl {
+        min-height: calc(100vh - 93px);
     }
 }
