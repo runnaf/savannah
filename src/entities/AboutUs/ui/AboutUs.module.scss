@@ -57,6 +57,7 @@
     }
 }
 .par {
+    text-indent: 20px;
 
     @include tablet-l {
         font-size: var(--font-size-s);       
