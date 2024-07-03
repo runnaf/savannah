@@ -2,18 +2,20 @@
 
 .edit {
     @include modal-content;
-        @include mobile-l {
-        flex-direction: column;
-    } 
-}
-
-.editImgBox{
+    position: relative;     
+} 
+.title {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.editPhoto{
+.photoPosition {
+    position: absolute;
+    right: 55.4%;
+    top: 23%;
+    z-index: 2;
+}
+.editPhoto{  
     width:330px;
     height:374px;
     
@@ -47,18 +49,25 @@
 
 .editIcon{
     position: absolute;
+    top: 40%;
+    right: 35%;
+    z-index: 9;
+ 
     @media (max-width: 1439px) {
         width: 70px;
 }
 }
-
+.save__btn {
+    align-self: flex-end;
+    margin-top: -230px;
+}
 .button {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    justify-content: space-between;  
+    width:400px;
     height: 44px;
+    margin-top: 20px;  
+
     @include desktop-l {
         font-size: var(--font-size-xs);
     } 
@@ -76,15 +85,19 @@
     @include mobile-l {
         width: 220px;
     } 
-
 }
 
+.delete__btn {
+    align-self: flex-end;
+    margin-top: -40px;
+}
 .buttonDelete {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    justify-content: space-between; 
+    align-items: center; 
+    width:400px;
+    height: 44px;
+    margin-top: 20px;  
     border: 2px solid var(--red) !important;
     color: var(--red) !important;
     height: 44px;
@@ -103,10 +116,10 @@
     } 
 }
 .closeButton {
-    cursor: pointer;
-    position: relative;
-    left: 290px;
-    top: 10px;
+    cursor: pointer; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
     width: 50px;
     height: 50px;
     @include desktop-l {
@@ -126,3 +139,5 @@
     // @include mobile-l {
 
     // } доработать после прокрутки
+
+   
