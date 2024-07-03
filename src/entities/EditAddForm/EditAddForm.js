@@ -5,26 +5,35 @@ import { Stack } from "../../shared/ui/Stack/Stack";
 import styles from './EditAddForm.module.scss';
 
 
-
-
 export const EditAddForm = () => {
     return (
         <Stack
-            justifyContent='justifyCenter'
-            alignItems='alignCenter'
-            direction='column' gap='16'
-            className={styles.editSection}
-        >
-            <Input
-                className={styles.editInput}
-                placeholder='имя'
-            />
+            justifyContent="justifyCenter"
+            alignItems="alignCenter"
+            direction="row"
+            gap='32'
+            className={styles.editForm}
+    >  
+            <div className={styles.addDiv}></div>  
+        
+            <Stack
+                justifyContent='justifyCenter'
+                alignItems='alignCenter'
+                direction='column' gap='16'
+                className={styles.editSection}
+            >
+                <Input
+                    className={styles.editInput}
+                    placeholder='имя'
+                />
 
-            <Select title="Возраст" options={dataSelect.optionsAge} />
-            <Select title="Пол" options={dataSelect.optionsSex} />
-            <Select title="Цвет" options={dataSelect.optionsColor} />
-            <Select title="Статус" options={dataSelect.optionsStatus} />
+                <Select title="Возраст" options={dataSelect.optionsAge} />
+                <Select title="Пол" options={dataSelect.optionsSex} />
+                <Select title="Цвет" options={dataSelect.optionsColor} />
+                <Select title="Статус" options={dataSelect.optionsStatus} />
 
+            </Stack>
         </Stack>
     )
+
 }
