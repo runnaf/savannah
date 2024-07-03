@@ -1,7 +1,7 @@
 import styles from './CatalogPage.module.scss';
 import { EditCatCard } from '../../widgets/EditCatCard/EditCatCard';
 import { CreateCatCard } from '../../widgets/CreateCatCard/CreateCatCard';
-import { FilterCats } from '../../feature/FilterCats/ui/FilterCats';
+import { FilterCats } from '../../feature/FilterCats/ui/FilterCats/FilterCats';
 import { Button } from '../../shared/ui/Button/Button';
 import { useModal } from '../../shared/hooks/useModal';
 import picAdjustm from '../../shared/assets/photo/picAdjustm.png';
@@ -18,7 +18,6 @@ export const CatalogPage = () => {
     ScrollToTop()
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
-    // const [changeDrawerModal, drawDrawerModal] = useModal();
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const toggleDrawer = () => {
@@ -73,8 +72,7 @@ export const CatalogPage = () => {
             )}
 
             <FilterCats />
-            <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer}
-            />
+            <Drawer isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer}/>
 
 
             {/* TEST */}

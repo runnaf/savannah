@@ -4,11 +4,15 @@
     @include modal-content;
     position: relative;     
 } 
-
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
 .photoPosition {
     position: absolute;
-    right: 48%;
-    top: 12.5%;
+    right: 55.4%;
+    top: 23%;
     z-index: 2;
 }
 .editPhoto{  
@@ -55,12 +59,12 @@
 }
 .save__btn {
     align-self: flex-end;
-    margin-top: -100px;
+    margin-top: -230px;
 }
 .button {
     display: flex;
     justify-content: space-between;  
-    width:263px;
+    width:400px;
     height: 44px;
     margin-top: 20px;  
 
@@ -91,7 +95,7 @@
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    width:263px;
+    width:400px;
     height: 44px;
     margin-top: 20px;  
     border: 2px solid var(--red) !important;
@@ -136,4 +140,4 @@
 
     // } доработать после прокрутки
 
-  
+   
