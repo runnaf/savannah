@@ -1,6 +1,14 @@
-@import '../../app/styles/mixin.scss';
+@import '../../../../app/styles/mixin.scss';
+@import '../../../../app/styles/media-queries.scss';
 
-.editInput{
+.filterbar {
+    margin-top: 60px;
+
+    @include tablet-l {
+        display: none;
+    }
+}
+.secondary{
     width: 263px;
     height: 44px;
 
@@ -14,12 +22,9 @@
     @include tablet-l {
         width: 150px;
     } 
-    @include tablet-m {
-        width: 140px;
-    } 
     @include mobile-l {
         width: 220px;
-    } 
+    }
+
     
 }
-

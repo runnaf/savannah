@@ -1,7 +1,7 @@
 import { Stack } from '../../shared/ui/Stack/Stack';
 import styles from './EditCatCard.module.scss';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
-import { EditAddForm } from "../../entities/EditAddForm/EditAddForm";
+import { EditAddForm } from "../../feature/EditAddForm/ui/EditAddForm/EditAddForm";
 import editPhoto from '../../shared/assets/photo/editCatImg.png';
 import { Button } from '../../shared/ui/Button/Button';
 import { arrowIcon } from '../../shared/assets/svg/arrowIcon';

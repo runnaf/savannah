@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Drawer.module.scss';
 import { Stack } from '../../shared/ui/Stack/Stack';
 import closeButton from '../../shared/assets/photo/close.png';
-import { dataSelect } from '../../feature/FilterCats/lib/dataSelect';
+import { dataSelect } from '../../feature/FilterCats/lib/data';
 import Checkbox from '../../shared/ui/Checkbox/Checkbox';
 import { Button } from '../../shared/ui/Button/Button';
 
