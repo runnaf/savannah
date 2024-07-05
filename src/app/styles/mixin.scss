@@ -55,8 +55,8 @@
     border-radius: var(--border-radius-container);
     box-shadow: 4px 6px 6px 4px rgba(0, 0, 0, 0.25);
 
-    @include mobile-l {
-        padding: 15px 20px 40px 20px;
+    @include mobile-l {       
+        padding: 20px;
     }
 }
 

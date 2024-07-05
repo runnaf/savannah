@@ -9,7 +9,7 @@ import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
 import editIcon from "../../shared/assets/photo/editPhotoIcon.png";
 
 
-export const CreateCatCard = ({ changeCreateModal }) => {
+export const CreateCatCard = ({ changeCreateModal}) => {
     return (
         <Stack 
             justifyContent="justifyCenter"
@@ -30,13 +30,14 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                     Создать карточку питомца
                 </Text>
                 <div  className={styles.photoPosition}>       
-                    <EditAddForm />
+                    <EditAddForm/>
                     <img
                         className={styles.editIcon}
-                        src={editIcon} alt="editIcon" />
+                        src={editIcon} alt="editIcon" /> 
                 </div> 
                 <div className={styles.save__btn}>
-                    <Button className={styles.button}>
+                    <Button className={styles.button}
+                            >
                         сохранить {arrowIcon()}
                     </Button>
                 </div>
