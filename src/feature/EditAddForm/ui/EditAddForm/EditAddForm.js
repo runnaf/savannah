@@ -3,9 +3,22 @@ import { dataFilter} from "../../../FilterCats/lib/data";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
 import styles from "./EditAddForm.module.scss";
 import { SelectItem } from "../SelectItem/SelectItem";
+import { useState } from "react";
+
 
 
 export const EditAddForm = () => {
+  const [empty, setEmpty] = useState(false);
+
+  const blurHandler = (e) => {
+   e.preventDefault()
+    if (e.target.value) {
+       setEmpty(false);
+    } else {
+      setEmpty(true);
+  }
+}
+
   return (  
 
       <Stack
@@ -23,9 +36,11 @@ export const EditAddForm = () => {
             gap="32"
             className={styles.edit__row}
             >
-            <Input 
-              className={styles.editInput} 
+            <Input             
               placeholder="имя" 
+              className={`${empty ? styles.wrong : ''}`} 
+              onBlur =  {e => blurHandler(e)}   
+              onChange={() => { }}
             />
       
             <Stack 
@@ -44,6 +59,7 @@ export const EditAddForm = () => {
               ))}
             </Stack>
           </Stack>
+          
     </Stack>
  
   );

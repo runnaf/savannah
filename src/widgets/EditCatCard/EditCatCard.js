@@ -2,7 +2,7 @@ import { Stack } from '../../shared/ui/Stack/Stack';
 import styles from './EditCatCard.module.scss';
 import editIcon from '../../shared/assets/photo/editPhotoIcon.png';
 import { EditAddForm } from "../../feature/EditAddForm/ui/EditAddForm/EditAddForm";
-import editPhoto from '../../shared/assets/photo/editCatImg.png';
+import editPhoto from '../../shared/assets/photo/kitten1.png';
 import { Button } from '../../shared/ui/Button/Button';
 import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
 import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
@@ -19,7 +19,9 @@ export const EditCatCard = ({ changeEditModal }) => {
 
 
     return (
-        <Stack          
+        <Stack 
+            justifyContent="justifyCenter"
+            alignItems="alignCenter"            
             direction='column'
             gap='32'
             className={styles.edit}
@@ -47,10 +49,12 @@ export const EditCatCard = ({ changeEditModal }) => {
                     src={closeButton} alt="закрыть"
                     onClick={changeEditModal}
                 />
+              
                 <Text type='h3' size='l' className={styles.title}>
                     Редактировать карточку питомца
                 </Text>
                 <EditAddForm />
+                
                 <div className={styles.save__btn}>
                     <Button className={styles.button}>
                         сохранить {arrowIcon()}

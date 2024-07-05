@@ -1,7 +1,7 @@
 @import '../../../app/styles/media-queries.scss';
 
 .button {
-    width: 190px;
+    width: 240px;
     border-radius: var(--border-radius-element);
     border: 2px solid transparent;   
     background-color: var(--white);
@@ -15,10 +15,24 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 15px;
+
+        & svg {
+            @include tablet-m {
+                width: 30px;
+                height: 30px; 
+            }
+        }
     }
 
-    @include desktop-l {
-        width: 165px;
+    @include tablet-m {
+        width: 190px;
+        height: 40px; 
+    }
+    @include mobile-l {
+        width: 280px;          
+    }
+    @include mobile-m {
+        width: 220px;
     }
 }
 
@@ -26,7 +40,7 @@
     background-color: var(--white);
     font-size: var(--font-size-xs);
     margin-top: 5px;
-    width: 250px;
+    width: 240px;
     padding: 0px 15px; 
     border-radius: var(--border-radius-element);
     border: 1px solid var(--dark-brown);
@@ -35,9 +49,15 @@
     :last-child {
         border: none
     }
-
-    @include desktop-l {
-        width: 165px;
+   
+    @include tablet-m {
+        width: 190px;   
+    }
+    @include mobile-l {
+        width: 280px;                  
+    }
+    @include mobile-m {
+        width: 220px;
     }
 }
 

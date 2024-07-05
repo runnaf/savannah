@@ -1,17 +1,68 @@
-.catInput {
+@import '../../app/styles/media-queries.scss';
+.catLabel { 
     position: absolute;
     cursor: pointer; 
-    width: 300px;
+    width: 280px;
+    height: 50px;
     top: 50%;
-    left: 14%;
+    left: 12%;
     z-index: 7;
-    background-color: var(--light-brown);
-   
-   
+    border-radius: var(--border-radius-element);
+    border: 1px solid rgba(0, 0, 0, 0.134);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    
+    @include desktop-l {
+        width: 250px;
+        left: 11.5%;       
+    } 
+    @include desktop-m {
+        width: 200px;
+        left: 13%;       
+    } 
+     @include tablet-l { 
+        width: 300px;       
+        top: 40%;
+        left: 30%;
+    } 
+    @include tablet-m { 
+        width: 260px;       
+    } 
+    @include mobile-l {     
+        width: 200px; 
+        top: 32%;
+        left: 20%;
+    }
+    @include mobile-m {
+        width: 160px;       
+        top: 30%;       
+    }
+}
+.catInput {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
 }
 .closeIcon {
     position: absolute;
-    top: 20%;
-    left: 46%;
+    top: 25%;
+    right: 2%;
+    z-index: 7;   
+}
+.chooseFile {
+    position: absolute;  
+    text-align: center;
+    font-size: var(--font-size-xs);
+    background-color: var(--light-brown);
+    border-radius: var(--border-radius-element);
+    padding: 14px;  
     z-index: 7;
+
+    @include mobile-m {
+        width: 120px;       
+        padding: 5px;
+    }
 }
