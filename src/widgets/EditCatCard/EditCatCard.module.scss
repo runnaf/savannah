@@ -14,9 +14,9 @@
     }
     
     @include mobile-l {
-        font-size: var(--font-size-m);
+        font-size: var(--font-size-m) !important;      
         max-width: 280px;       
-        margin-top: 50px;
+        margin-top: 40px;
     }
     @include mobile-m {
         max-width: 220px;
@@ -25,28 +25,32 @@
 .photoPosition {
     position: absolute;
     right: 59.5%;
-    top: 22.9%;
+    top: 20%;
     z-index: 2;
 
     @include desktop-l {
-        right: 62.5%;
-        top: 24%;
+        right: 62.45%;
+        top: 20.2%;
     } 
     @include desktop-m {
         right: 63.7%;
-        top: 25%;
+        top: 21%;
     }
     @include tablet-l {
         right: 14.2%;
-        top: 11.2%;
+        top: 9.5%;
     } 
     @include tablet-m {
-        right: 16.5%;
-        top: 14.2%;
+        right: 16.6%;
+        top: 13.15%;
     } 
     @include mobile-l {
         right: 6.2%;
-        top: 18.3%;
+        top: 15.6%;
+    }
+    @include mobile-m {
+        right: 7.6%;
+        top: 16.85%;
     }
 }
 .editPhoto{  
@@ -57,11 +61,11 @@
     
     @include desktop-l {
         width: 280px;
-        height: 317.56px;
+        height: 318px;
     } 
     @include desktop-m {
-        width: 259.6px;
-        height: 294.42px;
+        width: 260px;
+        height: 295px;
     } 
     @include tablet-l {
         width: 500px;
@@ -102,8 +106,7 @@
       
     }
     @include mobile-m {
-        width: 50px;
-             
+        width: 50px;        
     }
 }
 
@@ -112,7 +115,7 @@
     margin-top: -230px;
 
     @include desktop-l {
-        margin-top: -180px;
+        margin-top: -160px;
     } 
     @include tablet-l {
         margin-top: 0px;
@@ -127,6 +130,14 @@
     height: 44px;
     margin-top: 20px;  
 
+    
+    & svg {
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+
     @include desktop-l {
         font-size: var(--font-size-xs);
         margin-top: 0px;
@@ -137,8 +148,9 @@
         margin-top: 0px;  
 } 
     @include tablet-m {
-        width: 400px;
-        
+        width: 400px; 
+        height: 40px;      
+        padding: 5px 15px !important;  
     } 
     @include mobile-l {
         width: 280px; 
@@ -166,12 +178,20 @@
     border: 2px solid var(--red) !important;
     color: var(--red) !important;
     height: 44px;
+
+    & svg {
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
    
     @include tablet-l {
         width: 500px;
         margin-top: 20px;
     } 
     @include tablet-m {
+        height: 40px;
         width: 400px;       
     }  
     @include mobile-l {
@@ -187,8 +207,11 @@
     top: 20px;
     right: 20px;
     width: 50px;
-    height: 50px;    
+    height: 50px;   
+    
+    @include mobile-l {
+        width: 30px;
+        height: 30px;       
+    }
 }
 
-
-   

@@ -15,10 +15,18 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 15px;
+
+        & svg {
+            @include tablet-m {
+                width: 30px;
+                height: 30px; 
+            }
+        }
     }
 
     @include tablet-m {
         width: 190px;
+        height: 40px; 
     }
     @include mobile-l {
         width: 280px;          
@@ -41,13 +49,12 @@
     :last-child {
         border: none
     }
-
    
     @include tablet-m {
-        width: 190px;
+        width: 190px;   
     }
     @include mobile-l {
-        width: 280px;          
+        width: 280px;                  
     }
     @include mobile-m {
         width: 220px;

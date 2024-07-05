@@ -15,7 +15,7 @@ export const CreateCatCard = ({ changeCreateModal}) => {
             justifyContent="justifyCenter"
             alignItems="alignCenter"        
             direction="column"
-            gap = '16'          
+            gap = '32'          
             className={styles.edit}
         >  
             <div>

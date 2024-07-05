@@ -9,12 +9,11 @@
     text-align: center;
     
     @include mobile-l {
-        font-size: var(--font-size-m);
-        margin-top: 40px;
-        }
-        @include mobile-m {
-            max-width: 220px;
-        }
+        font-size: var(--font-size-m);      
+    }
+    @include mobile-m {
+        max-width: 220px;
+    }
 }
 .save__btn {
     align-self: flex-end;
@@ -38,8 +37,20 @@
     height: 44px;
     margin-top: 20px;
 
+    & svg {
+
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+    @include tablet-l {
+        height: 40px;
+        margin-top: 0px;
+    } 
     @include tablet-m {
-        width: 400px;       
+        width: 400px;         
+        padding: 5px 15px !important;      
     } 
     @include mobile-l {
         width: 280px; 
@@ -59,8 +70,8 @@
 
      
     @include mobile-l {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;       
     }
 }
 .photoPosition {
@@ -68,26 +79,30 @@
 }
 .editIcon{
     position: absolute;
-    top: 38%;
-    left: 14%;
+    top: 35%;
+    left: 13.5%;
     z-index: 9;
 
     @include desktop-l {
         width: 70px;
+    }
+    @include desktop-m {
+        top: 34%;
+        left: 12%;
+    }
 
     @include tablet-l {        
-        top: 34%;
+        top: 33%;
         left: 40%;
         width: 100px;
     } 
     @include mobile-l {
         width: 70px;
-        top: 23%;
-        left: 39%;
+        top: 20%;
+        left: 38%;
     }
     @include mobile-m {
         width: 50px;
-        top: 20%;       
+        top: 18%;       
     }
 } 
-}
