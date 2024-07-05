@@ -17,10 +17,10 @@ export const SelectItem = (props) => {
 
     return (
         <ListBox
-            filter={getFilterText(filter)}
+            filter={selected === '' ? getFilterText(filter) : selected}
             options={options}
             selected={selected}
-            changeSelect={changeSelect}
+            changeSelect={changeSelect}            
         />
     )
 }
