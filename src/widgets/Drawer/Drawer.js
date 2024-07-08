@@ -35,7 +35,7 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
 
     const renderOptions = (category, options) => {
         return options.map(option => (
-            <p key={option.id} onClick={() => handleListItemClick(category, option.id)}>
+            <li key={option.id} onClick={() => handleListItemClick(category, option.id)}>
                 <Stack
                     className={styles.test}
                     direction="row"
@@ -49,14 +49,14 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
                     />
                     <span>{option.value}</span>
                 </Stack>
-            </p>
+            </li>
         ));
     };
 
     return (
         <>
             {isDrawerOpen && <div className={styles.overlay} onClick={toggleDrawer}></div>}
-            <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ''}`}>
+            <form className={`${styles.drawer} ${isDrawerOpen ? styles.open : ''}`}>
                 <Stack
                     justifyContent="justifyContent"
                     direction='column'
@@ -88,7 +88,7 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
                     </ul>
 
                 </Stack>
-                <Button className={styles.secondary} variant="secondary" onClick={() => setCheckedOptions({
+                <Button type="reset" className={styles.secondary} variant="secondary" onClick={() => setCheckedOptions({
                     optionsAge: dataSelect.optionsAge.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
                     optionsSex: dataSelect.optionsSex.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
                     optionsColor: dataSelect.optionsColor.reduce((acc, option) => ({ ...acc, [option.id]: false }), {}),
@@ -96,7 +96,7 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
                 })}>
                     сбросить
                 </Button>
-            </div>
+            </form>
         </>
     );
 };

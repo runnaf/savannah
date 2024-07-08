@@ -1,7 +1,11 @@
 @import '../../../app/styles/media-queries.scss';
 
+.container {
+    width: 100%;
+}
+
 .button {
-    width: 190px;
+    width: 250px;
     border-radius: var(--border-radius-element);
     border: 2px solid transparent;   
     background-color: var(--white);
@@ -22,15 +26,23 @@
     }
 }
 
+.buttonOpen {
+    border: 1px solid  var(--dark-brown);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    box-shadow: none;
+}
+
 .options {
     background-color: var(--white);
     font-size: var(--font-size-xs);
-    margin-top: 5px;
-    width: 250px;
-    padding: 0px 15px; 
+    width: 250px; 
     border-radius: var(--border-radius-element);
     border: 1px solid var(--dark-brown);
     z-index: 100;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 
     :last-child {
         border: none

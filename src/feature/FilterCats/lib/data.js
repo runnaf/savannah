@@ -12,8 +12,8 @@
         { id: 1, value: 'Ф2' },
         { id: 2, value: 'Ф3' },
         { id: 3, value: 'Ф4' }
-       ],
-       optionsStatus: [
+      ],
+      optionsStatus: [
         { id: 1, value: 'готов к отправке' },
         { id: 2, value: 'в процессе' }
         ]

@@ -2,8 +2,9 @@ import { useCallback, useState } from "react";
 import { filters } from "../../lib/data";
 import { ListBox } from "../../../../shared/ui/ListBox/ListBox";
 
+
 export const FilterItem = (props) => {
-    const { filter, options } = props;
+    const { filter, options, checked, setChecked } = props;
 
     const [selected, setSelected] = useState([]);
 
@@ -25,6 +26,8 @@ export const FilterItem = (props) => {
             options={options}
             selected={selected}
             changeSelect={changeSelect}
+            checked={checked}
+            setChecked={setChecked}
             badge
         />
     )

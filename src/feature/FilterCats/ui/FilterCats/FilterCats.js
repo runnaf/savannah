@@ -1,27 +1,24 @@
-import { dataFilter } from "../../lib/data";
-import { Button } from "../../../../shared/ui/Button/Button";
-import { Stack } from "../../../../shared/ui/Stack/Stack";
-import styles from './FilterCats.module.scss';
-import { FilterItem } from "../FilterItem/FilterItem";
+import { useEffect, useState } from "react"
+import { FilterCatsDesktop } from "../FilterCatsDesktop/FilterCatsDesktop";
 
 export const FilterCats = () => {
-  return (
-    <Stack
-      alignItems='alignStart'
-      gap="32"
-      className={styles.filterbar}
-    >
-      {Object.entries(dataFilter).map(([filter, options]) => (
-        <FilterItem 
-          key={filter}
-          filter={filter} 
-          options={options}
-        />
-      ))}
+  const [width, setWidth] = useState(window.innerWidth);
+  const WIDTHMOBILE = 767;
 
-      <Button className={styles.secondary} variant="secondary">
-        сбросить
-      </Button>
-    </Stack>
+  useEffect(() => {
+    const handleResize = (event) => {
+      setWidth(event.target.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  return (
+    <>
+      {
+        width > WIDTHMOBILE ? <FilterCatsDesktop /> : 'hello'
+      }
+    </>
   )
-};
+}
