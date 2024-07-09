@@ -5,6 +5,10 @@
     position: relative; 
     
 } 
+
+.inputFile {
+    position: absolute;
+}
 .title {   
     margin-top: 30px;       
     text-align: center;
@@ -215,3 +219,11 @@
     }
 }
 
+.catInput {  
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
