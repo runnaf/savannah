@@ -14,7 +14,6 @@ export const ListBox = memo((props) => {
         checked,
         setChecked
     } = props;
-    console.log(checked)
 
     const handleOptionClick = (option, event) => {
         event.preventDefault();
