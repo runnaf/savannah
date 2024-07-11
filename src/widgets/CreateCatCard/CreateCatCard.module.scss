@@ -6,18 +6,58 @@
 }
 .title {
     margin-top: 20px;
+    text-align: center;
+    
+    @include mobile-l {
+        font-size: var(--font-size-m);      
+    }
+    @include mobile-m {
+        max-width: 220px;
+    }
 }
 .save__btn {
     align-self: flex-end;
     margin-top: -180px;
     margin-bottom: 60px;
+
+    @include desktop-l {
+        margin-top: -160px;
+    } 
+    @include tablet-l {   
+        align-self: center;     
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
 }
 .button {
     display: flex;
-    justify-content: space-between;  
-    width:400px;
+    justify-content: space-between; 
+    align-items: center;   
+    width:500px;
     height: 44px;
     margin-top: 20px;
+
+    & svg {
+
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+    @include tablet-l {
+        height: 40px;
+        margin-top: 0px;
+    } 
+    @include tablet-m {
+        width: 400px;         
+        padding: 5px 15px !important;      
+    } 
+    @include mobile-l {
+        width: 280px; 
+    }
+    @include mobile-m {
+        width: 220px;
+    }
 }
 
 .closeButton {
@@ -27,34 +67,42 @@
     right: 20px;
     width: 50px;
     height: 50px;
-    @include desktop-l {
-        left: 230px;
-        top:6px;
-    } 
-    @include desktop-m {
-        left: 200px;
-    } 
-    @include tablet-l {
-        left: 180px;
-        top:-60px;
-    } 
-    @include tablet-m {
-        left: 170px;
-        top: 10px;
-    } 
-    // @include mobile-l {
 
-    // } доработать после прокрутки
+     
+    @include mobile-l {
+        width: 30px;
+        height: 30px;       
+    }
 }
 .photoPosition {
     position: relative;
 }
 .editIcon{
     position: absolute;
-    top: 38%;
-    left: 16%;
+    top: 35%;
+    left: 13.5%;
     z-index: 9;
+
     @include desktop-l {
-    width: 70px;
+        width: 70px;
+    }
+    @include desktop-m {
+        top: 34%;
+        left: 12%;
+    }
+
+    @include tablet-l {        
+        top: 33%;
+        left: 40%;
+        width: 100px;
+    } 
+    @include mobile-l {
+        width: 70px;
+        top: 20%;
+        left: 38%;
+    }
+    @include mobile-m {
+        width: 50px;
+        top: 18%;       
+    }
 } 
-}

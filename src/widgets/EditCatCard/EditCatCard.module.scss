@@ -2,44 +2,86 @@
 
 .edit {
     @include modal-content;
-    position: relative;     
+    position: relative; 
+    
 } 
-.title {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+
+.inputFile {
+    position: absolute;
+}
+.title {   
+    margin-top: 30px;       
+    text-align: center;
+
+    @include tablet-m {
+        max-width: 400px;     
+    }
+    
+    @include mobile-l {
+        font-size: var(--font-size-m) !important;      
+        max-width: 280px;       
+        margin-top: 40px;
+    }
+    @include mobile-m {
+        max-width: 220px;
+    }
 }
 .photoPosition {
     position: absolute;
-    right: 55.4%;
-    top: 23%;
+    right: 59.5%;
+    top: 20%;
     z-index: 2;
+
+    @include desktop-l {
+        right: 62.45%;
+        top: 20.2%;
+    } 
+    @include desktop-m {
+        right: 63.7%;
+        top: 21%;
+    }
+    @include tablet-l {
+        right: 14.2%;
+        top: 9.5%;
+    } 
+    @include tablet-m {
+        right: 16.6%;
+        top: 13.15%;
+    } 
+    @include mobile-l {
+        right: 6.2%;
+        top: 15.6%;
+    }
+    @include mobile-m {
+        right: 7.6%;
+        top: 16.85%;
+    }
 }
 .editPhoto{  
     width:330px;
     height:374px;
+    border-radius: var(--border-radius-container);
+    opacity: 0.7;
     
     @include desktop-l {
         width: 280px;
-        height: 317.56px;
+        height: 318px;
     } 
     @include desktop-m {
-        width: 259.6px;
-        height: 294.42px;
+        width: 260px;
+        height: 295px;
     } 
     @include tablet-l {
-        // width: 410px;
-        // height: 465px;
-        width: 148px;
-        height: 168px;
+        width: 500px;
+        height: 567px;
     } 
     @include tablet-m {
-        width: 255px;
-        height: 290px;
+        width: 400px;
+        height: 520px;
     } 
-       @include mobile-l {
-        width: 470px;
-        height: 533px;
+    @include mobile-l {
+        width: 280px;
+        height: 317px;
     }
     @include mobile-m {
         width: 220px;
@@ -53,65 +95,113 @@
     right: 35%;
     z-index: 9;
  
-    @media (max-width: 1439px) {
+    @include desktop-l {
+        top: 40%;
+        right: 35%;
         width: 70px;
 }
+    @include tablet-l {
+        top: 42%;
+        right: 38%;
+        width: 100px;
+    } 
+    @include mobile-l {
+        width: 70px;
+      
+    }
+    @include mobile-m {
+        width: 50px;        
+    }
 }
+
 .save__btn {
     align-self: flex-end;
     margin-top: -230px;
+
+    @include desktop-l {
+        margin-top: -160px;
+    } 
+    @include tablet-l {
+        margin-top: 0px;
+        align-self: center;
+    } 
 }
 .button {
     display: flex;
-    justify-content: space-between;  
-    width:400px;
+    justify-content: space-between;
+    align-items: center;  
+    width:500px;
     height: 44px;
     margin-top: 20px;  
 
+    
+    & svg {
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+
     @include desktop-l {
         font-size: var(--font-size-xs);
+        margin-top: 0px;
     } 
 
-    @include desktop-m {
-        width: 170px;
-    } 
     @include tablet-l {
-        width: 150px;
+        width: 500px;
+        margin-top: 0px;  
 } 
-@include tablet-m {
-    width: 140px;
-    justify-content: center;
-} 
-    @include mobile-l {
-        width: 220px;
+    @include tablet-m {
+        width: 400px; 
+        height: 40px;      
+        padding: 5px 15px !important;  
     } 
+    @include mobile-l {
+        width: 280px; 
+    }
+    @include mobile-m {
+        width: 220px;
+    }
 }
 
 .delete__btn {
     align-self: flex-end;
     margin-top: -40px;
+
+    @include tablet-l {   
+        align-self: center;
+    } 
 }
 .buttonDelete {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    width:400px;
+    width:500px;
     height: 44px;
     margin-top: 20px;  
     border: 2px solid var(--red) !important;
     color: var(--red) !important;
     height: 44px;
-    @include desktop-m {
-        width: 170px;
-    } 
+
+    & svg {
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+   
     @include tablet-l {
-            width: 150px;
+        width: 500px;
+        margin-top: 20px;
     } 
     @include tablet-m {
-        width: 140px;
-        justify-content: center;
-    } 
+        height: 40px;
+        width: 400px;       
+    }  
     @include mobile-l {
+        width: 280px; 
+    }
+    @include mobile-m {
         width: 220px;
     } 
 }
@@ -121,23 +211,19 @@
     top: 20px;
     right: 20px;
     width: 50px;
-    height: 50px;
-    @include desktop-l {
-        left: 230px;
-    } 
-    @include desktop-m {
-        left: 200px;
-    } 
-    @include tablet-l {
-        left: 180px;
-        top:10px;
-    } 
-    @include tablet-m {
-        left: 170px;
-    } 
+    height: 50px;   
+    
+    @include mobile-l {
+        width: 30px;
+        height: 30px;       
+    }
 }
-    // @include mobile-l {
 
-    // } доработать после прокрутки
-
-   
+.catInput {  
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
