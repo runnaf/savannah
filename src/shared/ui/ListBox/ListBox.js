@@ -10,7 +10,9 @@ export const ListBox = memo((props) => {
         options, 
         selected, 
         changeSelect,
-        badge = false 
+        badge = false,
+        checked,
+        setChecked
     } = props;
 
     const handleOptionClick = (option, event) => {
@@ -21,12 +23,13 @@ export const ListBox = memo((props) => {
 
     return (
         <Listbox
+            className={styles.container}
             value={selected}
         >
             {({ open }) => (
                 <>
                     <ListboxButton
-                        className={styles.button}
+                        className={`${styles.button} ${open ? styles.buttonOpen : ''}`}
                     >
                         <div className={styles.text}>
                             {filter}
@@ -52,7 +55,8 @@ export const ListBox = memo((props) => {
                                 <Checkbox
                                     nameField={option}
                                     idInput={option}
-                                    checked={selected.includes(option)}
+                                    checked={checked ? selected.includes(option) : false}
+                                    setChecked = {setChecked}
                                 />
                                 {option}
                             </ListboxOption>

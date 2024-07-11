@@ -1,0 +1,78 @@
+@import "../../../../app/styles/mixin.scss";
+@import "../../../../app/styles/media-queries.scss";
+
+.container {
+    position: relative;
+    min-width: 165px;
+    margin-right: 40px;
+}
+
+.container h3 {
+    font-size: var(--font-size-m);
+    margin-bottom: 20px;
+}
+
+
+
+.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 1px solid var(--dark-brown);
+    box-shadow: none;
+}
+
+.open::after {
+    transform: rotate(-45deg);
+    top: 22px;
+}
+
+.list {
+    display: none;
+}
+
+.listMobile {
+    display: block;
+}
+
+.open + .list {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+}
+
+.item {
+    padding: 18px 25px;
+    border: 1px solid var(--dark-brown);
+    border-top: none;
+    background-color: var(--white);
+
+    @include mobile-xl {
+        padding: 7px 0;
+    }
+}
+
+.item:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.quantity {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--black);
+    background-color: var(--brown);
+    position: absolute;
+    top: -22px;
+    right: -5px;
+    // display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listMobile .item {
+    border: none;
+    margin: 0;
+} 

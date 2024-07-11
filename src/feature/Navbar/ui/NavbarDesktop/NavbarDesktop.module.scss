@@ -33,6 +33,10 @@
     font-weight: 400;
     flex-wrap: wrap;
 
+    @media (max-width: 1550px) {
+        gap: 35px;
+    }
+
     @include desktop-m {
         gap: var(--gap-desktop);
     }
