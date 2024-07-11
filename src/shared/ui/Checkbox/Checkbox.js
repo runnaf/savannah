@@ -1,25 +1,18 @@
-import React from "react";
-import style from './Checkbox.module.scss';
+import styles from './Checkbox.module.scss';
 
-const Checkbox = ({ nameField, idInput, checked, onChange }) => {
-
-    const handleCheck = (e) => {
-        if (onChange) {
-            onChange(e.target.checked);
-        }
-    }
+const Checkbox = ({ nameField, onChange }) => {
 
     return (
-        <div>
+        <label className={styles.label} htmlFor={nameField}>
             <input
                 type='checkbox'
-                className={style.checkbox}
+                className={styles.checkbox}
                 name={nameField}
-                id={idInput}
-                checked={checked}
-                onChange={handleCheck} />
-            <label htmlFor={idInput}></label>
-        </div>
+                id={nameField}
+                onChange={onChange}
+            />
+            {nameField}
+        </label>
     )
 }
 

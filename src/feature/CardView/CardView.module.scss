@@ -1,0 +1,15 @@
+.buttonForChoice{
+    background-color: var(--light-brown)
+}
+.iconSmall{
+    width: 44px;
+    @include mobile-m {
+        width: 36px;   
+    } 
+}
+.iconLarge{
+    width: 50px;
+    @include mobile-m {
+        width: 40px;   
+    } 
+}
