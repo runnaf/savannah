@@ -1,17 +1,17 @@
 import styles from './OurKittens.module.scss';
 import { Text } from "../../../../shared/ui/Text/Text";
-import { Stack } from '../../../../shared/ui/Stack/Stack';
 import CatSlider from '../../../CatSlider/CatSlider';
+import { HeaderSection } from '../../../../shared/ui/HeaderSection/HeaderSection';
 
 const OurKittens = () => {
 
     return (
         <section className={styles.section}>
-            <Stack justifyContent='justifyCenter'>
-                <Text type="h2" size="xl" className={styles.title}>
-                    НАШИ <strong>КОТЯТА</strong>
+            <HeaderSection section="Наши котята" hasButton>
+                <Text tag="h2" size='xl' className={styles.title}>
+                    Выберите себе <span>питомца</span> в нашем каталоге
                 </Text>
-            </Stack>
+            </HeaderSection>
             <div className={styles.kittens__row}>
                 <CatSlider />
             </div>

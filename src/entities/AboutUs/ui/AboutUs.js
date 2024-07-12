@@ -3,16 +3,16 @@ import styles from './AboutUs.module.scss';
 import aboutPicture from '../../../shared/assets/photo/aboutus.png';
 import aboutPicture_2x from '../../../shared/assets/photo/aboutus@2x.png';
 import { Stack } from "../../../shared/ui/Stack/Stack";
-
+import { HeaderSection } from "../../../shared/ui/HeaderSection/HeaderSection";
 
 const AboutUs = () => {
     return (
         <section className={styles.section}>
-            <Stack justifyContent='justifyCenter'>
-                <Text type="h2" size="xl" className={styles.title}>
-                    О ПИТОМНИКЕ <strong>SAVANNAH WORLD</strong>
+            <HeaderSection section="O питомнике">
+                <Text tag="h2" size='xl' className={styles.title}>
+                    Нас завораживает <span>красота и грация</span> Саванн!
                 </Text>
-            </Stack>
+            </HeaderSection>
 
             <div className={styles.about__row}>
                 <img className={styles.picture} src={aboutPicture}

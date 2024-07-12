@@ -3,13 +3,17 @@ import { Stack } from "../../../shared/ui/Stack/Stack";
 import { Text } from "../../../shared/ui/Text/Text";
 import { characteristicsData } from "../lib/characteristicsData";
 import check from '../../../shared/assets/photo/check.png'
+import { HeaderSection } from "../../../shared/ui/HeaderSection/HeaderSection";
 
 const Characteristics = () => {
   return (
     <section className={styles.section}>
-      <Text type="h2" size="xl" className={styles.title}>
-        ХАРАКТЕРИСТИКИ <strong>САВАНН</strong>
-      </Text>
+      <HeaderSection section="О породе">
+        <Text tag="h2" size='xl' className={styles.title}>
+          <span>Характеристика кошек</span> породы саванна
+        </Text>
+      </HeaderSection>
+
       <Stack
         justifyContent="justifyCenter"
         direction="column"
