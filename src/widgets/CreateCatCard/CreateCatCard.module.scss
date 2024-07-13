@@ -82,6 +82,7 @@
     top: 35%;
     left: 13.5%;
     z-index: 9;
+    cursor: pointer;
 
     @include desktop-l {
         width: 70px;
