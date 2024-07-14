@@ -1,4 +1,21 @@
 @import '../../../app/styles/mixin.scss';
+.section {
+    @include section-styles;  
+
+    @include tablet-l {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.title {
+    @include title-section;
+    margin-bottom: 0px; 
+    
+    @include tablet-l {         
+        margin-bottom: 20px;
+    }
+}
 
 .galleryContainer{
     background-color: var(--white);
@@ -8,11 +25,13 @@
     justify-content: center;
     width: 100%;
     margin-top: 60px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 20px;  
     border-radius: var(--border-radius-container);
   
-
+    @include desktop-m {
+        padding: 40px 10px;  
+    }  
+   
     @include tablet-l  {
         display: none;
     }
@@ -21,74 +40,32 @@
 .photoContainer{
     flex-wrap: wrap;
 
+    @include desktop-m {
+        gap: 16px;
+    } 
+
     @include tablet-l {
         display: flex;
         flex-wrap:wrap;
     }
 }
 
-
 .photo{
-    width: 312px;
-    height: 226px;
+    width: 30%;
+    height: 16vw;
+    object-fit: cover;
     border-radius: var(--border-radius-element);
-
-    @include desktop-l {
-        width: 210px;
-        height: 176px;
-    }  
-    @include tablet-l {        
-        width: 150px;
-        height: 106px;
-    }
 }
-
-.galleryText {
-    margin-top: 60px;
-
-
-    @include tablet-l {        
-        margin-top: 40px;
-    } 
-}
-.galleryTitle {
-    text-align: center;
-
-    @include desktop-m {
-        font-size: var(--font-size-m);
-    }
-    @include tablet-l {   
-        font-size: var(--font-size-s);
-    }
-}
-.gallery__btn {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;  
+.gallery__btn {    
+   
     @include button;
     @include button-accent;
-    text-transform: lowercase;
-
-
-    @include desktop-m {
-        font-size: var(--font-size-xs);
-        padding: 10px 15px;
-
-        border-radius: var(--border-radius-mobile);
-        & svg {
-            width: 20px;
-            height: 20px;
-        }
-    }  
-    @include tablet-l {   
-        width: 80%;     
-        padding: 10px 25px;
-    }
+    text-transform: lowercase;  
   
-    @include mobile-l {  
-        width: 100%;    
-        font-size: var(--font-size-xxs);
-        padding: 10px 10px;
+    @include button-title; 
+    margin-bottom: 0px; 
+
+    @include tablet-l {      
+        margin-bottom: 0px;
     }
 }

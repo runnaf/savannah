@@ -1,6 +1,6 @@
 import { useShownOnScroll } from "../../shared/hooks/useShownOnScroll";
 import styles from './ButtonSocial.module.scss';
-import chatIcon from '../../shared/assets/photo/chat-icon.png';
+import { socialIcon } from '../../shared/assets/svg/socialIcons';
 import SocialMedia from "../../feature/SocialMedia/SocialMedia";
 import { useState } from "react";
 
@@ -23,7 +23,7 @@ const ButtonSocial = () => {
                             type="button"
                             onClick={handleSocial}
                         >
-                            <img className={styles.iconChat} src={chatIcon} alt="социальные сети" />
+                                {socialIcon()}
                             <span className='visually-hidden'>Социальные сети</span>
                         </button>
                     }

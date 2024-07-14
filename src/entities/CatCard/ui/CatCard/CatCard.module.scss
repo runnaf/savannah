@@ -57,31 +57,4 @@
     object-fit: cover;
     border-radius: calc(var(--border-radius-container) - 10px);
 }
-.kitten__btn {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    @include button;
-    @include button-accent;
 
-
-    @include desktop-m {
-        font-size: var(--font-size-xs);
-        padding: 10px 15px;
-
-        border-radius: var(--border-radius-mobile);
-        & svg {
-            width: 20px;
-            height: 20px;
-        }
-    }  
-    @include tablet-l {
-        padding: 10px 25px;
-    }
-    @include mobile-l {
-        padding: 10px 10px;
-    }
-}
