@@ -1,4 +1,4 @@
-import { CatalogPage } from "../../../../pages/CatalogPage/CatalogPage";
+import { CatalogPage } from '../../../../pages/CatalogPage/ui/CatalogPage';
 import { MainPage } from "../../../../pages/MainPage/MainPage";
 import { PetsPage } from "../../../../pages/PetsPage/PetsPage";
 import { catalogIcon, homeIcon, petsIcon } from "../../../../shared/assets/svg/navbarIcons";
