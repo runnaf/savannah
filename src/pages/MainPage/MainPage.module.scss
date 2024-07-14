@@ -1,9 +1,6 @@
 @import '../../app/styles/mixin.scss';
 
-.main {
-    background-image: url('../../shared/assets/photo/background_main.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+.main {   
     background-color: var(--light-brown);
     padding-bottom: 50px;
 }
