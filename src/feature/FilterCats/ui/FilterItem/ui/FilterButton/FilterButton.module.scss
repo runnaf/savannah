@@ -20,12 +20,16 @@
         display: block;
         position: absolute;
         right: 23px;
-        top: 11px;
+        top: 15px;
         width: 17px;
         height: 17px;
         border-right: 2.5px solid var(--dark-brown);
         border-top: 2.5px solid var(--dark-brown);
         transform: rotate(135deg);
+
+        @include desktop-l {
+            top: 11px;
+        }
 
         @include tablet-l {
             width: 14px;
@@ -68,7 +72,11 @@
 
 .open::after {
     transform: rotate(-45deg);
-    top: 22px;
+    top: 30px;
+
+    @include desktop-l {
+        top: 22px;
+    }
 }
 
 .open + .list {
