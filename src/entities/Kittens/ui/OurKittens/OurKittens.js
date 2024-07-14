@@ -7,7 +7,7 @@ const OurKittens = () => {
 
     return (
         <section className={styles.section}>
-            <HeaderSection section="Наши котята" hasButton>
+            <HeaderSection section="Наши котята" hasButton >
                 <Text tag="h2" size='xl' className={styles.title}>
                     Выберите себе <span>питомца</span> в нашем каталоге
                 </Text>

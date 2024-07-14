@@ -1,4 +1,4 @@
-import upIcon from '../../assets/photo/up.png'
+import { upBtnIcon } from '../../assets/svg/upButton'
 import styles from './ButtonUp.module.scss';
 import { useShownOnScroll } from '../../hooks/useShownOnScroll';
 
@@ -14,7 +14,7 @@ export const ButtonUp = () => {
                     onClick={handleScrollUp}
                     type='button'
                 >
-                    <img className={styles.upImage} src={upIcon} alt='вверх' />
+                    {upBtnIcon()}
                     <span className='visually-hidden'>Скролл вверх</span>
                 </button>
             }

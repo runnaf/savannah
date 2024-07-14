@@ -1,0 +1,41 @@
+@import '../../../app/styles/media-queries.scss';
+@import '../../../app/styles/mixin.scss';
+
+.span {
+    color: var(--dark-brown);
+}
+.btn {
+    @include button-title;
+    
+
+    @include desktop-m {
+        width: 26%;
+    }
+    @include tablet-l {       
+        width: 80%;       
+    }
+    @include mobile-xl {    
+        width: 100%;          
+    }
+}
+
+.main {
+    @include tablet-l {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.section {
+   
+@include desktop-l {    
+    font-size: var(--font-size-m);
+}
+@include tablet-m {    
+    font-size: var(--font-size-s);  
+}
+@include mobile-l {  
+    font-size: var(--font-size-xs);
+}
+}

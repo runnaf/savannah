@@ -7,6 +7,10 @@
 }
 .title {
     @include title-section;   
+
+    @include tablet-l {
+       margin-bottom: 20px;
+    }
 }
 .kittens__row {
     display: flex;   

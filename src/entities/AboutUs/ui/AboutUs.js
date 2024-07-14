@@ -21,10 +21,7 @@ const AboutUs = () => {
                     direction='column'
                     alignItems='alignStart'
                     className={styles.text}
-                >
-                    <Text size="m" className={styles.par}>
-                        Нас завораживает красота и грация Саванн!
-                    </Text>
+                >                 
                     <Text size="m" className={styles.par}>
                         Питомник Savanna World, в лице заводчика Светланы Костроминой зарегистрирован в TICA и обладает всеми необходимыми документами.
                     </Text>
