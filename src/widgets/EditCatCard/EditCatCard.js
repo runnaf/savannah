@@ -13,7 +13,7 @@ import { useId } from 'react';
 
 
 export const EditCatCard = ({ changeEditModal }) => {
-    const id = useId()
+    const id = useId();   
 
     return (
         <Stack 
@@ -30,7 +30,7 @@ export const EditCatCard = ({ changeEditModal }) => {
                 <label className={styles.catLabel}  htmlFor={id}>
                     <Input
                         type ='file'
-                        id = {id}           
+                        id = {id}                                  
                         className={styles.catInput} 
                     />     
                     <img className={styles.editIcon}
