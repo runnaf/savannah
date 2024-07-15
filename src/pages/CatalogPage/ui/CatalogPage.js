@@ -1,54 +1,39 @@
 import styles from './CatalogPage.module.scss';
-import { FilterCats } from '../../../feature/FilterCats/ui/FilterCats/FilterCats';
-import React from 'react';
-import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
-import { useGetCatsQuery } from "../api/api";
+import { EditCatCard } from '../../../widgets/EditCatCard/EditCatCard';
+import { CreateCatCard } from '../../../widgets/CreateCatCard/CreateCatCard';
 import { Button } from '../../../shared/ui/Button/Button';
 import { useModal } from '../../../shared/hooks/useModal';
-import { CreateCatCard } from '../../../widgets/CreateCatCard/CreateCatCard';
-import { EditCatCard } from '../../../widgets/EditCatCard/EditCatCard';
+import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
 
 
 export const CatalogPage = () => {
-    ScrollToTop();
-    const [changeCreateCatModal, drawCreateCatModal] = useModal();
-    const [changeEditCatModal, drawEditCatModal] = useModal();
 
-    const filterParams = {
-        group: [],
-        sex: ['самка'],
-        age: ['котята'],
-        shipment: []
-    }; //TEST - из REDUX потом брать 
-
-    const params = {
-        generate: filterParams.group?.join(','),
-        sex: filterParams.sex?.join(','),
-        age: filterParams.age?.join(','),
-        shipment: filterParams.shipment?.join(',')
-    };
-
-    const { data: cats, error, isLoading } = useGetCatsQuery(params);
+    ScrollToTop()
+    const [changeCreateModal, drawCreateModal] = useModal();
+    const [changeEditModal, drawEditModal] = useModal();
 
     return (
         <main className={styles.main}>
-            {drawCreateCatModal(
-                <CreateCatCard changeCreateModal={changeCreateCatModal} />
-            )}
-            {drawEditCatModal(
-                <EditCatCard changeEditModal={changeEditCatModal} />
+            {drawCreateModal(
+                <CreateCatCard changeCreateModal={changeCreateModal} />
             )}
 
-            <FilterCats />
-            <Button
-                variant='secondary'
-                onClick={changeCreateCatModal}
-            >
-                Создать
+            {drawEditModal(
+                <EditCatCard changeEditModal={changeEditModal} />
+            )}
+
+            {/* TEST */}
+            <br />
+            <br />
+            <Button onClick={changeCreateModal}>
+                создать
             </Button>
-            <Button onClick={changeEditCatModal}>
-                Редактировать
+            <br />
+            <br />
+            <Button onClick={changeEditModal}>
+                редактировать
             </Button>
         </main>
-    );
+
+    )
 };

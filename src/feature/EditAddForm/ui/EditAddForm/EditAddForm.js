@@ -5,8 +5,6 @@ import styles from "./EditAddForm.module.scss";
 import { SelectItem } from "../SelectItem/SelectItem";
 import { useState } from "react";
 
-
-
 export const EditAddForm = () => {
   const [empty, setEmpty] = useState(false);
 

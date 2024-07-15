@@ -11,10 +11,7 @@ export const ListBox = memo((props) => {
         selected, 
         changeSelect,
         badge = false,
-        checked,
-        setChecked
     } = props;
-    console.log(checked)
 
     const handleOptionClick = (option, event) => {
         event.preventDefault();
@@ -56,8 +53,7 @@ export const ListBox = memo((props) => {
                                 <Checkbox
                                     nameField={option}
                                     idInput={option}
-                                    checked={checked ? selected.includes(option) : false}
-                                    setChecked = {setChecked}
+                                    checked={selected.includes(option)}
                                 />
                                 {option}
                             </ListboxOption>
