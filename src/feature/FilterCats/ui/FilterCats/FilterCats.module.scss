@@ -49,6 +49,8 @@
         height: 294.42px;
     } 
     @include tablet-l {
+        // width: 410px;  //как было до правки на главной
+        // height: 465px;
         width: 148px;
         height: 168px;
     } 
@@ -65,3 +67,6 @@
         height: 250px;
     }
 }
+
+
+

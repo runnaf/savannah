@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import { FilterCatsMobile } from "../ FilterCatsMobile/FilterCatsMobile";
+import { useEffect, useState } from "react"
 import { FilterCatsDesktop } from "../FilterCatsDesktop/FilterCatsDesktop";
 
 export const FilterCats = () => {
   const [width, setWidth] = useState(window.innerWidth);
-  const WIDTHMOBILE = 900;
+  const WIDTHMOBILE = 767;
 
   useEffect(() => {
     const handleResize = (event) => {
@@ -18,11 +17,8 @@ export const FilterCats = () => {
   return (
     <>
       {
-          width < WIDTHMOBILE ? 
-            <FilterCatsMobile />
-            : 
-            <FilterCatsDesktop />
-        }
+        width > WIDTHMOBILE ? <FilterCatsDesktop /> : 'hello'
+      }
     </>
   )
 }
