@@ -1,6 +1,6 @@
 import styles from './Checkbox.module.scss';
 
-const Checkbox = ({ nameField, onChange }) => {
+const Checkbox = ({ nameField, onChange, checked }) => {
 
     return (
         <label className={styles.label} htmlFor={nameField}>
@@ -10,6 +10,7 @@ const Checkbox = ({ nameField, onChange }) => {
                 name={nameField}
                 id={nameField}
                 onChange={onChange}
+                checked={checked}
             />
             {nameField}
         </label>

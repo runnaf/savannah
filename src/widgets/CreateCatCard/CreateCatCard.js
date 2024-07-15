@@ -9,38 +9,37 @@ import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
 import editIcon from "../../shared/assets/photo/editPhotoIcon.png";
 
 
-export const CreateCatCard = ({ changeCreateModal}) => {
+export const CreateCatCard = ({ changeCreateModal }) => {
     return (
-        <Stack 
+        <Stack
             justifyContent="justifyCenter"
-            alignItems="alignCenter"        
+            alignItems="alignCenter"
             direction="column"
-            gap = '32'          
+            gap='32'
             className={styles.edit}
-        >  
+        >
             <div>
                 <img
                     className={styles.closeButton}
                     src={closeButton} alt="закрыть"
                     onClick={changeCreateModal}
                 />
-            </div> 
-    
-                <Text type='h3' size='l' className={styles.title}>
-                    Создать карточку питомца
-                </Text>
-                <div  className={styles.photoPosition}>       
-                    <EditAddForm/>
-                    <img
-                        className={styles.editIcon}
-                        src={editIcon} alt="editIcon" /> 
-                </div> 
-                <div className={styles.save__btn}>
-                    <Button className={styles.button}
-                            >
-                        сохранить {arrowIcon()}
-                    </Button>
-                </div>
+            </div>
+
+            <Text type='h3' size='l' className={styles.title}>
+                Создать карточку питомца
+            </Text>
+            <div className={styles.photoPosition}>
+                <EditAddForm />
+                <img
+                    className={styles.editIcon}
+                    src={editIcon} alt="editIcon" />
+            </div>
+            <div className={styles.save__btn}>
+                <Button className={styles.button}>
+                    сохранить {arrowIcon()}
+                </Button>
+            </div>
         </Stack>
     );
 };
