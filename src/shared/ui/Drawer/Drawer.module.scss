@@ -1,0 +1,42 @@
+@import '../../../app/styles/media-queries.scss';
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);  
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px; 
+    height: 100%;
+    background-color: var(--white);
+    transition: right 0.3s ease-in-out;
+    z-index: 99;
+    overflow-y: auto;
+
+    &.open {
+        right: 0; 
+        box-shadow: -1px 0 3px var(--brown);
+    }
+
+    @include mobile-l {
+        right: -100%;
+        width: 55%; 
+    }
+}
+
+.button_container {
+    padding: 10px 10px 0 0;
+}
+
+.button {
+    background-color: inherit;
+}

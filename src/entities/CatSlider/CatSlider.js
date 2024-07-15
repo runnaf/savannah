@@ -31,7 +31,7 @@ const CatSlider = () => {
             className={styles.slider__row}
         >
             {kittensData.map(element =>
-                <SwiperSlide key={element.id}>
+                <SwiperSlide key={element._id}>
                     <CatCard
                         kittensData={element}
                         isMain

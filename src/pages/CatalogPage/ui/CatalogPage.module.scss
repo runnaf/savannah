@@ -2,19 +2,6 @@
 
 .main {
     @include main-styles;
-    margin-top: 134px;
-
-    @include desktop-m {
-        margin-top: 80px;
-    }
-
-    @include tablet-l {
-        margin-top: 50px;
-    }
-
-    @include mobile-xl {
-        margin-top: 25px;
-    }
 }
 .adjustm{
     background-color: var(--light-brown)

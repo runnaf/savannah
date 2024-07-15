@@ -1,18 +1,42 @@
 import styles from './CatalogPage.module.scss';
-import { FilterCats } from '../../../feature/FilterCats/ui/FilterCats/FilterCats';
-import React from 'react';
+import { EditCatCard } from '../../../widgets/EditCatCard/EditCatCard';
+import { CreateCatCard } from '../../../widgets/CreateCatCard/CreateCatCard';
+import { Button } from '../../../shared/ui/Button/Button';
+import { useModal } from '../../../shared/hooks/useModal';
 import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
-import { useGetCatsQuery } from "../api/api";
+import { Filter } from '../../../feature/FilterCats/ui/Filter/Filter';
 
 
 export const CatalogPage = () => {
 
-    ScrollToTop();
-    const { data: cats, error, isLoading } = useGetCatsQuery({});
+    ScrollToTop()
+    const [changeCreateModal, drawCreateModal] = useModal();
+    const [changeEditModal, drawEditModal] = useModal();
 
     return (
         <main className={styles.main}>
-            <FilterCats />
+            {drawCreateModal(
+                <CreateCatCard changeCreateModal={changeCreateModal} />
+            )}
+
+            {drawEditModal(
+                <EditCatCard changeEditModal={changeEditModal} />
+            )}
+
+            <Filter />
+
+            {/* TEST */}
+            <br />
+            <br />
+            <Button onClick={changeCreateModal}>
+                создать
+            </Button>
+            <br />
+            <br />
+            <Button onClick={changeEditModal}>
+                редактировать
+            </Button>
         </main>
-    );
+
+    )
 };
