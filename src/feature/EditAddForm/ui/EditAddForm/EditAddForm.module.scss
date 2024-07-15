@@ -56,7 +56,7 @@
         row-gap: 16px
      }
 }
-.addDiv{   
+.addDiv{    
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -98,3 +98,39 @@
     border: 1.5px solid var(--red);
 
 }
+
+.catInput {  
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.photoPosition {
+    position: relative;
+}
+.editIcon{
+    position: absolute;
+    top: 34%;
+    left: 34%;
+    z-index: 9;
+    cursor: pointer;
+
+    @include desktop-l {
+        width: 70px;
+    }
+   
+    @include tablet-l {        
+        top: 45%;
+        left: 40%;
+        width: 100px;
+    } 
+    @include mobile-l {
+        width: 70px;
+       
+    }
+    @include mobile-m {
+        width: 50px;          
+    }
+} 
