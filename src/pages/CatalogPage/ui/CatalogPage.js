@@ -4,6 +4,7 @@ import { CreateCatCard } from '../../../widgets/CreateCatCard/CreateCatCard';
 import { Button } from '../../../shared/ui/Button/Button';
 import { useModal } from '../../../shared/hooks/useModal';
 import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
+import { Filter } from '../../../feature/FilterCats/ui/Filter/Filter';
 
 
 export const CatalogPage = () => {
@@ -21,6 +22,8 @@ export const CatalogPage = () => {
             {drawEditModal(
                 <EditCatCard changeEditModal={changeEditModal} />
             )}
+
+            <Filter />
 
             {/* TEST */}
             <br />

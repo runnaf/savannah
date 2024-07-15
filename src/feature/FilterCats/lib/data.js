@@ -11,3 +11,7 @@ export const dataFilter = {
     age: 'возраст',
     shipment: 'статус',
   }
+
+  export const getFilterText = (filter) => {
+    return filters[filter]
+};
