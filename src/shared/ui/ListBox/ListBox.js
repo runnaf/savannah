@@ -58,7 +58,7 @@ export const ListBox = memo((props) => {
                                     checked={checked ? selected.includes(option) : false}
                                     setChecked = {setChecked}
                                 />
-                                {/* {option} */}
+                                {option}
                             </ListboxOption>
                         ))}
                     </ListboxOptions>
