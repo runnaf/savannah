@@ -3,10 +3,13 @@ import { dataFilter} from "../../../FilterCats/lib/data";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
 import styles from "./EditAddForm.module.scss";
 import { SelectItem } from "../SelectItem/SelectItem";
-import { useState } from "react";
+import { useId, useState } from "react";
+import editIcon from "../../../../shared/assets/photo/editPhotoIcon.png";
 
 export const EditAddForm = () => {
+
   const [empty, setEmpty] = useState(false);
+  const id = useId();
 
   const blurHandler = (e) => {
    e.preventDefault()
@@ -26,9 +29,18 @@ export const EditAddForm = () => {
           gap="32"
           className={styles.editSection}
       >
-
+      <div className={styles.photoPosition}>
           <div className={styles.addDiv}></div>  
-
+          <label className={styles.catLabel}  htmlFor={id}>
+                    <Input
+                        type ='file'
+                        id = {id}                                  
+                        className={styles.catInput} 
+                    />     
+                    <img className={styles.editIcon}
+                        src={editIcon} alt="editIcon" />            
+                </label> 
+                </div>
           <Stack
             direction="column"                          
             gap="32"
@@ -46,7 +58,8 @@ export const EditAddForm = () => {
               className={styles.select}
               justifyContent="justifyBetween"
             >
-          
+           
+
               {Object.entries(dataFilter).map(([filter, options]) => (
                   <SelectItem 
                       key={filter} 

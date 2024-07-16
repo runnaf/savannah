@@ -2,10 +2,8 @@
 
 .edit {
     @include modal-content;
-    position: relative; 
-    
+    position: relative;    
 } 
-
 .inputFile {
     position: absolute;
 }
@@ -26,36 +24,24 @@
         max-width: 220px;
     }
 }
+.contentPosition {
+    position: relative;
+}
 .photoPosition {
     position: absolute;
-    right: 59.5%;
-    top: 20%;
+    right: 61.7%;
+    top: 0;
     z-index: 2;
 
     @include desktop-l {
-        right: 62.45%;
-        top: 20.2%;
+        right: 65.5%;     
     } 
     @include desktop-m {
-        right: 63.7%;
-        top: 21%;
+        right: 67.2%;        
     }
     @include tablet-l {
-        right: 14.2%;
-        top: 9.5%;
-    } 
-    @include tablet-m {
-        right: 16.6%;
-        top: 13.15%;
-    } 
-    @include mobile-l {
-        right: 6.2%;
-        top: 15.6%;
-    }
-    @include mobile-m {
-        right: 7.6%;
-        top: 16.85%;
-    }
+        right: 0;       
+    }   
 }
 .editPhoto{  
     width:330px;
@@ -86,32 +72,6 @@
     @include mobile-m {
         width: 220px;
         height: 250px;
-    }
-}
-
-.editIcon{
-    position: absolute;
-    top: 40%;
-    right: 35%;
-    z-index: 9;
-    cursor: pointer;
- 
-    @include desktop-l {
-        top: 40%;
-        right: 35%;
-        width: 70px;
-}
-    @include tablet-l {
-        top: 42%;
-        right: 38%;
-        width: 100px;
-    } 
-    @include mobile-l {
-        width: 70px;
-      
-    }
-    @include mobile-m {
-        width: 50px;        
     }
 }
 
@@ -220,11 +180,3 @@
     }
 }
 
-.catInput {  
-    width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
