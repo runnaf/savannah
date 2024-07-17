@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    cat:   {        
-        images: '',
+    cat: {        
         name_cat: '',
         generate:'',
         sex: '',
@@ -11,14 +10,14 @@ const initialState = {
     }
 };
 
-export const Slice = createSlice ({
-    name: 'FormData',
+export const createCatCardSlice = createSlice ({
+    name: 'createCatCard',
     initialState,
     reducers: {
-        initFormData: (state, action) => {
+        initCatCard: (state, action) => {
             state.cat = action.payload;
         },
-        resetFormData: () => {
+        resetCatCard: () => {
             return {initialState}            
         },
         setFormData: (state, action) => {
@@ -28,6 +27,6 @@ export const Slice = createSlice ({
     }
 })
 
-export const { setFormData, resetFormData, saveFormData } = counterSlice.actions
-
-export default counterSlice.reducer
+export const {  initCatCard, resetCatCard, setFormData } = createCatCardSlice.actions;
+export const getCatCard = state => state.createCatCard.cat;
+export default createCatCardSlice.reducer

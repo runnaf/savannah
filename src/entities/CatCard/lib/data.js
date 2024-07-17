@@ -2,7 +2,15 @@ import cat1 from '../../../shared/assets/photo/kitten1.png';
 import cat2 from '../../../shared/assets/photo/kitten2.png';
 import cat3 from '../../../shared/assets/photo/kitten3.png';
 
-
+export const KittensMock = {
+      _id: '',
+    name_cat: '',
+    generate: '',
+    sex: '',
+    age:'',
+    shipment: '',
+    image: '',
+}
 const kittensData = [
     {
         _id: 1,

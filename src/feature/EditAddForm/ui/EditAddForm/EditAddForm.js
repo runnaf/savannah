@@ -1,3 +1,4 @@
+
 import { Input } from "../../../../shared/ui/Input/Input";
 import { dataFilter} from "../../../FilterCats/lib/data";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
@@ -6,7 +7,9 @@ import { SelectItem } from "../SelectItem/SelectItem";
 import { useId, useState } from "react";
 import editIcon from "../../../../shared/assets/photo/editPhotoIcon.png";
 
-export const EditAddForm = () => {
+
+export const EditAddForm = ({setForm}) => {
+  
 
   const [empty, setEmpty] = useState(false);
   const id = useId();
@@ -19,6 +22,14 @@ export const EditAddForm = () => {
       setEmpty(true);
   }
 }
+
+
+const handleChange = (e) => {
+      const { name, value } = e.target;
+      setForm(name, value);
+    
+}
+
 
   return (  
 
@@ -34,8 +45,10 @@ export const EditAddForm = () => {
           <label className={styles.catLabel}  htmlFor={id}>
                     <Input
                         type ='file'
-                        id = {id}                                  
+                        id = {id} 
+                        required                                 
                         className={styles.catInput} 
+                        onChange={handleChange}
                     />     
                     <img className={styles.editIcon}
                         src={editIcon} alt="editIcon" />            
