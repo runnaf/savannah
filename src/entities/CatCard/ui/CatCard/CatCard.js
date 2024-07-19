@@ -1,7 +1,10 @@
 import { Text } from "../../../../shared/ui/Text/Text";
 import styles from './CatCard.module.scss';
 
+
 const CatCard = ({ kittensData }) => {
+    
+    
     return (
         <article className={styles.kittens__card}>
             <img className={styles.kitten__img} src={kittensData.images} alt='котята Саванны' />

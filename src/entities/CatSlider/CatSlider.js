@@ -6,6 +6,8 @@ import 'swiper/scss';
 import 'swiper/scss/pagination';
 import kittensData from '../../entities/CatCard/lib/data';
 
+
+
 const CatSlider = () => {
 
     return (
@@ -34,10 +36,12 @@ const CatSlider = () => {
                 <SwiperSlide key={element._id}>
                     <CatCard
                         kittensData={element}
-                        isMain
+                        isCatalog
                     />
                 </SwiperSlide>
+
             )}
+            
         </Swiper>
     );
 };
