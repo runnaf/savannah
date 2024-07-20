@@ -58,8 +58,15 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         try {
             const fileResponse = await uploadFile(file).unwrap();
             const updatedCat = {
-                ...cat,
-                image: fileResponse.url.split('/')[2]
+                cat: {
+                    images: '',        
+                    name_cat: '',
+                    generate:'',
+                    sex: '',
+                    age: '',
+                    shipment: ''
+                },
+                images: fileResponse.url.split('/')[2]
             };
             await saveCat(updatedCat).unwrap();
             setStatusReq({
@@ -111,7 +118,7 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                 disabled={disabled}
                 onClick={handleSaveCat}
                 >
-                     сохранить 
+                    сохранить 
                         {isLoading
                             ? <span className={styles.loader} />
                             : <>{arrowIcon()}</>
