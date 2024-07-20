@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { api } from '../../../shared/api/api';
-import { createCatCardSlice } from "../../../feature/EditAddForm/model/slises/Slice";
+import { createCatCardSlice } from "../../../feature/EditAddForm/model/Slice";
 
 
 const rootReducer = combineReducers({
