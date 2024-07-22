@@ -7,10 +7,14 @@ import { setFilter } from "../../model/slices/slice";
 export const FilterItem = ({ filter, options }) => {
     const dispatch = useDispatch();
     const selected = useSelector(state => state.filter[filter])
-    const handleSelect = useCallback((option) => {
-        dispatch(setFilter({filter, option}))
-    }, [dispatch, filter])
+    // const handleSelect = useCallback((option) => {
+    //     // dispatch(setFilter(filter, option))
+    //     console.log(filter,option)
+    // }, [dispatch, filter])
 
+const handleSelect = ()=> {
+    console.log(filter, options)
+}
     return (
         <ListBox
             filter={getFilterText(filter)}

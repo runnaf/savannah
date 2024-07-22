@@ -14,17 +14,17 @@ export const CatalogPage = () => {
     ScrollToTop()
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
-    const filterParams = useSelector(state => ({
-        generate: state.filter.generate,
-        sex: state.filter.sex,
-        age: state.filter.age,
-        shipment: state.filter.shipment,
-    }))
-
-    const params = useMemo(()=>Object.fromEntries(
-        Object.entries(filterParams)
-            .map(([k, v]) => [k, v?.join(',')])
-    ), [filterParams])
+    // const filterParams = useSelector(state => ({
+    //     generate: state.filter.generate,
+    //     sex: state.filter.sex,
+    //     age: state.filter.age,
+    //     shipment: state.filter.shipment,
+    // }))
+    // console.log(filterParams)
+    // const params = useMemo(()=>Object.fromEntries(
+    //     Object.entries(filterParams)
+    //         .map(([k, v]) => [k, v?.join(',')])
+    // ), [filterParams])
 
     return (
         <main className={styles.main}>
