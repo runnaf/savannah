@@ -20,6 +20,7 @@
         justify-content: space-between;
         padding: 0 15px;
         text-transform: none;
+        height: 100%;
 
         & svg {
             @include tablet-m {
