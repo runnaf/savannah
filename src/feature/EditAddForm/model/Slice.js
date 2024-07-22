@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    cat: {
-        images: '',        
+    cat: {   
         name_cat: '',
         generate:'',
         sex: '',
@@ -28,6 +27,6 @@ export const createCatCardSlice = createSlice ({
     }
 })
 
-export const getCatCard = (state) => state.createCatCard;
+export const getCatCard = (state) => state.createCatCard.cat;
 export const {  initCatCard, resetCatCard, setCatCard } = createCatCardSlice.actions;
 export default createCatCardSlice.reducer
