@@ -6,7 +6,7 @@ import { Text } from "../../shared/ui/Text/Text";
 import { EditAddForm } from "../../feature/EditAddForm/ui/EditAddForm/EditAddForm";
 import { Button } from "../../shared/ui/Button/Button";
 import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
-import {  initCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/model/slises/Slice";
+import {  initCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/model/Slice";
 import { useSaveCatMutation, useUploadFileMutation } from '../../pages/CatalogPage/api/api';
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect, useState } from "react";
