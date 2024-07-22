@@ -1,4 +1,5 @@
 @import '../../../../app/styles/media-queries.scss';
+@import '../../../../app/styles/mixin.scss';
 
 @mixin afterElement($width: 0) {
     &:after {
@@ -14,13 +15,14 @@
 
 .container {
     z-index: 10;
-    padding: 40px 0;
+    padding: 25px 0;
+    background-color: var(--white);
 
     @include tablet-l {
         padding: 20px 0;
     };
 
-    @include mobile-xl {
+    @include tablet-m {
         display: none;
     }
 }
@@ -45,31 +47,26 @@
         gap: var(--gap-tablet);
     }
 
-    @include mobile-xl {
+    @include tablet-m {
         gap: var(--gap-mobile);
     }
 }
 
 .link {
-    color: var(--white);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-transform: var(--text-uppercase);
     min-width: 150px;
     text-align: center;
     padding: 5px;
     line-height: 1;
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-m);
 
     @include desktop-l {
         min-width: 80px;
-        font-size: var(--font-size-l);
     }
 
-    @include desktop-m {
-        font-size: var(--font-size-m);
-    }
-
-    @include mobile-xl {
+    @include tablet-m {
         font-size: var(--font-size-xs);
     }
 }
@@ -90,13 +87,24 @@
 }
 
 .opened_page {
+    position: relative;
     font-weight: 600;
+    color: var(--dark-brown);
     @include afterElement(100%);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        height: 3px;
+        width: 100%;
+        background-color: var(--dark-brown);
+    }
 } 
 
 .buttonSigin {
     min-width: 200px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
 
     @include desktop-l {

@@ -26,17 +26,17 @@
 
     @include desktop-l() {    
         max-width: 320px;
-        min-height: 750px;
+        min-height: 650px;
         padding: 50px;
     }
     @include desktop-m() {    
         max-width: 273px;
-        min-height: 600px;
+        min-height: 400px;
         padding: 30px;
     }
     @include tablet-l() {    
         max-width: 270px;
-        min-height: 520px;
+        min-height: 350px;
         padding: 45px;
     }
     @media (max-width: 900px) {
@@ -44,7 +44,7 @@
     }
     @include tablet-m() {    
         max-width: 350px;
-        padding: 45px;
+        padding: 30px 45px;
     }
     @include mobile-l() {    
         max-width: 100%;
@@ -76,9 +76,13 @@
 
     @include desktop-l() {    
         font-size: var(--font-size-m);
+        margin-bottom: 40px;
+        padding-bottom: 25px;
     }
-    @include mobile-l() {    
+    @include mobile-xl() {    
         font-size: var(--font-size-s);
+        margin-bottom: 30px;
+        padding-bottom: 20px;
     }
 }
 

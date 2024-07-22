@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    cat: {
-        images: '',        
+    cat: {   
         name_cat: '',
         generate:'',
         sex: '',

@@ -4,13 +4,8 @@
     @include modal-content;
     position: relative;    
 } 
-.editSection {
-    @include tablet-l {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-    } 
-   
+.inputFile {
+    position: absolute;
 }
 
 .title {   

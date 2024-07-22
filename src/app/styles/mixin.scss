@@ -132,7 +132,7 @@
 
 @mixin header-height {
     @include desktop-xl {
-        min-height: 100vh;
+        min-height: calc(100% - 178px);
     }
 
     @include desktop-m {

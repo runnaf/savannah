@@ -8,15 +8,20 @@ import { getStyle } from "../../../../shared/helper/getStyle";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
 import { getRouteCatalog } from "../../../../app/providers/router/config/helpers";
 import styles from "./HeaderMain.module.scss";
+import { HeaderLogo } from "../HeaderLogo/HeaderLogo";
+import { HeaderContact } from "../HeaderContact/ui/HeaderContact";
 
 export const HeaderMain = () => {
     return (
         <Stack justifyContent='justifyCenter'>
             <header className={getStyle(styles.header, {}, [styles.headerMain])}>
-                <HeaderPictureMain />
-                <div className={styles.headerContext}>
-                    <NavbarDesktop className={styles.navbarMain} />
+                <HeaderContact />
+                <div className={styles.container}>
+                    <HeaderLogo />
                     <NavbarMobile />
+                    <NavbarDesktop />
+                </div>
+                <div className={styles.headerContext}>
                     <div className={styles.titleContainer}>
                         <Text type='h1' className={styles.title}>
                             SAVANNAH WORLD<br />
@@ -26,6 +31,7 @@ export const HeaderMain = () => {
                             в каталог {arrowIcon()}
                         </Link>
                     </div>
+                    <HeaderPictureMain />
                 </div>
             </header>
         </Stack>

@@ -1,4 +1,3 @@
-
 import { Input } from "../../../../shared/ui/Input/Input";
 import { dataFilter} from "../../../FilterCats/lib/data";
 import { Stack } from "../../../../shared/ui/Stack/Stack";
