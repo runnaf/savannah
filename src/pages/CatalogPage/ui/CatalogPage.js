@@ -13,6 +13,7 @@ export const CatalogPage = () => {
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
 
+ 
     return (
         <main className={styles.main}>
             {drawCreateModal(
@@ -24,7 +25,7 @@ export const CatalogPage = () => {
             )}
 
             <Filter />
-
+          
             {/* TEST */}
             <br />
             <br />

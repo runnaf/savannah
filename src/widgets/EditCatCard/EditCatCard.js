@@ -7,9 +7,9 @@ import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
 import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
 import closeButton from '../../shared/assets/photo/close.png';
 import { Text } from "../../shared/ui/Text/Text";
+import { UploadImage } from '../../shared/ui/UploadImage/UploadImage';
 
-export const EditCatCard = ({ changeEditModal }) => {
-  
+export const EditCatCard = ({ changeEditModal }) => {    
 
     return (
         <Stack 
@@ -23,18 +23,27 @@ export const EditCatCard = ({ changeEditModal }) => {
                     className={styles.closeButton}
                     src={closeButton} alt="закрыть"
                     onClick={changeEditModal}
-                />          
-
+                />              
                 <Text type='h3' size='l' className={styles.title}>
                     Редактировать карточку питомца
                 </Text>
-                <div  className={styles.contentPosition}>
-                <EditAddForm />                 
-                <div className={styles.photoPosition}>                
+
+                <Stack 
+                    direction = 'row'
+                    justifyContent= 'justifyCenter'
+                    alignItems = 'alignStart'
+                    gap = '32'
+                    className={styles.editSection}>
+
+                    <div className={styles.photoPosition}>
+                        <UploadImage               
+                        />
                         <img className={styles.editPhoto}
-                            src={editPhoto} alt="editPhoto"/> 
-                </div>
-                </div>
+                            src={editPhoto} alt="editPhoto"/>
+                    </div>
+                    <EditAddForm />               
+                </Stack>
+                
                 <div className={styles.save__btn}>
                     <Button className={styles.button}>
                         сохранить {arrowIcon()}

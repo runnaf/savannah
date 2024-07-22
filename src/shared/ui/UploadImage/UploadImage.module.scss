@@ -1,0 +1,109 @@
+@import '../../..//app/styles/media-queries.scss';
+
+.image {
+    position: absolute;   
+    width: 330px;
+    height: 374px;
+    opacity: 0.7;
+    border-radius:  var(--border-radius-container);
+    z-index: 6;
+
+    @include desktop-l {
+        width: 280px;
+        height: 317px;
+    } 
+    @include desktop-m {
+        width: 260px;
+        height: 295px;
+    } 
+    @include tablet-l {
+        width: 500px;  
+        height: 567px;
+        margin-bottom: 0;
+    
+    } 
+    @include tablet-m {
+        width: 400px;
+        height: 520px;     
+    } 
+    @include mobile-l {     
+        width: 280px;
+        height: 317px;
+    }
+    @include mobile-m {      
+        width: 220px;
+        height: 250px;
+    }
+}
+
+.upload_container {   
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    margin-bottom: 60px;
+    width:330px;
+    height:374px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-container);
+
+    @include desktop-l {
+        width: 280px;
+        height: 317px;
+    } 
+    @include desktop-m {
+        width: 260px;
+        height: 295px;
+    } 
+    @include tablet-l {
+        width: 500px;  
+        height: 567px;
+        margin-bottom: 0;
+    
+    } 
+    @include tablet-m {
+        width: 400px;
+        height: 520px;     
+    } 
+    @include mobile-l {     
+        width: 280px;
+        height: 317px;
+    }
+    @include mobile-m {      
+        width: 220px;
+        height: 250px;
+    }
+}
+
+.input {  
+    position: absolute;   
+    width: 330px;
+    height: 374px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9;
+}
+.editIcon{
+    position: absolute;
+    top: 34%;
+    left: 34%;
+    z-index: 7;
+    cursor: pointer;
+
+    @include desktop-l {
+        width: 70px;
+    }
+   
+    @include tablet-l {        
+        top: 45%;
+        left: 40%;
+        width: 100px;
+    } 
+    @include mobile-l {
+        width: 70px;
+       
+    }
+    @include mobile-m {
+        width: 50px;          
+    }
+} 
