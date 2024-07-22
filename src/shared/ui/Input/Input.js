@@ -13,7 +13,7 @@ export const Input = ({
 
     const handlerInput = (e) => {
         setValue(e.target.value);
-        onChange(e.target.value);           
+        onChange(e);           
     };
 
     return (

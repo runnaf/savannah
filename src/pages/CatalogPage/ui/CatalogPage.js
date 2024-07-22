@@ -5,8 +5,6 @@ import { Button } from '../../../shared/ui/Button/Button';
 import { useModal } from '../../../shared/hooks/useModal';
 import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
 import { Filter } from '../../../feature/FilterCats/ui/Filter/Filter';
-import { useSelector } from 'react-redux';
-import { useMemo } from 'react';
 
 
 export const CatalogPage = () => {
@@ -14,6 +12,7 @@ export const CatalogPage = () => {
     ScrollToTop()
     const [changeCreateModal, drawCreateModal] = useModal();
     const [changeEditModal, drawEditModal] = useModal();
+
     // const filterParams = useSelector(state => ({
     //     generate: state.filter.generate,
     //     sex: state.filter.sex,
@@ -26,6 +25,8 @@ export const CatalogPage = () => {
     //         .map(([k, v]) => [k, v?.join(',')])
     // ), [filterParams])
 
+
+ 
     return (
         <main className={styles.main}>
             {drawCreateModal(
@@ -37,7 +38,7 @@ export const CatalogPage = () => {
             )}
 
             <Filter />
-
+          
             {/* TEST */}
             <br />
             <br />
