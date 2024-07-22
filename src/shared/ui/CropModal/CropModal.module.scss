@@ -1,0 +1,88 @@
+@import '../../..//app/styles/media-queries.scss';
+
+.image {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   row-gap: 32px;
+  
+}
+
+.upload_container {   
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    padding: 20px;
+    width: 1200px;
+    height: 50vw;
+    background-color: var(--white);
+    border-radius: var(--border-radius-container);
+    z-index: 10;
+
+    @include desktop-l {      
+        height: 65vw;
+    } 
+    @include desktop-m {
+        width: 1080px;
+       
+    } 
+    @include tablet-l {
+        width: 800px;  
+        height: 120vw;
+       
+    
+    } 
+    @include tablet-m {
+        width: 650px;
+        height: 150vw;
+       
+    } 
+    @include mobile-l {     
+        width: 450px;
+        height: 200vw;
+      
+    }
+    @include mobile-m {      
+        width: 220px;
+        height: 250px;
+    }
+}
+
+.input {  
+    position: absolute;   
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.downloadIcon {
+    position: absolute; 
+    top: 30px;
+    left: 30px;  
+    z-index: 11;
+    cursor: pointer;
+}
+.closeButton {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+}
+
+.canvas {
+    display: none;
+    object-fit: contain;
+    width: 330px;
+    height: 374px;
+    border: black;
+
+}

@@ -28,6 +28,6 @@ export const createCatCardSlice = createSlice ({
     }
 })
 
-export const getCatCard = (state) => state.createCatCard;
+export const getCatCard = (state) => state.createCatCard.cat;
 export const {  initCatCard, resetCatCard, setCatCard } = createCatCardSlice.actions;
 export default createCatCardSlice.reducer

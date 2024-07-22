@@ -13,11 +13,12 @@ import { useCallback, useEffect, useState } from "react";
 import { UploadImage } from "../../shared/ui/UploadImage/UploadImage";
 
 
+
 export const CreateCatCard = ({ changeCreateModal }) => { 
 
     const dispatch = useDispatch();
     const cat = useSelector(getCatCard);  
-    const [file, setFile] = useState();
+    const [file, setFile] = useState();  
     const [imagePreview, setImagePreview] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [statusReq, setStatusReq] = useState({ text: '', isError: false });   
@@ -32,7 +33,10 @@ export const CreateCatCard = ({ changeCreateModal }) => {
             const file = e.target.files[0];
             setFile(file);
 
+         
             const fileUrl = URL.createObjectURL(file);
+
+                     
             setImagePreview(fileUrl);
         } else {
             setImagePreview(null);
@@ -43,6 +47,9 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         const isEmpty = Object.values({cat}).every(value => value !== '');        
         setDisabled(!isEmpty || !file);
     }, [cat, file]);
+    
+
+  
 
     const setFormData = useCallback((key, value) => {
         dispatch( initCatCard({ key, value }))
@@ -58,14 +65,7 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         try {
             const fileResponse = await uploadFile(file).unwrap();
             const updatedCat = {
-                cat: {
-                    images: '',        
-                    name_cat: '',
-                    generate:'',
-                    sex: '',
-                    age: '',
-                    shipment: ''
-                },
+                ...{cat},
                 images: fileResponse.url.split('/')[2]
             };
             await saveCat(updatedCat).unwrap();
@@ -106,9 +106,9 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                 alignItems = 'alignStart'
                 gap = '32'
                 className={styles.editSection}>
-                <UploadImage
+                <UploadImage     
                     uploadFileFromDisk={uploadFileFromDisk}
-                    imagePreview={imagePreview}
+                    imagePreview ={imagePreview}                    
                 />
                 <EditAddForm setForm={setFormData} />               
             </Stack>
