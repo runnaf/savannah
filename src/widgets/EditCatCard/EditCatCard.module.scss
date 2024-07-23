@@ -2,8 +2,15 @@
 
 .edit {
     @include modal-content;
-    position: relative;    
+    position: relative;  
 } 
+.editSection {
+    @include tablet-l {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+}
 .inputFile {
     position: absolute;
 }
@@ -27,41 +34,42 @@
 }
 
 .photoPosition {
-    position: relative;  
+    position: relative; 
+ 
 }
 .editPhoto{  
     position: absolute; 
     right: 0;
     top: 0;  
     width:330px;
-    height:374px;
+    height:440px;
     border-radius: var(--border-radius-container);
     opacity: 0.7;
     z-index: 2;
     
-    @include desktop-l {
+    @include desktop-l {       
         width: 280px;
-        height: 318px;
+        height: 372px;
     } 
     @include desktop-m {
         width: 260px;
-        height: 295px;
+        height: 345px;
     } 
     @include tablet-l {
         width: 500px;
-        height: 567px;
+        height: 665px;
     } 
     @include tablet-m {
         width: 400px;
-        height: 520px;
+        height: 532px;
     } 
     @include mobile-l {
         width: 280px;
-        height: 317px;
+        height: 372px;
     }
     @include mobile-m {
         width: 220px;
-        height: 250px;
+        height: 286px;
     }
 }
 

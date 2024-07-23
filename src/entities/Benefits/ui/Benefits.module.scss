@@ -20,6 +20,7 @@
 
     @include desktop-l {    
         column-gap: 30px;
+        padding: 55px 35px;
     }
 
     @include desktop-m {
@@ -39,8 +40,10 @@
 }
 
 .benefit {
-
+  
     & svg {      
+        width: 60px;
+        height: 60px;
 
         @include desktop-m {    
             width: 60px;
@@ -59,11 +62,12 @@
 
 .benefit__text {
     font-weight: 400;
-    max-width: 240px;
+    max-width: 220px;
+    
 
 
     @include desktop-m {    
-        max-width: 100%;
+        max-width: 100%;      
     }
 
     @include mobile-l {
