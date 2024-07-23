@@ -5,6 +5,10 @@
     right: 12px; 
     background-color: transparent;
     z-index: 10;
+    & svg {
+        width: 60px; 
+        height: 60px; 
+    } 
 
     @include mobile-xl {    
         bottom: 160px;   

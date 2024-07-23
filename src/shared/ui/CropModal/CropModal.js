@@ -19,8 +19,9 @@ export const CropModal = ({
         const imgRef = useRef(null);
         const previewCanvasRef = useRef(null) 
  
-        const cardWidth = 330;
-        const cardHeight = 374;
+        const cardWidth = 300;
+        const cardHeight = 400;
+        const aspectRatio = 3/4
 
         const [crop, setCrop] = useState();
       
@@ -31,10 +32,10 @@ export const CropModal = ({
             const cropHeightPecent = (cardHeight/height) *100;
             const crop = makeAspectCrop(
                 {
-                    unit: '%',                
+                    unit: '%',                               
                     width: cropWidthPecent,
                     height: cropHeightPecent,
-                }, width, height
+                }, aspectRatio, width, height
             );
             const centeredCrop = centerCrop(crop, width, height)
             setCrop(centeredCrop);
@@ -66,7 +67,8 @@ export const CropModal = ({
                 <ReactCrop
                     crop={crop}
                     onChange={(pixelCrop, percentCrop) => setCrop(percentCrop)}
-                    keepSelection                   
+                    keepSelection     
+                    aspect={aspectRatio}                                       
                     minWidth={cardWidth}
                     minHeight={cardHeight}
                 >

@@ -2,11 +2,13 @@
 
 .image {
    position: absolute;
+   max-width: 800px;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    row-gap: 32px;
+   padding: 20px;
   
 }
 
@@ -31,23 +33,31 @@
     } 
     @include tablet-l {
         width: 800px;  
-        height: 120vw;
+        height: 140vw;
        
     
     } 
     @include tablet-m {
         width: 650px;
-        height: 150vw;
+        height: 170vw;
        
     } 
-    @include mobile-l {     
-        width: 450px;
-        height: 200vw;
+    @include mobile-xl {          
+        height: 180vw;
       
     }
+    @include mobile-l {     
+        width: 440px;
+        height: 220vw;
+      
+    }
+    @media all and (max-width:450px) {
+        width: 340px;
+        height: 280vw;
+    }
     @include mobile-m {      
-        width: 220px;
-        height: 250px;
+        width: 280px;
+        height: 320vw;
     }
 }
 
