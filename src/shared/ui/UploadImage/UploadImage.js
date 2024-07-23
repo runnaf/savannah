@@ -1,29 +1,34 @@
 import styles from './UploadImage.module.scss';
-import editIcon from '../../assets/photo/editPhotoIcon.png'
-import { Input } from '../Input/Input';
-import { useId } from 'react';
+import { useModal } from '../../hooks/useModal';
+import { CropModal } from '../CropModal/CropModal';
+import editIcon  from '../../assets/photo/editPhotoIcon.png'
+import { useRef } from 'react';
+import emptyCard from '../../assets/photo/emptyCard.png'
 
-export const UploadImage = ({
-    uploadFileFromDisk,
-    imagePreview = '' | null
-})=> {
-  
-    const id = useId();
+
+
+
+export const UploadImage = ({uploadFileFromDisk, imagePreview})=> {
+    const [changeCropModal, drawCropModal] = useModal();
+    const catUrl = useRef(emptyCard)
+    const updateCatCard = (imagePreview) => {
+        catUrl.current = imagePreview;
+    }
 
     return (
         <div className={styles.upload_container}>
-          <img className={styles.editIcon}
-                src={editIcon} alt="editIcon" />   
-            <Input
-                type='file' 
-                id = {id}            
-                className={styles.input}
-                accept="image/*, .png, .jpg, .jpeg, .jfif, .pjpeg, .pjp, .tif, .tiff, .bmp, .ico, .cur, .gif, .webp, .pdf, .svg, .webm, .avi, .mpeg, .mp4"
-                onChange={uploadFileFromDisk}
-            />
-            {imagePreview &&
-                <img src={imagePreview} alt="preview" className={styles.image} />
-            }
+            <img src={catUrl.current} className={styles.imgContainer} alt=''/>
+        {drawCropModal(
+            <CropModal changeCropModal = {changeCropModal}
+                        updateCatCard={updateCatCard}  
+                        uploadFileFromDisk={uploadFileFromDisk}
+                        imagePreview ={imagePreview}                                         
+                      />
+                   
+        )}
+              <img className={styles.editIcon}
+               onClick={changeCropModal}
+            src={editIcon} alt="editIcon" />
         </div>
     );
 };
