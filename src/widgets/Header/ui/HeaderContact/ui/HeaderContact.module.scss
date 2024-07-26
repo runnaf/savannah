@@ -1,0 +1,49 @@
+@import '../../../../../app/styles/mixin.scss';
+@import '../../../../../app/styles/media-queries.scss';
+
+.container {
+    background-color: var(--dark-brown);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    @include tablet-m {
+        display: none;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+
+    @include main-styles;
+
+    padding: 0 var(--desktop-padding);
+    margin: 0 auto;
+
+    @include desktop-l {
+        padding: 0 var(--tablet-padding);
+    } 
+
+    @include mobile-xl {
+        padding: 0 var(--tablet-padding);
+    } 
+}
+
+.position {
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    color: var(--white);
+    font-size: var(--font-size-m);
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+}

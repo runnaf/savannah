@@ -16,7 +16,6 @@
         padding: 25px;
     }
     @include tablet-l {
-      
         padding: 40px;
     }
     @include mobile-l {       
@@ -56,5 +55,28 @@
     width: 100%;
     object-fit: cover;
     border-radius: calc(var(--border-radius-container) - 10px);
+}
+
+.link {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--dark-brown);
+    @include button;
+    @include button-accent;
+    font-weight: 600;
+    font-size: 30px;
+    background: var(--dark-brown);
+    font-size: 20px;
+    margin-top: 40px;
+
+    &:hover {
+        background-color: #C49B82;
+        animation: none;
+    }
 }
 

@@ -1,5 +1,6 @@
 import { Stack } from '../Stack/Stack';
 import styles from './Drawer.module.scss';
+import { closeIcon } from '../../../shared/assets/svg/closeIcon'
 
 export const Drawer = ({ children, isOpen, close }) => {
     return (
@@ -16,7 +17,8 @@ export const Drawer = ({ children, isOpen, close }) => {
                         onClick={close}
                         className={styles.button}
                     >
-                        закрыть
+                        <span className='visually-hidden'>Закрыть</span>
+                        { closeIcon() }
                     </button>
                 </Stack>
                 {children}

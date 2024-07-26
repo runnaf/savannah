@@ -2,17 +2,18 @@
 @import '../../../../app/styles/media-queries.scss';
 
 .header {
-    display: flex;
     background-color: transparent;
     width: 100%;
+    height: 100vh;
     position: relative;
 
-    @include mobile-l {
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        justify-content: flex-start;
+    @include tablet-m {
+        height: calc(100vh - 120px);
     }
+}
+
+.wrapper {
+    background-color: var(--white);
 }
 
 .headerMain .navbar {
@@ -23,18 +24,37 @@
     justify-content: flex-end;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    @include main-styles;
+    padding: 0 var(--desktop-padding);
+
+    @include desktop-l {
+        padding: 0 var(--tablet-padding);
+    } 
+
+    @include tablet-m {
+        padding: 0;
+    } 
+}
+
 .headerContext {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: calc(100vh - 162px);
 
-    @include main-styles;
-    @include header-height;
+    @include tablet-m {
+        height: calc(100vh - 110px);
+    }
 
     @include mobile-xl {
         align-items: center;
         margin-top: auto;
-        margin-bottom: 50px;
         margin-left: 0;
     }
 
@@ -57,7 +77,7 @@
     @include button-accent;
     font-weight: 600;
     font-size: 30px;
-    background: linear-gradient(45deg, #7A5452, #C49B82, #F7F1EB);
+    background: linear-gradient(45deg,  var(--dark-brown), #c7653e, #d9825f);
     background-size: 400% 400%;
     animation: animate_gradient 5s ease infinite;
 
@@ -101,25 +121,21 @@
 }
 
 .titleContainer {
-    width: fit-content;
+    width: 100%;
     align-self: self-start;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
     z-index: 9;
-
+    @include main-styles;
+    
     @include tablet-m {
-        margin-top: 160px;
+        margin-top: 60%;
     }
 
     @include mobile-xl {
-        margin-top: auto;
-        margin-bottom: 40%;
-    }
-
-    @media (max-width: 380px) {
-        margin-bottom: 25%;
+        margin-top: 75%;
     }
 }
 

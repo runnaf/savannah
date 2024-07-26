@@ -1,0 +1,11 @@
+@import '../../../../app/styles/media-queries.scss';
+
+.logo {
+    color: var(--black);
+    font-size: var(--font-size-l);
+    width: min-content;
+
+    @include tablet-m {
+        display: none;
+    }
+}

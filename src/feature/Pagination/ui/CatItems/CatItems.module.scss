@@ -1,0 +1,14 @@
+.container {
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container article {
+    width: 410px;
+    min-height: 600px;
+    justify-content: space-between;
+}
+
+.container article div {
+    flex-grow: 0;
+}
