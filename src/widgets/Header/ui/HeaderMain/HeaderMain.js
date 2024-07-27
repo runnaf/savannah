@@ -17,9 +17,11 @@ export const HeaderMain = () => {
             <header className={getStyle(styles.header, {}, [styles.headerMain])}>
                 <HeaderContact />
                 <div className={styles.container}>
-                    <HeaderLogo />
-                    <NavbarMobile />
-                    <NavbarDesktop />
+                    <div className={styles.wrapper}>
+                        <HeaderLogo />
+                        <NavbarMobile />
+                        <NavbarDesktop />
+                    </div>
                 </div>
                 <div className={styles.headerContext}>
                     <div className={styles.titleContainer}>

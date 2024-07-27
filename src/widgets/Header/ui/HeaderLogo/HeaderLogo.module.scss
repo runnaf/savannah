@@ -5,6 +5,10 @@
     font-size: var(--font-size-l);
     width: min-content;
 
+    @media (max-width: 920px) {
+        font-size: 20px;
+    }
+
     @include tablet-m {
         display: none;
     }
