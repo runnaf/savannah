@@ -4,14 +4,16 @@
 .header {
     background-color: transparent;
     width: 100%;
+    height: 100vh;
     position: relative;
 
-    @include mobile-l {
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        justify-content: flex-start;
+    @include tablet-m {
+        height: calc(100vh - 120px);
     }
+}
+
+.wrapper {
+    background-color: var(--white);
 }
 
 .headerMain .navbar {
@@ -50,7 +52,6 @@
     @include mobile-xl {
         align-items: center;
         margin-top: auto;
-        margin-bottom: 50px;
         margin-left: 0;
     }
 
@@ -117,7 +118,7 @@
 }
 
 .titleContainer {
-    width: fit-content;
+    width: 100%;
     align-self: self-start;
     display: flex;
     flex-direction: column;

@@ -12,8 +12,6 @@
     display: block;
     object-position: 80% center;
 
-    @include header-height;
-
     @include desktop-m {
         object-position: 85% center;
     }
@@ -24,6 +22,7 @@
     @include tablet-m {
         background-color: var(--brown);
         object-position: 0% center;
+        height: calc(100vh - 110px);
     }
 
     @include mobile-xl {

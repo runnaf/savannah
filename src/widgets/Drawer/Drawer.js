@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Drawer.module.scss';
 import { Stack } from '../../shared/ui/Stack/Stack';
 import closeButton from '../../shared/assets/photo/close.png';
+import { closeIcon } from '../../shared/assets/svg/closeIcon'
 import { dataSelect } from '../../feature/FilterCats/lib/data';
 import Checkbox from '../../shared/ui/Checkbox/Checkbox';
 import { Button } from '../../shared/ui/Button/Button';
@@ -62,12 +63,14 @@ export const Drawer = ({ isDrawerOpen, toggleDrawer }) => {
                     direction='column'
                     gap="16"
                     className={styles.drawerContent}>
-                    <img
+                    <button type='button'
                         className={styles.closeButton}
                         src={closeButton}
-                        alt="закрыть"
                         onClick={toggleDrawer}
-                    />
+                    >
+                        <span className='visually-hidden'>Закрыть</span>
+                        { closeIcon() }
+                    </button>
 
                     <h3>Возраст:</h3>
                     <ul>

@@ -3,6 +3,7 @@ import { FilterBar } from '../FilterBar/FilterBar';
 import styles from './Filter.module.scss';
 import { FilterDrawer } from '../FilterDrawer/FilterDrawer';
 import { Drawer } from '../../../../shared/ui/Drawer/Drawer';
+import { filterOpen } from '../../../../shared/assets/svg/filterOpen'
 
 export const Filter = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,8 @@ export const Filter = () => {
                     className={styles.button}
                     onClick={toggleDrawer}
                 >
-                    открыть
+                    <span className='visually-hidden'>Открыть</span>
+                    { filterOpen() }
                 </button>
                 <Drawer
                     isOpen={isOpen}
