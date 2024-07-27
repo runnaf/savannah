@@ -44,10 +44,6 @@
     }
 
     @include tablet-l {
-        gap: var(--gap-tablet);
-    }
-
-    @media (max-width: 920px) {
         gap: 10px;
     }
 
