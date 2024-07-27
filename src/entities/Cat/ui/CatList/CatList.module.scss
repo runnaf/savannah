@@ -1,12 +1,56 @@
+@import '../../../../app/styles/media-queries.scss';
+
 .container {
-    flex-wrap: wrap;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 410px);
+    gap: 60px;
+    justify-content: space-between;
+
+    @include desktop-m {
+        gap: 40px;
+        grid-template-columns: repeat(auto-fill, 350px);
+    }
+
+    @media (max-width: 1060px) {
+        grid-template-columns: repeat(auto-fill, 250px);
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(auto-fill, 410px);
+        justify-content: center;
+    }
+
+    @media (max-width: 410px) {
+        grid-template-columns: repeat(auto-fill, 280px);
+    }
 }
 
 .container article {
     width: 410px;
     min-height: 600px;
-    justify-content: space-between;
+    justify-self: center;
+
+    @include desktop-m {
+        width: 350px;
+        min-height: 500px;
+    }
+
+    @media (max-width: 1060px) {
+        width: 300px;
+    }
+
+    @media (max-width: 900px) {
+        width: 410px;
+    }
+
+    @include mobile-l {
+        width: 350px;
+        height: 550px;
+    }
+
+    @media (max-width: 410px) {
+        width: 280px;
+    }
 }
 
 .container article div {

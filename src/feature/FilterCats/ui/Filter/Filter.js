@@ -1,13 +1,16 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { FilterBar } from '../FilterBar/FilterBar';
 import styles from './Filter.module.scss';
 import { FilterDrawer } from '../FilterDrawer/FilterDrawer';
 import { Drawer } from '../../../../shared/ui/Drawer/Drawer';
 import { filterOpen } from '../../../../shared/assets/svg/filterOpen'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getState } from '../../model/slices/sliceIsOpen';
 
 export const Filter = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const dispatch = useDispatch()
+    const isOpen = useSelector(state => state.open.open)
+    console.log(isOpen)
     const filterParams = useSelector(state => ({
         generate: state.filter.generate,
         sex: state.filter.sex,
@@ -16,7 +19,7 @@ export const Filter = () => {
     }));
 
     const toggleDrawer = useCallback(() => {
-        setIsOpen(isOpen => !isOpen)
+        dispatch(getState())
     }, []);
 
     const selected = () => {

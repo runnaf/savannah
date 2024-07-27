@@ -3,6 +3,7 @@ import styles from './Drawer.module.scss';
 import { closeIcon } from '../../../shared/assets/svg/closeIcon'
 
 export const Drawer = ({ children, isOpen, close }) => {
+    
     return (
         <>
             {isOpen &&

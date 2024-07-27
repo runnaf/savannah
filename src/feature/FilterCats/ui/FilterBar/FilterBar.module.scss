@@ -1,0 +1,10 @@
+@import '../../../../app/styles/media-queries.scss';
+
+.container {
+    flex-wrap: wrap;
+    row-gap: 50px;
+
+    @include desktop-m {
+        row-gap: 30px;
+    }
+}

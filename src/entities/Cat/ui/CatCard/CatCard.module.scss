@@ -56,6 +56,27 @@
     height: 250px;
     object-fit: cover;
     border-radius: calc(var(--border-radius-container) - 10px);
+
+    @include desktop-m {
+        width: 290px;
+    }
+
+    @media (max-width: 1060px) {
+        width: 220px;
+    }
+
+    @media (max-width: 900px) {
+        width: 330px;
+        height: 250px;
+    }
+
+    @include mobile-l {
+        width: 300px;
+    }
+
+    @media (max-width: 410px) {
+        width: 240px;
+    }
 }
 
 .link {

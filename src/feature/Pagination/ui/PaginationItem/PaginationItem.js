@@ -30,6 +30,7 @@ export function PaginatedItems({ pageCount }) {
                     previousClassName={styles.previous}
                     nextClassName={styles.next}
                     activeClassName={styles.active}
+                    breakClassName={styles.break}
                     activeLinkClassName={styles.activeLink}
                     disabledClassName={styles.disabled}
                 />
