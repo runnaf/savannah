@@ -4,31 +4,81 @@
     position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center; 
-    margin-top: 20px;   
+    align-items: center;   
     margin-bottom: 60px;
     width:330px;
-    height:374px;
+    height:440px;
     background-color: var(--white);
     border-radius: var(--border-radius-container);
 
+    @include desktop-l {       
+        width: 280px;
+        height: 372px;
+    } 
+    @include desktop-m {
+        width: 260px;
+        height: 345px;
+    } 
+    @include tablet-l {
+        width: 500px;
+        height: 665px;
+    } 
+    @include tablet-m {
+        width: 400px;
+        height: 532px;
+    } 
+    @include mobile-l {
+        width: 280px;
+        height: 372px;
+    }
+    @include mobile-m {
+        width: 220px;
+        height: 286px;
+    }
 }
+
+
+
 .imgContainer {
     position: absolute; 
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    margin-top: 20px; 
+    top: 0;
+    left: 0;   
     margin-bottom: 60px;
     width:330px;
-    height:374px;
+    height:440px;
     background-color: var(--white);
     border-radius: var(--border-radius-container);
+    
+    @include desktop-l {       
+        width: 280px;
+        height: 372px;
+    } 
+    @include desktop-m {
+        width: 260px;
+        height: 345px;
+    } 
+    @include tablet-l {
+        width: 500px;
+        height: 665px;
+    } 
+    @include tablet-m {
+        width: 400px;
+        height: 532px;
+    } 
+    @include mobile-l {
+        width: 280px;
+        height: 372px;
+    }
+    @include mobile-m {
+        width: 220px;
+        height: 286px;
+    }
 }
+
 .editIcon{
     position: absolute;
-    top: 34%;
-    left: 34%;
+    top: 35%;
+    left: 35%;
     z-index: 7;
     cursor: pointer;
 
@@ -37,7 +87,7 @@
     }
    
     @include tablet-l {        
-        top: 45%;
+        top: 40%;
         left: 40%;
         width: 100px;
     } 

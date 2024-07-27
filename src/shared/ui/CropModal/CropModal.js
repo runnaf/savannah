@@ -19,11 +19,9 @@ export const CropModal = ({
     const imgRef = useRef(null);
     const previewCanvasRef = useRef(null)
 
-    const cardWidth = 330;
-    const cardHeight = 374;
-
-    const [crop, setCrop] = useState();
-
+    const cardWidth = 300;
+    const cardHeight = 400;
+    const aspectRatio = 3 / 4
 
     const onImageLoad = (e) => {
         const { width, height } = e.currentTarget;
@@ -34,13 +32,11 @@ export const CropModal = ({
                 unit: '%',
                 width: cropWidthPecent,
                 height: cropHeightPecent,
-            }, width, height
+            }, aspectRatio, width, height
         );
         const centeredCrop = centerCrop(crop, width, height)
         setCrop(centeredCrop);
     }
-
-
 
     return (
         <div className={styles.upload_container}>
@@ -67,6 +63,7 @@ export const CropModal = ({
                         crop={crop}
                         onChange={(pixelCrop, percentCrop) => setCrop(percentCrop)}
                         keepSelection
+                        aspect={aspectRatio}
                         minWidth={cardWidth}
                         minHeight={cardHeight}
                     >
