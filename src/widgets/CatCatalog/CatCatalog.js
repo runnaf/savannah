@@ -6,7 +6,7 @@ import { Filter } from '../../feature/FilterCats/ui/Filter/Filter';
 import { PaginatedItems } from '../../feature/Pagination/ui/PaginationItem/PaginationItem';
 import { CatList } from '../../entities/Cat/ui/CatList/CatList';
 
-const countCatCart = 12
+const COUNT_CAT_CART = 12
 
 export const CatCatalog = () => {
     const [changeCreateModal, drawCreateModal] = useModal();
@@ -27,15 +27,15 @@ export const CatCatalog = () => {
                 return [key, value];
             })
         );
+        
 
     const {
         data: { cats, totalCount } = {},
         error,
         isLoading
     } = useGetCatsQuery(params);
-    console.log(cats, totalCount)
 
-    let itemsPerPage = Math.ceil(totalCount / countCatCart);
+    let itemsPerPage = Math.ceil(totalCount / COUNT_CAT_CART);
 
     return (
         <>
