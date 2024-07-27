@@ -9,7 +9,6 @@ export const FilterBar = () => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-        console.log('hi')
         dispatch(resetFilter());
     }
     return (

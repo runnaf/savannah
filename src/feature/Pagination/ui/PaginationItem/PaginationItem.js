@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
-import { CatItems } from '../CatItems/CatItems';
 import styles from './PaginationItems.module.scss'
+import { useDispatch } from 'react-redux';
+import { getPage } from '../../model/slices/slice';
 
-export function PaginatedItems({ cats, pageCount }) {
-
+export function PaginatedItems({ pageCount }) {
+    const dispatch = useDispatch();
 
     const handlePageClick = (event) => {
+        dispatch(getPage(event.selected))
         console.log(
         `User requested page number ${event.selected}`
         );
     };
 
     return (
-        <>
-            <CatItems cats={cats} />
             <div className={styles.wrapper}>
                 <ReactPaginate className={styles.paginate}
                     breakLabel="..."
@@ -34,6 +34,5 @@ export function PaginatedItems({ cats, pageCount }) {
                     disabledClassName={styles.disabled}
                 />
             </div>
-        </>
     );
 }

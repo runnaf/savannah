@@ -1,8 +1,9 @@
-import CatCard from '../../../../entities/CatCard/ui/CatCard/CatCard'
+import styles from './CatList.module.scss';
+import CatCard from '../../../../entities/Cat/ui/CatCard/CatCard'
 import { Stack } from '../../../../shared/ui/Stack/Stack'
-import styles from './CatItems.module.scss'
 
-export const CatItems = ({cats}) => {
+
+export const CatList = ({cats}) => {
     return (
         <Stack
             justifyContent="justifyBetween"
@@ -12,3 +13,4 @@ export const CatItems = ({cats}) => {
         </Stack>
     )
 }
+
