@@ -1,0 +1,13 @@
+@import '../../../../app/styles/mixin.scss';
+
+.container {
+    background-color: var(--white);
+}
+
+.wrapper {
+    @include main-styles;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

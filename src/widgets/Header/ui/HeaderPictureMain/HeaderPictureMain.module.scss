@@ -8,21 +8,18 @@
     pointer-events: none;
     object-fit: cover;
     width: 100%;
-    height: calc(100% - 180px);
+    height: calc(100vh - 170px);
     display: block;
-    object-position: 80% center;
+    object-position: 91% center;
 
-    @include desktop-m {
-        object-position: 85% center;
-    }
     @include tablet-l {
-        object-position: 90% center;
+        height: calc(100vh - 160px);
     }
 
     @include tablet-m {
         background-color: var(--brown);
         object-position: 0% center;
-        height: calc(100vh - 110px);
+        height: calc(100vh - 87px);
     }
 
     @include mobile-xl {
