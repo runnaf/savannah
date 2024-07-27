@@ -13,31 +13,27 @@ import { HeaderContact } from "../HeaderContact/ui/HeaderContact";
 
 export const HeaderMain = () => {
     return (
-        <div className={styles.wrapper}>
-            <Stack justifyContent='justifyCenter'>
-                <header className={getStyle(styles.header, {}, [styles.headerMain])}>
-                    <HeaderContact />
-                    <div className={styles.container}>
-                        <HeaderLogo />
-                        <NavbarMobile />
-                        <NavbarDesktop />
+        <Stack justifyContent='justifyCenter'>
+            <header className={getStyle(styles.header, {}, [styles.headerMain])}>
+                <HeaderContact />
+                <div className={styles.container}>
+                    <HeaderLogo />
+                    <NavbarMobile />
+                    <NavbarDesktop />
+                </div>
+                <div className={styles.headerContext}>
+                    <div className={styles.titleContainer}>
+                        <Text type='h1' className={styles.title}>
+                            SAVANNAH WORLD<br />
+                            <span className={styles.text}>Питомник кошек Саванны </span>
+                        </Text>
+                        <Link to={getRouteCatalog()} className={styles.linkHeader}>
+                            в каталог {arrowIcon()}
+                        </Link>
                     </div>
-                    <div className={styles.headerContext}>
-                        <div className={styles.titleContainer}>
-                            <div className={styles.wrapperContext}>
-                                <Text type='h1' className={styles.title}>
-                                    SAVANNAH WORLD<br />
-                                    <span className={styles.text}>Питомник кошек Саванны </span>
-                                </Text>
-                                <Link to={getRouteCatalog()} className={styles.linkHeader}>
-                                    в каталог {arrowIcon()}
-                                </Link>
-                            </div>
-                        </div>
-                        <HeaderPictureMain />
-                    </div>
-                </header>
-            </Stack>
-        </div>
+                    <HeaderPictureMain />
+                </div>
+            </header>
+        </Stack>
     );
 };

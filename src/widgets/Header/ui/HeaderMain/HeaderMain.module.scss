@@ -29,7 +29,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--white);
-    @include main-styles;
     padding: 0 var(--desktop-padding);
 
     @include desktop-l {
@@ -46,11 +45,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 162px);
+    height: 100%;
 
-    @include tablet-m {
-        height: calc(100vh - 110px);
-    }
+    @include header-height;
 
     @include mobile-xl {
         align-items: center;
@@ -128,8 +125,8 @@
     justify-content: center;
     height: 100%;
     z-index: 9;
-    @include main-styles;
-    
+    padding: 0 var(--tablet-padding);
+
     @include tablet-m {
         margin-top: 60%;
     }

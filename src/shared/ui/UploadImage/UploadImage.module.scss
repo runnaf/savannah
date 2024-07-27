@@ -1,40 +1,4 @@
-@import '../../..//app/styles/media-queries.scss';
-
-.image {
-    position: absolute;   
-    width: 330px;
-    height: 374px;
-    opacity: 0.7;
-    border-radius:  var(--border-radius-container);
-    z-index: 6;
-
-    @include desktop-l {
-        width: 280px;
-        height: 317px;
-    } 
-    @include desktop-m {
-        width: 260px;
-        height: 295px;
-    } 
-    @include tablet-l {
-        width: 500px;  
-        height: 567px;
-        margin-bottom: 0;
-    
-    } 
-    @include tablet-m {
-        width: 400px;
-        height: 520px;     
-    } 
-    @include mobile-l {     
-        width: 280px;
-        height: 317px;
-    }
-    @include mobile-m {      
-        width: 220px;
-        height: 250px;
-    }
-}
+@import '../../../app/styles/media-queries.scss';
 
 .upload_container {   
     position: relative; 
@@ -43,50 +7,78 @@
     align-items: center;   
     margin-bottom: 60px;
     width:330px;
-    height:374px;
+    height:440px;
     background-color: var(--white);
     border-radius: var(--border-radius-container);
 
-    @include desktop-l {
+    @include desktop-l {       
         width: 280px;
-        height: 317px;
+        height: 372px;
     } 
     @include desktop-m {
         width: 260px;
-        height: 295px;
+        height: 345px;
     } 
     @include tablet-l {
-        width: 500px;  
-        height: 567px;
-        margin-bottom: 0;
-    
+        width: 500px;
+        height: 665px;
     } 
     @include tablet-m {
         width: 400px;
-        height: 520px;     
+        height: 532px;
     } 
-    @include mobile-l {     
+    @include mobile-l {
         width: 280px;
-        height: 317px;
+        height: 372px;
     }
-    @include mobile-m {      
+    @include mobile-m {
         width: 220px;
-        height: 250px;
+        height: 286px;
     }
 }
 
-.input {  
-    position: absolute;   
-    width: 330px;
-    height: 374px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 9;
+
+
+.imgContainer {
+    position: absolute; 
+    top: 0;
+    left: 0;   
+    margin-bottom: 60px;
+    width:330px;
+    height:440px;
+    background-color: var(--white);
+    border-radius: var(--border-radius-container);
+    
+    @include desktop-l {       
+        width: 280px;
+        height: 372px;
+    } 
+    @include desktop-m {
+        width: 260px;
+        height: 345px;
+    } 
+    @include tablet-l {
+        width: 500px;
+        height: 665px;
+    } 
+    @include tablet-m {
+        width: 400px;
+        height: 532px;
+    } 
+    @include mobile-l {
+        width: 280px;
+        height: 372px;
+    }
+    @include mobile-m {
+        width: 220px;
+        height: 286px;
+    }
 }
+
 .editIcon{
     position: absolute;
-    top: 34%;
-    left: 34%;
+    top: 35%;
+    left: 35%;
     z-index: 7;
     cursor: pointer;
 
@@ -95,7 +87,7 @@
     }
    
     @include tablet-l {        
-        top: 45%;
+        top: 40%;
         left: 40%;
         width: 100px;
     } 
