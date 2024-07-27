@@ -17,8 +17,8 @@ import { UploadImage } from "../../shared/ui/UploadImage/UploadImage";
 export const CreateCatCard = ({ changeCreateModal }) => {
 
     const dispatch = useDispatch();
-    const cat = useSelector(getCatCard);
-    const [file, setFile] = useState();
+    const cat = useSelector(getCatCard);  
+    const [file, setFile] = useState(null);   
     const [imagePreview, setImagePreview] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [statusReq, setStatusReq] = useState({ text: '', isError: false });
@@ -42,7 +42,7 @@ export const CreateCatCard = ({ changeCreateModal }) => {
     };
 
     useEffect(() => {
-        const isEmpty = Object.values({ cat }).every(value => value !== '');
+        const isEmpty = Object.values(cat).every(value => value !=='');    
         setDisabled(!isEmpty || !file);
     }, [cat, file]);
 
@@ -60,8 +60,8 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         try {
             const fileResponse = await uploadFile(file).unwrap();
             const updatedCat = {
-                ...{ cat },
-                images: fileResponse.url.split('/')[2]
+                ...cat,
+                image: fileResponse.url.split('/')[2]
             };
             await saveCat(updatedCat).unwrap();
             setStatusReq({
@@ -112,12 +112,14 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                     className={styles.button}
                     disabled={disabled}
                     onClick={handleSaveCat}
+                   
                 >
                     сохранить
                     {isLoading
                         ? <span className={styles.loader} />
                         : <>{arrowIcon()}</>
                     }
+                  
                 </Button>
                 <Text className={`${styles.text} ${statusReq.isError ? styles.error : styles.default}`}>
                     {statusReq.text}

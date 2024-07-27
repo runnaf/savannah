@@ -102,3 +102,22 @@
         transform: rotate(360deg);
     }
 } 
+.text {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    height: 25px;
+
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+        margin-top: 10px;
+    }
+}
+
+.default {
+    color: var(--dark-brown);
+}
+
+.error {
+    color: var(--red);
+}

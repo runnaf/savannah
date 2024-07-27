@@ -6,7 +6,7 @@ import cat3 from '../../../shared/assets/photo/kitten3.png';
 const kittensData = [
     {
         _id: 1,
-        images: cat1,
+        image: cat1,
         name_cat: 'имя 1',
         generate:'Ф2',
         sex: 'самка',
@@ -15,7 +15,7 @@ const kittensData = [
     },
     {
         _id: 2,
-        images: cat2,
+        image: cat2,
         name_cat: 'имя 2',
         generate:'Ф3',
         sex: 'самeц',
@@ -24,7 +24,7 @@ const kittensData = [
     },
     {
         _id: 3,
-        images: cat3,
+        image: cat3,
         name_cat: 'имя 3',
         generate:'Ф4',
         sex: 'самка',
