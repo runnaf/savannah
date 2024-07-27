@@ -18,6 +18,7 @@ export const CropModal = ({
 
     const imgRef = useRef(null);
     const previewCanvasRef = useRef(null)
+    const [crop, setCrop] = useState();
 
     const cardWidth = 300;
     const cardHeight = 400;
