@@ -6,7 +6,7 @@ const initialState = {
         generate:'',
         sex: '',
         age: '',
-        shipment: ''
+        shipment: '',      
     }
 };
 
@@ -14,19 +14,19 @@ export const createCatCardSlice = createSlice ({
     name: 'createCatCard',
     initialState,
     reducers: {
-        initCatCard: (state, action) => {
+        initCatCard: (state, action) => {            
             state.cat = action.payload;
         },
         resetCatCard: () => {
             return {initialState}            
         },
-        setCatCard: (state, action) => {
-            return {...state.cat, [action.payload.name]: action.payload.value}
+        setCatCard: (state, action) => {          
+            state.cat[action.payload.key] = action.payload.value;
         },
 
     }
 })
 
-export const getCatCard = (state) => state.createCatCard.cat;
+export const getCatCard = state => state.createCatCard.cat;
 export const {  initCatCard, resetCatCard, setCatCard } = createCatCardSlice.actions;
 export default createCatCardSlice.reducer

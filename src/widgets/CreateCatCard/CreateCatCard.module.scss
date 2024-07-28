@@ -102,3 +102,37 @@
         transform: rotate(360deg);
     }
 } 
+.text {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    height: 25px;
+
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+        margin-top: 10px;
+    }
+}
+
+.default {
+    color: var(--dark-brown);
+}
+
+.error {
+    color: var(--red);
+}
+
+.grey {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    width:500px;
+    height: 44px;
+    margin-top: 20px;
+    background-color: rgba(148, 145, 145, 0.547);
+
+    &:hover {
+        background: linear-gradient(to left,  rgba(148, 145, 145, 0.547),  rgba(199, 197, 197, 0.547));
+        background-size: 250% 100%;
+}
+}

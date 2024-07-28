@@ -33,6 +33,7 @@ const handleChange = (e) => {
               <Input             
                 placeholder="имя" 
                 required
+                name='name_cat'
                 className={`${empty ? styles.wrong : ''}`} 
                 onBlur =  {e => blurHandler(e)}   
                 onChange={handleChange}
