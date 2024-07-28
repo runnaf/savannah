@@ -1,17 +1,18 @@
 import styles from './CropModal.module.scss'
-import { Input } from '../Input/Input';
+import { Input } from '../../../shared/ui/Input/Input';
 import { useId, useRef, useState } from 'react';
-import { downloadIcon } from '../../assets/svg/downloadIcon';
+import { downloadIcon } from '../../../shared/assets/svg/downloadIcon';
 import closeButton from '../../../shared/assets/photo/close.png';
 import ReactCrop, { makeAspectCrop, centerCrop, convertToPixelCrop } from 'react-image-crop'
 import 'react-image-crop/src/ReactCrop.scss'
-import { Button } from '../Button/Button';
-import setCanvasPreview from "../CropModal/setCanvasPreview";
+import { Button } from '../../../shared/ui/Button/Button';
+import setCanvasPreview from "./setCanvasPreview";
 
 export const CropModal = ({
     changeCropModal,
     updateCatCard,
     uploadFileFromDisk,
+    setCroppedFile,
     imagePreview = '' | null
 }) => {
     const id = useId();
@@ -82,7 +83,8 @@ export const CropModal = ({
                                     imgRef.current.height
                                 ));
                             const dataUrl = previewCanvasRef.current.toDataURL()                                               
-                            updateCatCard(dataUrl);                                              
+                            updateCatCard(dataUrl); 
+                            setCroppedFile(dataUrl)                                             
                             changeCropModal()
                         }}>
                         Обрезать фото

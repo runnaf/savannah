@@ -10,7 +10,7 @@ import { setCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/
 import { useSaveCatMutation, useUploadFileMutation } from '../../pages/CatalogPage/api/api';
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect, useState } from "react";
-import { UploadImage } from "../../shared/ui/UploadImage/UploadImage";
+import { UploadImage } from "../../feature/UploadImage/UploadImage/UploadImage";
 
 
 
@@ -25,6 +25,7 @@ export const CreateCatCard = ({ changeCreateModal }) => {
     const [saveCat, { isLoading: isSaving }] = useSaveCatMutation();
     const [uploadFile, { isLoading: isUploading }] = useUploadFileMutation();
     const isLoading = isSaving || isUploading;
+    const [fileName, setFileName] = useState("");
     
     
 
@@ -33,6 +34,7 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         if (e.target.files && e.target.files.length > 0) {
             const file = e.target.files[0];
             setFile(file);
+            setFileName(file.name);
 
             const fileUrl = URL.createObjectURL(file);                   
 
@@ -41,6 +43,18 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         } else {
             setImagePreview(null);
         }          
+    };
+
+    const setCroppedFile = async (dataUrl) => {
+        try {
+            const response = await fetch(dataUrl);
+            const blob = await response.blob();
+            const file = new File([blob], `${fileName}`, { type: "image/png" });
+            setFile(file);
+            setImagePreview(dataUrl);
+        } catch (error) {
+            console.error("Ошибка при преобразовании dataUrl в файл:", error);
+        }
     };
 
     useEffect(() => {
@@ -108,7 +122,8 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                 className={styles.editSection}>
                 <UploadImage
                     uploadFileFromDisk={uploadFileFromDisk}
-                    imagePreview={imagePreview}                                                                              
+                    imagePreview={imagePreview}    
+                    setCroppedFile={setCroppedFile}                                                                          
                 />
                 <EditAddForm setForm={setFormData} />
             </Stack>
