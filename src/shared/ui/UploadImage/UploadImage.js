@@ -6,11 +6,12 @@ import { useRef } from 'react';
 import emptyCard from '../../assets/photo/emptyCard.png'
 
 export const UploadImage = ({ uploadFileFromDisk, imagePreview }) => {
+    
     const [changeCropModal, drawCropModal] = useModal();
-    const catUrl = useRef(emptyCard)
-    const updateCatCard = (imagePreview) => {
-        catUrl.current = imagePreview;
-    }
+     const catUrl = useRef(emptyCard)  
+    const updateCatCard = (imagePreview) => {  
+        catUrl.current = imagePreview;         
+        }    
 
     return (
         <div className={styles.upload_container}>

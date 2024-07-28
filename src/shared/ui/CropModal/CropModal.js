@@ -16,7 +16,7 @@ export const CropModal = ({
 }) => {
     const id = useId();
 
-    const imgRef = useRef(null);
+    const imgRef = useRef(null);    
     const previewCanvasRef = useRef(null)
     const [crop, setCrop] = useState();
 
@@ -81,8 +81,8 @@ export const CropModal = ({
                                     imgRef.current.width,
                                     imgRef.current.height
                                 ));
-                            const dataUrl = previewCanvasRef.current.toDataURL()
-                            updateCatCard(dataUrl);
+                            const dataUrl = previewCanvasRef.current.toDataURL()                                               
+                            updateCatCard(dataUrl);                                              
                             changeCropModal()
                         }}>
                         Обрезать фото
