@@ -6,51 +6,69 @@ import { Text } from "../../shared/ui/Text/Text";
 import { EditAddForm } from "../../feature/EditAddForm/ui/EditAddForm/EditAddForm";
 import { Button } from "../../shared/ui/Button/Button";
 import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
-import { initCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/model/Slice";
+import { setCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/model/Slice";
 import { useSaveCatMutation, useUploadFileMutation } from '../../pages/CatalogPage/api/api';
 import { useDispatch, useSelector } from "react-redux";
 import { useCallback, useEffect, useState } from "react";
-import { UploadImage } from "../../shared/ui/UploadImage/UploadImage";
+import { UploadImage } from "../../feature/UploadImage/UploadImage/UploadImage";
 
 
 
 export const CreateCatCard = ({ changeCreateModal }) => {
 
     const dispatch = useDispatch();
-    const cat = useSelector(getCatCard);
-    const [file, setFile] = useState();
+    const cat = useSelector(getCatCard);     
+    const [file, setFile] = useState(null);   
     const [imagePreview, setImagePreview] = useState('');
     const [disabled, setDisabled] = useState(true);
     const [statusReq, setStatusReq] = useState({ text: '', isError: false });
     const [saveCat, { isLoading: isSaving }] = useSaveCatMutation();
     const [uploadFile, { isLoading: isUploading }] = useUploadFileMutation();
     const isLoading = isSaving || isUploading;
-
+    const [fileName, setFileName] = useState("");
+    
+    
 
 
     const uploadFileFromDisk = async (e) => {
         if (e.target.files && e.target.files.length > 0) {
             const file = e.target.files[0];
             setFile(file);
+            setFileName(file.name);
 
-            const fileUrl = URL.createObjectURL(file);
+            const fileUrl = URL.createObjectURL(file);                   
 
             setImagePreview(fileUrl);
+            
         } else {
             setImagePreview(null);
+        }          
+    };
+
+    const setCroppedFile = async (dataUrl) => {
+        try {
+            const response = await fetch(dataUrl);
+            const blob = await response.blob();
+            const file = new File([blob], `${fileName}`, { type: "image/png" });
+            setFile(file);
+            setImagePreview(dataUrl);
+        } catch (error) {
+            console.error("Ошибка при преобразовании dataUrl в файл:", error);
         }
     };
 
     useEffect(() => {
-        const isEmpty = Object.values({ cat }).every(value => value !== '');
+        const isEmpty = Object.values(cat).every(value => value !=='');    
         setDisabled(!isEmpty || !file);
     }, [cat, file]);
 
+   
+  
     const setFormData = useCallback((key, value) => {
-        dispatch(initCatCard({ key, value }))
+        dispatch(setCatCard({ key, value }))
     }, [dispatch]);
 
-    const resetFormData = () => {
+    const resetFormData = () => {   
         changeCreateModal();
         dispatch(resetCatCard());
     };
@@ -58,11 +76,12 @@ export const CreateCatCard = ({ changeCreateModal }) => {
 
     const handleSaveCat = async () => {
         try {
-            const fileResponse = await uploadFile(file).unwrap();
+            const fileResponse = await uploadFile(file).unwrap();           
             const updatedCat = {
-                ...{ cat },
-                images: fileResponse.url.split('/')[2]
+                ...cat,                
+                image: fileResponse.url.split('/')[2]              
             };
+          
             await saveCat(updatedCat).unwrap();
             setStatusReq({
                 text: "Карточка питомца сохранена успешно",
@@ -103,21 +122,24 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                 className={styles.editSection}>
                 <UploadImage
                     uploadFileFromDisk={uploadFileFromDisk}
-                    imagePreview={imagePreview}
+                    imagePreview={imagePreview}    
+                    setCroppedFile={setCroppedFile}                                                                          
                 />
                 <EditAddForm setForm={setFormData} />
             </Stack>
             <div className={styles.save__btn}>
                 <Button
-                    className={styles.button}
+                    className={`${ disabled ? styles.grey : styles.button}`}
                     disabled={disabled}
                     onClick={handleSaveCat}
+                    
                 >
                     сохранить
                     {isLoading
                         ? <span className={styles.loader} />
                         : <>{arrowIcon()}</>
                     }
+                  
                 </Button>
                 <Text className={`${styles.text} ${statusReq.isError ? styles.error : styles.default}`}>
                     {statusReq.text}
