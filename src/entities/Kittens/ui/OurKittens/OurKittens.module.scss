@@ -12,10 +12,24 @@
        margin-bottom: 20px;
     }
 }
-.kittens__row {
-    display: flex;   
+.container_mobile {
+    display: none;
+
+    @include tablet-l {
+        margin-top: 20px;
+        display: block;
+    }
+}
+.container_desktop {
+    display: flex;
     justify-content: space-between;
-} 
+    column-gap: 32px;
+    margin-top: 48px;
+
+    @include tablet-l {
+        display: none;
+    }
+}
 
 
 
