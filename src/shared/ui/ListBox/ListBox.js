@@ -3,6 +3,7 @@ import styles from './ListBox.module.scss';
 import Checkbox from '../Checkbox/Checkbox';
 import { arrowDownIcon, arrowUpIcon } from '../../assets/svg/listboxIcons';
 import { memo } from 'react';
+import { Badge } from '../Badge/Badge';
 
 export const ListBox = memo((props) => {
     const { 
@@ -35,9 +36,7 @@ export const ListBox = memo((props) => {
                         </div>
                         {
                             selected.length > 0 && badge
-                                ? <div className={styles.badge}>
-                                    {selected.length}
-                                </div>
+                                ? <Badge count={selected.length} className={styles.badge} />
                                 : <></>
                         }
                     </ListboxButton>

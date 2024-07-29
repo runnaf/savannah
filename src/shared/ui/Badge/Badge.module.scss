@@ -1,0 +1,17 @@
+@import '../../../app/styles/media-queries.scss';
+
+.badge {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: var(--brown);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    @include desktop-m {
+        width: 33px;
+        height: 33px;
+    }
+}

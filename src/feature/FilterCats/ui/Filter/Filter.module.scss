@@ -21,4 +21,19 @@
 
 .button {
     background-color: inherit;
+    position: relative;
+}
+
+.selectedContainer {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-brown);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    right: -15px;
+    top: -12px;
 }

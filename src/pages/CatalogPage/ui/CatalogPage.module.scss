@@ -1,4 +1,5 @@
 @import '../../../app/styles/mixin.scss';
+@import '../../../app/styles/media-queries.scss';
 
 .main {
     @include main-styles;
@@ -6,4 +7,52 @@
 
 .title {
     @include title-section;
+}
+
+.titleContainer {
+    padding: 60px 0 0 0;
+}
+
+p.titleFist {
+    padding-left: 70px;
+    position: relative;
+    font-size: var(--font-size-l);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 58px;
+        height: 2px;
+        background-color: var(--dark-brown);
+    }
+
+    @include mobile-xl {
+        font-size: var(--font-size-s);
+    }
+}
+
+h2.titleSecond {
+    font-size: var(--font-size-xl);
+    color: var(--black);
+    font-weight: 500;
+
+    & span {
+        color: var(--dark-brown);
+    }
+
+    @include desktop-l {
+        font-size: var(--font-size-l);
+    }
+
+    @include mobile-xl {
+        font-size: var(--font-size-m);
+    }
+
+    @include mobile-l {
+        font-size: var(--font-size-s);
+    }
 }

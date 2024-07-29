@@ -1,49 +1,71 @@
 @import '../../../../app/styles/mixin.scss';
 @import '../../../../app/styles/media-queries.scss';
 
-.wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .container {
     width: fit-content;
     display: flex;
     justify-content: space-between;
-    margin-top: 150px;
-    margin-bottom: 50px;
+    margin: 100px auto 50px;
     gap: 32px;
 
+    @include desktop-m {
+        gap: 24px;
+        margin-top: 70px;
+    }
+
     @include tablet-m {
-        gap: 20px;
-        margin-top: 50px;
+        gap: 16px;
+        margin-top: 40px;
+    }
+
+    @include mobile-l {
+        gap: 8px;
+        margin-top: 30px;
     }
 }
 
 .page {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     user-select: none;
 
-    @include tablet-m {
+    @include desktop-m {
         width: 50px;
         height: 50px;
+    }
+
+    @include tablet-m {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include mobile-m {
+        width: 35px;
+        height: 35px;
     }
 }
 
 .link {
     color: var(--dark-brown);
     font-size: var(--font-size-xl);
-    line-height: 70px; 
+    line-height: 70px;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    @include tablet-m {
+    @include desktop-m {
         font-size: var(--font-size-l);
         line-height: 1.2;
+    }
+
+    @include tablet-m {
+        font-size: var(--font-size-m);
     }
 }
 
@@ -53,15 +75,24 @@
     justify-content: center;
     align-items: center;
     color: var(--dark-brown);
-    height: 70px;
+    height: 60px;
     width: 50px;
-    font-size: 30px;
+    font-size: var(--font-size-l);
     cursor: pointer;
+
+    @include desktop-m {
+        height: 50px;
+    }
 
     @include tablet-m {
         font-size: var(--font-size-l);
         line-height: 1.2;
-        height: 50px;
+        height: 40px;
+    }
+
+    @include mobile-m {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -79,4 +110,8 @@
 
 .activeLink {
     font-weight: 800;
+}
+
+.break {
+    background-color: var(--dark-brown);
 }
