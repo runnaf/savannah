@@ -2,9 +2,9 @@
 
 .container {
     flex-wrap: wrap;
-    row-gap: 50px;
+    row-gap: 48px;
 
     @include desktop-m {
-        row-gap: 30px;
+        row-gap: 24;
     }
 }

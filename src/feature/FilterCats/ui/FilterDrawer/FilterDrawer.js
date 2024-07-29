@@ -7,7 +7,6 @@ import { Stack } from "../../../../shared/ui/Stack/Stack";
 import { Text } from "../../../../shared/ui/Text/Text";
 import { Button } from "../../../../shared/ui/Button/Button";
 import { useDispatch } from "react-redux";
-import { getState } from "../../model/slices/sliceIsOpen";
 
 export const FilterDrawer = memo(({ close }) => {
     const dispatch = useDispatch();
@@ -15,11 +14,6 @@ export const FilterDrawer = memo(({ close }) => {
     const handleClick = () => {
         dispatch(resetFilter());
     };
-    console.log(close)
-
-    const handleClickApply = () => {
-        dispatch(getState())
-    }
 
     return (
         <Stack
@@ -46,7 +40,7 @@ export const FilterDrawer = memo(({ close }) => {
             >
                 <Button 
                     className={styles.button}
-                    onClick={handleClickApply}
+                    onClick={close}
                 >
                     применить
                 </Button>

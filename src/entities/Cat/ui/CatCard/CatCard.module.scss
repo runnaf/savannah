@@ -5,7 +5,7 @@
 .kittens__card {
     display: flex;
     flex-direction: column;    
-    row-gap: 15px;
+    row-gap: 16px;
     width: 100%;
     height: 100%;
     padding: 40px;
@@ -61,11 +61,11 @@
         width: 290px;
     }
 
-    @media (max-width: 1060px) {
+    @include tablet-l {
         width: 220px;
     }
 
-    @media (max-width: 900px) {
+    @include tablet-m {
         width: 330px;
         height: 250px;
     }
@@ -74,7 +74,7 @@
         width: 300px;
     }
 
-    @media (max-width: 410px) {
+    @include mobile-m {
         width: 240px;
     }
 }

@@ -3,10 +3,11 @@ import styles from './CatalogPage.module.scss';
 import { Button } from '../../../shared/ui/Button/Button';
 import { CatCatalog } from '../../../widgets/CatCatalog/CatCatalog';
 import { Text } from '../../../shared/ui/Text/Text';
+import { ScrollToTop } from '../../../shared/hooks/scrollToTop';
 
 export const CatalogPage = () => {
     const [changeCreateModal] = useModal();
-
+    ScrollToTop()
     return (
         <main className={styles.main}>
             <Text className='visually-hidden' type="h1">Каталог Котят</Text>

@@ -1,15 +1,17 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { FilterBar } from '../FilterBar/FilterBar';
 import styles from './Filter.module.scss';
 import { FilterDrawer } from '../FilterDrawer/FilterDrawer';
 import { Drawer } from '../../../../shared/ui/Drawer/Drawer';
 import { filterOpen } from '../../../../shared/assets/svg/filterOpen'
-import { useDispatch, useSelector } from 'react-redux';
-import { getState } from '../../model/slices/sliceIsOpen';
+import { useSelector } from 'react-redux';
+import { Badge } from '../../../../shared/ui/Badge/Badge';
 
 export const Filter = () => {
-    const dispatch = useDispatch()
-    const isOpen = useSelector(state => state.open.open)
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleDrawer = useCallback(() => {
+        setIsOpen(isOpen => !isOpen)
+    }, []);
     console.log(isOpen)
     const filterParams = useSelector(state => ({
         generate: state.filter.generate,
@@ -18,11 +20,7 @@ export const Filter = () => {
         shipment: state.filter.shipment,
     }));
 
-    const toggleDrawer = useCallback(() => {
-        dispatch(getState())
-    }, []);
-
-    const selected = () => {
+    const selected = useMemo(() => {
         let arrays = []
         for (const [key, value] of Object.entries(filterParams)) {
             if (value.length > 0) {
@@ -31,7 +29,7 @@ export const Filter = () => {
         }
         
         return arrays.length;
-    }   
+    }   ) 
 
     return (
         <div className={styles.container}>
@@ -45,11 +43,12 @@ export const Filter = () => {
                 >
                     <span className='visually-hidden'>Открыть</span>
                     { filterOpen() }
-                    {selected()? <span className={styles.selectedContainer}>{selected()}</span>: ''}
+                    { }
+                    {selected? <Badge className={styles.selectedContainer} count = {selected} /> : ''}
                 </button>
                 <Drawer
-                    isOpen={isOpen}
                     close={toggleDrawer}
+                    isOpen = {isOpen}
                 >
                     <FilterDrawer />
                 </Drawer>

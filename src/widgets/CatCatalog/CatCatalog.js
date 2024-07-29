@@ -5,18 +5,20 @@ import { CreateCatCard } from '../CreateCatCard/CreateCatCard';
 import { Filter } from '../../feature/FilterCats/ui/Filter/Filter';
 import { PaginatedItems } from '../../feature/Pagination/ui/PaginationItem/PaginationItem';
 import { CatList } from '../../entities/Cat/ui/CatList/CatList';
+import { useState } from 'react';
 
 const COUNT_CAT_CART = 12
 
 export const CatCatalog = () => {
     const [changeCreateModal, drawCreateModal] = useModal();
+    const [page, setPage] = useState(1)
 
     const filterParams = useSelector(state => ({
         generate: state.filter.generate,
         sex: state.filter.sex,
         age: state.filter.age,
         shipment: state.filter.shipment,
-        page: state.page.page,
+        page: page,
     }));
 
     const params =  Object.fromEntries(
@@ -54,7 +56,7 @@ export const CatCatalog = () => {
         {
                 isLoading
                     ? <div>Loading...</div>
-                    : <PaginatedItems cats={cats} pageCount = {itemsPerPage}/>
+                    : <PaginatedItems setPage={setPage} pageCount = {itemsPerPage}/>
             }
         
         </>

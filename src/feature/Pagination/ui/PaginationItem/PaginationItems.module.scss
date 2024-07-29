@@ -1,32 +1,25 @@
 @import '../../../../app/styles/mixin.scss';
 @import '../../../../app/styles/media-queries.scss';
 
-.wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .container {
     width: fit-content;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin: 100px auto 50px;
     gap: 32px;
 
     @include desktop-m {
-        gap: 20px;
+        gap: 24px;
         margin-top: 70px;
     }
 
     @include tablet-m {
-        gap: 15px;
+        gap: 16px;
         margin-top: 40px;
     }
 
     @include mobile-l {
-        gap: 10px;
+        gap: 8px;
         margin-top: 30px;
     }
 }
@@ -84,7 +77,7 @@
     color: var(--dark-brown);
     height: 60px;
     width: 50px;
-    font-size: 30px;
+    font-size: var(--font-size-l);
     cursor: pointer;
 
     @include desktop-m {

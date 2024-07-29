@@ -26,9 +26,6 @@ export const CreateCatCard = ({ changeCreateModal }) => {
     const [uploadFile, { isLoading: isUploading }] = useUploadFileMutation();
     const isLoading = isSaving || isUploading;
     const [fileName, setFileName] = useState("");
-    
-    
-
 
     const uploadFileFromDisk = async (e) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -81,7 +78,6 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                 ...cat,                
                 image: fileResponse.url.split('/')[2]              
             };
-          
             await saveCat(updatedCat).unwrap();
             setStatusReq({
                 text: "Карточка питомца сохранена успешно",
@@ -139,7 +135,6 @@ export const CreateCatCard = ({ changeCreateModal }) => {
                         ? <span className={styles.loader} />
                         : <>{arrowIcon()}</>
                     }
-                  
                 </Button>
                 <Text className={`${styles.text} ${statusReq.isError ? styles.error : styles.default}`}>
                     {statusReq.text}

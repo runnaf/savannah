@@ -3,24 +3,23 @@
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 410px);
-    gap: 60px;
+    gap: 48px;
     justify-content: space-between;
 
     @include desktop-m {
-        gap: 40px;
         grid-template-columns: repeat(auto-fill, 350px);
     }
 
-    @media (max-width: 1060px) {
+    @include tablet-l {
         grid-template-columns: repeat(auto-fill, 250px);
     }
 
-    @media (max-width: 900px) {
+    @include tablet-m {
         grid-template-columns: repeat(auto-fill, 410px);
         justify-content: center;
     }
 
-    @media (max-width: 410px) {
+    @include mobile-l {
         grid-template-columns: repeat(auto-fill, 280px);
     }
 }
@@ -35,11 +34,11 @@
         min-height: 500px;
     }
 
-    @media (max-width: 1060px) {
+    @include tablet-l {
         width: 300px;
     }
 
-    @media (max-width: 900px) {
+    @include tablet-m {
         width: 410px;
     }
 
@@ -48,7 +47,7 @@
         height: 550px;
     }
 
-    @media (max-width: 410px) {
+    @include mobile-m {
         width: 280px;
     }
 }

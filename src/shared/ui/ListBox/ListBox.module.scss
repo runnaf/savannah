@@ -30,7 +30,7 @@
         }
     }
 
-    @media (max-width: 1480px) {
+    @include desktop-l {
         width: 200px;
     }
 
@@ -90,24 +90,14 @@
 }
 
 .badge {
-    position: relative;
     bottom: 70px;
     left: 220px;
-    width: 35px;
-    height: 35px;
-    background-color: var(--brown);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
+    
     @media (max-width: 1480px) {
         left: 177px;
     }
 
     @include desktop-m {
-        width: 33px;
-        height: 33px;
         left: 160px;
         bottom: 60px;
     }
