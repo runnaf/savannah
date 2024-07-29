@@ -1,0 +1,57 @@
+@import '../../../../app/styles/media-queries.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 410px);
+    gap: 48px;
+    justify-content: space-between;
+
+    @include desktop-m {
+        grid-template-columns: repeat(auto-fill, 350px);
+    }
+
+    @include tablet-l {
+        grid-template-columns: repeat(auto-fill, 250px);
+    }
+
+    @include tablet-m {
+        grid-template-columns: repeat(auto-fill, 410px);
+        justify-content: center;
+    }
+
+    @include mobile-l {
+        grid-template-columns: repeat(auto-fill, 280px);
+    }
+}
+
+.container article {
+    width: 410px;
+    min-height: 600px;
+    justify-self: center;
+
+    @include desktop-m {
+        width: 350px;
+        min-height: 500px;
+    }
+
+    @include tablet-l {
+        width: 300px;
+    }
+
+    @include tablet-m {
+        width: 410px;
+    }
+
+    @include mobile-l {
+        width: 350px;
+        height: 550px;
+    }
+
+    @include mobile-m {
+        width: 280px;
+    }
+}
+
+.container article div {
+    flex-grow: 0;
+}

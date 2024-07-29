@@ -25,6 +25,7 @@
     &.open {
         right: 0; 
         box-shadow: -1px 0 3px var(--brown);
+        padding-left: 20px;
     }
 
     @include mobile-l {

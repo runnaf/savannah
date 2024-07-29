@@ -5,7 +5,7 @@
 .kittens__card {
     display: flex;
     flex-direction: column;    
-    row-gap: 15px;
+    row-gap: 16px;
     width: 100%;
     height: 100%;
     padding: 40px;
@@ -52,10 +52,31 @@
     flex-grow: 1;
 }
 .kitten__img {
-    width: 100%;
-    height: 100%;
+    width: 330px;
+    height: 250px;
     object-fit: cover;
     border-radius: calc(var(--border-radius-container) - 10px);
+
+    @include desktop-m {
+        width: 290px;
+    }
+
+    @include tablet-l {
+        width: 220px;
+    }
+
+    @include tablet-m {
+        width: 330px;
+        height: 250px;
+    }
+
+    @include mobile-l {
+        width: 300px;
+    }
+
+    @include mobile-m {
+        width: 240px;
+    }
 }
 
 .link {

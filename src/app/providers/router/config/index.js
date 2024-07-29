@@ -18,7 +18,7 @@ export const routeConfig = {
     catalog: {
         path: getRouteCatalog(),
         element: <CatalogPage />,
-        navlink: 'каталог',
+        navlink: 'котята',
         img: catalogIcon(),
     },
     pets: {
