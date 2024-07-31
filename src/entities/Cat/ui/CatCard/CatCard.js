@@ -2,12 +2,11 @@ import { Text } from "../../../../shared/ui/Text/Text";
 import styles from './CatCard.module.scss';
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { apiUrl } from "../../../../shared/api/api";
-import kittensData from "../../lib/data";
 
 const TELEGRAM_HREF = 'https://t.me/savannahworld';
-const CatCard = ({ cat = kittensData, isCatalog = false }) => {
+
+const CatCard = ({ cat, isCatalog = false }) => {
     const { image, name_cat, generate, sex, age, shipment } = cat;
-    
     
     return (
         <article className={styles.kittens__card}>

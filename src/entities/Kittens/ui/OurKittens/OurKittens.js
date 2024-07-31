@@ -1,20 +1,18 @@
 import styles from './OurKittens.module.scss';
 import { Text } from "../../../../shared/ui/Text/Text";
-
 import { HeaderSection } from '../../../../shared/ui/HeaderSection/HeaderSection';
 import { useGetCatsQuery } from '../../../../pages/CatalogPage/api/api';
-import { CatList } from '../../../CatCard/ui/CatList/CatList';
-import kittensData from '../../../CatCard/lib/data';
+import { CatList } from '../../../Cat/ui/CatList/CatList';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
-import CatCard from '../../../CatCard/ui/CatCard/CatCard';
+import CatCard from '../../../Cat/ui/CatCard/CatCard';
 
 const OurKittens = () => {
 
     const {
-        data: { cats } = {},
+        data: { cats } = [],
         error,
         isLoading
     } = useGetCatsQuery({shipment: ['готов к отправке']});
@@ -29,9 +27,9 @@ const OurKittens = () => {
             </HeaderSection>
             <div className={styles.container_desktop}>
                 <CatList
-                cats={cats?.slice(0,3)}
-                isLoading={isLoading}
-                skeletons={3}
+                    cats={cats?.slice(0,3)}
+                    isLoading={isLoading}
+                    skeletons={3}
                 />
             </div>
             <div className={styles.container_mobile}>
@@ -50,7 +48,7 @@ const OurKittens = () => {
                         },
                     }}
                 >
-                    {cats?.slice(0, 3).map((cat = kittensData) =>
+                    {cats?.slice(0, 3).map((cat) =>
                         <SwiperSlide key={cat._id}>
                             <CatCard
                                 cat={cat}                            
