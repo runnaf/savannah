@@ -1,0 +1,11 @@
+@import '../../app/styles/media-queries.scss';
+@import '../../app/styles/mixin.scss';
+
+.delete {
+    padding: 0;
+    background: none;
+
+    &:hover {
+        background: none;
+    }
+}

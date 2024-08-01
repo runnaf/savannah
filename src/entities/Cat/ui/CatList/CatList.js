@@ -7,6 +7,7 @@ export const CatList = ({ cats }) => {
             {cats?.map(cat =>
                 <CatCard
                     key={cat._id}
+                    _id={cat._id}
                     cat={cat}
                     isCatalog
                     className={styles.card} />

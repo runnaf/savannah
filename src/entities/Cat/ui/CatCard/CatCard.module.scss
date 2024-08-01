@@ -47,6 +47,7 @@
     }
 }
 .card__body {
+    position: relative;
     display: flex;
     flex-direction: column;  
     flex-grow: 1;
@@ -101,4 +102,19 @@
         animation: none;
     }
 }
+.icons__row {
+    position: absolute;
+    right: 35px;
+    bottom: 200px;
+    display: flex;
+    gap: 8px;
+    
+}
+.edit {
+    padding: 0;
+    background: none;
 
+    &:hover {
+        background: none;
+    }
+}
