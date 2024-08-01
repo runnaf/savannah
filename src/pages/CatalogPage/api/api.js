@@ -1,42 +1,41 @@
 import { api } from "../../../shared/api/api";
 
+const CATS_TAG = [{ type: 'Cats', id: 'LIST' }];
+
+const createApiConfig = (
+    method, 
+    url, 
+    body,
+) => ({
+    url,
+    method,
+    ...(body && { body })
+});
+
+
 const catsApi = api.injectEndpoints({
     endpoints: (build) => ({
         getCats: build.query({
-            query: (params) => {
-                const query = new URLSearchParams(params).toString();
-                return `?${query}`;
-            },
+            query: (params) => `?${new URLSearchParams(params).toString()}`,
+            providesTags: () => CATS_TAG,
         }),
         saveCat: build.mutation({
-            query: (newCats) => ({
-                url: '/',
-                method: 'POST',
-                body: newCats,
-            })
+            query: (newCats) => createApiConfig('POST', '/', newCats),
+            invalidatesTags: CATS_TAG,
         }),
         updateCat: build.mutation({
-            query: ({ id, ...updatedCat }) => ({
-                url: `/${id}`,
-                method: 'PUT',
-                body: updatedCat,
-            })
+            query: ({ id, ...updatedCat }) => createApiConfig('PUT', `/${id}`, updatedCat),
+            invalidatesTags: CATS_TAG,
         }),
         deleteCat: build.mutation({
-            query: (id) => ({
-                url: `/${id}`,
-                method: 'DELETE',
-            })
+            query: (id) => createApiConfig('DELETE', `/${id}`),
+            invalidatesTags: CATS_TAG,
         }),
         uploadFile: build.mutation({
             query: (fileData) => {
                 let formData = new FormData();
                 formData.append('image', fileData);
-                return {
-                    url: '/upload',
-                    method: 'POST',
-                    body: formData,
-                };
+                return createApiConfig('POST', '/upload', formData);
             }
         }),
     }),

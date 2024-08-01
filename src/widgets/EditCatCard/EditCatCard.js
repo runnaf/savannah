@@ -7,7 +7,7 @@ import { arrowIcon } from '../../shared/assets/svg/arrowIcon';
 import { deleteIcon } from "../../shared/assets/svg/deleteIcon";
 import closeButton from '../../shared/assets/photo/close.png';
 import { Text } from "../../shared/ui/Text/Text";
-import { UploadImage } from '../../shared/ui/UploadImage/UploadImage';
+import { UploadImage } from '../../feature/UploadImage/UploadImage/UploadImage';
 
 export const EditCatCard = ({ changeEditModal }) => {    
 
