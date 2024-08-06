@@ -128,8 +128,7 @@ export const EnterDetails = ({
                 </Button>
                 <Text className={`${styles.text} ${statusReq.isError ? styles.error : styles.default}`}>
                     {statusReq.text}
-                </Text>
-            
+                </Text>            
             </div>
             </Stack>
         </Stack>
