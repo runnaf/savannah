@@ -8,7 +8,7 @@ const AccordionComponent = () => {
     return (
         <section className={styles.section}>
             <HeaderSection section="FAQ">
-                <Text tag="h2" size='xl' className={styles.title}>
+                <Text type="h2" size='xl' className={styles.title}>
                     <span>Есть вопросы?</span> Посмотри здесь:
                 </Text>
             </HeaderSection>

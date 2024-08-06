@@ -9,7 +9,7 @@ const Benefits = () => {
     return (
         <section className={styles.section}>
             <HeaderSection section="Почему мы">
-                <Text tag="h2" size='xl' className={styles.title}>
+                <Text type="h2" size='xl' className={styles.title}>
                     Наши преимущества: <span>опыт и забота</span> о вашем питомце
                 </Text>
             </HeaderSection>

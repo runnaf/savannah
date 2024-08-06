@@ -8,8 +8,15 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import CatCard from '../../../Cat/ui/CatCard/CatCard';
+import { useNavigate } from 'react-router';
+import { useCallback } from 'react';
 
 const OurKittens = () => {
+    const navigate = useNavigate();
+
+    const handleClick = useCallback(() => {
+        navigate("/catalog");
+    }, [navigate]);
 
     const {
         data: { cats } = [],
@@ -20,8 +27,13 @@ const OurKittens = () => {
 
     return (
         <section className={styles.section}>
-            <HeaderSection section="Наши котята" hasButton >
-                <Text tag="h2" size='xl' className={styles.title}>
+            <HeaderSection 
+                section="Наши котята" 
+                handleClick={handleClick}
+                hasButton
+                button='купить котенка'
+                >
+                <Text type="h2" size='xl' className={styles.title}>
                     Выберите себе <span>питомца</span> в нашем каталоге
                 </Text>
             </HeaderSection>

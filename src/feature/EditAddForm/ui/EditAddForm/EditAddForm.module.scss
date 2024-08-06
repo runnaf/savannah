@@ -1,4 +1,5 @@
 @import '../../../../app/styles/mixin.scss';
+@import '../../../../app/styles/media-queries.scss';
 
 .select {
     max-width: 500px;
@@ -53,11 +54,3 @@
 
 }
 
-.catInput {  
-    width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}

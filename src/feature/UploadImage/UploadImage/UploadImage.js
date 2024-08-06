@@ -1,35 +1,32 @@
 import styles from './UploadImage.module.scss';
-import { useModal } from '../../../shared/hooks/useModal';
-import { CropModal } from '../CropModal/CropModal';
-import editIcon from '../../../shared/assets/photo/editPhotoIcon.png'
-import { useRef } from 'react';
-import emptyCard from '../../../shared/assets/photo/emptyCard.png'
+import { downloadIcon } from '../../../shared/assets/svg/downloadIcon';
+import { Input } from '../../../shared/ui/Input/Input';
+import { useId } from 'react';
 
-export const UploadImage = ({ uploadFileFromDisk, imagePreview, setCroppedFile }) => {
+export const UploadImage = ({ uploadFileFromDisk, imagePreview, setIsCrop }) => {
+    const id = useId();
+        const handleInput = (e) => {
+            uploadFileFromDisk(e);
+            setIsCrop(true);
+        };
     
-    const [changeCropModal, drawCropModal] = useModal();
-
-    
-     const catUrl = useRef(emptyCard)  
-    const updateCatCard = (imagePreview) => {  
-        catUrl.current = imagePreview;         
-        }    
-
-    return (
-        <div className={styles.upload_container}>
-            <img src={catUrl.current} className={styles.imgContainer} alt='' />
-            {drawCropModal(
-                <CropModal changeCropModal={changeCropModal}
-                    updateCatCard={updateCatCard}
-                    uploadFileFromDisk={uploadFileFromDisk}
-                    imagePreview={imagePreview}
-                    setCroppedFile={setCroppedFile}
+        return (
+            <div className={styles.upload_container}>               
+                <label htmlFor={id}>
+                <Input
+                    type='file'
+                    id = {id}
+                    className={styles.input}
+                    accept="image/*, .png, .jpg, .jpeg, .jfif, .pjpeg, .pjp, .tif, .tiff, .bmp, .ico, .cur, .gif, .webp, .pdf, .svg, .webm, .avi, .mpeg, .mp4"
+                    onChange={handleInput}
                 />
-
-            )}
-            <img className={styles.editIcon}
-                onClick={changeCropModal}
-                src={editIcon} alt="editIcon" />
-        </div>
+                <div className={styles.downloadIcon}>
+                    {downloadIcon()}
+                </div>
+                </label>
+                {imagePreview &&
+                    <img src={imagePreview} alt="preview" className={styles.image} />
+                }
+            </div>
     );
 };

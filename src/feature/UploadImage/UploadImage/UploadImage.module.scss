@@ -4,12 +4,15 @@
     position: relative; 
     display: flex;
     justify-content: center;
-    align-items: center;   
-    margin-bottom: 60px;
+    align-items: center;      
     width:330px;
     height:440px;
     background-color: var(--white);
-    border-radius: var(--border-radius-container);
+    border-radius: var(--border-radius-container);   
+    svg {        
+        width: 50px;
+        height: 50px;
+    }
 
     @include desktop-l {       
         width: 280px;
@@ -37,17 +40,15 @@
     }
 }
 
-
-
-.imgContainer {
+.image {
     position: absolute; 
     top: 0;
-    left: 0;   
-    margin-bottom: 60px;
+    left: 0;     
     width:330px;
-    height:440px;
-    background-color: var(--white);
+    height:440px;   
     border-radius: var(--border-radius-container);
+    opacity: 0.7;
+ 
     
     @include desktop-l {       
         width: 280px;
@@ -75,26 +76,21 @@
     }
 }
 
-.editIcon{
-    position: absolute;
-    top: 40%;
-    left: 35%;
-    z-index: 7;
+.input {  
+    position: absolute;   
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+    opacity: 0;
     cursor: pointer;
+    z-index: -1;
+}
 
-    @include desktop-l {
-        width: 70px;
-    }
+.downloadIcon {
+    position: absolute; 
+    top: 45%;
+    left: 45%;  
+    z-index: 2;
    
-    @include tablet-l {    
-        left: 40%;
-        width: 100px;
-    } 
-    @include mobile-l {
-        width: 70px;
-       
-    }
-    @include mobile-m {
-        width: 50px;          
-    }
-} 
+    cursor: pointer;
+}

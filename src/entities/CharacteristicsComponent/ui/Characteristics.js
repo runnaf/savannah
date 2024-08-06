@@ -9,7 +9,7 @@ const Characteristics = () => {
   return (
     <section className={styles.section}>
       <HeaderSection section="О породе">
-        <Text tag="h2" size='xl' className={styles.title}>
+        <Text type="h2" size='xl' className={styles.title}>
           <span>Характеристика кошек</span> породы саванна
         </Text>
       </HeaderSection>

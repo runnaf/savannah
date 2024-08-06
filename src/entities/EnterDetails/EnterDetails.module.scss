@@ -1,0 +1,136 @@
+@import '../../app/styles/mixin.scss';
+@import '../../app/styles/media-queries.scss';
+
+.edit {
+    @include modal-content;
+     position: relative;
+}
+.title {
+    margin-top: 20px;
+    text-align: center;
+    
+    @include mobile-l {
+        font-size: var(--font-size-m);      
+    }
+    @include mobile-m {
+        max-width: 220px;
+    }
+}
+.select__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+
+    @include desktop-l {
+        row-gap: 60px;
+    } 
+    @include tablet-l {   
+        align-self: center;     
+        row-gap: 30px;
+    } 
+}
+.button {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    width:500px;
+    height: 44px;
+    margin-top: 20px;
+
+    & svg {
+
+        @include mobile-m {
+            width: 20px;
+            height: 20px;       
+        }
+    }
+   
+    @include tablet-m {
+        width: 400px;         
+        padding: 5px 15px !important;      
+    } 
+    @include mobile-l {
+        width: 280px; 
+    }
+    @include mobile-m {
+        width: 220px;
+        padding: 10px 8px !important; 
+    }
+}
+
+.closeButton {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+
+     
+    @include mobile-l {
+        width: 30px;
+        height: 30px;       
+    }
+}
+.editSection {
+    @include tablet-l {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    } 
+   
+}
+
+.loader {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--white);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+.text {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    height: 25px;
+
+    @include mobile-l {
+        font-size: var(--font-size-xs);
+        margin-top: 10px;
+    }
+}
+
+.default {
+    color: var(--dark-brown);
+}
+
+.error {
+    color: var(--red);
+}
+
+.grey {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;   
+    width:500px;
+    height: 44px;
+    margin-top: 20px;
+    background-color: rgba(148, 145, 145, 0.547);
+
+    &:hover {
+        background: linear-gradient(to left,  rgba(148, 145, 145, 0.547),  rgba(199, 197, 197, 0.547));
+        background-size: 250% 100%;
+}
+}

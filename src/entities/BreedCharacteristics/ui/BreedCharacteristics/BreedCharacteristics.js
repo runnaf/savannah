@@ -8,7 +8,7 @@ export const BreedCharacteristics = () => {
     return (
         <section className={styles.section}>
             <HeaderSection section="Подгруппы">
-                <Text tag="h2" size='xl' className={styles.title}>
+                <Text type="h2" size='xl' className={styles.title}>
                     <span>Генетические подгруппы</span> породы саванна
                 </Text>
             </HeaderSection>

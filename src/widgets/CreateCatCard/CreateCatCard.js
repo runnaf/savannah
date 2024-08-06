@@ -1,48 +1,28 @@
-
-import { Stack } from "../../shared/ui/Stack/Stack";
-import styles from "./CreateCatCard.module.scss";
-import closeButton from '../../shared/assets/photo/close.png';
-import { Text } from "../../shared/ui/Text/Text";
-import { EditAddForm } from "../../feature/EditAddForm/ui/EditAddForm/EditAddForm";
-import { Button } from "../../shared/ui/Button/Button";
-import { arrowIcon } from "../../shared/assets/svg/arrowIcon";
-import { setCatCard, resetCatCard, getCatCard } from "../../feature/EditAddForm/model/Slice";
-import { useSaveCatMutation, useUploadFileMutation } from '../../pages/CatalogPage/api/api';
-import { useDispatch, useSelector } from "react-redux";
-import { useCallback, useEffect, useState } from "react";
-import { UploadImage } from "../../feature/UploadImage/UploadImage/UploadImage";
+import { useCallback, useState } from "react";
+import { apiUrl } from "../../shared/api/api";
+import { EnterDetails } from "../../entities/EnterDetails/EnterDetails";
+import { CropModal } from "../../feature/UploadImage/CropModal/CropModal";
 
 
-
-export const CreateCatCard = ({ changeCreateModal }) => {
-
-    const dispatch = useDispatch();
-    const cat = useSelector(getCatCard);     
+export const CreateCatCard = ({ changeCreateModal, image, id, isCreate }) => {
     const [file, setFile] = useState(null);   
-    const [imagePreview, setImagePreview] = useState('');
-    const [disabled, setDisabled] = useState(true);
-    const [statusReq, setStatusReq] = useState({ text: '', isError: false });
-    const [saveCat, { isLoading: isSaving }] = useSaveCatMutation();
-    const [uploadFile, { isLoading: isUploading }] = useUploadFileMutation();
-    const isLoading = isSaving || isUploading;
+    const [imagePreview, setImagePreview] = useState(image ? `${apiUrl}/uploads/${image}` : null);
+    const [isCrop, setIsCrop] = useState(false); 
     const [fileName, setFileName] = useState("");
 
-    const uploadFileFromDisk = async (e) => {
+    const uploadFileFromDisk = useCallback (async (e) => {
         if (e.target.files && e.target.files.length > 0) {
             const file = e.target.files[0];
             setFile(file);
             setFileName(file.name);
-
-            const fileUrl = URL.createObjectURL(file);                   
-
-            setImagePreview(fileUrl);
-            
+            const fileUrl = URL.createObjectURL(file);              
+            setImagePreview(fileUrl);            
         } else {
             setImagePreview(null);
         }          
-    };
+    }, [setFile, setFileName, setImagePreview]);
 
-    const setCroppedFile = async (dataUrl) => {
+    const setCroppedFile = useCallback(async (dataUrl) => {
         try {
             const response = await fetch(dataUrl);
             const blob = await response.blob();
@@ -52,94 +32,27 @@ export const CreateCatCard = ({ changeCreateModal }) => {
         } catch (error) {
             console.error("Ошибка при преобразовании dataUrl в файл:", error);
         }
-    };
-
-    useEffect(() => {
-        const isEmpty = Object.values(cat).every(value => value !=='');    
-        setDisabled(!isEmpty || !file);
-    }, [cat, file]);
-
-   
-  
-    const setFormData = useCallback((key, value) => {
-        dispatch(setCatCard({ key, value }))
-    }, [dispatch]);
-
-    const resetFormData = () => {   
-        changeCreateModal();
-        dispatch(resetCatCard());
-    };
-
-
-    const handleSaveCat = async () => {
-        try {
-            const fileResponse = await uploadFile(file).unwrap();           
-            const updatedCat = {
-                ...cat,                
-                image: fileResponse.url.split('/')[2]              
-            };
-            await saveCat(updatedCat).unwrap();
-            setStatusReq({
-                text: "Карточка питомца сохранена успешно",
-                isError: false,
-            });
-        } catch (error) {
-            setStatusReq({
-                text: "Произошла ошибка, попробуй еще раз",
-                isError: true,
-            });
-        }
-    };
+    }, [setFile, setImagePreview, fileName]); 
 
     return (
-        <Stack
-            justifyContent="justifyCenter"
-            alignItems="alignCenter"
-            direction="column"
-            gap='32'
-            className={styles.edit}
-        >
-            <div>
-                <img
-                    className={styles.closeButton}
-                    src={closeButton} alt="закрыть"
-                    onClick={resetFormData}
-                />
-            </div>
-
-            <Text type='h3' size='l' className={styles.title}>
-                Создать карточку питомца
-            </Text>
-            <Stack
-                direction='row'
-                justifyContent='justifyCenter'
-                alignItems='alignStart'
-                gap='32'
-                className={styles.editSection}>
-                <UploadImage
-                    uploadFileFromDisk={uploadFileFromDisk}
-                    imagePreview={imagePreview}    
-                    setCroppedFile={setCroppedFile}                                                                          
-                />
-                <EditAddForm setForm={setFormData} />
-            </Stack>
-            <div className={styles.save__btn}>
-                <Button
-                    className={`${ disabled ? styles.grey : styles.button}`}
-                    disabled={disabled}
-                    onClick={handleSaveCat}
-                    
-                >
-                    сохранить
-                    {isLoading
-                        ? <span className={styles.loader} />
-                        : <>{arrowIcon()}</>
-                    }
-                </Button>
-                <Text className={`${styles.text} ${statusReq.isError ? styles.error : styles.default}`}>
-                    {statusReq.text}
-                </Text>
-            </div>
-        </Stack>
+        <>
+        { !isCrop ?
+        <EnterDetails
+            changeCreateModal={changeCreateModal}
+            imagePreview={imagePreview}
+            uploadFileFromDisk={uploadFileFromDisk}
+            file={file}
+            setIsCrop={setIsCrop}
+            isCreate={isCreate}
+            id={id}/>
+        :
+         <CropModal         
+            imagePreview={imagePreview}    
+            setCroppedFile={setCroppedFile}   
+            setIsCrop={setIsCrop}                                                                       
+     />    
+        }              
+        
+        </>
     );
 };
