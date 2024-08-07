@@ -81,8 +81,7 @@
 }
 
 .link {
-    width: 100%;
-    max-width: 300px;
+    width: 100%;  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,17 +103,9 @@
 }
 .icons__row {
     position: absolute;
-    right: 35px;
-    bottom: 200px;
+    right: 0;
+    top: 0;
     display: flex;
+    align-items: center;
     gap: 8px;
-    
-}
-.edit {
-    padding: 0;
-    background: none;
-
-    &:hover {
-        background: none;
-    }
 }

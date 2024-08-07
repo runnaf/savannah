@@ -18,7 +18,7 @@ export const Gallery = () => {
                 gap = '16'
                 className={styles.section}>
                 <HeaderSection section="Галерея">
-                    <Text tag="h2" size='xl' className={styles.title}>
+                    <Text type="h2" size='xl' className={styles.title}>
                         Больше  <span>о нас и жизни </span>наших питомцев
                     </Text>
                 </HeaderSection>

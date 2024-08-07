@@ -9,7 +9,7 @@ const AboutUs = () => {
     return (
         <section className={styles.section}>
             <HeaderSection section="O питомнике">
-                <Text tag="h2" size='xl' className={styles.title}>
+                <Text type="h2" size='xl' className={styles.title}>
                     Нас завораживает <span>красота и грация</span> Саванн!
                 </Text>
             </HeaderSection>

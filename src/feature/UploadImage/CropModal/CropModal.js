@@ -1,21 +1,18 @@
-import styles from './CropModal.module.scss'
-import { Input } from '../../../shared/ui/Input/Input';
-import { useId, useRef, useState } from 'react';
-import { downloadIcon } from '../../../shared/assets/svg/downloadIcon';
-import closeButton from '../../../shared/assets/photo/close.png';
+import styles from './CropModal.module.scss';
+import { useRef, useState } from 'react';
+import { Text } from '../../../shared/ui/Text/Text';
 import ReactCrop, { makeAspectCrop, centerCrop, convertToPixelCrop } from 'react-image-crop'
 import 'react-image-crop/src/ReactCrop.scss'
 import { Button } from '../../../shared/ui/Button/Button';
 import setCanvasPreview from "./setCanvasPreview";
+import { arrowIcon } from '../../../shared/assets/svg/arrowIcon';
 
 export const CropModal = ({
-    changeCropModal,
-    updateCatCard,
-    uploadFileFromDisk,
     setCroppedFile,
-    imagePreview = '' | null
+    setIsCrop,
+    imagePreview
 }) => {
-    const id = useId();
+
 
     const imgRef = useRef(null);    
     const previewCanvasRef = useRef(null)
@@ -40,27 +37,28 @@ export const CropModal = ({
         setCrop(centeredCrop);
     }
 
+    const handleClick = () => {
+        if (crop && imgRef.current && previewCanvasRef.current){
+        setCanvasPreview(
+            imgRef.current,
+            previewCanvasRef.current,
+            convertToPixelCrop(
+                crop,
+                imgRef.current.width,
+                imgRef.current.height
+            ));
+        const dataUrl = previewCanvasRef.current.toDataURL();                                               
+      
+        setCroppedFile(dataUrl);
+        setIsCrop(false);                                             
+       
+    }}
     return (
-        <div className={styles.upload_container}>
-            <img
-                className={styles.closeButton}
-                src={closeButton} alt="закрыть"
-                onClick={changeCropModal}
-            />
-            <label htmlFor={id}>
-                <Input
-                    type='file'
-                    id={id}
-                    className={styles.input}
-                    accept="image/*, .png, .jpg, .jpeg, .jfif, .pjpeg, .pjp, .tif, .tiff, .bmp, .ico, .cur, .gif, .webp, .pdf, .svg, .webm, .avi, .mpeg, .mp4"
-                    onChange={uploadFileFromDisk}
-                />
-                <div className={styles.downloadIcon}>
-                    {downloadIcon()}
-                </div>
-            </label>
-            {imagePreview &&
-                <div className={styles.image}>
+        <div className={styles.crop__row} >   
+            <Text type='h3' size='l' className={styles.title}>
+                Кадрировать фотографию
+            </Text>        
+            {imagePreview &&               
                     <ReactCrop
                         crop={crop}
                         onChange={(pixelCrop, percentCrop) => setCrop(percentCrop)}
@@ -69,31 +67,22 @@ export const CropModal = ({
                         minWidth={cardWidth}
                         minHeight={cardHeight}
                     >
-                        <img src={imagePreview} ref={imgRef} alt='preview'
-                            onLoad={onImageLoad} />
+                        <img src={imagePreview}
+                             ref={imgRef} 
+                             alt='preview'
+                             onLoad={onImageLoad}
+                             className={styles.image} />
                     </ReactCrop>
+                    }
                     <Button className={styles.cropBtn}
-                        onClick={() => {
-                            setCanvasPreview(
-                                imgRef.current,
-                                previewCanvasRef.current,
-                                convertToPixelCrop(
-                                    crop,
-                                    imgRef.current.width,
-                                    imgRef.current.height
-                                ));
-                            const dataUrl = previewCanvasRef.current.toDataURL()                                               
-                            updateCatCard(dataUrl); 
-                            setCroppedFile(dataUrl)                                             
-                            changeCropModal()
-                        }}>
-                        Обрезать фото
-                    </Button>
-                </div>
-            }
-            {crop && (
+                        onClick={handleClick}>
+                        сохранить
+                        {arrowIcon()}
+                    </Button>             
+            
+            {crop && 
                 <canvas className={styles.canvas} ref={previewCanvasRef} />
-            )
+            
             }
         </div>
     )

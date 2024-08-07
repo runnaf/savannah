@@ -2,20 +2,14 @@ import { Text } from "../../../../shared/ui/Text/Text";
 import styles from './CatCard.module.scss';
 import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { apiUrl } from "../../../../shared/api/api";
-import { editIcon } from "../../../../shared/assets/svg/editIcon";
-import { Button } from "../../../../shared/ui/Button/Button";
-import { useModal } from "../../../../shared/hooks/useModal";
-
-import { EditCatCard } from "../../../../widgets/EditCatCard/EditCatCard";
 import { DeleteCat } from "../../../../feature/DeleteCat/DeleteCat";
+import { EditCat } from "../../../../feature/EditCat/EditCat";
 
 const TELEGRAM_HREF = 'https://t.me/savannahworld';
 
 const CatCard = ({ cat, isCatalog }) => {
-    const { _id, image, name_cat, generate, sex, age, shipment } = cat;   
-
-  
-    const [changeEditModal, drawEditModal] = useModal();
+    const { _id, image, name_cat, generate, sex, age, shipment } = cat;  
+   
     
     return (
         <article className={styles.kittens__card}>
@@ -41,28 +35,15 @@ const CatCard = ({ cat, isCatalog }) => {
                     подробнее {arrowIcon()}
                 </a>: ''}
               
-
-                 {drawEditModal (
-                    <EditCatCard changeEditModal = {changeEditModal}/> 
-                )}
-
+                
                 { 
                 isCatalog &&
-                <div          
-                    className={styles.icons__row}                    
-                >
-                    <Button 
-                        className={styles.edit}
-                        onClick={changeEditModal}
-                    >
-                    {editIcon()}
-                    </Button>
-
-                    <DeleteCat id = {_id}/>                  
+                    <div className={styles.icons__row}>                 
+                        <EditCat cat = {cat}/>
+                        <DeleteCat id = {_id}/>                  
                     </div>
             }           
-            </div>
-           
+            </div>           
         </article>
     );
 }

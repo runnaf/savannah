@@ -8,7 +8,7 @@ export const Advices = () => {
   return (
     <section className={styles.section}>
       <HeaderSection section="Советы">
-        <Text tag="h2" size='xl' className={styles.title}>
+        <Text type="h2" size='xl' className={styles.title}>
           На заметку владельцам: <span>советы и рекомендации</span>
         </Text>
       </HeaderSection>
