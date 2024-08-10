@@ -4,13 +4,14 @@ import { arrowIcon } from "../../../../shared/assets/svg/arrowIcon";
 import { apiUrl } from "../../../../shared/api/api";
 import { DeleteCat } from "../../../../feature/DeleteCat/DeleteCat";
 import { EditCat } from "../../../../feature/EditCat/EditCat";
+import { useAuth } from "../../../../shared/hooks/useAuth";
 
 const TELEGRAM_HREF = 'https://t.me/savannahworld';
 
-const CatCard = ({ cat, isCatalog }) => {
+const CatCard = ({ cat, isCatalog, onClick }) => {
     const { _id, image, name_cat, generate, sex, age, shipment } = cat;  
    
-    
+    const { isAuth } = useAuth();
     return (
         <article className={styles.kittens__card}>
             <img className={styles.kitten__img} src={`${apiUrl}/uploads/${image}`} alt='котята Саванны' />
@@ -31,13 +32,15 @@ const CatCard = ({ cat, isCatalog }) => {
                     Статус: {shipment}
                 </Text>
                 
-                {isCatalog ? <a href={TELEGRAM_HREF} className={styles.link}>
+                {isCatalog ? <a href={TELEGRAM_HREF} className={styles.link}
+                                onClick={onClick}
+                                >
                     подробнее {arrowIcon()}
                 </a>: ''}
               
                 
                 { 
-                isCatalog &&
+                (isCatalog && isAuth) &&
                     <div className={styles.icons__row}>                 
                         <EditCat cat = {cat}/>
                         <DeleteCat id = {_id}/>                  

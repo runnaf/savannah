@@ -6,6 +6,7 @@ import { useModal } from '../../../../shared/hooks/useModal';
 import { useAppRoutes } from '../../../../shared/hooks/useAppRoutes';
 import styles from './NavbarDesktop.module.scss';
 import { getStyle } from '../../../../shared/helper/getStyle';
+import { useAuth } from '../../../../shared/hooks/useAuth';
 
 
 export const NavbarDesktop = ({className}) => {
@@ -14,6 +15,12 @@ export const NavbarDesktop = ({className}) => {
     const additional = [
         className,
     ]
+
+    const { isAuth, logout } = useAuth();
+    const handleClick = () => {
+        if (isAuth) logout();
+        else changeSigninModal();
+    }
 
     return (
         <div className={styles.container}>
@@ -33,11 +40,11 @@ export const NavbarDesktop = ({className}) => {
                 }
 
                 <Button
-                    onClick={changeSigninModal}
+                    onClick={handleClick}
                     className={styles.buttonSigin}
                     variant="secondary"
                 >
-                    войти
+                    {isAuth ? 'выйти' : 'войти'}
                 </Button>
             </nav>
         </div>

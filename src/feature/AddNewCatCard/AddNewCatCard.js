@@ -3,9 +3,11 @@ import { HeaderSection } from "../../shared/ui/HeaderSection/HeaderSection";
 import { CreateCatCard } from "../../widgets/CreateCatCard/CreateCatCard";
 import styles from './AddNewCatCard.module.scss';
 import { Text } from "../../shared/ui/Text/Text";
+import { useAuth } from "../../shared/hooks/useAuth";
 
-const AddNewCatCard = () => {
+export const AddNewCatCard = () => {
     const [changeCreateModal, drawCreateModal] = useModal();
+    const { isAuth } = useAuth();
     return ( 
         <>
         {drawCreateModal(
@@ -16,7 +18,7 @@ const AddNewCatCard = () => {
 
             <HeaderSection
                 section="Продаются котята"
-                hasButton             
+                hasButton={isAuth}             
                 handleClick={changeCreateModal}
                 button='создать питомца'
             >
@@ -29,4 +31,3 @@ const AddNewCatCard = () => {
      );
 }
  
-export default AddNewCatCard;
