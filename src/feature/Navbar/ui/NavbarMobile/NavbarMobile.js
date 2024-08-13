@@ -5,11 +5,18 @@ import { AppNavLink } from '../AppNavLink/AppNavLink';
 import { useModal } from '../../../../shared/hooks/useModal';
 import { useAppRoutes } from '../../../../shared/hooks/useAppRoutes';
 import styles from './NavbarMobile.module.scss';
+import { useAuth } from '../../../../shared/hooks/useAuth';
 
 export const NavbarMobile = () => {
     const [changeSigninModal, drawSiginModal] = useModal();
     const includeIcons = true;
     const routes = useAppRoutes({ routeConfig, includeIcons });
+    const { isAuth, logout } = useAuth();
+
+    const handleClick = () => {
+        if (isAuth) logout();
+        else changeSigninModal();
+    }
 
     return (
         <div className={styles.container}>
@@ -30,9 +37,9 @@ export const NavbarMobile = () => {
                 }
                 <button
                     className={styles.button}
-                    onClick={changeSigninModal}
+                    onClick={handleClick}
                 >
-                    войти
+                    {isAuth ? 'выйти' : 'войти'}
                     {signinIcon()}
                 </button>
             </nav>

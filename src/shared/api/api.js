@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import Cookies from 'js-cookie'
 
 const config = {
     production: 'https://savannah-world-backend.onrender.com',
@@ -12,7 +13,7 @@ export const api = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: apiUrl,
         prepareHeaders: (headers) => {
-            const token = 'FIX_LATER';
+            const token = Cookies.get('autoToken');
             if (token) {
                 headers.set('Authorization', token);
             }
